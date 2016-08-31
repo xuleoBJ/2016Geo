@@ -1,0 +1,849 @@
+E:\sutan\Heglig Main\Heglig-01\Heg_1.las
+E:\sutan\Heglig Main\Heglig-02\Heg2.pds
+E:\sutan\Heglig Main\Heglig-02\heglig2a.las
+E:\sutan\Heglig Main\Heglig-02\Heglig2b.las
+E:\sutan\Heglig Main\Heglig-02\Heg_2.las
+E:\sutan\Heglig Main\Heglig-03\Heg_3.las
+E:\sutan\Heglig Main\Heglig-04\Heglig-4 PVT.xls
+E:\sutan\Heglig Main\Heglig-04\Heg_4.las
+E:\sutan\Heglig Main\Heglig-05\HEGLIG-5 (GR#1).las
+E:\sutan\Heglig Main\Heglig-05\HEGLIG-5 (GR#2).las
+E:\sutan\Heglig Main\Heglig-05\HEGLIG-5 (GR#3).las
+E:\sutan\Heglig Main\Heglig-05\Heglig5_results.las
+E:\sutan\Heglig Main\Heglig-05\Heglig_5_Aradeiba Main.gif
+E:\sutan\Heglig Main\Heglig-05\Heglig_5_Bentiu 1 Sand.gif
+E:\sutan\Heglig Main\Heglig-05\Heglig_5_Bentiu 2 Sand.gif
+E:\sutan\Heglig Main\Heglig-05\Heglig_5_Bentiu 3 Sand.gif
+E:\sutan\Heglig Main\Heglig-05\Heglig_5_summation.txt
+E:\sutan\Heglig Main\Heglig-05\Heg_5.las
+E:\sutan\Heglig Main\Heglig-05\GR-11-2012\GR#1\HEGLIG-5 (GR#1).las
+E:\sutan\Heglig Main\Heglig-05\GR-11-2012\GR#2\HEGLIG-5 (GR#2).las
+E:\sutan\Heglig Main\Heglig-05\GR-11-2012\GR#3\HEGLIG-5 (GR#3).las
+E:\sutan\Heglig Main\Heglig-06\HEGLIG-06 - GR#1 for BP.PDF
+E:\sutan\Heglig Main\Heglig-06\HEGLIG-6.las
+E:\sutan\Heglig Main\Heglig-06\Heg_6.las
+E:\sutan\Heglig Main\Heglig-07\Heglig-7 PVT.xls
+E:\sutan\Heglig Main\Heglig-07\Heg_7.las
+E:\sutan\Heglig Main\Heglig-08\Heglig8_results.las
+E:\sutan\Heglig Main\Heglig-08\Heg_8.las
+E:\sutan\Heglig Main\Heglig-09\Heglig9_results.las
+E:\sutan\Heglig Main\Heglig-09\Heg_9.las
+E:\sutan\Heglig Main\Heglig-10\HEGLIG-10 (GR#1).las
+E:\sutan\Heglig Main\Heglig-10\HEGLIG-10.las
+E:\sutan\Heglig Main\Heglig-10\Heglig-10.ppt
+E:\sutan\Heglig Main\Heglig-10\Heglig10_results.las
+E:\sutan\Heglig Main\Heglig-10\GR#1\HEGLIG-10 (GR#1).las
+E:\sutan\Heglig Main\Heglig-11\HE-11 Analysis Plot.ppt
+E:\sutan\Heglig Main\Heglig-11\Heglig11_results.las
+E:\sutan\Heglig Main\Heglig-11\Heg_11.las
+E:\sutan\Heglig Main\Heglig-11\Hglg11.doc
+E:\sutan\Heglig Main\Heglig-12\HE-12 Mug Log.doc
+E:\sutan\Heglig Main\Heglig-12\Heglig-12_PETRO.ppt
+E:\sutan\Heglig Main\Heglig-12\heglig12.las
+E:\sutan\Heglig Main\Heglig-12\Heglig12.pds
+E:\sutan\Heglig Main\Heglig-12\Heglig12_results.las
+E:\sutan\Heglig Main\Heglig-13\Heglig # 13 Oil Sample - Test # 01.doc
+E:\sutan\Heglig Main\Heglig-13\Heglig13.cli
+E:\sutan\Heglig Main\Heglig-13\heglig13.las
+E:\sutan\Heglig Main\Heglig-13\Heglig13_results.las
+E:\sutan\Heglig Main\Heglig-14\HEG-15PDF FINAL.pdf
+E:\sutan\Heglig Main\Heglig-14\Heglig14_results.las
+E:\sutan\Heglig Main\Heglig-14\Heg_14.las
+E:\sutan\Heglig Main\Heglig-15\HEG-15PDF FINAL.pdf
+E:\sutan\Heglig Main\Heglig-15\Heglig15_results.las
+E:\sutan\Heglig Main\Heglig-15\Heg_15.las
+E:\sutan\Heglig Main\Heglig-16\Heglig16_results.las
+E:\sutan\Heglig Main\Heglig-16\heglig16_Summation.xls
+E:\sutan\Heglig Main\Heglig-16\Heg_16.las
+E:\sutan\Heglig Main\Heglig-17\Heglig17_summation.xls
+E:\sutan\Heglig Main\Heglig-17\Heg_17.las
+E:\sutan\Heglig Main\Heglig-18\heglig18 summation5.xls
+E:\sutan\Heglig Main\Heglig-18\heglig18.las
+E:\sutan\Heglig Main\Heglig-19\heglig-19.las
+E:\sutan\Heglig Main\Heglig-19\heglig19_Summation.xls
+E:\sutan\Heglig Main\Heglig-20\heglig-20.las
+E:\sutan\Heglig Main\Heglig-20\heglig20_Summation.xls
+E:\sutan\Heglig Main\Heglig-21\HEG-21FMTdata#2.xls
+E:\sutan\Heglig Main\Heglig-21\HEG-21FMTdata.xls
+E:\sutan\Heglig Main\Heglig-21\HEG-21Pressure Data.xls
+E:\sutan\Heglig Main\Heglig-21\heglig-21.las
+E:\sutan\Heglig Main\Heglig-21\HEGLIG-21.PDF
+E:\sutan\Heglig Main\Heglig-21\heglig21_Summation.xls
+E:\sutan\Heglig Main\Heglig-22\HEGLIG-22 (GR#1).las
+E:\sutan\Heglig Main\Heglig-22\HEGLIG-22-SUMMATION.txt
+E:\sutan\Heglig Main\Heglig-22\heglig-22.las
+E:\sutan\Heglig Main\Heglig-22\HEGLIG22gr1.las
+E:\sutan\Heglig Main\Heglig-22\hg22m.las
+E:\sutan\Heglig Main\Heglig-22\hg22m.rep.doc
+E:\sutan\Heglig Main\Heglig-22\GR\HEGLIG22gr1.las
+E:\sutan\Heglig Main\Heglig-22\GR\GR#1\HEGLIG-22 (GR#1).las
+E:\sutan\Heglig Main\Heglig-23\HEGLIG-23 (GR#1).las
+E:\sutan\Heglig Main\Heglig-23\heglig23.las
+E:\sutan\Heglig Main\Heglig-23\heglig23_Summation.xls
+E:\sutan\Heglig Main\Heglig-23\GR#1\HEGLIG-23 (GR#1).las
+E:\sutan\Heglig Main\Heglig-24\Heglig 24 shows summary.doc
+E:\sutan\Heglig Main\Heglig-24\heglig24.las
+E:\sutan\Heglig Main\Heglig-24\heglig24_Summation.xls
+E:\sutan\Heglig Main\Heglig-24\hg24m.las
+E:\sutan\Heglig Main\Heglig-25\HE25ML.PDF
+E:\sutan\Heglig Main\Heglig-25\Heg25_B3.gif
+E:\sutan\Heglig Main\Heglig-25\Heg_A.gif
+E:\sutan\Heglig Main\Heglig-26\HEGLIG-26 (450-1940).PDF
+E:\sutan\Heglig Main\Heglig-26\HEGLIG-26.las
+E:\sutan\Heglig Main\Heglig-27\heg27s.las
+E:\sutan\Heglig Main\Heglig-27\Heglig-27 petrophysical report.doc
+E:\sutan\Heglig Main\Heglig-27\Heglig27 petro summary.doc
+E:\sutan\Heglig Main\Heglig-28-core\HE-28  FMT Fluid Data.xls
+E:\sutan\Heglig Main\Heglig-28-core\HE-28  FMT Pressure Data .xls
+E:\sutan\Heglig Main\Heglig-28-core\HEG28 Core.xls
+E:\sutan\Heglig Main\Heglig-28-core\Heglig # 28 - Water Analyses..doc
+E:\sutan\Heglig Main\Heglig-28-core\Heglig28.pds
+E:\sutan\Heglig Main\Heglig-28-core\Heglig28_results.las
+E:\sutan\Heglig Main\Heglig-28-core\core analysis\Results.xls
+E:\sutan\Heglig Main\Heglig-28-core\core analysis\text.DOC
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\10B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\11B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\12B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\13B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\14B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\15B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\16B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\1B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\2B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\3B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\4B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\5B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\6B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\7B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\8B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\after plugs\9B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\10B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\11B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\12B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\13B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\14B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\15B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\16B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\1B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\2B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\3B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\4B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\5B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\6B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\7B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\8B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\before plugs\9B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\10B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\11B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\12B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\13B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\14B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\15B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\16B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\1B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\2B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\3B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\4B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\5B.gif
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\5B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\6B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\7B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\8B.psd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\9B.pdd
+E:\sutan\Heglig Main\Heglig-28-core\core photos\uv\Thumbs.db
+E:\sutan\Heglig Main\Heglig-28-core\SPECIAL\final.xls
+E:\sutan\Heglig Main\Heglig-28-core\SPECIAL\S14203, Heglig -28 Mar.04.doc
+E:\sutan\Heglig Main\Heglig-29\he29_tables.xls
+E:\sutan\Heglig Main\Heglig-29\heg29_tvd_results.las
+E:\sutan\Heglig Main\Heglig-29\Heglig-29 FMT Fluid Data.xls
+E:\sutan\Heglig Main\Heglig-29\Heglig29.gif
+E:\sutan\Heglig Main\Heglig-29\heglig29_survey.xls
+E:\sutan\Heglig Main\Heglig-29\Heg_29.las
+E:\sutan\Heglig Main\Heglig-30\HE-30_PDF.pdf
+E:\sutan\Heglig Main\Heglig-30\he30_lumping.xls
+E:\sutan\Heglig Main\Heglig-30\he30_results.las
+E:\sutan\Heglig Main\Heglig-30\he30_tables.xls
+E:\sutan\Heglig Main\Heglig-30\HEG30.ppt
+E:\sutan\Heglig Main\Heglig-30\HEGLIG-30 (GR#1).las
+E:\sutan\Heglig Main\Heglig-30\HEGLIG-30 (GR#2).las
+E:\sutan\Heglig Main\Heglig-30\Heglig30_tvd_results.las
+E:\sutan\Heglig Main\Heglig-30\GR\GR#1\HEGLIG-30 (GR#1).las
+E:\sutan\Heglig Main\Heglig-30\GR\GR#2\HEGLIG-30 (GR#2).las
+E:\sutan\Heglig Main\Heglig-31\he31.gif
+E:\sutan\Heglig Main\Heglig-31\HE31_PVPa.gif
+E:\sutan\Heglig Main\Heglig-31\Heg_31_MH_RM.LAS
+E:\sutan\Heglig Main\Heglig-32\HEGLIG 32 GeoVision Resistivity_field copy_RM Combined.PDS
+E:\sutan\Heglig Main\Heglig-32\HEGLIG 32 RT_FINAL_1500_2019 LASOutput.LAS
+E:\sutan\Heglig Main\Heglig-32\Heglig-32_final Masterlog (33-2025m,TD).pdf
+E:\sutan\Heglig Main\Heglig-32\HEGLIG32_LWD.txt
+E:\sutan\Heglig Main\Heglig-32\PdsPrinterInfo.log
+E:\sutan\Heglig Main\Heglig-32\PDSViewKit-11.exe
+E:\sutan\Heglig Main\Heglig-32\RENDERER_VERSION
+E:\sutan\Heglig Main\Heglig-33\Heglig-33 PDF _ Masterlog(30m-2160.5m).pdf
+E:\sutan\Heglig Main\Heglig-33\heglig33-cor-appendix.ppt
+E:\sutan\Heglig Main\Heglig-33\heglig33-cor-interpretation.tif
+E:\sutan\Heglig Main\Heglig-34\Heglig34_RM.LAS
+E:\sutan\Heglig Main\Heglig-35\Aradeiba Sand (Heglig_35).GIF
+E:\sutan\Heglig Main\Heglig-35\Bentiu 1 Sand (Heglig_35).GIF
+E:\sutan\Heglig Main\Heglig-35\heglig 35 slm.las
+E:\sutan\Heglig Main\Heglig-35\Heglig-35_PDF Masterlog_33-1800m.pdf
+E:\sutan\Heglig Main\Heglig-35\Summation Results_Heglig_35.xls
+E:\sutan\Heglig Main\Heglig-35\Zarqa Sand (Heglig_35).GIF
+E:\sutan\Heglig Main\Heglig-36\Heglig -36_final pdf masterlog_30-1950 m,TD.pdf
+E:\sutan\Heglig Main\Heglig-36\Heglig 36 PP Summary.doc
+E:\sutan\Heglig Main\Heglig-36\heglig36.PDF
+E:\sutan\Heglig Main\Heglig-36\heglig36slam.las
+E:\sutan\Heglig Main\Heglig-37\HE-37-Masterlog (ST)-(30-2502m)backup.pdf
+E:\sutan\Heglig Main\Heglig-37\Heglig-37.LAS
+E:\sutan\Heglig Main\Heglig-38-core\Heglig 38 GR-SBT-CCL (3).pdf
+E:\sutan\Heglig Main\Heglig-38-core\HEGLIG-38 (GR#1).las
+E:\sutan\Heglig Main\Heglig-38-core\HEGLIG-38 (WCP#1).las
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_Final Masterlog.pdf
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_lumping.xls
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_pvp.pds
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_pvp.TIF
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_results.LAS
+E:\sutan\Heglig Main\Heglig-38-core\Heglig-38_SLAM.las
+E:\sutan\Heglig Main\Heglig-38-core\HEGLIG38_200.GIF
+E:\sutan\Heglig Main\Heglig-38-core\HEGLIG38_500.GIF
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core analysis\core analysis.xls
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core analysis\text.DOC
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\1.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\10.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\11.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\12.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\13.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\2.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\3.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\4.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\5.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\6.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\7.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\8.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\9.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\AFTER\Thumbs.db
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\1.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\10.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\11.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\12.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\13.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\2.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\3.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\4.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\5.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\6.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\7.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\8.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\9.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\BEFOR\Thumbs.db
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\1.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\10.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\11.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\12.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\13.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\2.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\3.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\4.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\5.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\6.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\7.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\8.gif
+E:\sutan\Heglig Main\Heglig-38-core\CONVENTIONAL\core photos\UV\9.gif
+E:\sutan\Heglig Main\Heglig-38-core\GR#1\HEGLIG-38 (GR#1).las
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\EXCEL\HEGLIG-38 DATA SHEET.xls
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\EXCEL\HEGLIG-38 GRAIN SIZE.xls
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\EXCEL\HEGLIG-38 XRD.xls
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\EXCEL\KEY FOR PETROGRAPHIC DATA SHEET.xls
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\LOG\HEGLIG-38 SUMMARY.WCL
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\LOG\HEGLIG-38.WCL
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 1 (CONTINUED).JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 1.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 2 (CONTINUED I).JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 2 (CONTINUED II).JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 2.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 3 (CONTINUED).JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 3.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 4 (CONTINUED).JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\PLATE 4.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 HM PLATES\Thumbs.db
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 12.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 14.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 17.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 2.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 20.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 23.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 25.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 28.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 33.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 35.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 38.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 44.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 46.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 5.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 7.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\PLATE 9.jpg
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 SEM PLATES\Thumbs.db
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 1.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 10.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 11.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 13.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 15.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 16.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 18.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 19.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 21.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 22.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 24.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 26.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 27.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 29.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 3.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 30.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 31.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 32.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 34.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 36.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 37.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 39.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 4.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 40.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 41.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 42.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 43.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 45.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 6.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\PLATE 8.JPG
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\PLATES\HEGLIG-38 TS PLATES\Thumbs.db
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\WORD\BOXES.doc
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\WORD\HEGLIG-38 HM PLATE DESCRIPTION.doc
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\WORD\HEGLIG-38 REPORT.doc
+E:\sutan\Heglig Main\Heglig-38-core\SED_PETR-CORE\HEGLIG-38\WORD\HEGLIG-38 TS & SEM  PLATE DESCRIPTION.doc
+E:\sutan\Heglig Main\Heglig-38-core\Special Core Analysis\heglig-38.xls
+E:\sutan\Heglig Main\Heglig-38-core\Special Core Analysis\S18705, Heglig -38 Mar.06.doc
+E:\sutan\Heglig Main\Heglig-38-core\WCP#1\HEGLIG-38 (WCP#1).las
+E:\sutan\Heglig Main\Heglig-39\3PM Heglig39_Plot_021105.doc
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_LASOutput_1080-1830m_021105.LAS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_LASOutput_1880-1975m_141105.LAS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200MD_1080-1830m_021105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200MD_1080-1830m_021105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200MD_1880-1975m_141105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200MD_1880-1975m_141105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200TVD_1080-1830m_021105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200TVD_1080-1830m_021105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200TVD_1880-1975m_141105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 200TVD_1880-1975m_141105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500MD_1080-1830m_021105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500MD_1080-1830m_021105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500MD_1880-1975m_141105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500MD_1880-1975m_141105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500TVD_1080-1830m_021105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500TVD_1080-1830m_021105.TIF
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500TVD_1880-1975m_141105.PDS
+E:\sutan\Heglig Main\Heglig-39\HEGLIG 39_Vision Service RT 500TVD_1880-1975m_141105.TIF
+E:\sutan\Heglig Main\Heglig-39\Heglig-39(ST)_pdf masterlog TD_30-1975m_051114.pdf
+E:\sutan\Heglig Main\Heglig-39\Heglig-39_ Main Hole Final Survey_141105.xls
+E:\sutan\Heglig Main\Heglig-39\Heglig-39_ Section View_141105.doc
+E:\sutan\Heglig Main\Heglig-39\Heglig-39_Plan View_141105.doc
+E:\sutan\Heglig Main\Heglig-39\Heglig39 _Pilot Hole Final Survey_021105.xls
+E:\sutan\Heglig Main\Heglig-40\heglig-40-cbl.PDF
+E:\sutan\Heglig Main\Heglig-40\Heglig-40.pdf
+E:\sutan\Heglig Main\Heglig-40\Heglig40.TIF
+E:\sutan\Heglig Main\Heglig-40\Heglig40_a.gif
+E:\sutan\Heglig Main\Heglig-40\Heglig40_b.gif
+E:\sutan\Heglig Main\Heglig-40\Heglig40_c.gif
+E:\sutan\Heglig Main\Heglig-40\Heglig40_d.gif
+E:\sutan\Heglig Main\Heglig-40\Heglig40_slam.las
+E:\sutan\Heglig Main\Heglig-41\h41slm.las
+E:\sutan\Heglig Main\Heglig-41\HEG41_pvp.pds
+E:\sutan\Heglig Main\Heglig-41\HEG41_pvp.TIF
+E:\sutan\Heglig Main\Heglig-41\HEG41_results.las
+E:\sutan\Heglig Main\Heglig-41\Heglig-41_lumping.xls
+E:\sutan\Heglig Main\Heglig-41\Heglig-41_PDF Masterlog_33.5-1800m.pdf
+E:\sutan\Heglig Main\Heglig-41\Heglig41 PP Summary.doc
+E:\sutan\Heglig Main\Heglig-42\CBL.PDF
+E:\sutan\Heglig Main\Heglig-42\Heglig 42_Far end of Aradeiba Main Sand.gif
+E:\sutan\Heglig Main\Heglig-42\Heglig 42_Middle Aradeiba Main Sand.gif
+E:\sutan\Heglig Main\Heglig-42\Heglig 42_Top Aradeiba Main Sand.gif
+E:\sutan\Heglig Main\Heglig-42\Heglig 42_TVD Aradeiba Main Sand.gif
+E:\sutan\Heglig Main\Heglig-42\Heglig-42_Masterlog_32-2066 m.pdf
+E:\sutan\Heglig Main\Heglig-42\HEGLIG_42.LAS
+E:\sutan\Heglig Main\Heglig-43\Heg43_Map.jpg
+E:\sutan\Heglig Main\Heglig-43\Heglig-43_Masterlog_30-2040m. pdf.pdf
+E:\sutan\Heglig Main\Heglig-43\Heglig-43_RM.LAS
+E:\sutan\Heglig Main\Heglig-43\Heglig43-CBL-TLC-Combined.PDF
+E:\sutan\Heglig Main\Heglig-43\Heglig43_lumping.xls
+E:\sutan\Heglig Main\Heglig-43\Heglig43_results.LAS
+E:\sutan\Heglig Main\Heglig-43\Heglig43_results.xls
+E:\sutan\Heglig Main\Heglig-44\Aradeiba_Anterior_Heglig_44.gif
+E:\sutan\Heglig Main\Heglig-44\Aradeiba_Middle_Heglig_44.gif
+E:\sutan\Heglig Main\Heglig-44\HEG44.pds
+E:\sutan\Heglig Main\Heglig-44\Heglig-44 Masterlog_31.5-2133m.pdf
+E:\sutan\Heglig Main\Heglig-45\Heglig-45_masterlog pdf_32-2206m_Final.pdf
+E:\sutan\Heglig Main\Heglig-45\Heglig45_8.5in section_RM.LAS
+E:\sutan\Heglig Main\Heglig-46\Heglig-46_Final Masterlog_30-2059m.pdf
+E:\sutan\Heglig Main\Heglig-46\Heglig-46_LWD_RM_Composite Section_LAS_788-2059m MD.LAS
+E:\sutan\Heglig Main\Heglig-47\Correlation data for Heglig 47.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig 47, Bentiu 1 Sand.gif
+E:\sutan\Heglig Main\Heglig-47\Heglig-47 slam Data_1913-448m_060520.las.las
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_DEV-GR_060522.pdf.pdf
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_Dev-GR_060522.XLS.las
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_FMT Fluid Data.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_FMT Fluid Data_060523.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_FMT Pressure Analysis.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_FMT Pressure Data_060523.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_MWD Survey _30-1925m _060519.xls
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_pdf masterlog_30-1925m _060519.pdf
+E:\sutan\Heglig Main\Heglig-47\Heglig-47_SLAM Data_1913-448m_060520.pdf.pdf
+E:\sutan\Heglig Main\Heglig-47\heglig47cbl.PDF
+E:\sutan\Heglig Main\Heglig-47\heglig47_cbl.PDF
+E:\sutan\Heglig Main\Heglig-47\Heglig_47, Aradeiba Main and E Sand.gif
+E:\sutan\Heglig Main\Heglig-47\PETROPHYSICAL SUMMARY FOR HEGLIG 47.doc
+E:\sutan\Heglig Main\Heglig-47\Summation Results_HEGLIG _47.xls
+E:\sutan\Heglig Main\Heglig-48\Heg-48-CBL-after pressure.PDF
+E:\sutan\Heglig Main\Heglig-48\Heg-48-CBL-before pressure.PDF
+E:\sutan\Heglig Main\Heglig-48\HEGLIG-48.las
+E:\sutan\Heglig Main\Heglig-48\Heglig-48_ PDF masterlog_31-1725m.pdf
+E:\sutan\Heglig Main\Heglig-49\Heglig-49_ PDF masterlog_31-1723m.pdf
+E:\sutan\Heglig Main\Heglig-49\HEGLIG-49_GR.las
+E:\sutan\Heglig Main\Heglig-49\HEGLIG49-CBL (1).PDF
+E:\sutan\Heglig Main\Heglig-49\HEGLIG49-CBL (2).PDF
+E:\sutan\Heglig Main\Heglig-49\HEGLIG49-CBL (3).PDF
+E:\sutan\Heglig Main\Heglig-49\HEGLIG49-CBL.pdf
+E:\sutan\Heglig Main\Heglig-49\heglig49slam.las
+E:\sutan\Heglig Main\Heglig-49\Heglig_49SUM.Las
+E:\sutan\Heglig Main\Heglig-50\HE-50.LAS
+E:\sutan\Heglig Main\Heglig-50\Heglig-50_masterlog pdf_30-2425m.pdf
+E:\sutan\Heglig Main\Heglig-50\heglig50 CBL.pdf
+E:\sutan\Heglig Main\Heglig-50\heglig50.PDF
+E:\sutan\Heglig Main\Heglig-50\PETROPHYSICAL SUMMARY FOR HEGLIG 50.doc
+E:\sutan\Heglig Main\Heglig-51\Heg51ST_Aradeiba_E.gif
+E:\sutan\Heglig Main\Heglig-51\Heg51ST_Aradeiba_F.gif
+E:\sutan\Heglig Main\Heglig-51\Heg51ST_Aradeiba_Main.gif
+E:\sutan\Heglig Main\Heglig-51\Heglig-51(ST)_masterlog pdf_30-2327m.pdf
+E:\sutan\Heglig Main\Heglig-51\PETROPHYSICAL SUMMARY FOR HEGLIG 51.doc
+E:\sutan\Heglig Main\Heglig-51\Summation_Results_Heglig_51_MD.xls
+E:\sutan\Heglig Main\Heglig-51\Summation_Results_Heglig_51_TVD.xls
+E:\sutan\Heglig Main\Heglig-52-core\CBL-zone1.PDF
+E:\sutan\Heglig Main\Heglig-52-core\CBL-zone2.PDF
+E:\sutan\Heglig Main\Heglig-52-core\Heg-52 FMT Fluid data.xls
+E:\sutan\Heglig Main\Heglig-52-core\Heg52_Aradeib_Main_Sand.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heg52_Bentiu_1_Sand.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heg52_Bentiu_2_Sand.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heg52_Bentiu_3_Sand.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_masterlog_30-1950m.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig_52.Las
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Conventional Core Analysis  HEGLIG -52  Report.doc
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Cover Page.doc
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\HEGLIG -52 CORE SUMMERY SHEET.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\HEGLIG -52 D & S TABULATE DATA.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\HEGLIG -52 FLOW Diagram.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\HEGLIG -52 TABULATE DATA.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\HEGLIG -52Whole Core Data.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Heglig-52, Spectral gamma.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Probe Measurements Heglig -52.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Routine  Histogram.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Composite Log\LOG Heglig 52.WCL
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\CORE INFO\Box Log HEGLIG -52.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\CORE INFO\Plugging list HEGLIG -52.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\CORE INFO\Preserved Core samples HEGLIG -52.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\CORE INFO\Whole Core samples HEGLIG -52.xls
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Cross Plots\HEGLIG -52 Crossplot Core-1.xlS
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Cross Plots\HEGLIG -52 Crossplot Core-2.xlS
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Cross Plots\HEGLIG -52 Crossplot.xlS
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\1 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\2 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\3 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\4 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\5 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\6 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\7 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\8 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\9 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\After\Thumbs.db
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\1 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\2 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\3 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\4 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\5 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\6 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\7 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\8 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Befor\9 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\1 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\2 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\3 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\4 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\5 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\6 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\7 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\8 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\uv\9 copy.gif
+E:\sutan\Heglig Main\Heglig-52-core\Conventional Core Analysis HEGLIG -52 Final Report\Photography\Whole Core Photograph\sample no 4.psd
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\contact_us.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\index.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\D__Attached Documents_Heglig52 - Stabilization and core handling report.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\Heglig 52  KIRK REPORT Core Log Sheet.xls
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\Heglig52 - Stabilization and core handling report.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\Kirk Foam brochure.PDF
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\_vti_cnf\Heglig 52  KIRK REPORT Core Log Sheet.xls
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\_vti_cnf\Heglig52 - Stabilization and core handling report.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\aquisition\_vti_cnf\Kirk Foam brochure.PDF
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\Heglig 52  KIRK REPORT Core Log Sheet.xls
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\Heglig52 - Stabilization and core handling report.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\Kirk Foam brochure.PDF
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\_vti_cnf\Heglig 52  KIRK REPORT Core Log Sheet.xls
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\_vti_cnf\Heglig52 - Stabilization and core handling report.pdf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Attached Documents\_vti_cnf\Kirk Foam brochure.PDF
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198785.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198786.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198787.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198788.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198789.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198790.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198791.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198792.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198793.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198794.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198795.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198796.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198797.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198799.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\P1198800.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\Thumbs.db
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\Tubes # 1,2 & 3.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\Tubes # 4,5 & 6.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\Tubes # 7 & 8.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198785.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198786.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198787.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198788.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198789.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198790.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198791.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198792.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198793.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198794.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198795.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198796.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198797.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198799.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\P1198800.JPG
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\Thumbs.db
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\Tubes # 1,2 & 3.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\Tubes # 4,5 & 6.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 1\_vti_cnf\Tubes # 7 & 8.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Picture 312.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Picture 313.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Picture 314.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Thumbs.db
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Tubes # 1, 2 & 3.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Tubes # 4, 5 & 6.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Tubes # 7 & 8.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\Tubes # 9 & 10.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Picture 312.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Picture 313.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Picture 314.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Thumbs.db
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Tubes # 1, 2 & 3.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Tubes # 4, 5 & 6.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Tubes # 7 & 8.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\Core 2\_vti_cnf\Tubes # 9 & 10.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\index.2.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\Kirk Logo Transparent.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\middle.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\_vti_cnf\index.2.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\_vti_cnf\Kirk Logo Transparent.jpg
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\images\_vti_cnf\middle.gif
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_borders\top.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_borders\_vti_cnf\top.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_cnf\contact_us.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_cnf\index.htm
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\botinfs.cnf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\bots.cnf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\deptodoc.btr
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\doctodep.btr
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\linkinfo.cnf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\service.cnf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\service.lck
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\services.cnf
+E:\sutan\Heglig Main\Heglig-52-core\Heglig-52_CORE-STABILIZATION\_vti_pvt\structure.cnf
+E:\sutan\Heglig Main\Heglig-53\bentiu1.PDF
+E:\sutan\Heglig Main\Heglig-53\HEGLIG-53 (GR#1).las
+E:\sutan\Heglig Main\Heglig-53\Heglig-53_PDF masterlog_30-1900m 070211pdf.pdf
+E:\sutan\Heglig Main\Heglig-53\heglig53.las
+E:\sutan\Heglig Main\Heglig-53\Heglig_53Rsm.las
+E:\sutan\Heglig Main\Heglig-53\Heglig_A.gif
+E:\sutan\Heglig Main\Heglig-53\Heglig_B1BA.gif
+E:\sutan\Heglig Main\Heglig-53\Heglig_B2.gif
+E:\sutan\Heglig Main\Heglig-53\GR#1\HEGLIG-53 (GR#1).las
+E:\sutan\Heglig Main\Heglig-54\HE-54 CBL.PDF
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_ FMT Fluid Data.xls
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_ Pressure Analysis.xls
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_CAL LAS_070307.las
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_MWD Survey report.xls
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_PDF Masterlog_30-1750m.pdf
+E:\sutan\Heglig Main\Heglig-54\Heglig-54_SLAM Data.las
+E:\sutan\Heglig Main\Heglig-54\Heglig54_Aradeiba.gif
+E:\sutan\Heglig Main\Heglig-54\Heglig54_Bentiu.gif
+E:\sutan\Heglig Main\Heglig-54\PETROPHYSICAL SUMMARY FOR HEGLIG 54.doc
+E:\sutan\Heglig Main\Heglig-54\Summation Results_HEGLIG _54.xls
+E:\sutan\Heglig Main\Heglig-55\HE-55 Geological Prognosis.doc1.doc
+E:\sutan\Heglig Main\Heglig-55\HE-55 Map  Seismic sections.ppt
+E:\sutan\Heglig Main\Heglig-55\Heglig 55 CBL.PDF
+E:\sutan\Heglig Main\Heglig-55\Heglig 55 Result.xls
+E:\sutan\Heglig Main\Heglig-55\Heglig-55 PDF masterlog_31-1720m_080311.pdf
+E:\sutan\Heglig Main\Heglig-55\Heglig-55.las
+E:\sutan\Heglig Main\Heglig-55\Heglig-55_ FMT Fluid Data.xls
+E:\sutan\Heglig Main\Heglig-55\Heglig-55_FMT pressure data.xls
+E:\sutan\Heglig Main\Heglig-55\Heglig-55_FMT pressure Plot.xls
+E:\sutan\Heglig Main\Heglig-55\Heglig-55_pdf SLAM TD_080312.PDF
+E:\sutan\Heglig Main\Heglig-55\heglig55cbl.PDF
+E:\sutan\Heglig Main\Heglig-55\Heglig_55.pds
+E:\sutan\Heglig Main\Heglig-55\Heglig_55r.las
+E:\sutan\Heglig Main\Heglig-55\PETROPHYSICAL SUMMARY FOR  Heglig 55.doc
+E:\sutan\Heglig Main\Heglig-56\Heglig-56 _ Final PDF masterlog_31-1730m.pdf
+E:\sutan\Heglig Main\Heglig-56\heglig56-cbl.PDF
+E:\sutan\Heglig Main\Heglig-56\Heglig56.las
+E:\sutan\Heglig Main\Heglig-56\heglig56cbl-1625.PDF
+E:\sutan\Heglig Main\Heglig-56\Heglig56_MD.pds
+E:\sutan\Heglig Main\Heglig-56\Heglig56_TVD.pds
+E:\sutan\Heglig Main\Heglig-56\Sum - Table heglig 56.xls
+E:\sutan\Heglig Main\Heglig-57\heglig 5 7 10.ppt
+E:\sutan\Heglig Main\Heglig-57\Heglig-57_ Final PDF Masterlog.pdf
+E:\sutan\Heglig Main\Heglig-58\Heglig-58_1225in Section RMud.las
+E:\sutan\Heglig Main\Heglig-58\Heglig-58_85in Section RMud.las
+E:\sutan\Heglig Main\Heglig-58\Heglig-58_Final Masterlog_30-2276m.pdf
+E:\sutan\Heglig Main\Heglig-59\Heglig-59_final PDF Masterlog_30-2250m_080417.pdf
+E:\sutan\Heglig Main\Heglig-60\Heglig-60_ Final Masterlog PDF_30-2250m.pdf
+E:\sutan\Heglig Main\Heglig-61\Heglig-61_Final Masterlog_30-2405m.pdf.pdf
+E:\sutan\Heglig Main\Heglig-61\Heglig_61_Combined_Section_RM_LAS.las
+E:\sutan\Heglig Main\Heglig-61\PETROPHYSICAL SUMMATION RESULTS.xls
+E:\sutan\Heglig Main\Heglig-62\Heglig-62_ Final PDF Masterlog.pdf
+E:\sutan\Heglig Main\Heglig-62\Heglig-62_LWD RM_LAS_Compsite Section_930-2336m MD.LAS
+E:\sutan\Heglig Main\Heglig-63\HG-63_Final LAS.las
+E:\sutan\Heglig Main\Heglig-64\HEGLIG - 64 - PETROPHYSICAL SUMMARY.xls
+E:\sutan\Heglig Main\Heglig-64\heglig64-cbl.PDF
+E:\sutan\Heglig Main\Heglig-64\LASOutput_Heglig64_RM_1100m_1809.5m_20_May_08.LAS
+E:\sutan\Heglig Main\Heglig-64\Unity-64 final PDF Masterlog.pdf
+E:\sutan\Heglig Main\Heglig-65\cbl.PDF
+E:\sutan\Heglig Main\Heglig-65\Heglig-65_Master log pdf_30-1791m.pdf
+E:\sutan\Heglig Main\Heglig-65\Heglig-65_slam#1_080408.las
+E:\sutan\Heglig Main\Heglig-65\tcpinterval.PDF
+E:\sutan\Heglig Main\Heglig-66\HEGLIG-66_175in.las
+E:\sutan\Heglig Main\Heglig-66\Heglig-66_Final PDF Masterlog _30-2419m.pdf
+E:\sutan\Heglig Main\Heglig-67\HE-67_LWD LAS_RM_080617.las
+E:\sutan\Heglig Main\Heglig-67\Heglig-67_PDF Masterlog_30-2528m.pdf
+E:\sutan\Heglig Main\Heglig-68\Heglig-68_Final Masterlog_30-2436m.pdf
+E:\sutan\Heglig Main\Heglig-69\HE-69_Final Masterlog_30-2274m_080906.pdf
+E:\sutan\Heglig Main\Heglig-69\Heglig 69 Sum Result .xls
+E:\sutan\Heglig Main\Heglig-69\HEGLIG-69.LAS
+E:\sutan\Heglig Main\Heglig-69\PETROPHYSICAL SUMMARY FOR  Heglig 69.doc
+E:\sutan\Heglig Main\Heglig-71\Heglig-71_ Final Masterlog PDF_30-2168m.pdf
+E:\sutan\Heglig Main\Heglig-71\Heglig-71_LWD LAS_RM_110510_.las
+E:\sutan\Heglig Main\Heglig-71\Heglig-71_LWD VISION Resistivity_RM Composite Log.pdf
+E:\sutan\Heglig Main\Heglig-72\GNPOC Heglig 72 dev Main pass ConPr_R1L6Up_SPE_PPC_DSLT_HRLT_HDRS_HGNS__07Jul13_174202.las
+E:\sutan\Heglig Main\Heglig-72\HEG-72-CBL2TT.PDF
+E:\sutan\Heglig Main\Heglig-72\HEG-72-CBLTT.PDF
+E:\sutan\Heglig Main\Heglig-72\Heglig-72_Final PDF Masterlog_30-1750m_130703.pdf
+E:\sutan\Heglig Main\Heglig-72\Heglig-72_Final Well Report.DOC
+E:\sutan\Heglig Main\Heglig-72\Heglig-72_Fluid  Data_Suit#1_run#2_130705.xls
+E:\sutan\Heglig Main\Heglig-72\Heglig-72_Suite#1_Run#2_MDT-GR_Pretest Data_130705.xls
+E:\sutan\Heglig Main\Heglig-72\ASCII Data\Heglig-72_ Final Mudlog Gas & Lith Ascii_30-1750m.xls
+E:\sutan\Heglig Main\Heglig-72\ASCII Data\Heglig-72_Final Drilling Parameter Ascii_30-1750m.xls
+E:\sutan\Heglig Main\Heglig-72\Bit Performance PDF\Heglig-72_Bit #1.pdf
+E:\sutan\Heglig Main\Heglig-72\Bit Performance PDF\Heglig-72_Bit #2.pdf
+E:\sutan\Heglig Main\Heglig-72\Bit Performance PDF\Heglig-72_Bit #3.pdf
+E:\sutan\Heglig Main\Heglig-72\Bit Performance PDF\Heglig-72_Bit #4.pdf
+E:\sutan\Heglig Main\Heglig-73\GNPOC_Heglig-73_PEX-HRLA-BHC-PPC-SP_14-Jul-2013_Main.las
+E:\sutan\Heglig Main\Heglig-73\Heglig 73 Deviation plan V1.xls
+E:\sutan\Heglig Main\Heglig-73\Heglig 73 Interpreted las file.las
+E:\sutan\Heglig Main\Heglig-73\Heglig 73 Result.xlsx
+E:\sutan\Heglig Main\Heglig-73\Heglig 73.bmp
+E:\sutan\Heglig Main\Heglig-73\Heglig 73.las
+E:\sutan\Heglig Main\Heglig-73\Heglig 73_AMS.bmp
+E:\sutan\Heglig Main\Heglig-73\Heglig 73_Ben1A.bmp
+E:\sutan\Heglig Main\Heglig-73\Heglig-73_Final PDF Masterlog_30-2065m_130713.pdf
+E:\sutan\Heglig Main\Heglig-74\GNPOC_Heglig-74_1225in-Section_RT_Las_1000 -1470m_130803.LAS
+E:\sutan\Heglig Main\Heglig-74\Heglig -74ST_PDF Masterlog_30 - 2340m.pdf
+E:\sutan\Heglig Main\Heglig-74\Heglig-74_ Survey Report_130803.xlsx
+E:\sutan\Heglig Main\Heglig-76\Heglig -76_Final Well Report.DOC
+E:\sutan\Heglig Main\Heglig-76\Heglig 76 Interpreted las file.las
+E:\sutan\Heglig Main\Heglig-76\Heglig 76 plot.bmp
+E:\sutan\Heglig Main\Heglig-76\Heglig 76 Result.xlsx
+E:\sutan\Heglig Main\Heglig-76\Heglig-76_Final PDF Masterlog_30-1750m.pdf
+E:\sutan\Heglig Main\Heglig-76\heglig76slam.las
+E:\sutan\Heglig Main\Heglig-76\heglig76slam.PDF
+E:\sutan\Heglig Main\Heglig-76\ASCII Data\Heglig-76_Drilling ascii_30-1750m_Final data.xls
+E:\sutan\Heglig Main\Heglig-76\ASCII Data\Heglig-76_Mudlog & Litho Ascii_30-1750m_Final data.xls
+E:\sutan\Heglig Main\Heglig-76\Bit Performance PDF\Bit#1 PDF.pdf
+E:\sutan\Heglig Main\Heglig-76\Bit Performance PDF\Bit#2 PDF.pdf
+E:\sutan\Heglig Main\Heglig-77\Heglig-77_RT LAS MD_2140-2300m_131019.las
+E:\sutan\Heglig Main\Heglig-77\Heglig-77_RT LAS TVD_2140-2300m_131019.las
+E:\sutan\Heglig Main\Heglig-77\Heglig-77_RT Log_2140-2300m_131019.Pdf
+E:\sutan\Heglig Main\Heglig-77\Heglig-77_Survey Report _131019.xlsx
+E:\sutan\Heglig Main\Heglig-79\Heglig-79_Final PDF Masterlog_30-2350m_140820.pdf
+E:\sutan\Heglig Main\Heglig-79\Heglig-79_VISION Resistivity_12.25in_RM_014814las.las
+E:\sutan\Heglig Main\Heglig-81\GNPOC_Heglig-81_CBL-VDL-GR-CCL ( 7 in Casing )_24-Oct-2013.Pdf
+E:\sutan\Heglig Main\Heglig-81\Heglig 81 Interpreted las file.las
+E:\sutan\Heglig Main\Heglig-81\Heglig 81 Result.xlsx
+E:\sutan\Heglig Main\Heglig-81\Heglig-81_Suite#1_Run#1_SLAM-Combined_las_130906.las
+E:\sutan\Heglig Main\Heglig-81\Heglig-81_Suite#1_Run#1_SLAM-Combined_PDF_130906.PDF
+E:\sutan\Heglig Main\Heglig-81\Heglig_81.jpg
+E:\sutan\Heglig Main\Heglig-81\Heglig_81_AE & Ben.jpg
+E:\sutan\Heglig Main\Heglig-83\Heglig-83_ASCII_LAS_Field Print__131213.las
+E:\sutan\Heglig Main\Heglig-83\Heglig-83_PDF Masterlog_30 - 1860_131210.pdf
+E:\sutan\Heglig Main\Heglig-83\Heglig-83_TVD_MD Log_Field Print_131213.Pdf
+E:\sutan\Heglig Main\Heglig-83\HEGLIG83_CBL (1).PDF
+E:\sutan\Heglig Main\Heglig-83\HEGLIG83_CBL.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\Heglig _AG-1_Post Test Table.xls
+E:\sutan\Heglig Main\Heglig-AG-01\Heglig_AG-1_vcly_PHIT_Sw.las
+E:\sutan\Heglig Main\Heglig-AG-01\ASCII Data\Heglig AG-1_ Final Drilling  ascii_30-3798m.xls
+E:\sutan\Heglig Main\Heglig-AG-01\ASCII Data\Heglig AG-1_Final Mudlog Gas and Lithology ascii_30-3798m.xls
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#1.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#10.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#11.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#12.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#13.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#14.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#2.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#3.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#4.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#5.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#6.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#7.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#8.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\Bit Performance PDF\Heglig AG-1_Bit#9.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL)-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL).las
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL).meta
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL).PDF
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL).tap
+E:\sutan\Heglig Main\Heglig-AG-01\CBL\HEGLIG AG-1 (CBL).xtf
+E:\sutan\Heglig Main\Heglig-AG-01\devcal\dev-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\devcal\devcal.las
+E:\sutan\Heglig Main\Heglig-AG-01\devcal\devcal.meta
+E:\sutan\Heglig Main\Heglig-AG-01\devcal\devcal.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\devcal\devcal.tap
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt.meta
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt.tap
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt01.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt02.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt03.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt04.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt05.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt06.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt07.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt08.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt09.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt10.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt11.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt12.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt13.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt14.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt15.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt16.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt17.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt18.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt19.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt20.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt21.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt22.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt23.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt24.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt25.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt26.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt27.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt28.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt29.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt30.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt31.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt32.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt33.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt34.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt35.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt36.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt37.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt38.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt39.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt40.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt41.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\fmt42.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\gr01.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\gr02.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\gr03.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\s01.las
+E:\sutan\Heglig Main\Heglig-AG-01\fmt\s02.las
+E:\sutan\Heglig Main\Heglig-AG-01\GR\Combined.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\GR\PERFO_075LUP.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\GR Correlation_Suite 1_Run 5\Client Package\DLIS\Main On Depth\CORRELATION_1_012.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\GR Correlation_Suite 1_Run 5\Client Package\DLIS\Main On Depth\PERFO_012PUP.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\GR Correlation_Suite 1_Run 5\Client Package\DLIS\Main On Depth\PERFO_012PUP.las
+E:\sutan\Heglig Main\Heglig-AG-01\GR Correlation_Suite 1_Run 5\Client Package\PDS & PDF\GNPOC_Heglig AG-1_Suite 1_Run 5_GR Correlation_11-Nov-2011.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\GR Correlation_Suite 1_Run 5\Client Package\PDS & PDF\GNPOC_Heglig AG-1_Suite 1_Run 5_GR Correlation_11-Nov-2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\Masterlog PDF\Heglig AG-1_Final masterlog_30-3798m.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\ASCII\GNPOC Heglig AG-1 Main CAL_HRLA_TLD_MCFL_040PUC.las
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\DLIS\GNPOC Heglig AG-1 Main CAL_HRLA_TLD_MCFL_040PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\DLIS\GNPOC Heglig AG-1 Repeat CAL_HRLA_TLD_MCFL_042PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\PDS\GNPOC Heglig AG-1 BGL log 10Aug2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\PDS\GNPOC Heglig AG-1 Composite log 10Aug2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R1 PEX-HRLA-HNGS-PPC-SP\PDS\GNPOC Heglig AG-1 HNGS log 10Aug2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R2 FMI-DSI\ASCII\GNPOC Heglig AG-1 S1 R2 FMI_DSI_CAL_008PUC.las
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R2 FMI-DSI\DLIS\GNOC Heglig AG-1 S1 R2  FMI_DSI_CAL_014PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R2 FMI-DSI\DLIS\GNOC Heglig AG-1 S1 R2 FMI_DSI_CAL_008PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R2 FMI-DSI\PDS\GNPOC Heglig AG -1 S1 R2 DSI Composite.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R2 FMI-DSI\PDS\GNPOC Heglig AG-1  S1 R2 FMI-GR .PDS
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\Excell Sheet\GNPOC_Heglig AG-1_ZVSP_13-Aug-2011.xls
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\Report\Report.pdf
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_geo_wavefield_x.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_geo_wavefield_y.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_geo_wavefield_z.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_s1.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_s2.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_s3.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_x.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_y.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_nascent_shot_z.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_geo_x.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_geo_y.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_geo_z.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_s1.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_s2.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_shot_s3.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_stack_geo_x.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_stack_geo_y.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\S1 R3 VSP-GR\SEGY\VSI_002_A_raw_stack_geo_z.sgy
+E:\sutan\Heglig Main\Heglig-AG-01\slam\slam-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\slam\slam.las
+E:\sutan\Heglig Main\Heglig-AG-01\slam\slam.meta
+E:\sutan\Heglig Main\Heglig-AG-01\slam\slam.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\slam\slam.tap
+E:\sutan\Heglig Main\Heglig-AG-01\Spectrum log\sl-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\Spectrum log\spectrum.las
+E:\sutan\Heglig Main\Heglig-AG-01\Spectrum log\spectrum.meta
+E:\sutan\Heglig Main\Heglig-AG-01\Spectrum log\spectrum.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\Spectrum log\spectrum.tap
+E:\sutan\Heglig Main\Heglig-AG-01\swc\gr01.las
+E:\sutan\Heglig Main\Heglig-AG-01\swc\gr02.las
+E:\sutan\Heglig Main\Heglig-AG-01\swc\gr03.las
+E:\sutan\Heglig Main\Heglig-AG-01\swc\gr04.las
+E:\sutan\Heglig Main\Heglig-AG-01\swc\swc-hdf.lis
+E:\sutan\Heglig Main\Heglig-AG-01\swc\swc.meta
+E:\sutan\Heglig Main\Heglig-AG-01\swc\swc.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\swc\swc.tap
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\7in casing\FPM Pass\USI_SONIC_024LDC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\7in casing\Main Pass\USI_SONIC_069PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\7in casing\Repeat Pass\USI_SONIC_070PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\9.625in casing\FPM Pass\USI_SONIC_047LDC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\9.625in casing\FPM Pass\USI_SONIC_050LDC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\9.625in casing\Main Pass\USI_SONIC_075PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\DLIS\9.625in casing\Repeat Pass\USI_SONIC_077PUC.DLIS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\7in casing\Run #1_CBL-VDL-GR-CCL\PDF\GNPOC_Heglig AG-1_CBL-VDL-GR-CCL(7in casing)_18-Oct-2011.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\7in casing\Run #1_CBL-VDL-GR-CCL\PDS\GNPOC_Heglig AG-1_CBL-VDL-GR-CCL(7in casing)_18-Oct-2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\7in casing\Run #1_USIT-GR-CCL\PDF\GNPOC_Heglig AG-1_USIT-GR-CCL(7in casing) _18-Oct-2011.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\7in casing\Run #1_USIT-GR-CCL\PDS\GNPOC_Heglig AG-1_USIT-GR-CCL(7in casing)_18-Oct-2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\9.625in casing\Run #1_CBL-VDL-GR-CCL\PDF\GNPOC_Heglig AG-1_CBL-VDL-GR-CCL(9.625in casing)_18-Oct-2011.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\9.625in casing\Run #1_CBL-VDL-GR-CCL\PDS\GNPOC_Heglig AG-1_CBL-VDL-GR-CCL(9.625in casing)_18-Oct-2011.PDS
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\9.625in casing\Run #1_USIT-GR-CCL\PDF\GNPOC_Heglig AG-1_USIT-GR-CCL(9.625in casing)_18-Oct-2011.PDF
+E:\sutan\Heglig Main\Heglig-AG-01\USIT-CBL-VDL-GR-CCL\Graphical\9.625in casing\Run #1_USIT-GR-CCL\PDS\GNPOC_Heglig AG-1_USIT-GR-CCL(9.625in casing)_18-Oct-2011.PDS

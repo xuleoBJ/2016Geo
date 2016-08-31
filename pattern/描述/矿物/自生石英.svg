@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="1" version="1.1" width="1" id="svg2" inkscape:version="0.91 r13725" sodipodi:docname="自生石英.svg">
+  <metadata id="metadata8">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs6">
+    <inkscape:path-effect effect="skeletal" id="path-effect4197" is_visible="true" pattern="m -0.015625,4.9765625 c 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z" copytype="single_stretched" prop_scale="1" scale_y_rel="false" spacing="0" normal_offset="0" tang_offset="0" prop_units="false" vertical_pattern="false" fuse_tolerance="0" />
+    <inkscape:path-effect effect="spiro" id="path-effect4195" is_visible="true" />
+    <inkscape:path-effect effect="skeletal" id="path-effect4190" is_visible="true" pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 Z" copytype="single_stretched" prop_scale="1" scale_y_rel="false" spacing="0" normal_offset="0" tang_offset="0" prop_units="false" vertical_pattern="false" fuse_tolerance="0" />
+    <inkscape:path-effect effect="spiro" id="path-effect4188" is_visible="true" />
+    <pattern width="1" height="1" id="自生石英" patternContentUnits="objectBoundingBox">
+      <path style="fill:#000000" d="M 0.1693399,0.81668348 C 0.0972829,0.79452936 0.0890562,0.67995872 0.1570346,0.6453111 c 0.0610072,-0.0310944 0.12401885,0.012921 0.12401885,0.0866306 0,0.0464561 -0.0272978,0.0775119 -0.0784351,0.0892332 -0.005883,0.001349 -0.0208581,-6.7475e-4 -0.0332784,-0.004489 z m 0.62035064,0 c -0.072057,-0.0221539 -0.0802837,-0.13672476 -0.0123053,-0.17137238 0.0610071,-0.0310944 0.12401881,0.012921 0.12401881,0.0866306 0,0.0464561 -0.0272978,0.0775119 -0.0784351,0.0892332 -0.005883,0.001349 -0.0208581,-6.7475e-4 -0.0332784,-0.004489 z M 0.46644569,0.29133923 c -0.0653102,-0.0360332 -0.0621152,-0.13796057 0.005273,-0.16820286 0.0721991,-0.03240124 0.14371979,0.0444174 0.11355305,0.12196513 -0.0195055,0.0501414 -0.0735989,0.0711904 -0.1188256,0.0462377 z" id="path4209" inkscape:connector-curvature="0" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1680" inkscape:window-height="988" id="namedview4" showgrid="false" inkscape:zoom="256" inkscape:cx="0.5" inkscape:cy="0.5" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2" />
+  <path style="fill:#000000" d="M 0.1693399,0.81668348 C 0.0972829,0.79452936 0.0890562,0.67995872 0.1570346,0.6453111 c 0.0610072,-0.0310944 0.12401885,0.012921 0.12401885,0.0866306 0,0.0464561 -0.0272978,0.0775119 -0.0784351,0.0892332 -0.005883,0.001349 -0.0208581,-6.7475e-4 -0.0332784,-0.004489 z m 0.62035064,0 c -0.072057,-0.0221539 -0.0802837,-0.13672476 -0.0123053,-0.17137238 0.0610071,-0.0310944 0.12401881,0.012921 0.12401881,0.0866306 0,0.0464561 -0.0272978,0.0775119 -0.0784351,0.0892332 -0.005883,0.001349 -0.0208581,-6.7475e-4 -0.0332784,-0.004489 z M 0.46644569,0.29133923 c -0.0653102,-0.0360332 -0.0621152,-0.13796057 0.005273,-0.16820286 0.0721991,-0.03240124 0.14371979,0.0444174 0.11355305,0.12196513 -0.0195055,0.0501414 -0.0735989,0.0711904 -0.1188256,0.0462377 z" id="path4209" inkscape:connector-curvature="0" />
+</svg>

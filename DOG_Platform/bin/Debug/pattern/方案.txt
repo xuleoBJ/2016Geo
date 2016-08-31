@@ -1,0 +1,7 @@
+文件名命名 patternID.svg
+用程序生成svg模板，再生成pattern，改patternID。
+
+泥粉砂和粉砂泥都在03版本都只有1个文件，归到常用里就OK。
+
+"objectBoundingBox" 注意两种模式
+

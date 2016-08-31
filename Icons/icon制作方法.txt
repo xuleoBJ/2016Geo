@@ -1,0 +1,8 @@
+1 用程序生成一个16X16或者其它大小的SVG文件
+2 画icon
+3 inkscape文档设成background为0或者其它强色 保存成png
+4 gmip打开png文件
+5 gmip 图层 透明 选择 添加alpha通道
+6 模糊选择工具 选择背景 
+7 按delete 删除背景。
+8 完成Icon制作。

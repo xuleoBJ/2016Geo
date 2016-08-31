@@ -1,0 +1,9 @@
+构型元素Miall1985	ch_MajorChannel
+构型元素Miall1985	ch_MinorChannel
+构型元素Miall1985	FF_Floodplainfines
+构型元素Miall1985	GM_GravelBarsAndBedforms
+构型元素Miall1985	Ho_HollowElement
+构型元素Miall1985	LA_LateralAccretionDeposit
+构型元素Miall1985	Ls_laminateSandSheet
+构型元素Miall1985	SB_sandBedforms
+构型元素Miall1985	SP

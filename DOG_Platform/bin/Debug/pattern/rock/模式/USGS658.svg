@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg345073"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="USGS658.svg">
+  <defs
+     id="defs345075">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern136353"
+       id="USGS658"
+       patternTransform="matrix(1.25,0,0,-1.25,-616.68341,561.51897)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#sed658"
+       id="pattern136353"
+       patternTransform="translate(-86.61125,427.96051)" />
+    <pattern
+       id="sed658"
+       height="54.125"
+       width="54.125"
+       y="0"
+       x="0"
+       patternUnits="userSpaceOnUse"
+       patternTransform="translate(4.51562,97.5605)">
+      <path
+         id="path10392"
+         style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 0,54.125 54.125,0 L 54.125,0 0,0 0,54.125 z" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.87792642"
+     inkscape:cx="294.28571"
+     inkscape:cy="515.71429"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata345078">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       id="text1874-9"
+       x="132.39993"
+       y="419.90961"
+       style="font-size:15px">
+      <tspan
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;font-family:'Myriad Pro';-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="132.39993 138.40738 144.41489"
+         y="419.90961"
+         sodipodi:role="line"
+         id="tspan1876-1">658</tspan>
+    </text>
+    <text
+       id="text1878"
+       x="132.98428"
+       y="430.40961"
+       style="font-size:15px">
+      <tspan
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75px;font-family:'Myriad Pro';-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         x="132.98428 138.14676 143.13431 147.53555"
+         y="430.40961"
+         sodipodi:role="line"
+         id="tspan1880">Coal</tspan>
+    </text>
+    <path
+       inkscape:connector-curvature="0"
+       d="m 174.9919,353.15586 -67.5,0 0,54 67.5,0 0,-54 z"
+       style="fill:url(#USGS658);fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path10394-0" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 174.9919,353.15586 -67.5,0 0,54 67.5,0 0,-54 z"
+       style="fill:none;stroke:#231f20;stroke-width:0.53750002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path10396" />
+  </g>
+</svg>

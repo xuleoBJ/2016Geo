@@ -1,0 +1,10 @@
+E:\leoJob2013\2013Project\DataManager\DataManager\bin\Debug\DataManager.exe
+E:\leoJob2013\2013Project\DataManager\DataManager\bin\Debug\DataManager.pdb
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\ResolveAssemblyReference.cache
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\DataManager.FormMain.resources
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\DataManager.Properties.Resources.resources
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\PetrelProject.csproj.GenerateResource.Cache
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\DataManager.exe
+E:\leoJob2013\2013Project\DataManager\DataManager\obj\Debug\DataManager.pdb
+E:\leoJob2013\2013Project\XLeoPetroleumProjectPlatform\DataManager\obj\Debug\DataManager.exe
+E:\leoJob2013\2013Project\XLeoPetroleumProjectPlatform\DataManager\obj\Debug\DataManager.pdb

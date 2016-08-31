@@ -1,0 +1,6 @@
+1. 将生成的msi文件右键点击卸载。重新安装即可！出现这个错误的原因是之前的程序没有卸载干净产生的。
+2. regedit -> 删除所有 geoscape 相关的选项
+3. HKEY_CURRENT_USER \ Software \ Microsoft \ Installer \ Products\
+找到包含对应的安装程序的项（Products下的子节点），删除，重新安装即可。
+4.HKEY_CLASSES_ROOT\Installer\Products\0BA4F44875FCC2D499948BD3C3FA9475 删除
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="1" version="1.1" width="1" id="svg2" inkscape:version="0.91 r13725" sodipodi:docname="角砾构造.svg">
+  <metadata id="metadata8">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs6">
+    <pattern width="1" height="1" id="角砾构造" patternContentUnits="objectBoundingBox">
+      <path sodipodi:type="star" style="opacity:0.8;fill:none;fill-opacity:0.38823529;fill-rule:nonzero;stroke:#000000;stroke-width:0.01417721;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="path4135" sodipodi:sides="3" sodipodi:cx="0.4375" sodipodi:cy="0.546875" sodipodi:r1="0.15900885" sodipodi:r2="0.079504423" sodipodi:arg1="0.48562209" sodipodi:arg2="1.5328196" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" d="M 0.578125,0.62109375 0.30291218,0.63155045 0.43146282,0.3879808 Z" inkscape:transform-center-x="0.00025577382" inkscape:transform-center-y="-0.085080102" transform="matrix(2.0848749,0.07813062,-0.08243403,2.1446469,-0.37360027,-0.62304948)" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1680" inkscape:window-height="988" id="namedview4" showgrid="false" inkscape:zoom="256" inkscape:cx="1.2913766" inkscape:cy="-0.34765625" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2" />
+  <path sodipodi:type="star" style="opacity:0.8;fill:none;fill-opacity:0.38823529;fill-rule:nonzero;stroke:#000000;stroke-width:0.01417721;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="path4135" sodipodi:sides="3" sodipodi:cx="0.4375" sodipodi:cy="0.546875" sodipodi:r1="0.15900885" sodipodi:r2="0.079504423" sodipodi:arg1="0.48562209" sodipodi:arg2="1.5328196" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" d="M 0.578125,0.62109375 0.30291218,0.63155045 0.43146282,0.3879808 Z" inkscape:transform-center-x="0.00025577382" inkscape:transform-center-y="-0.085080102" transform="matrix(2.0848749,0.07813062,-0.08243403,2.1446469,-0.37360027,-0.62304948)" />
+</svg>

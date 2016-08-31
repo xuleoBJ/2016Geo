@@ -1,0 +1,59 @@
+﻿SP	自然电位	MV	blue	0	100	0	1	0
+CAL	井径	IN	black	20	40	0	1	0
+GR	自然伽玛	API	black	0	100	0	1	0
+Rt	地层真电阻率	OMM	red	2	200	1	1	0
+BS	BitSize	IN	black	5	15	0	1	0
+DT	声波时差	US/F	black	50	100	0	1	0
+AC	声波时差	μ/m	black	200	300	0	1	0
+RHOB	密度	G/C3	black	2	3	0	1	0
+DEN	密度	g/cm3	black	2	3	0	1	0
+Rxo	冲洗带地层电阻率	OHMM	red	2	200	1	1	0
+Rd	深双侧向电阻率测井	OHMM	red	2	200	1	1	0
+Rs	浅双侧向电阻率测井	OHMM	red	2	200	1	1	0
+RMLL	微侧向电阻率测井	OHMM	red	2	200	1	1	0
+LLD	深侧向电阻率测井	OHMM	red	2	200	1	1	0
+LLS	浅侧向电阻率测井	OHMM	red	2	200	1	1	1
+R1	1米梯度	OHMM	red	2	200	1	1	0
+R4	4米梯度	OHMM	red	2	200	1	1	0
+R25	2.5米梯度	OHMM	red	2	200	1	1	0
+R8	8米梯度	OHMM	red	2	200	1	1	0
+R6	6米梯度	OHMM	red	2	200	1	1	0
+LLD7	七测向	OHMM	red	2	200	1	1	0
+CN	中子	V/V	black	0	20	0	1	0
+KTH	无铀伽马	API	black	0	100	0	1	0
+NGR	中子伽马	API	black	0	100	0	1	0
+U	铀	ppm	black	0	100	0	1	0
+K	钾	%	black	0	100	0	1	0
+TH	钍	ppm	black	0	100	0	1	0
+RXO	RXO		black	0	100	0	1	0
+DEVI	DEVI		black	0	100	0	1	0
+AZIM	AZIM		black	0	100	0	1	0
+RT	RT		black	0	100	0	1	0
+RI	RI		black	0	100	0	1	0
+C1	C1		black	0	100	0	1	0
+C2	C2		black	0	100	0	1	0
+CNL	CNL		black	0	100	0	1	0
+CNL%%%	CNL%%%		black	0	100	0	1	0
+DEN%%%	DEN%%%		black	0	100	0	1	0
+AC%%%	AC%%%		black	0	100	0	1	0
+TVD	TVD		black	0	100	0	1	0
+XE	XE		black	0	100	0	1	0
+YN	YN		black	0	100	0	1	0
+HOFS	HOFS		black	0	100	0	1	0
+HOAZ	HOAZ		black	0	100	0	1	0
+AZZ	AZZ		black	0	100	0	1	0
+VAC	VAC		black	0	100	0	1	0
+VAC%%%	VAC%%%		black	0	100	0	1	0
+VAZIM	VAZIM		black	0	100	0	1	0
+VC1	VC1		black	0	100	0	1	0
+VC2	VC2		black	0	100	0	1	0
+VCNL	VCNL		black	0	100	0	1	0
+VCNL%%%	VCNL%%%		black	0	100	0	1	0
+VDEN	VDEN		black	0	100	0	1	0
+VDEN%%%	VDEN%%%		black	0	100	0	1	0
+VDEVI	VDEVI		black	0	100	0	1	0
+VGR	VGR		black	0	100	0	1	0
+VRI	VRI		black	0	100	0	1	0
+VRT	VRT		black	0	100	0	1	0
+VRXO	VRXO		black	0	100	0	1	0
+VSP	VSP		black	0	100	0	1	0

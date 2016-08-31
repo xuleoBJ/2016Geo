@@ -1,0 +1,4 @@
+E:\ProjectPlatform\2015geo\geoIO\bin\Debug\geoIO.dll
+E:\ProjectPlatform\2015geo\geoIO\bin\Debug\geoIO.pdb
+E:\ProjectPlatform\2015geo\geoIO\obj\Debug\geoIO.dll
+E:\ProjectPlatform\2015geo\geoIO\obj\Debug\geoIO.pdb

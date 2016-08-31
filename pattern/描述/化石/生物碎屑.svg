@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="1" version="1.1" width="1" id="svg2" inkscape:version="0.91 r13725" sodipodi:docname="生物碎屑.svg">
+  <metadata id="metadata8">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs6">
+    <pattern width="1" height="1" id="生物碎屑" patternContentUnits="objectBoundingBox">
+      <path style="fill:#000000" d="M 0.1800443,0.55476585 C 0.10653637,0.50384116 0.04639357,0.4447887 0.04639357,0.42353864 c 0,-0.0616196 0.04124158,-0.0455668 0.14619856,0.0569064 0.15045912,0.14689845 0.38348326,0.13937539 0.55972935,-0.0180711 0.15158531,-0.13541612 0.15408558,-0.13680817 0.15408558,-0.0857986 0,0.0198579 -0.0549128,0.0835561 -0.12202892,0.14155205 C 0.61397667,0.66537284 0.3617726,0.68066291 0.1800443,0.55476559 Z" id="path33179" inkscape:connector-curvature="0" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1600" inkscape:window-height="838" id="namedview4" showgrid="false" inkscape:zoom="247.69108" inkscape:cx="0.72977633" inkscape:cy="-0.1097408" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg2" />
+  <path style="fill:#000000" d="M 0.1800443,0.55476585 C 0.10653637,0.50384116 0.04639357,0.4447887 0.04639357,0.42353864 c 0,-0.0616196 0.04124158,-0.0455668 0.14619856,0.0569064 0.15045912,0.14689845 0.38348326,0.13937539 0.55972935,-0.0180711 0.15158531,-0.13541612 0.15408558,-0.13680817 0.15408558,-0.0857986 0,0.0198579 -0.0549128,0.0835561 -0.12202892,0.14155205 C 0.61397667,0.66537284 0.3617726,0.68066291 0.1800443,0.55476559 Z" id="path33179" inkscape:connector-curvature="0" />
+  <ellipse style="opacity:0.9906977;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.03563509;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path4216" cx="0.46025068" cy="0.41257474" rx="0.011684241" ry="0.0096655972" />
+</svg>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <script type="text/javascript" src="d3.min.js"></script>
+	</head>
+	<body>
+          <div id="viz"></div>
+        <script type="text/javascript">
+
+            d3.xml("rect01.svg", "image/svg+xml", function (xml) {
+                document.body.appendChild(xml.documentElement);
+            });
+
+    </script> 
+
+	</body>
+</html>

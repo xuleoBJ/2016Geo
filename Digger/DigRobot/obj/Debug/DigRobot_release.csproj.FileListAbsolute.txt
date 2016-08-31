@@ -1,0 +1,13 @@
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.exe
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.pdb
+E:\leoJob2013\DigRobot\DigRobot\bin\Debug\DigRobot.exe
+E:\leoJob2013\DigRobot\DigRobot\bin\Debug\DigRobot.pdb
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\ResolveAssemblyReference.cache
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot._3PointCoordinateForm.resources
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.aboutForm.resources
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.coordinateLocationForm.resources
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.mainForm_DigRobot.resources
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot.Properties.Resources.resources
+E:\leoJob2013\DigRobot\DigRobot\obj\Debug\DigRobot_release.csproj.GenerateResource.Cache
+E:\2013LeoProjectPlatform\2013Project\DigRobot\DigRobot\obj\Debug\DigRobot.exe
+E:\2013LeoProjectPlatform\2013Project\DigRobot\DigRobot\obj\Debug\DigRobot.pdb

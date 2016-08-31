@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xlink:href="" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" height="300px" width="200px" viewBox="0 0 200 300" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <pattern inkscape:stockid="白云岩" id="baiyunyan" inkscape:collect="always" patternUnits="userSpaceOnUse" x="0" y="0" width="60" height="20" transform="scale(0.2,0.2)">
+      <line xmlns="http://www.w3.org/2000/svg" x1="14" y1="0" x2="8" y2="10" stroke="black" stroke-width="1"  />
+      <line xmlns="http://www.w3.org/2000/svg" x1="44" y1="0" x2="38" y2="10" stroke="black" stroke-width="1"  />
+      <line xmlns="http://www.w3.org/2000/svg" x1="29" y1="10" x2="23" y2="20" stroke="black" stroke-width="1" />
+      <line xmlns="http://www.w3.org/2000/svg" x1="59" y1="10" x2="53" y2="20" stroke="black" stroke-width="1"  />
+      <g>
+        <path d="M 0 0 h60" stroke-width="0.5" stroke="black" fill="none" />
+        <path d="M 0 10 h60" stroke-width="0.5" stroke="black" fill="none" />
+      </g>
+    </pattern>
+  </defs>
+  <g transform="translate(0,0)" id="BaseLayer" inkscape:label="BaseLayer" inkscape:groupmode="layer" xml:space="preserve" />
+  <rect x="0" y="0" width="100" height="100" fill="url(#baiyunyan)" stroke-width="0.1" stroke="black" />
+</svg>

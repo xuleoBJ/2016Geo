@@ -1,0 +1,5 @@
+文件名命名 patternID.svg
+用程序生成svg模板，再生成pattern，改patternID。
+
+"objectBoundingBox" 注意两种模式
+

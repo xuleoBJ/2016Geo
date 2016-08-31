@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xlink:href=""
+   version="1.1"
+   height="300px"
+   width="200px"
+   viewBox="0 0 200 300"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="含泥白云岩.svg">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20">
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="60"
+       height="20.6665"
+       patternTransform="translate(0,-0.25724788)"
+       id="含泥白云岩">
+      <g
+         id="g3387"
+         transform="translate(0,0.25724788)">
+        <line
+           x1="44"
+           y1="0"
+           x2="38"
+           y2="10"
+           id="line6"
+           style="stroke:#000000;stroke-width:1" />
+        <line
+           x1="26.290518"
+           y1="10"
+           x2="20.290518"
+           y2="20"
+           id="line8"
+           style="stroke:#000000;stroke-width:1" />
+        <line
+           x1="59"
+           y1="10"
+           x2="53"
+           y2="20"
+           id="line10"
+           style="stroke:#000000;stroke-width:1" />
+        <path
+           d="m -0.17815378,10.287385 59.99999978,0"
+           id="path44"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 0,19.890769 60,0"
+           id="path46"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <line
+           style="stroke:#000000;stroke-width:1"
+           x1="13.928746"
+           y1="0.083657093"
+           x2="7.9287462"
+           y2="10.083656"
+           id="line8-0" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:0.65929139"
+           d="m 23.400114,15.448129 6,0"
+           id="path28" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:0.65929139"
+           d="m 41.169012,4.7067671 6,0"
+           id="path28-8" />
+      </g>
+    </pattern>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="838"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="5.3065896"
+     inkscape:cx="23.609943"
+     inkscape:cy="293.64407"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <rect
+     style="stroke:none;fill:url(#含泥白云岩)"
+     width="60"
+     height="20.6665"
+     x="0"
+     y="-0.25724788"
+     id="rect3408" />
+</svg>

@@ -1,0 +1,1 @@
+function getID(evt) {var sID = evt.target.getAttribute("id"); return window.external.ShowMessage(sID);}

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" height="1" version="1.1" width="1" id="svg4232" inkscape:version="0.91 r13725" sodipodi:docname="单体四射珊瑚.svg">
+  <metadata id="metadata4238">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs4236">
+    <pattern width="1" height="1" id="单体四射珊瑚" patternContentUnits="objectBoundingBox">
+      <path style="fill:#000000" d="m 0.44049503,0.91375045 c -0.023305,-0.0328283 -0.0262121,-0.0971066 -0.0121336,-0.26829161 0.0250315,-0.30436174 0.0258723,-0.37669101 0.00539,-0.46361331 -0.0140081,-0.059447 -0.00783,-0.080245 0.031066,-0.10458124 0.10949154,-0.06850548 0.18530279,0.16610431 0.13854424,0.4287479 -0.015741,0.0884184 -0.0299279,0.22236938 -0.0315266,0.29766873 -0.002475,0.11663945 -0.0101448,0.13811675 -0.0517994,0.14507468 -0.0268909,0.004492 -0.0626843,-0.0112606 -0.0795404,-0.0350052 z m 0.0933009,-0.16348503 c 0,-0.082088 0.0115369,-0.21214206 0.0256378,-0.28900924 0.0291361,-0.15882414 0.0132754,-0.27366083 -0.0377951,-0.27366083 -0.0261567,0 -0.034827,0.0353502 -0.035259,0.14375331 -3.1433e-4,0.0790643 -0.0111391,0.19732423 -0.0240536,0.26279987 -0.0279289,0.14159541 -0.007043,0.30536794 0.0389437,0.30536794 0.0237755,0 0.0325261,-0.0401538 0.0325261,-0.14925105 z" id="path4330" inkscape:connector-curvature="0" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1600" inkscape:window-height="838" id="namedview4234" showgrid="false" inkscape:zoom="173.96364" inkscape:cx="-0.96043815" inkscape:cy="-0.15998783" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg4232" />
+  <path style="fill:#000000" d="m 0.44049503,0.91375045 c -0.023305,-0.0328283 -0.0262121,-0.0971066 -0.0121336,-0.26829161 0.0250315,-0.30436174 0.0258723,-0.37669101 0.00539,-0.46361331 -0.0140081,-0.059447 -0.00783,-0.080245 0.031066,-0.10458124 0.10949154,-0.06850548 0.18530279,0.16610431 0.13854424,0.4287479 -0.015741,0.0884184 -0.0299279,0.22236938 -0.0315266,0.29766873 -0.002475,0.11663945 -0.0101448,0.13811675 -0.0517994,0.14507468 -0.0268909,0.004492 -0.0626843,-0.0112606 -0.0795404,-0.0350052 z m 0.0933009,-0.16348503 c 0,-0.082088 0.0115369,-0.21214206 0.0256378,-0.28900924 0.0291361,-0.15882414 0.0132754,-0.27366083 -0.0377951,-0.27366083 -0.0261567,0 -0.034827,0.0353502 -0.035259,0.14375331 -3.1433e-4,0.0790643 -0.0111391,0.19732423 -0.0240536,0.26279987 -0.0279289,0.14159541 -0.007043,0.30536794 0.0389437,0.30536794 0.0237755,0 0.0325261,-0.0401538 0.0325261,-0.14925105 z" id="path4330" inkscape:connector-curvature="0" />
+</svg>

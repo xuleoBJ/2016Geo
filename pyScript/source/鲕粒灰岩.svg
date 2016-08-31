@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xlink:href="" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" height="300px" width="200px" viewBox="0 0 200 300" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <pattern inkscape:stockid="鲕粒灰岩" id="385009206" inkscape:collect="always" patternUnits="userSpaceOnUse" x="0" y="0" width="60" height="20">
+      <g>
+        <circle cx="10" cy="5" r="3" stroke="black" stroke-width="0.5" fill="none" />
+        <circle cx="10" cy="5" r="1" stroke="black" stroke-width="0.5" fill="black" />
+      </g>
+      <path d="M 30 0v10" stroke="black" stroke-width="1" fill="none" />
+      <g>
+        <circle cx="50" cy="5" r="3" stroke="black" stroke-width="0.5" fill="none" />
+        <circle cx="50" cy="5" r="1" stroke="black" stroke-width="0.5" fill="black" />
+      </g>
+      <path d="M 70 0v10" stroke="black" stroke-width="1" fill="none" />
+      <path d="M 10 10v10" stroke="black" stroke-width="1" fill="none" />
+      <g>
+        <circle cx="30" cy="15" r="3" stroke="black" stroke-width="0.5" fill="none" />
+        <circle cx="30" cy="15" r="1" stroke="black" stroke-width="0.5" fill="black" />
+      </g>
+      <path d="M 50 10v10" stroke="black" stroke-width="1" fill="none" />
+      <g>
+        <path d="M 0 0 h60" stroke-width="0.5" stroke="black" fill="none" />
+        <path d="M 0 10 h60" stroke-width="0.5" stroke="black" fill="none" />
+      </g>
+    </pattern>
+  </defs>
+  <g transform="translate(0,0)" id="BaseLayer" inkscape:label="BaseLayer" inkscape:groupmode="layer" xml:space="preserve" />
+  <rect x="0" y="0" width="100" height="100" fill="url(#385009206)" stroke-width="0.1" stroke="black" />
+</svg>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xlink:href=""
+   version="1.1"
+   height="300px"
+   width="200px"
+   viewBox="0 0 200 300"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="溶洞灰岩.svg">
+  <metadata
+     id="metadata50">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="838"
+     id="namedview48"
+     showgrid="false"
+     inkscape:zoom="5.613128"
+     inkscape:cx="-5.6586357"
+     inkscape:cy="262.94543"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect4153"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 Z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4151"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect4147"
+       is_visible="true"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 Z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4145"
+       is_visible="true" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="60.178154"
+       height="20.390769"
+       patternTransform="translate(-0.17815378,0)"
+       id="溶洞灰岩">
+      <g
+         id="g4173"
+         transform="translate(0.17815378,0)">
+        <path
+           d="M 7.5,10 7.5,0"
+           id="path28"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 37.5,10 0,-10"
+           id="path32"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 22.5,20 0,-10"
+           id="path38"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 52.5,20 0,-10"
+           id="path42"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m -0.17815378,10.287385 59.99999978,0"
+           id="path44"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 0,19.890769 60,0"
+           id="path46"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           style="opacity:0.9906977;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.54751259;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:transform-center-x="1.5997638"
+           inkscape:transform-center-y="-1.3944425"
+           d="M 8.9704202,16.771222 C 5.7204962,21.571324 5.9685892,13.911368 5.7708922,12.591398 5.2127022,5.1244554 2.2652498,3.7302464 4.6697462,2.0373784 l 7.0223488,-0.499166 c 2.501937,1.282647 -0.28651,4.576826 -1.646555,9.2065016 -0.5569318,1.895832 -0.1240488,3.750945 -1.0751198,6.026508 z"
+           id="path4155"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccsc" />
+        <path
+           style="opacity:0.9906977;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.54751259;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:transform-center-x="1.5997638"
+           inkscape:transform-center-y="-1.3944425"
+           d="M 38.698842,17.337058 C 35.448918,22.13716 35.697011,14.477204 35.499314,13.157234 34.941124,5.6902905 31.993672,4.2960815 34.398168,2.6032134 l 7.022349,-0.499166 c 2.501936,1.282647 -0.28651,4.5768261 -1.646555,9.2065026 -0.556932,1.895832 -0.124049,3.750945 -1.07512,6.026508 z"
+           id="path4155-8"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccsc" />
+      </g>
+    </pattern>
+  </defs>
+  <g
+     transform="translate(0,0)"
+     id="BaseLayer"
+     inkscape:label="BaseLayer"
+     inkscape:groupmode="layer"
+     xml:space="preserve" />  <rect
+     style="stroke:none;fill:url(#溶洞灰岩)"
+     width="60.178154"
+     height="20.390769"
+     x="-0.17815378"
+     y="0"
+     id="rect4194" />
+</svg>

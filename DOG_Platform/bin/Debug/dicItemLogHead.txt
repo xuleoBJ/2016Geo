@@ -1,0 +1,10 @@
+﻿SP	自然电位	MV	blue	0	100	0	1	0
+CAL	井径	cm	black	20	40	0	1	0
+GR	自然伽玛	API	black	0	100	0	1	0
+Rt	地层真电阻率	Ω/M	red	2	200	1	1	0
+AC	声波时差	μ/m	black	200	300	0	1	0
+DEN	密度	g/cm3	black	2	3	0	1	0
+Rxo	冲洗带地层电阻率	OMM	red	2	200	1	1	0
+Rd	深双侧向电阻率测井	OMM	red	2	200	1	1	0
+Rs	浅双侧向电阻率测井	OMM	red	2	200	1	1	0
+RMLL	微侧向电阻率测井	OMM	red	2	200	1	1	0

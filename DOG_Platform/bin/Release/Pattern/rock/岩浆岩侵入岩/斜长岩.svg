@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xlink:href=""
+   version="1.1"
+   height="300px"
+   width="200px"
+   viewBox="0 0 200 300"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="斜长岩.svg">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20">
+    <pattern
+       y="0"
+       x="0"
+       height="6"
+       width="6"
+       patternUnits="userSpaceOnUse"
+       id="EMFhbasepattern" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="20"
+       height="19.981167"
+       patternTransform="translate(0,0.42597015)"
+       id="斜长岩">
+      <g
+         id="g7230"
+         transform="translate(0,-0.42597015)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.50038147px;line-height:125%;font-family:'Microsoft Tai Le';-inkscape-font-specification:'Microsoft Tai Le';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="1.1596347"
+           y="8.4555635"
+           id="text4143"
+           sodipodi:linespacing="125%"
+           transform="scale(1.0689267,0.93551785)"><tspan
+             sodipodi:role="line"
+             id="tspan4145"
+             x="1.1596347"
+             y="8.4555635">N</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.50038147px;line-height:125%;font-family:'Microsoft Tai Le';-inkscape-font-specification:'Microsoft Tai Le';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="9.8449497"
+           y="19.637547"
+           id="text4143-5"
+           sodipodi:linespacing="125%"
+           transform="scale(1.0689267,0.93551785)"><tspan
+             sodipodi:role="line"
+             id="tspan4145-2"
+             x="9.8449497"
+             y="19.637547">N</tspan></text>
+      </g>
+    </pattern>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="838"
+     id="namedview18"
+     showgrid="true"
+     inkscape:zoom="5.3065896"
+     inkscape:cx="37.907114"
+     inkscape:cy="248.3317"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3450"
+       spacingx="10"
+       spacingy="10"
+       empspacing="10" />
+  </sodipodi:namedview>
+  <g
+     id="g4211"
+     transform="matrix(0.78140386,0,0,0.77804861,2.1828129,0.1440446)" />
+  <rect
+     style="stroke:none;fill:url(#斜长岩)"
+     width="20"
+     height="19.981167"
+     x="0"
+     y="0.42597015"
+     id="rect7249" />
+</svg>

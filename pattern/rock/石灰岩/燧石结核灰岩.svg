@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xlink:href=""
+   version="1.1"
+   height="300px"
+   width="200px"
+   viewBox="0 0 200 300"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="燧石结核灰岩.svg">
+  <metadata
+     id="metadata50">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="838"
+     id="namedview48"
+     showgrid="false"
+     inkscape:zoom="5.613128"
+     inkscape:cx="-35.766625"
+     inkscape:cy="264.17128"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="60.178154"
+       height="20.390769"
+       patternTransform="translate(-0.17815378,0)"
+       id="燧石结核灰岩">
+      <g
+         id="g4143"
+         transform="translate(0.17815378,0)">
+        <path
+           d="M 7.5,10 7.5,0"
+           id="path28"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 37.5,10 0,-10"
+           id="path32"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 22.5,20 0,-10"
+           id="path38"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 52.5,20 0,-10"
+           id="path42"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m -0.17815378,10.287385 59.99999978,0"
+           id="path44"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <path
+           d="m 0,19.890769 60,0"
+           id="path46"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#000000;stroke-width:1" />
+        <ellipse
+           style="opacity:0.9906977;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4143"
+           cx="21.378454"
+           cy="4.8882551"
+           rx="4.8101521"
+           ry="2.405076" />
+        <ellipse
+           style="opacity:0.9906977;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4143-0"
+           cx="52.377213"
+           cy="5.1554852"
+           rx="4.8101521"
+           ry="2.405076" />
+        <ellipse
+           style="opacity:0.9906977;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4143-3"
+           cx="37.234138"
+           cy="15.132097"
+           rx="4.8101521"
+           ry="2.405076" />
+        <ellipse
+           style="opacity:0.9906977;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path4143-2"
+           cx="7.304306"
+           cy="14.953943"
+           rx="4.8101521"
+           ry="2.405076" />
+      </g>
+    </pattern>
+  </defs>
+  <g
+     transform="translate(0,0)"
+     id="BaseLayer"
+     inkscape:label="BaseLayer"
+     inkscape:groupmode="layer"
+     xml:space="preserve" />  <rect
+     style="stroke:none;fill:url(#燧石结核灰岩)"
+     width="60.178154"
+     height="20.390769"
+     x="-0.17815378"
+     y="0"
+     id="rect4168" />
+</svg>

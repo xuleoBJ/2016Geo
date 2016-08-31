@@ -1,0 +1,2 @@
+GRmax=4.0
+GRmin=100

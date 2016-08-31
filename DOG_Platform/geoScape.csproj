@@ -1,0 +1,1343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47CD334C-5D5F-4578-B844-BE707357CD9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DOGPlatform</RootNamespace>
+    <AssemblyName>DOGPlatform</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Stone Henge.ico</ApplicationIcon>
+    <SignManifests>false</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronPython, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Scripting.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cDataItemConnect.cs" />
+    <Compile Include="c2DLineSegmentIntersection.cs" />
+    <Compile Include="cIDmake.cs" />
+    <Compile Include="cBase.cs" />
+    <Compile Include="cCalDistance.cs" />
+    <Compile Include="cCallInkscape.cs" />
+    <Compile Include="cCMSsetupTreeNodeBase.cs" />
+    <Compile Include="cCMSsetupInputWellLog.cs" />
+    <Compile Include="cCMSsetupInputWellsManager.cs" />
+    <Compile Include="cCMSsetupBaseWell.cs" />
+    <Compile Include="cCMSsetupLogItem.cs" />
+    <Compile Include="cCMSsetupSVGGraph.cs" />
+    <Compile Include="cCMSsetupWellSection.cs" />
+    <Compile Include="cInkExtensionColor.cs" />
+    <Compile Include="cIODicLayerDataDynamic.cs" />
+    <Compile Include="cExportData4Petrel.cs" />
+    <Compile Include="cIOGeoEarthText.cs" />
+    <Compile Include="cIOgeomodel.cs" />
+    <Compile Include="cGridPara.cs" />
+    <Compile Include="cIOGridEcl.cs" />
+    <Compile Include="cIOinputHorizionalWellPath.cs" />
+    <Compile Include="cIOinputInjectProfile.cs" />
+    <Compile Include="cIOinputLayerSerier.cs" />
+    <Compile Include="cCMSsetupDataTable.cs" />
+    <Compile Include="cIOlas.cs" />
+    <Compile Include="cIOtemplate.cs" />
+    <Compile Include="cIOVoronoi.cs" />
+    <Compile Include="cConvexHull.cs" />
+    <Compile Include="clipper.cs" />
+    <Compile Include="ColorMap.cs" />
+    <Compile Include="colorTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="colorTextBox.Designer.cs">
+      <DependentUpon>colorTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEclipsePaser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEclipsePaser.Designer.cs">
+      <DependentUpon>FormEclipsePaser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFileManagerGeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFileManagerGeo.Designer.cs">
+      <DependentUpon>FormFileManagerGeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerLog.Designer.cs">
+      <DependentUpon>FormLayerLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerSetPie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerSetPie.Designer.cs">
+      <DependentUpon>FormLayerSetPie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerSetBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerSetBar.Designer.cs">
+      <DependentUpon>FormLayerSetBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddLayer.Designer.cs">
+      <DependentUpon>FormAddLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExport2Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExport2Map.Designer.cs">
+      <DependentUpon>FormExport2Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFunctionCal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFunctionCal.Designer.cs">
+      <DependentUpon>FormFunctionCal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerGeologicalValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerGeologicalValue.Designer.cs">
+      <DependentUpon>FormLayerGeologicalValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerContour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerContour.Designer.cs">
+      <DependentUpon>FormLayerContour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerDevelopState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerDevelopState.Designer.cs">
+      <DependentUpon>FormLayerDevelopState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerFault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerFault.Designer.cs">
+      <DependentUpon>FormLayerFault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerInjec2Dev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerInjec2Dev.Designer.cs">
+      <DependentUpon>FormLayerInjec2Dev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerSettingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerSettingPage.Designer.cs">
+      <DependentUpon>FormLayerSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerSettingWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerSettingWell.Designer.cs">
+      <DependentUpon>FormLayerSettingWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerSetWellPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerSetWellPattern.Designer.cs">
+      <DependentUpon>FormLayerSetWellPattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerWeb.Designer.cs">
+      <DependentUpon>FormLayerWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMakeNewLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMakeNewLog.Designer.cs">
+      <DependentUpon>FormMakeNewLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogEditor.Designer.cs">
+      <DependentUpon>FormLogEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProjectInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectInfor.Designer.cs">
+      <DependentUpon>FormProjectInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddImageItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddImageItem.Designer.cs">
+      <DependentUpon>FormSectionAddImageItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddItemLitho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddItemLitho.Designer.cs">
+      <DependentUpon>FormSectionAddItemLitho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddNewDataItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddNewDataItem.Designer.cs">
+      <DependentUpon>FormSectionAddNewDataItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionCurveFill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionCurveFill.Designer.cs">
+      <DependentUpon>FormSectionCurveFill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionDataLogComposition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionDataLogComposition.Designer.cs">
+      <DependentUpon>FormSectionDataLogComposition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddSymbol.Designer.cs">
+      <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSVGplygon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSVGplygon.Designer.cs">
+      <DependentUpon>FormSVGplygon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionLogInforByDepth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionLogInforByDepth.Designer.cs">
+      <DependentUpon>FormSectionLogInforByDepth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionWellCrossplot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionWellCrossplot.Designer.cs">
+      <DependentUpon>FormSectionWellCrossplot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingModeInterval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingModeInterval.Designer.cs">
+      <DependentUpon>FormSettingModeInterval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetGlobleLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetGlobleLog.Designer.cs">
+      <DependentUpon>FormSetGlobleLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionGeoShowDepth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionGeoShowDepth.Designer.cs">
+      <DependentUpon>FormSettingSectionGeoShowDepth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWellHorizon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWellHorizon.Designer.cs">
+      <DependentUpon>FormWellHorizon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerWellValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerWellValue.Designer.cs">
+      <DependentUpon>FormLayerWellValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWellJobBat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWellJobBat.Designer.cs">
+      <DependentUpon>FormWellJobBat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCode.cs" />
+    <Compile Include="ctlStatisticInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlStatisticInfor.Designer.cs">
+      <DependentUpon>ctlStatisticInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlLogInforStatistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlLogInforStatistic.Designer.cs">
+      <DependentUpon>ctlLogInforStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemLayerDataProperty.cs" />
+    <Compile Include="ItemDicLogGlobe.cs" />
+    <Compile Include="makeConnectPath.cs" />
+    <Compile Include="makeLayerMap.cs" />
+    <Compile Include="makeSectionFence.cs" />
+    <Compile Include="codeReplace.cs" />
+    <Compile Include="controls\TextBoxNumeric .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cProjectData.cs" />
+    <Compile Include="cPublicPanel.cs" />
+    <Compile Include="cSectionUIoperate.cs" />
+    <Compile Include="cSortPoints.cs" />
+    <Compile Include="cssTrack.cs" />
+    <Compile Include="cssTrackText.cs" />
+    <Compile Include="cSVG2Html.cs" />
+    <Compile Include="ScriptHost.cs" />
+    <Compile Include="SVG\cSVGLayerWellPosition.cs" />
+    <Compile Include="SVG\cSVGoperate.cs" />
+    <Compile Include="SVG\cSVGsectionFaultLine.cs" />
+    <Compile Include="SVG\cSVGSectionTrackLogComposite.cs" />
+    <Compile Include="SVG\cSVGSectionTrackWellBone.cs" />
+    <Compile Include="SVG\cXMLLayerMapWellLog.cs" />
+    <Compile Include="trackDataItemIntervalProperty.cs" />
+    <Compile Include="trackDataListLog.cs" />
+    <Compile Include="TreeViewMapLayer.cs" />
+    <Compile Include="TreeViewSectionEditView.cs" />
+    <Compile Include="FormAnaTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAnaTable.Designer.cs">
+      <DependentUpon>FormAnaTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalArea.Designer.cs">
+      <DependentUpon>FormCalArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataTableDeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataTableDeal.Designer.cs">
+      <DependentUpon>FormDataTableDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputBox.Designer.cs">
+      <DependentUpon>FormInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddGroup.Designer.cs">
+      <DependentUpon>FormSectionAddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddNewGeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddNewGeo.Designer.cs">
+      <DependentUpon>FormSectionAddNewGeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionDepthRuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionDepthRuler.Designer.cs">
+      <DependentUpon>FormSettingSectionDepthRuler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionHorizonSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionHorizonSetting.Designer.cs">
+      <DependentUpon>FormSectionHorizonSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingConnect.Designer.cs">
+      <DependentUpon>FormSettingConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingLayerColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingLayerColor.Designer.cs">
+      <DependentUpon>FormSettingLayerColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionTrack.Designer.cs">
+      <DependentUpon>FormSettingSectionTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingShowState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingShowState.Designer.cs">
+      <DependentUpon>FormSettingShowState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingWellArrange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingWellArrange.Designer.cs">
+      <DependentUpon>FormSettingWellArrange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectAddNewWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectAddNewWell.Designer.cs">
+      <DependentUpon>FormSectAddNewWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingPage.Designer.cs">
+      <DependentUpon>FormSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfilePIcal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfilePIcal.Designer.cs">
+      <DependentUpon>FormProfilePIcal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataImportLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataImportLayer.Designer.cs">
+      <DependentUpon>FormDataImportLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataViewProjectSingleWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataViewProjectSingleWell.Designer.cs">
+      <DependentUpon>FormDataViewProjectSingleWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGridDefine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGridDefine.Designer.cs">
+      <DependentUpon>FormGridDefine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionDataImportWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionDataImportWell.Designer.cs">
+      <DependentUpon>FormSectionDataImportWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataImportLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataImportLog.Designer.cs">
+      <DependentUpon>FormDataImportLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataImportWells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataImportWells.Designer.cs">
+      <DependentUpon>FormDataImportWells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfileSelectWells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileSelectWells.Designer.cs">
+      <DependentUpon>FormProfileSelectWells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionDataItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionDataItemView.Designer.cs">
+      <DependentUpon>FormSettingSectionDataItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionLayer.Designer.cs">
+      <DependentUpon>FormSettingSectionLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionLog.Designer.cs">
+      <DependentUpon>FormSettingSectionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingElevationRuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingElevationRuler.Designer.cs">
+      <DependentUpon>FormSettingElevationRuler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionText.Designer.cs">
+      <DependentUpon>FormSettingSectionText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSectionWellBone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSectionWellBone.Designer.cs">
+      <DependentUpon>FormSettingSectionWellBone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVoronoiAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVoronoiAna.Designer.cs">
+      <DependentUpon>FormVoronoiAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemConnectInjPro.cs" />
+    <Compile Include="ItemDicLayerDataDynamic.cs" />
+    <Compile Include="ItemDicPerforation.cs" />
+    <Compile Include="ItemFaultLine.cs" />
+    <Compile Include="ItemJSJL.cs" />
+    <Compile Include="ItemLogHeadInfor.cs" />
+    <Compile Include="ItemWellHead.cs" />
+    <Compile Include="ItemDicInjectProfile.cs" />
+    <Compile Include="ItemHorizonalWellPath.cs" />
+    <Compile Include="ItemDicWellPath.cs" />
+    <Compile Include="cDogTrack.cs" />
+    <Compile Include="cDogTrackEvationRuler.cs" />
+    <Compile Include="cDogTrackJSJL.cs" />
+    <Compile Include="cDogTrackLayer.cs" />
+    <Compile Include="cDogTrackLog.cs" />
+    <Compile Include="cDogTrackMDRuler.cs" />
+    <Compile Include="cDogTrackPeforation.cs" />
+    <Compile Include="cDogTrackText.cs" />
+    <Compile Include="cPerforationList.cs" />
+    <Compile Include="itemWellLayerVoi.cs" />
+    <Compile Include="makeSectionGeo.cs" />
+    <Compile Include="makeSectionWell.cs" />
+    <Compile Include="MyBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PointD.cs" />
+    <Compile Include="statistics.cs" />
+    <Compile Include="SVG\cSVGSectionLegend.cs" />
+    <Compile Include="SVG\cSVGSectionTrackCycle.cs" />
+    <Compile Include="SVG\cSVGSectionTrackImage.cs" />
+    <Compile Include="SVG\cSVGSectionTrackSymbol.cs" />
+    <Compile Include="SVG\cSVGSectionTrackLogCurveFill.cs" />
+    <Compile Include="SVG\cSVGSectionTrackDes.cs" />
+    <Compile Include="SVG\cSVGXEPatternBase.cs" />
+    <Compile Include="SVG\cSVGXEPatternCarbonatie.cs" />
+    <Compile Include="SVG\cSVGXEPatternLithoSand.cs" />
+    <Compile Include="SVG\cSVGSectionTrackConnect.cs" />
+    <Compile Include="SVG\cSVGSectionTrack.cs" />
+    <Compile Include="SVG\cSVGSectionTrackJSJL.cs" />
+    <Compile Include="SVG\cSVGSectionTrackLitho.cs" />
+    <Compile Include="SVG\cSVGSectionTrackPeforation.cs" />
+    <Compile Include="SVG\cSVGSectionTrackText.cs" />
+    <Compile Include="SVG\cSVGSectionTrackLayer.cs" />
+    <Compile Include="SVG\cSVGSectionTrackLog.cs" />
+    <Compile Include="SVG\cSVGSectionTrackWellRuler.cs" />
+    <Compile Include="SVG\cSVGSectionWell.cs" />
+    <Compile Include="SVG\cSVGDocTrack.cs" />
+    <Compile Include="SVG\cSVGElement.cs" />
+    <Compile Include="SVG\cSVGText.cs" />
+    <Compile Include="TreeViewProjectData.cs" />
+    <Compile Include="ControlMoverOrResizer.cs" />
+    <Compile Include="cIODicLogHeadProject.cs" />
+    <Compile Include="SVG\cSVGWrapText.cs" />
+    <Compile Include="SVG\cSVGcss.cs" />
+    <Compile Include="cIOBase.cs" />
+    <Compile Include="cIOInputWellInject.cs" />
+    <Compile Include="cIOinputWellProduct.cs" />
+    <Compile Include="cCordinationTransform.cs" />
+    <Compile Include="cIOMapLayer.cs" />
+    <Compile Include="cSoftwareLimited.cs" />
+    <Compile Include="SVG\cSVGXEPatternGravel.cs" />
+    <Compile Include="SVG\cSVGDocPatternSand.cs" />
+    <Compile Include="SVG\cSVGXEPatternShale.cs" />
+    <Compile Include="cMenuStripMain.cs" />
+    <Compile Include="cCMSsetupInputWell.cs" />
+    <Compile Include="ItemWell.cs" />
+    <Compile Include="ItemWellMapPosition.cs" />
+    <Compile Include="cIOWellSection.cs" />
+    <Compile Include="ItemWellSection.cs" />
+    <Compile Include="FormAddSectionLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSectionLog.Designer.cs">
+      <DependentUpon>FormAddSectionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportLog.Designer.cs">
+      <DependentUpon>FormExportLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionLogChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionLogChoose.Designer.cs">
+      <DependentUpon>FormSectionLogChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWellManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWellManager.Designer.cs">
+      <DependentUpon>FormWellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionDataLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionDataLog.Designer.cs">
+      <DependentUpon>FormSectionDataLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWebNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWebNavigation.Designer.cs">
+      <DependentUpon>FormWebNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDicLayerDataStatic.cs" />
+    <Compile Include="ItemDicLayerDepth.cs" />
+    <Compile Include="ItemLayerSplitFactor.cs" />
+    <Compile Include="ItemWellView.cs" />
+    <Compile Include="SVG\cSVGSectionTrackProfile.cs" />
+    <Compile Include="SVG\cSVGXEPatternMud.cs" />
+    <Compile Include="SVG\cXMLLayerMapWellBarGraph.cs" />
+    <Compile Include="SVG\cXMLLayerMapWellPieGraph.cs" />
+    <Compile Include="trackData.cs" />
+    <Compile Include="Track.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackDepthRuler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackJSJL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="trackDataListLayerDepth.cs" />
+    <Compile Include="TrackLitho.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackPerforation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="trackInputPerforationDataList.cs" />
+    <Compile Include="trackScatterDataList.cs" />
+    <Compile Include="TrackText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeView2Xml.cs" />
+    <Compile Include="TreeViewExtensions.cs" />
+    <Compile Include="ItemDicWellInjection.cs" />
+    <Compile Include="ItemWellLayerGeologyProperty.cs" />
+    <Compile Include="ItemWellLayerYMValue.cs" />
+    <Compile Include="Voronoi.cs" />
+    <Compile Include="VoronoiElements.cs" />
+    <Compile Include="WellNavigation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemDicWellProduct.cs" />
+    <Compile Include="ItemWellValue.cs" />
+    <Compile Include="wellPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="wellPanel.Designer.cs">
+      <DependentUpon>wellPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XML\cXEGeopage.cs" />
+    <Compile Include="XML\cXEtrack.cs" />
+    <Compile Include="XML\cXETrackWellConeRuler.cs" />
+    <Compile Include="XML\cXEWellCss.cs" />
+    <Compile Include="XML\cXEWellPage.cs" />
+    <Compile Include="XML\cXmlBase.cs" />
+    <Compile Include="XML\cXMLLayerMapGeoproperty.cs" />
+    <Compile Include="XML\cXMLLayerMapHorizonalWell.cs" />
+    <Compile Include="XML\cXMLLayerMapFaultLine.cs" />
+    <Compile Include="FormPatternElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPatternElement.Designer.cs">
+      <DependentUpon>FormPatternElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionDev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionDev.Designer.cs">
+      <DependentUpon>FormSectionDev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductAnalisys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductAnalisys.Designer.cs">
+      <DependentUpon>FormProductAnalisys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SVG\cSVGDocRoseMap.cs" />
+    <Compile Include="FormDataAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataAnalysis.Designer.cs">
+      <DependentUpon>FormDataAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SVG\cSVGBasePattern.cs" />
+    <Compile Include="SVG\cSVGPie.cs" />
+    <Compile Include="SVG\cSVGDocLayerMapProduction.cs" />
+    <Compile Include="SVG\cSVGDocPoleMap.cs" />
+    <Compile Include="SVG\cSVGBaseMap.cs" />
+    <Compile Include="cExcel.cs" />
+    <Compile Include="cDirDataSourceSingleWell.cs" />
+    <Compile Include="XML\cXMLLayerMapLog.cs" />
+    <Compile Include="XML\cXMLLayerMapDynamic.cs" />
+    <Compile Include="XML\cXMLLayerMapStatic.cs" />
+    <Compile Include="XML\cXELayerPage.cs" />
+    <Compile Include="XML\cXMLMapLayerText.cs" />
+    <Compile Include="XML\cXMLProductMap.cs" />
+    <Compile Include="FormDataTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataTable.Designer.cs">
+      <DependentUpon>FormDataTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSingleLogImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSingleLogImport.Designer.cs">
+      <DependentUpon>FormSingleLogImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionAddWellLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionAddWellLog.Designer.cs">
+      <DependentUpon>FormSectionAddWellLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cIODicLayerDataStatic.cs" />
+    <Compile Include="cIOinputWellPerforation.cs" />
+    <Compile Include="cIOProject.cs" />
+    <Compile Include="cCalConnectionInject2Production.cs" />
+    <Compile Include="cCalGeologyStatistics.cs" />
+    <Compile Include="cIOinputJSJL.cs" />
+    <Compile Include="cIOinputLog.cs" />
+    <Compile Include="cIOinputWellPath.cs" />
+    <Compile Include="cIODicInjProCon.cs" />
+    <Compile Include="cInterpolation.cs" />
+    <Compile Include="cPublicMethodBase.cs" />
+    <Compile Include="cIOinputLayerDepth.cs" />
+    <Compile Include="cIOinputWellHead.cs" />
+    <Compile Include="cDataQuanlityControl.cs" />
+    <Compile Include="XML\cXmlProject.cs" />
+    <Compile Include="FormWellInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWellInfor.Designer.cs">
+      <DependentUpon>FormWellInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInjProMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInjProMap.Designer.cs">
+      <DependentUpon>FormInjProMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingSplitFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingSplitFactor.Designer.cs">
+      <DependentUpon>FormSettingSplitFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionWell.Designer.cs">
+      <DependentUpon>FormSectionWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SVG\cSVGBaseSection.cs" />
+    <Compile Include="SVG\cSVGBase.cs" />
+    <Compile Include="SVG\cSVGDocFenceDiagram.cs" />
+    <Compile Include="c2DGeometryAlgorithm.cs" />
+    <Compile Include="cLine.cs" />
+    <Compile Include="FormSectionGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionGroup.Designer.cs">
+      <DependentUpon>FormSectionGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MarkControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\MarkControl.Designer.cs">
+      <DependentUpon>MarkControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SVG\cSVGDocLayerMap.cs" />
+    <Compile Include="cProjectManager.cs" />
+    <Compile Include="cGeomodelData.cs" />
+    <Compile Include="cPublicMethodForm.cs" />
+    <Compile Include="cCalBase.cs" />
+    <Compile Include="XML\cXMLFenceDiagram.cs" />
+    <Compile Include="XML\cXmlDocSectionGeo.cs" />
+    <Compile Include="XML\cXmlDocLayer.cs" />
+    <Compile Include="FormCalInterWell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalInterWell.Designer.cs">
+      <DependentUpon>FormCalInterWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalReservor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalReservor.Designer.cs">
+      <DependentUpon>FormCalReservor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalWellDistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalWellDistance.Designer.cs">
+      <DependentUpon>FormCalWellDistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInjProAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInjProAna.Designer.cs">
+      <DependentUpon>FormInjProAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCopyRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCopyRight.Designer.cs">
+      <DependentUpon>FormCopyRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMapLayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMapLayer.Designer.cs">
+      <DependentUpon>FormMapLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSectionGeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSectionGeo.Designer.cs">
+      <DependentUpon>FormSectionGeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XML\cXmlDocSectionWell.cs" />
+    <Compile Include="XML\cXETrackRuler.cs" />
+    <Compile Include="XML\cXETrackJSJL.cs" />
+    <Compile Include="XML\cXETrackLayer.cs" />
+    <Compile Include="XML\cXETrackLog.cs" />
+    <Compile Include="XML\cXETrackPerforation.cs" />
+    <Compile Include="XML\cXETrackText.cs" />
+    <EmbeddedResource Include="colorTextBox.resx">
+      <DependentUpon>colorTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEclipsePaser.resx">
+      <DependentUpon>FormEclipsePaser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFileManagerGeo.resx">
+      <DependentUpon>FormFileManagerGeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerLog.resx">
+      <DependentUpon>FormLayerLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerSetPie.resx">
+      <DependentUpon>FormLayerSetPie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerSetBar.resx">
+      <DependentUpon>FormLayerSetBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddLayer.resx">
+      <DependentUpon>FormAddLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAnaTable.resx">
+      <DependentUpon>FormAnaTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalArea.resx">
+      <DependentUpon>FormCalArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataTableDeal.resx">
+      <DependentUpon>FormDataTableDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExport2Map.resx">
+      <DependentUpon>FormExport2Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFunctionCal.resx">
+      <DependentUpon>FormFunctionCal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerGeologicalValue.resx">
+      <DependentUpon>FormLayerGeologicalValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputBox.resx">
+      <DependentUpon>FormInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerContour.resx">
+      <DependentUpon>FormLayerContour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerDevelopState.resx">
+      <DependentUpon>FormLayerDevelopState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerFault.resx">
+      <DependentUpon>FormLayerFault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerInjec2Dev.resx">
+      <DependentUpon>FormLayerInjec2Dev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerSettingPage.resx">
+      <DependentUpon>FormLayerSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerSettingWell.resx">
+      <DependentUpon>FormLayerSettingWell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerSetWellPattern.resx">
+      <DependentUpon>FormLayerSetWellPattern.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerWeb.resx">
+      <DependentUpon>FormLayerWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMakeNewLog.resx">
+      <DependentUpon>FormMakeNewLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogEditor.resx">
+      <DependentUpon>FormLogEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectInfor.resx">
+      <DependentUpon>FormProjectInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddImageItem.resx">
+      <DependentUpon>FormSectionAddImageItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddItemLitho.resx">
+      <DependentUpon>FormSectionAddItemLitho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddNewDataItem.resx">
+      <DependentUpon>FormSectionAddNewDataItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddNewGeo.resx">
+      <DependentUpon>FormSectionAddNewGeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionCurveFill.resx">
+      <DependentUpon>FormSectionCurveFill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionDataLogComposition.resx">
+      <DependentUpon>FormSectionDataLogComposition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionHorizonSetting.resx">
+      <DependentUpon>FormSectionHorizonSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddGroup.resx">
+      <DependentUpon>FormSectionAddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddSymbol.resx">
+      <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSVGplygon.resx">
+      <DependentUpon>FormSVGplygon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionLogInforByDepth.resx">
+      <DependentUpon>FormSectionLogInforByDepth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionWellCrossplot.resx">
+      <DependentUpon>FormSectionWellCrossplot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingModeInterval.resx">
+      <DependentUpon>FormSettingModeInterval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetGlobleLog.resx">
+      <DependentUpon>FormSetGlobleLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingConnect.resx">
+      <DependentUpon>FormSettingConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingLayerColor.resx">
+      <DependentUpon>FormSettingLayerColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionDepthRuler.resx">
+      <DependentUpon>FormSettingSectionDepthRuler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionGeoShowDepth.resx">
+      <DependentUpon>FormSettingSectionGeoShowDepth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionTrack.resx">
+      <DependentUpon>FormSettingSectionTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingShowState.resx">
+      <DependentUpon>FormSettingShowState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingWellArrange.resx">
+      <DependentUpon>FormSettingWellArrange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectAddNewWell.resx">
+      <DependentUpon>FormSectAddNewWell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingPage.resx">
+      <DependentUpon>FormSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileSelectWells.resx">
+      <DependentUpon>FormProfileSelectWells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionDataItemView.resx">
+      <DependentUpon>FormSettingSectionDataItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionLayer.resx">
+      <DependentUpon>FormSettingSectionLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionLog.resx">
+      <DependentUpon>FormSettingSectionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingElevationRuler.resx">
+      <DependentUpon>FormSettingElevationRuler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionText.resx">
+      <DependentUpon>FormSettingSectionText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSectionWellBone.resx">
+      <DependentUpon>FormSettingSectionWellBone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVoronoiAna.resx">
+      <DependentUpon>FormVoronoiAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWellHorizon.resx">
+      <DependentUpon>FormWellHorizon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWellInfor.resx">
+      <DependentUpon>FormWellInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddSectionLog.resx">
+      <DependentUpon>FormAddSectionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfilePIcal.resx">
+      <DependentUpon>FormProfilePIcal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalInterWell.resx">
+      <DependentUpon>FormCalInterWell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalReservor.resx">
+      <DependentUpon>FormCalReservor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalWellDistance.resx">
+      <DependentUpon>FormCalWellDistance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataImportLayer.resx">
+      <DependentUpon>FormDataImportLayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataViewProjectSingleWell.resx">
+      <DependentUpon>FormDataViewProjectSingleWell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportLog.resx">
+      <DependentUpon>FormExportLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGridDefine.resx">
+      <DependentUpon>FormGridDefine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionDataImportWell.resx">
+      <DependentUpon>FormSectionDataImportWell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataImportLog.resx">
+      <DependentUpon>FormDataImportLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataImportWells.resx">
+      <DependentUpon>FormDataImportWells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionLogChoose.resx">
+      <DependentUpon>FormSectionLogChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWellJobBat.resx">
+      <DependentUpon>FormWellJobBat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWellManager.resx">
+      <DependentUpon>FormWellManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataTable.resx">
+      <DependentUpon>FormDataTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionDataLog.resx">
+      <DependentUpon>FormSectionDataLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPatternElement.resx">
+      <DependentUpon>FormPatternElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionGroup.resx">
+      <DependentUpon>FormSectionGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInjProAna.resx">
+      <DependentUpon>FormInjProAna.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCopyRight.resx">
+      <DependentUpon>FormCopyRight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionDev.resx">
+      <DependentUpon>FormSectionDev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductAnalisys.resx">
+      <DependentUpon>FormProductAnalisys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSingleLogImport.resx">
+      <DependentUpon>FormSingleLogImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMapLayer.resx">
+      <DependentUpon>FormMapLayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInjProMap.resx">
+      <DependentUpon>FormInjProMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataAnalysis.resx">
+      <DependentUpon>FormDataAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionAddWellLog.resx">
+      <DependentUpon>FormSectionAddWellLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingSplitFactor.resx">
+      <DependentUpon>FormSettingSplitFactor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionWell.resx">
+      <DependentUpon>FormSectionWell.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWebNavigation.resx">
+      <DependentUpon>FormWebNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSectionGeo.resx">
+      <DependentUpon>FormSectionGeo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\MarkControl.resx">
+      <DependentUpon>MarkControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlStatisticInfor.resx">
+      <DependentUpon>ctlStatisticInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlLogInforStatistic.resx">
+      <DependentUpon>ctlLogInforStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerWellValue.resx">
+      <DependentUpon>FormLayerWellValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Track.resx">
+      <DependentUpon>Track.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackLog.resx">
+      <DependentUpon>TrackLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitWindowGUI.resx">
+      <DependentUpon>WaitWindowGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="wellPanel.resx">
+      <DependentUpon>wellPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SVG\cSVGDocSection.cs" />
+    <Compile Include="WaitWindow.cs" />
+    <Compile Include="WaitWindowEventArgs.cs" />
+    <Compile Include="WaitWindowGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitWindowGUI.designer.cs">
+      <DependentUpon>WaitWindowGUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\白云岩.jpg" />
+    <None Include="Resources\灰岩.jpg" />
+    <None Include="Resources\Folder-New.ico" />
+    <None Include="Resources\Folder.ico" />
+    <None Include="Resources\Save.ico" />
+    <None Include="Resources\Zoom-In.ico" />
+    <None Include="Resources\Zoom-Out.ico" />
+    <None Include="Resources\hand.png" />
+    <None Include="Resources\New.ico" />
+    <Content Include="Html\d3.js" />
+    <Content Include="Html\d3.min.js" />
+    <Content Include="Html\testD3.html" />
+    <Content Include="NameRules.txt" />
+    <Content Include="Stone Henge.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Digger\DigRobot\DigRobot.csproj">
+      <Project>{8C2F3066-6D57-4813-9395-E798E5C624B0}</Project>
+      <Name>DigRobot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="publicMethod\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

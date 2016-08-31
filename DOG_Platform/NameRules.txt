@@ -1,0 +1,5 @@
+﻿文件路径名 ： filepath+
+string变量 s+ or str+
+doulbe variable db+
+List variable list
+List<string> ltStr
