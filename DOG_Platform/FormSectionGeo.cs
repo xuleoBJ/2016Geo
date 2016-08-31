@@ -343,8 +343,9 @@ namespace DOGPlatform
              {
                  if (cSectionUIoperate.updateTrackData(this.sJH, currentNode, this.filePathOper) == DialogResult.OK) 
                  {
-                     makeSVGmap(); 
-                     updateTVandList(); 
+                     updateTVandList();
+                     //刷新树，不刷新图，太慢了。
+                     // makeSVGmap(); 
                  }
              }
          }

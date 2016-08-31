@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0202B4C766C18BBDC25E1F854A7841AD"
-        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,6 +59,12 @@
         {
         "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
         "OwnerKey" = "8:_BDB1072FDD85553113163DF29A221875"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5014BD9325DAE6590B68A668665B275F"
+        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -172,7 +172,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0202B4C766C18BBDC25E1F854A7841AD"
+        "OwnerKey" = "8:_5014BD9325DAE6590B68A668665B275F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -316,37 +316,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0202B4C766C18BBDC25E1F854A7841AD"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DigRobot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_0202B4C766C18BBDC25E1F854A7841AD"
-                    {
-                    "Name" = "8:DigRobot.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DigRobot.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3623343173BE27179D1B24C32C348766"
             {
             "AssemblyRegister" = "3:1"
@@ -412,6 +381,37 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Scripting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5014BD9325DAE6590B68A668665B275F"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:DigRobot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5014BD9325DAE6590B68A668665B275F"
+                    {
+                    "Name" = "8:DigRobot.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:DigRobot.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
@@ -783,7 +783,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:geoScape2016"
         "ProductCode" = "8:{14F56315-DCCB-4156-9CA1-2A3D83C3F1F7}"
-        "PackageCode" = "8:{981C8DED-4C1D-4AFF-A044-C90425A21BF0}"
+        "PackageCode" = "8:{B562649E-5865-4485-BC14-EFAEC59517D1}"
         "UpgradeCode" = "8:{AED19D8B-12FA-496E-8B91-0704E80D5D2F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

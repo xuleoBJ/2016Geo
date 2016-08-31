@@ -2051,6 +2051,19 @@ namespace DOGPlatform
                 System.Diagnostics.Process.Start(dirSVG);
             }
         }
+
+        private void tsmiSectionGeoCopy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiGraphEdit_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string _filename = getSelectSVGGraphtNodePath(tnSelected) + ".svg";
+            string svgfilepath = Path.Combine(cProjectManager.dirPathMap, _filename);
+            if (File.Exists(svgfilepath)) cCallInkscape.callInk(svgfilepath);
+        }
        
      
     }

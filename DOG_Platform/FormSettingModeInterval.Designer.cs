@@ -145,18 +145,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 8;
-            this.label2.Text = "最上层";
+            this.label2.Text = "顶层";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(14, 72);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 12);
+            this.label13.Size = new System.Drawing.Size(29, 12);
             this.label13.TabIndex = 8;
-            this.label13.Text = "最下层";
+            this.label13.Text = "底层";
             // 
             // label3
             // 
@@ -184,17 +184,17 @@
             this.btnSectionShowDepth.Name = "btnSectionShowDepth";
             this.btnSectionShowDepth.Size = new System.Drawing.Size(128, 23);
             this.btnSectionShowDepth.TabIndex = 11;
-            this.btnSectionShowDepth.Text = "层位设置显示深度";
+            this.btnSectionShowDepth.Text = "选择层位显示";
             this.btnSectionShowDepth.UseVisualStyleBackColor = true;
             this.btnSectionShowDepth.Click += new System.EventHandler(this.btnSectionShowDepth_Click);
             // 
             // btnFlattedByTop
             // 
-            this.btnFlattedByTop.Location = new System.Drawing.Point(16, 186);
+            this.btnFlattedByTop.Location = new System.Drawing.Point(16, 188);
             this.btnFlattedByTop.Name = "btnFlattedByTop";
             this.btnFlattedByTop.Size = new System.Drawing.Size(128, 23);
             this.btnFlattedByTop.TabIndex = 71;
-            this.btnFlattedByTop.Text = "最上层位顶拉平";
+            this.btnFlattedByTop.Text = "顶层拉平";
             this.btnFlattedByTop.UseVisualStyleBackColor = true;
             this.btnFlattedByTop.Click += new System.EventHandler(this.btnFlattedByTop_Click);
             // 
@@ -220,7 +220,7 @@
             // 
             // btnClearConnectLayer
             // 
-            this.btnClearConnectLayer.Location = new System.Drawing.Point(16, 232);
+            this.btnClearConnectLayer.Location = new System.Drawing.Point(16, 231);
             this.btnClearConnectLayer.Name = "btnClearConnectLayer";
             this.btnClearConnectLayer.Size = new System.Drawing.Size(128, 23);
             this.btnClearConnectLayer.TabIndex = 74;

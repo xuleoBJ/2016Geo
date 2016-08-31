@@ -55,6 +55,7 @@
             this.cmsWebSVG = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSVGedit = new System.Windows.Forms.ToolStripMenuItem();
             this.窗口打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiOpenFileDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tbgMainTable = new System.Windows.Forms.TabPage();
             this.dgvDataTable = new System.Windows.Forms.DataGridView();
             this.tbgWellHead = new System.Windows.Forms.TabPage();
@@ -180,7 +181,7 @@
             this.cmsProjectGrapthSVG = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiGraphRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGraphDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsGlobalLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExportAllLog = new System.Windows.Forms.ToolStripMenuItem();
             this.全局设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -205,7 +206,7 @@
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenFileDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGraphEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -508,21 +509,28 @@
             this.窗口打开ToolStripMenuItem,
             this.tsmiOpenFileDir});
             this.cmsWebSVG.Name = "cmsWebSVG";
-            this.cmsWebSVG.Size = new System.Drawing.Size(153, 92);
+            this.cmsWebSVG.Size = new System.Drawing.Size(149, 70);
             // 
             // tsmiSVGedit
             // 
             this.tsmiSVGedit.Name = "tsmiSVGedit";
-            this.tsmiSVGedit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSVGedit.Size = new System.Drawing.Size(148, 22);
             this.tsmiSVGedit.Text = "图形编辑";
             this.tsmiSVGedit.Click += new System.EventHandler(this.tsmiSVGedit_Click);
             // 
             // 窗口打开ToolStripMenuItem
             // 
             this.窗口打开ToolStripMenuItem.Name = "窗口打开ToolStripMenuItem";
-            this.窗口打开ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.窗口打开ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.窗口打开ToolStripMenuItem.Text = "窗口打开";
             this.窗口打开ToolStripMenuItem.Click += new System.EventHandler(this.窗口打开ToolStripMenuItem_Click);
+            // 
+            // tsmiOpenFileDir
+            // 
+            this.tsmiOpenFileDir.Name = "tsmiOpenFileDir";
+            this.tsmiOpenFileDir.Size = new System.Drawing.Size(148, 22);
+            this.tsmiOpenFileDir.Text = "打开文件位置";
+            this.tsmiOpenFileDir.Click += new System.EventHandler(this.tsmiOpenFileDir_Click);
             // 
             // tbgMainTable
             // 
@@ -1557,32 +1565,33 @@
             // cmsProjectGrapthSVG
             // 
             this.cmsProjectGrapthSVG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiGraphEdit,
             this.tsmiGraphRename,
             this.tsmiGraphCopy,
-            this.tsmiDelete});
+            this.tsmiGraphDelete});
             this.cmsProjectGrapthSVG.Name = "cmsProjectGrapth";
-            this.cmsProjectGrapthSVG.Size = new System.Drawing.Size(113, 70);
+            this.cmsProjectGrapthSVG.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiGraphRename
             // 
             this.tsmiGraphRename.Name = "tsmiGraphRename";
-            this.tsmiGraphRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphRename.Text = "重命名";
             this.tsmiGraphRename.Click += new System.EventHandler(this.tsmiGraphRename_Click);
             // 
             // tsmiGraphCopy
             // 
             this.tsmiGraphCopy.Name = "tsmiGraphCopy";
-            this.tsmiGraphCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphCopy.Text = "复制";
             this.tsmiGraphCopy.Click += new System.EventHandler(this.tsmiGraphCopy_Click);
             // 
-            // tsmiDelete
+            // tsmiGraphDelete
             // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(112, 22);
-            this.tsmiDelete.Text = "删除";
-            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            this.tsmiGraphDelete.Name = "tsmiGraphDelete";
+            this.tsmiGraphDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphDelete.Text = "删除";
+            this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // cmsGlobalLog
             // 
@@ -1725,6 +1734,7 @@
             this.tsmiSectionGeoCopy.Name = "tsmiSectionGeoCopy";
             this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionGeoCopy.Text = "复制";
+            this.tsmiSectionGeoCopy.Click += new System.EventHandler(this.tsmiSectionGeoCopy_Click);
             // 
             // tsmiSectionGeoDel
             // 
@@ -1762,12 +1772,12 @@
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
             // 
-            // tsmiOpenFileDir
+            // tsmiGraphEdit
             // 
-            this.tsmiOpenFileDir.Name = "tsmiOpenFileDir";
-            this.tsmiOpenFileDir.Size = new System.Drawing.Size(152, 22);
-            this.tsmiOpenFileDir.Text = "打开文件位置";
-            this.tsmiOpenFileDir.Click += new System.EventHandler(this.tsmiOpenFileDir_Click);
+            this.tsmiGraphEdit.Name = "tsmiGraphEdit";
+            this.tsmiGraphEdit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphEdit.Text = "编辑";
+            this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
             // 
             // FormMain
             // 
@@ -1977,7 +1987,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleteWell;
         private System.Windows.Forms.ContextMenuStrip cmsProjectGrapthSVG;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphRename;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGraphDelete;
         private System.Windows.Forms.ContextMenuStrip cmsGlobalLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportAllLog;
         private System.Windows.Forms.ToolStripMenuItem 全局设置ToolStripMenuItem;
@@ -2017,6 +2027,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslblProjectionInfor;
         private System.Windows.Forms.ToolStripStatusLabel tssLabelPosition;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFileDir;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGraphEdit;
     }
 }
 
