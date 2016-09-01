@@ -882,13 +882,15 @@ namespace DOGPlatform.XML
        public static string getTrackChildInforByID(string filePathSelectTemplatelate, string sIDtrack,string sTag)
        {
            //根据sIDtrack查找XML并删除
-
+           string sRet = "";
+           if(File.Exists(filePathSelectTemplatelate))
+           {
            XmlDocument xmlDoc = new XmlDocument();
            xmlDoc.Load(filePathSelectTemplatelate);
            string sPath = string.Format("//*[@id='{0}']", sIDtrack);
            XmlNode el = xmlDoc.SelectSingleNode(sPath);
-           string sRet = "";
            if (el != null && el[sTag] != null) sRet = el[sTag].InnerText;
+           } 
            return sRet;
        }
 

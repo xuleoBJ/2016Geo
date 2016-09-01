@@ -57,12 +57,15 @@ namespace DOGPlatform.XML
             List<ItemWellSection> listWellsSection=new List<ItemWellSection>();
             foreach (XmlElement elWell in cXmlDocSectionGeo.getWellNodes(filePathSectionGeoCss))
             {
-                ItemWellSection item = new ItemWellSection(elWell["JH"].InnerText);
-                item.fShowedDepthTop = float.Parse(elWell["fShowTop"].InnerText); 
-                item.fShowedDepthBase = float.Parse(elWell["fShowBot"].InnerText);
-                item.fXview = float.Parse(elWell["Xview"].InnerText);
-                item.fYview = float.Parse(elWell["Yview"].InnerText);
-                listWellsSection.Add(item);
+                if (elWell["JH"].InnerText != "")
+                {
+                    ItemWellSection item = new ItemWellSection(elWell["JH"].InnerText);
+                    item.fShowedDepthTop = float.Parse(elWell["fShowTop"].InnerText);
+                    item.fShowedDepthBase = float.Parse(elWell["fShowBot"].InnerText);
+                    item.fXview = float.Parse(elWell["Xview"].InnerText);
+                    item.fYview = float.Parse(elWell["Yview"].InnerText);
+                    listWellsSection.Add(item);
+                }
             }
             return listWellsSection; 
     }
@@ -153,56 +156,62 @@ namespace DOGPlatform.XML
         /// <param name="item2"></param>
         public static void addConnectDataItem(string pathTemplate, int iShowMode, cDataItemConnect item1, cDataItemConnect item2)
         {
-            XmlDocument wellTemplateXML = new XmlDocument();
-            wellTemplateXML.Load(pathTemplate);
-            string sPath = "SectionMap/ConnectInfor";
-            XmlNode selectNode = wellTemplateXML.SelectSingleNode(sPath);
+            if (item1.sJH != "" && item1.sIDDataItem != "" && item1.sIDTrack != "" &&
+                item2.sJH != "" && item2.sIDDataItem != "" && item2.sIDTrack != "")
+            {
+                XmlDocument wellTemplateXML = new XmlDocument();
+                wellTemplateXML.Load(pathTemplate);
+                string sPath = "SectionMap/ConnectInfor";
+                XmlNode selectNode = wellTemplateXML.SelectSingleNode(sPath);
+                XmlElement newNode = wellTemplateXML.CreateElement("ConnectItem");
+                newNode.SetAttribute("id", cIDmake.idConnectItem());
+                newNode.SetAttribute("iShowMode", iShowMode.ToString());
+                newNode.SetAttribute("trackType", item1.typeTrack);
+                newNode.SetAttribute("sFill", item1.sFill);
 
-            XmlElement newNode = wellTemplateXML.CreateElement("ConnectItem");
-            newNode.SetAttribute("id", cIDmake.idConnectItem());
-            newNode.SetAttribute("iShowMode", iShowMode.ToString());
-            newNode.SetAttribute("trackType", item1.typeTrack);
-            newNode.SetAttribute("sFill", item1.sFill);
-           
-            XmlElement itemRect1 = wellTemplateXML.CreateElement("rect1");
-            itemRect1.SetAttribute("wellID", item1.sJH);
-            itemRect1.SetAttribute("sIDtrack", item1.sIDTrack);
-            itemRect1.SetAttribute("sIDitem", item1.sIDDataItem);
-            newNode.AppendChild(itemRect1);
+                XmlElement itemRect1 = wellTemplateXML.CreateElement("rect1");
+                itemRect1.SetAttribute("wellID", item1.sJH);
+                itemRect1.SetAttribute("sIDtrack", item1.sIDTrack);
+                itemRect1.SetAttribute("sIDitem", item1.sIDDataItem);
+                newNode.AppendChild(itemRect1);
 
-            XmlElement itemRect2 = wellTemplateXML.CreateElement("rect2");
-            itemRect2.SetAttribute("wellID", item2.sJH);
-            itemRect2.SetAttribute("sIDtrack", item2.sIDTrack);
-            itemRect2.SetAttribute("sIDitem", item2.sIDDataItem);
-            newNode.AppendChild(itemRect2);
- 
-            selectNode.AppendChild(newNode); 
-            
-            wellTemplateXML.Save(pathTemplate);
+                XmlElement itemRect2 = wellTemplateXML.CreateElement("rect2");
+                itemRect2.SetAttribute("wellID", item2.sJH);
+                itemRect2.SetAttribute("sIDtrack", item2.sIDTrack);
+                itemRect2.SetAttribute("sIDitem", item2.sIDDataItem);
+                newNode.AppendChild(itemRect2);
+
+                selectNode.AppendChild(newNode);
+
+                wellTemplateXML.Save(pathTemplate);
+            }
         }
 
         public static void addConnectDataItem(string pathTemplate, int iShowMode, cDataItemConnect item1)
         {
-            XmlDocument wellTemplateXML = new XmlDocument();
-            wellTemplateXML.Load(pathTemplate);
-            string sPath = "SectionMap/ConnectInfor";
-            XmlNode selectNode = wellTemplateXML.SelectSingleNode(sPath);
+            if (item1.sJH != "" && item1.sIDDataItem != "" && item1.sIDTrack != "")
+            {
+                XmlDocument wellTemplateXML = new XmlDocument();
+                wellTemplateXML.Load(pathTemplate);
+                string sPath = "SectionMap/ConnectInfor";
+                XmlNode selectNode = wellTemplateXML.SelectSingleNode(sPath);
 
-            XmlElement newNode = wellTemplateXML.CreateElement("ConnectItem");
-            newNode.SetAttribute("id", cIDmake.idConnectItem());
-            newNode.SetAttribute("iShowMode", iShowMode.ToString());
-            newNode.SetAttribute("trackType", item1.typeTrack);
-            newNode.SetAttribute("sFill", item1.sFill);
+                XmlElement newNode = wellTemplateXML.CreateElement("ConnectItem");
+                newNode.SetAttribute("id", cIDmake.idConnectItem());
+                newNode.SetAttribute("iShowMode", iShowMode.ToString());
+                newNode.SetAttribute("trackType", item1.typeTrack);
+                newNode.SetAttribute("sFill", item1.sFill);
 
-            XmlElement itemRect1 = wellTemplateXML.CreateElement("rect1");
-            itemRect1.SetAttribute("wellID", item1.sJH);
-            itemRect1.SetAttribute("sIDtrack", item1.sIDTrack);
-            itemRect1.SetAttribute("sIDitem", item1.sIDDataItem);
-            newNode.AppendChild(itemRect1);
+                XmlElement itemRect1 = wellTemplateXML.CreateElement("rect1");
+                itemRect1.SetAttribute("wellID", item1.sJH);
+                itemRect1.SetAttribute("sIDtrack", item1.sIDTrack);
+                itemRect1.SetAttribute("sIDitem", item1.sIDDataItem);
+                newNode.AppendChild(itemRect1);
 
-            selectNode.AppendChild(newNode);
+                selectNode.AppendChild(newNode);
 
-            wellTemplateXML.Save(pathTemplate);
+                wellTemplateXML.Save(pathTemplate);
+            }
         }
         public static void deleteConnectSelect(string pathTemplate, string sID)
         {

@@ -27,6 +27,7 @@ namespace DOGPlatform
         {
             cXEGeopage curpage = new cXEGeopage(xmlPath);
             nUDPageHeight.Value = (decimal)curpage.PageHeight;
+            if (nUDPageHeight.Value <= 200) nUDPageHeight.Value  = (decimal) 1000.0;
             nUDPageWidth.Value = (decimal)curpage.PageWidth;
             nUDpageTopElevation.Value = (decimal)curpage.TopElevation;
             nUDFirstWellPosition.Value = (decimal)curpage.iPositionXFirstWell;

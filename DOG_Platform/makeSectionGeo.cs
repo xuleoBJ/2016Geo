@@ -116,7 +116,8 @@ namespace DOGPlatform
                         string sIDtrack1 = rect1.Attributes["sIDtrack"].Value;
                         string wellID1 = rect1.Attributes["wellID"].Value;
                         string sIDitem1 = rect1.Attributes["sIDitem"].Value;
-
+                        if(wellID1!="")
+                        {
                         string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
                         cDataItemConnect item1 = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
 
@@ -138,11 +139,11 @@ namespace DOGPlatform
                             connectPath.SetAttribute("stroke", "black");
                             connectPath.SetAttribute("d", d);
                             string fillType = "none";
-                            if (strTypeTrack == TypeTrack.测井解释.ToString()) 
+                            if (strTypeTrack == TypeTrack.测井解释.ToString())
                             {
-                                fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill); 
+                                fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill);
                                 connectPath.SetAttribute("fill", fillType);
-                                svgSection.addgElement2Layer(gLayerConnectJSJL,connectPath,svgSection.offsetX_gSVG, iPageTopYOff);
+                                svgSection.addgElement2Layer(gLayerConnectJSJL, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
                             }
                             else if (strTypeTrack == TypeTrack.分层.ToString())
                             {
@@ -157,10 +158,11 @@ namespace DOGPlatform
                                 svgSection.addgElement2Layer(gLayerConnectLitho, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
                             }
                             else
-                            { 
+                            {
                                 connectPath.SetAttribute("fill", "none");
                                 svgSection.addgElement2Layer(gLayerConnectBase, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
                             }
+                          }
                         }
                     }
                     #endregion

@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml;
 using DOGPlatform.SVG;
 using DOGPlatform.XML;
+using System.IO;
 
 
 namespace DOGPlatform
@@ -54,19 +55,22 @@ namespace DOGPlatform
 
         void setupBySectioWell(string filePathOper, float fVscale)
         {
-            XmlDocument wellTemplateXML = new XmlDocument();
-            wellTemplateXML.Load(filePathOper);
-
-            //获取rect属性信息
-            string sPath = string.Format("//*[@id='{0}']", sIDDataItem);
-            XmlNode dataNode = wellTemplateXML.SelectSingleNode(sPath);
-
-            if (dataNode != null)
+            if (File.Exists(filePathOper))
             {
-                this.width = double.Parse(dataNode.ParentNode.ParentNode["trackWidth"].InnerText);
-                this.top = fVscale * double.Parse(dataNode["topTVD"].InnerText);
-                this.bot = fVscale * double.Parse(dataNode["botTVD"].InnerText);
-                this.sFill = dataNode["sProperty"].InnerText;
+                XmlDocument wellTemplateXML = new XmlDocument();
+                wellTemplateXML.Load(filePathOper);
+
+                //获取rect属性信息
+                string sPath = string.Format("//*[@id='{0}']", sIDDataItem);
+                XmlNode dataNode = wellTemplateXML.SelectSingleNode(sPath);
+
+                if (dataNode != null)
+                {
+                    this.width = double.Parse(dataNode.ParentNode.ParentNode["trackWidth"].InnerText);
+                    this.top = fVscale * double.Parse(dataNode["topTVD"].InnerText);
+                    this.bot = fVscale * double.Parse(dataNode["botTVD"].InnerText);
+                    this.sFill = dataNode["sProperty"].InnerText;
+                }
             }
         }
         void setupBySectionCss(string filePathSectionGeoCss, float fVscale)

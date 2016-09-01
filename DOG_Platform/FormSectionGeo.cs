@@ -95,13 +95,16 @@ namespace DOGPlatform
              //解析sectioncss文件，增加节点
              foreach (ItemWellSection item in  listWellsSection)
              {
-                 string filePath = Path.Combine(dirSectionData, item.sJH + ".xml");
-                 TreeNode tnWell = new TreeNode(item.sJH);
-                 tnWell.Tag = item.sJH;
-                 tnWell.Text = item.sJH;
-                 tnWell.Name = item.sJH;
-                 TreeViewSectionEditView.setupWellNode(tnWell, filePath);
-                 tvSectionEdit.Nodes.Add(tnWell);
+                 if (item.sJH != "")
+                 {
+                     string filePath = Path.Combine(dirSectionData, item.sJH + ".xml");
+                     TreeNode tnWell = new TreeNode(item.sJH);
+                     tnWell.Tag = item.sJH;
+                     tnWell.Text = item.sJH;
+                     tnWell.Name = item.sJH;
+                     TreeViewSectionEditView.setupWellNode(tnWell, filePath);
+                     tvSectionEdit.Nodes.Add(tnWell);
+                 }
              }
 
              foreach (TreeNode tn in tvSectionEdit.Nodes) tn.Expand();
@@ -177,6 +180,7 @@ namespace DOGPlatform
 
         void updateSVGMap() 
         {
+            Cursor.Current = Cursors.WaitCursor;
             PscrollOffset = cSectionUIoperate.getOffSet(this.webBrowserSVG);
             if (File.Exists(filePathSectionGeoCss))
             {
@@ -189,6 +193,7 @@ namespace DOGPlatform
                 filePathSVG = makeSectionGeo.generateSectionGraph(dirSectionData, this.filePathSectionGeoCss, "test.svg");
                 this.webBrowserSVG.Navigate(new Uri(filePathSVG));
             }
+            Cursor.Current = Cursors.Default;
         }
 
         DateTime dtLastStop = DateTime.Now;
@@ -1054,6 +1059,7 @@ namespace DOGPlatform
         private void 等井距ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cXmlBase.setNodeInnerText(filePathSectionGeoCss, cXEGeopage.xmlFullPathPageWellArrange,"1");
+            makeSVGmap();
         }
 
         private void tsBtnZoonInH_Click(object sender, EventArgs e)
@@ -1064,6 +1070,7 @@ namespace DOGPlatform
         private void 实际井距比ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cXmlBase.setNodeInnerText(filePathSectionGeoCss, cXEGeopage.xmlFullPathPageWellArrange,"2");
+            makeSVGmap();
         }
 
 
@@ -1310,6 +1317,13 @@ namespace DOGPlatform
         {
             setXYview(2.0F);
         }
+
+        private void 井排列ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
     }
 }

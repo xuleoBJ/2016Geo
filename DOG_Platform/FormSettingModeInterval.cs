@@ -182,6 +182,8 @@ namespace DOGPlatform
         private void btnClearConnectLayer_Click(object sender, EventArgs e)
         {
             cXmlDocSectionGeo.clearAllConnectDataItem(this.filePathSectionGeoCss);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

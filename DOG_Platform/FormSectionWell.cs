@@ -523,8 +523,9 @@ namespace DOGPlatform
             makeNewSVG();
         }
 
-        void updateSVG() 
+        void updateSVG()
         {
+            Cursor.Current = Cursors.WaitCursor;
             this.Text ="剖面综合:\t"+filePathOper;
             filePathSVG = makeSectionWell.makeSectionWellBody(filePathOper, sJHSelected + ".svg");
             //string sUnit = cXmlBase.getNodeInnerText(this.filePathOper, cXEWellPage.fullPathPageUnit);
@@ -537,6 +538,7 @@ namespace DOGPlatform
             this.wellPanelMain.filePathSVG = filePathSVG;
             this.wellPanelMain.filePathHeadSVG = filePathSVG;
             this.wellPanelMain.RefreshSVG();
+            Cursor.Current = Cursors.Default;
         }
 
         DateTime dtLastStop = DateTime.Now;
