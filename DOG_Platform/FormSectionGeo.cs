@@ -38,7 +38,7 @@ namespace DOGPlatform
         public List<string> ltStrSelectedJH = new List<string>();  
         //定义存储绘图剖面井数据结构
         List<ItemWellSection> listWellsSection = new List<ItemWellSection>();
-        
+        static bool bRefreshNow = true;
         //tempXML存储路径
         static string mapID = "sectionGeo" + DateTime.Now.ToString("MMddHHmmss");
         static string dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
@@ -199,24 +199,27 @@ namespace DOGPlatform
         DateTime dtLastStop = DateTime.Now;
         void makeSVGmap()
         {
-            updateSVGMap(); 
-
-            //更新前把 数据备份，copy到历史数据，准备回退。
-            if (iSwichHis == 0 && cPublicMethodBase.ExecDateDiff(dtLastStop, DateTime.Now).TotalSeconds >= 2) //0表示重新生成的，1表示回退的 回退的不用备份。
+            if (bRefreshNow)
             {
-                string dirPathUndo = Path.Combine(this.dirHisUnto, cIDmake.generateRandomDirName());
-                Directory.CreateDirectory(dirPathUndo);
-                string backFileName = Path.Combine(dirPathUndo, mapID + cProjectManager.fileExtensionSectionGeo);
-                File.Copy(this.filePathSectionGeoCss, backFileName, true);
-                cPublicMethodForm.DirectoryCopy(dirSectionData, dirPathUndo, true);
-                UndoList.Push(dirPathUndo);
-                if (UndoList.Count > 1) this.tsbUndo.Enabled = true;
-                if (RedoList.Count > 1) this.tsbRedo.Enabled = true;
+                updateSVGMap();
+
+                //更新前把 数据备份，copy到历史数据，准备回退。
+                if (iSwichHis == 0 && cPublicMethodBase.ExecDateDiff(dtLastStop, DateTime.Now).TotalSeconds >= 2) //0表示重新生成的，1表示回退的 回退的不用备份。
+                {
+                    string dirPathUndo = Path.Combine(this.dirHisUnto, cIDmake.generateRandomDirName());
+                    Directory.CreateDirectory(dirPathUndo);
+                    string backFileName = Path.Combine(dirPathUndo, mapID + cProjectManager.fileExtensionSectionGeo);
+                    File.Copy(this.filePathSectionGeoCss, backFileName, true);
+                    cPublicMethodForm.DirectoryCopy(dirSectionData, dirPathUndo, true);
+                    UndoList.Push(dirPathUndo);
+                    if (UndoList.Count > 1) this.tsbUndo.Enabled = true;
+                    if (RedoList.Count > 1) this.tsbRedo.Enabled = true;
+                }
+                iSwichHis = 0;
+                dtLastStop = DateTime.Now;
+                this.lblClick.Visible = false;
+                this.iPageTopElevation = int.Parse(cXmlDocSectionGeo.getNodeInnerText(this.filePathSectionGeoCss, cXEGeopage.xmlFullPathPageTopElevation));
             }
-            iSwichHis = 0;
-            dtLastStop = DateTime.Now;
-            this.lblClick.Visible = false;
-            this.iPageTopElevation=int.Parse(cXmlDocSectionGeo.getNodeInnerText(this.filePathSectionGeoCss,cXEGeopage.xmlFullPathPageTopElevation));
         }
 
          private void tsBtnReflush_Click(object sender, EventArgs e)
@@ -224,6 +227,7 @@ namespace DOGPlatform
              //这里等记录多次刷新的问题 相等表示连续触发刷新选项，
              //不等说明不是从刷新触发的 连续刷新操作如果避免的话 会造成修改后不刷新的问题,逻辑不好控制
              updateTVandList();
+             bRefreshNow = true ;
              makeSVGmap();
          }
 
@@ -349,8 +353,7 @@ namespace DOGPlatform
                  if (cSectionUIoperate.updateTrackData(this.sJH, currentNode, this.filePathOper) == DialogResult.OK) 
                  {
                      updateTVandList();
-                     //刷新树，不刷新图，太慢了。
-                     // makeSVGmap(); 
+                     makeSVGmap(); 
                  }
              }
          }
@@ -1321,6 +1324,11 @@ namespace DOGPlatform
         private void 井排列ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsmiCloseRefresh_Click(object sender, EventArgs e)
+        {
+            bRefreshNow = false;
         }
 
        

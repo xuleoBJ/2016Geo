@@ -152,6 +152,8 @@
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCloseRefresh = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tbcSectionGeo.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
@@ -578,7 +580,6 @@
             this.tsbPageSet,
             this.tsbTreeView,
             this.toolStripSeparator7,
-            this.tsBtnReflush,
             this.tsbUndo,
             this.tsbRedo,
             this.toolStripSeparator1,
@@ -595,7 +596,10 @@
             this.toolStripSeparator4,
             this.tsbFault,
             this.tslblFaulDisplacement,
-            this.tsTextFaultDisplacement});
+            this.tsTextFaultDisplacement,
+            this.toolStripSeparator8,
+            this.tsmiCloseRefresh,
+            this.tsBtnReflush});
             this.ToolStripMain.Location = new System.Drawing.Point(0, 25);
             this.ToolStripMain.Name = "ToolStripMain";
             this.ToolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -673,28 +677,28 @@
             // tsBtnZoonOutHItem1_1
             // 
             this.tsBtnZoonOutHItem1_1.Name = "tsBtnZoonOutHItem1_1";
-            this.tsBtnZoonOutHItem1_1.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_1.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem1_1.Text = "X 1.1";
             this.tsBtnZoonOutHItem1_1.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_1_Click);
             // 
             // tsBtnZoonOutHItem1_2
             // 
             this.tsBtnZoonOutHItem1_2.Name = "tsBtnZoonOutHItem1_2";
-            this.tsBtnZoonOutHItem1_2.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_2.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem1_2.Text = "X 1.2";
             this.tsBtnZoonOutHItem1_2.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_2_Click);
             // 
             // tsBtnZoonOutHItem1_5
             // 
             this.tsBtnZoonOutHItem1_5.Name = "tsBtnZoonOutHItem1_5";
-            this.tsBtnZoonOutHItem1_5.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_5.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem1_5.Text = "X 1.5";
             this.tsBtnZoonOutHItem1_5.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_5_Click);
             // 
             // tsBtnZoonOutHItem2
             // 
             this.tsBtnZoonOutHItem2.Name = "tsBtnZoonOutHItem2";
-            this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem2.Text = "X 2";
             this.tsBtnZoonOutHItem2.Click += new System.EventHandler(this.tsBtnZoonOutHItem2_Click_1);
             // 
@@ -714,21 +718,21 @@
             // tsBtnZoonOutHItem0_9
             // 
             this.tsBtnZoonOutHItem0_9.Name = "tsBtnZoonOutHItem0_9";
-            this.tsBtnZoonOutHItem0_9.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem0_9.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem0_9.Text = "X 0.9";
             this.tsBtnZoonOutHItem0_9.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_9_Click);
             // 
             // tsBtnZoonOutHItem0_8
             // 
             this.tsBtnZoonOutHItem0_8.Name = "tsBtnZoonOutHItem0_8";
-            this.tsBtnZoonOutHItem0_8.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem0_8.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem0_8.Text = "X 0.8";
             this.tsBtnZoonOutHItem0_8.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_8_Click);
             // 
             // tsBtnZoonOutHItem0_5
             // 
             this.tsBtnZoonOutHItem0_5.Name = "tsBtnZoonOutHItem0_5";
-            this.tsBtnZoonOutHItem0_5.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem0_5.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem0_5.Text = "X 0.5";
             this.tsBtnZoonOutHItem0_5.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_5_Click);
             // 
@@ -1132,26 +1136,26 @@
             // tsmiConnectJSJL
             // 
             this.tsmiConnectJSJL.Name = "tsmiConnectJSJL";
-            this.tsmiConnectJSJL.Size = new System.Drawing.Size(152, 22);
+            this.tsmiConnectJSJL.Size = new System.Drawing.Size(124, 22);
             this.tsmiConnectJSJL.Text = "连接储层";
             this.tsmiConnectJSJL.Click += new System.EventHandler(this.tsmiConnectJSJL_Click);
             // 
             // 右尖灭ToolStripMenuItem
             // 
             this.右尖灭ToolStripMenuItem.Name = "右尖灭ToolStripMenuItem";
-            this.右尖灭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.右尖灭ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.右尖灭ToolStripMenuItem.Text = "右尖灭";
             // 
             // 左尖灭ToolStripMenuItem
             // 
             this.左尖灭ToolStripMenuItem.Name = "左尖灭ToolStripMenuItem";
-            this.左尖灭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.左尖灭ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.左尖灭ToolStripMenuItem.Text = "左尖灭";
             // 
             // 插入断层ToolStripMenuItem
             // 
             this.插入断层ToolStripMenuItem.Name = "插入断层ToolStripMenuItem";
-            this.插入断层ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.插入断层ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.插入断层ToolStripMenuItem.Text = "插入断层";
             // 
             // 井排列ToolStripMenuItem
@@ -1160,21 +1164,21 @@
             this.实际井距比ToolStripMenuItem,
             this.等井距ToolStripMenuItem});
             this.井排列ToolStripMenuItem.Name = "井排列ToolStripMenuItem";
-            this.井排列ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.井排列ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.井排列ToolStripMenuItem.Text = "井排列";
             this.井排列ToolStripMenuItem.Click += new System.EventHandler(this.井排列ToolStripMenuItem_Click);
             // 
             // 实际井距比ToolStripMenuItem
             // 
             this.实际井距比ToolStripMenuItem.Name = "实际井距比ToolStripMenuItem";
-            this.实际井距比ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.实际井距比ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.实际井距比ToolStripMenuItem.Text = "实际井距比";
             this.实际井距比ToolStripMenuItem.Click += new System.EventHandler(this.实际井距比ToolStripMenuItem_Click);
             // 
             // 等井距ToolStripMenuItem
             // 
             this.等井距ToolStripMenuItem.Name = "等井距ToolStripMenuItem";
-            this.等井距ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.等井距ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.等井距ToolStripMenuItem.Text = "等井距";
             this.等井距ToolStripMenuItem.Click += new System.EventHandler(this.等井距ToolStripMenuItem_Click);
             // 
@@ -1228,6 +1232,21 @@
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // tsmiCloseRefresh
+            // 
+            this.tsmiCloseRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsmiCloseRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsmiCloseRefresh.Image")));
+            this.tsmiCloseRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsmiCloseRefresh.Name = "tsmiCloseRefresh";
+            this.tsmiCloseRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsmiCloseRefresh.Text = "暂时关闭实时刷新";
+            this.tsmiCloseRefresh.Click += new System.EventHandler(this.tsmiCloseRefresh_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // FormSectionGeo
             // 
@@ -1392,5 +1411,7 @@
         private System.Windows.Forms.ToolStripMenuItem 井排列ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 实际井距比ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 等井距ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton tsmiCloseRefresh;
     }
 }

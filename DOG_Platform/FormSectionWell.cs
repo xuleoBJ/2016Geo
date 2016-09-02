@@ -33,6 +33,8 @@ namespace DOGPlatform
         private Stack<string> RedoList = new Stack<string>();
         private string dirHisUnto = cProjectManager.dirPathHis;
 
+        static bool bRefreshNow = true ;
+
         double fVscale = 1000 / 500;  //默认是用1：500比例尺 //是用sunit单位换算过的
 
         //初始化redo
@@ -509,6 +511,7 @@ namespace DOGPlatform
 
         private void tsBtnReflush_Click(object sender, EventArgs e)
         {
+            bRefreshNow = true;
             updateTVandWB(); 
         }
 
@@ -545,15 +548,18 @@ namespace DOGPlatform
         void makeNewSVG() //makeNewOne 需要备份数据，刷新，不备份。
         {
             //备份数据需要时间和空间，用户会连续刷新。
-            string filePathHis = Path.Combine(this.dirHisUnto, cIDmake.generateRandomFileNameID());
-            if ( cPublicMethodBase.ExecDateDiff(dtLastStop, DateTime.Now).TotalSeconds >= 1.5)
+            if (bRefreshNow == true)
             {
-                File.Copy(filePathOper, filePathHis, true);
-                UndoList.Push(filePathHis);
-                setUnDoRedoEnable(); 
+                string filePathHis = Path.Combine(this.dirHisUnto, cIDmake.generateRandomFileNameID());
+                if (cPublicMethodBase.ExecDateDiff(dtLastStop, DateTime.Now).TotalSeconds >= 1.5)
+                {
+                    File.Copy(filePathOper, filePathHis, true);
+                    UndoList.Push(filePathHis);
+                    setUnDoRedoEnable();
+                }
+                dtLastStop = DateTime.Now;
+                updateSVG();
             }
-            dtLastStop = DateTime.Now;
-            updateSVG();
         }
 
         private void tvSectionEdit_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -1120,6 +1126,11 @@ namespace DOGPlatform
          private void tsmiInsertCompositon_Click(object sender, EventArgs e)
          {
              addTrackCss(TypeTrack.组分);
+         }
+
+         private void tsmiCloseRefresh_Click(object sender, EventArgs e)
+         {
+             bRefreshNow = false ;
          }
      
     }
