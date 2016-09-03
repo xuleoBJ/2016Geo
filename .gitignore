@@ -2,6 +2,30 @@
 Thumbs.db
 ehthumbs.db
 
+#xuleo filters
+Digger/DigRobot/bin/release/
+Digger/DigRobot/obj/
+demoData/demoResult/
+pyScript/source/
+pyScript/rock/
+pyScript/New/
+pyScript/*.txt/
+*.swp
+*.pyc
+*.pdb
+*.exe
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
 # Folder config file
 Desktop.ini
 

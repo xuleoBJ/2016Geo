@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
+using DOGPlatform.XML;
+using System.Drawing;
 
 namespace DOGPlatform
 {
@@ -207,7 +209,44 @@ namespace DOGPlatform
                 tnSectionWell.Name = TypeProjectNode.sectionWell.ToString();
                 tnSectionWell.Tag = TypeProjectNode.sectionWell;
                 tnWell.Nodes.Add(tnSectionWell);
+                //读单井综合图，增加图道节点
+                setupSectionWellNode(tnSectionWell, filePathWellSection, sJH);
             }
+        }
+
+
+        public static void setupSectionWellNode(TreeNode tn, string filePathOper, string sJHSelected)
+        {
+            //read xml and treeview
+            foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathOper))
+            {
+                trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                TreeNode tnode = new TreeNode(curTrackDraw.sTrackType,12,12);
+                tnode.Text = curTrackDraw.sTrackTitle;
+                tnode.Name = curTrackDraw.sTrackID;  //结点name
+                tnode.Tag = curTrackDraw.sTrackType;
+                tn.Nodes.Add(tnode);
+                if (curTrackDraw.iVisible > 0) tnode.Checked = true;
+                else tnode.Checked = false;
+                if (curTrackDraw.sTrackType == TypeTrack.曲线道.ToString())
+                {
+                    //继续读取曲线
+                    XmlNodeList xnList = el_Track.SelectNodes(".//Log");
+                    foreach (XmlElement xnLog in xnList)
+                    {
+                        string sLogName = xnLog["logName"].InnerText;
+                        TreeNode tnLog = new TreeNode(sLogName, 5, 5);
+                        tnLog.Name = xnLog.Attributes["id"].Value;
+                        tnLog.Text = sLogName ;
+                        tnLog.Tag = sLogName ;
+                       
+                        string sColor = xnLog["curveColor"].InnerText;
+                        tnLog.ForeColor = Color.FromName(sColor);
+                        tnode.Nodes.Add(tnLog);
+                    }
+                }
+            }
+
         }
 
         public static void updateTN_GlobeWellLog(TreeView _tv)

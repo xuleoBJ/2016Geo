@@ -24,24 +24,56 @@ namespace DOGPlatform
             cXmlBase.setNodeInnerText(goalFilePath, cXmlDocSectionWell.fullPathJH, sJH);
             cXmlBase.setNodeInnerText(goalFilePath, cXEWellPage.fullPathMapTitle, sJH);
             //加载曲线数据
-            //foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(goalFilePath))
-            //{
-            //    trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
-            //    //继续读取曲线,加载数据
-            //    if (curTrackDraw.sTrackType == TypeTrack.曲线道.ToString())
-            //    {
-            //        XmlNodeList xnList = el_Track.SelectNodes(".//Log");
-            //        foreach (XmlElement xnLog in xnList)
-            //        {
-            //            itemLogHeadInforDraw curLogHead = new itemLogHeadInforDraw(xnLog);
-            //            //此处写入配置文件xml,tn.name 是 id
-            //            string sLogID = curLogHead.sIDLog;
-            //            string sLogName = curLogHead.sLogName;
-            //            //如果测井文件存在，自动加载数据
-            //            addLogData2Track(goalFilePath, sJH, sLogName, sLogID);
-            //        }
-            //    } 
-            //} //end track loop
+            ItemWell curWell = cProjectData.ltProjectWell.FirstOrDefault(p => p.sJH == sJH);
+            foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(goalFilePath))
+            {
+                trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                //继续读取曲线,加载数据
+                if (curTrackDraw.sTrackType == TypeTrack.分层.ToString())
+                {
+                    List<itemDrawDataIntervalValue> listDataItem = new List<itemDrawDataIntervalValue>();
+                    //判断库中是否有相关数据，如果有数据的话，构建 listDataItem，然后导入
+                    cIOinputLayerDepth cSelectLayerDepth = new cIOinputLayerDepth();
+                    List<string> listStrLine = cSelectLayerDepth.selectSectionDrawData2List(sJH);
+                    foreach(string sLine in listStrLine)
+                    {
+                        string[] splitLine = sLine.Split();
+                        if (splitLine.Length >= 3)
+                        {
+                            itemDrawDataIntervalValue itemPro = new itemDrawDataIntervalValue();
+                            itemPro.top = float.Parse(splitLine[0]);
+                            itemPro.bot = float.Parse(splitLine[1]);
+                            itemPro.sProperty = splitLine[2];
+                            itemPro.calTVD(curWell);
+                            listDataItem.Add(itemPro);
+                        }
+                    }  //end 第一种类型
+                    cXmlDocSectionWell.addDataItemListIntervaProperty(goalFilePath, curTrackDraw.sTrackID, listDataItem);
+                }
+
+                if (curTrackDraw.sTrackType == TypeTrack.测井解释.ToString())
+                {
+                    List<itemDrawDataIntervalValue> listDataItem = new List<itemDrawDataIntervalValue>();
+                    //判断库中是否有相关数据，如果有数据的话，构建 listDataItem，然后导入
+                    cIOinputJSJL cSelectJSJL = new cIOinputJSJL();
+                    List<string> listStrLine = cSelectJSJL.selectSectionDrawData2List(sJH);
+                    foreach (string sLine in listStrLine)
+                    {
+                        string[] splitLine = sLine.Split();
+                        if (splitLine.Length >= 3)
+                        {
+                            itemDrawDataIntervalValue itemPro = new itemDrawDataIntervalValue();
+                            itemPro.top = float.Parse(splitLine[0]);
+                            itemPro.bot = float.Parse(splitLine[1]);
+                            itemPro.sProperty = splitLine[2];
+                            itemPro.calTVD(curWell);
+                            listDataItem.Add(itemPro);
+                        }
+                    }  //end 第一种类型
+                    cXmlDocSectionWell.addDataItemListIntervaProperty(goalFilePath, curTrackDraw.sTrackID, listDataItem);
+                }
+
+            } //end track loop
         }
 
 

@@ -179,6 +179,7 @@
             this.tsmiWellData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteWell = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsProjectGrapthSVG = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiGraphEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -206,7 +207,6 @@
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGraphEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1509,6 +1509,7 @@
             this.imageListMain.Images.SetKeyName(9, "welGeo.png");
             this.imageListMain.Images.SetKeyName(10, "svgmap.ico");
             this.imageListMain.Images.SetKeyName(11, "layMap.ico");
+            this.imageListMain.Images.SetKeyName(12, "16X16Track.png");
             // 
             // cmsProjectLayer
             // 
@@ -1572,24 +1573,31 @@
             this.cmsProjectGrapthSVG.Name = "cmsProjectGrapth";
             this.cmsProjectGrapthSVG.Size = new System.Drawing.Size(113, 92);
             // 
+            // tsmiGraphEdit
+            // 
+            this.tsmiGraphEdit.Name = "tsmiGraphEdit";
+            this.tsmiGraphEdit.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphEdit.Text = "编辑";
+            this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
+            // 
             // tsmiGraphRename
             // 
             this.tsmiGraphRename.Name = "tsmiGraphRename";
-            this.tsmiGraphRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphRename.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphRename.Text = "重命名";
             this.tsmiGraphRename.Click += new System.EventHandler(this.tsmiGraphRename_Click);
             // 
             // tsmiGraphCopy
             // 
             this.tsmiGraphCopy.Name = "tsmiGraphCopy";
-            this.tsmiGraphCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphCopy.Text = "复制";
             this.tsmiGraphCopy.Click += new System.EventHandler(this.tsmiGraphCopy_Click);
             // 
             // tsmiGraphDelete
             // 
             this.tsmiGraphDelete.Name = "tsmiGraphDelete";
-            this.tsmiGraphDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphDelete.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphDelete.Text = "删除";
             this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
@@ -1771,13 +1779,6 @@
             this.tsmiSectionFenceDel.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
-            // 
-            // tsmiGraphEdit
-            // 
-            this.tsmiGraphEdit.Name = "tsmiGraphEdit";
-            this.tsmiGraphEdit.Size = new System.Drawing.Size(152, 22);
-            this.tsmiGraphEdit.Text = "编辑";
-            this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
             // 
             // FormMain
             // 

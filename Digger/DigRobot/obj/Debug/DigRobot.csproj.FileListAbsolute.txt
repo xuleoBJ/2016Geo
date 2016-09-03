@@ -50,3 +50,14 @@ E:\2016geo\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.Properties.Resources.resou
 E:\2016geo\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.csproj.GenerateResource.Cache
 E:\2016geo\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.exe
 E:\2016geo\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.pdb
+D:\2016Geo\Digger\DigRobot\bin\Debug\DigRobot.exe.config
+D:\2016Geo\Digger\DigRobot\bin\Debug\DigRobot.exe
+D:\2016Geo\Digger\DigRobot\bin\Debug\DigRobot.pdb
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot._3PointCoordinateForm.resources
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.aboutForm.resources
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.coordinateLocationForm.resources
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.FormDigRobot.resources
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.Properties.Resources.resources
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.csproj.GenerateResource.Cache
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.exe
+D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.pdb

@@ -108,9 +108,9 @@ namespace DOGPlatform
                 if (curTrackDraw.iVisible > 0) tnode.Checked = true;
                 else tnode.Checked = false;
 
+                //继续道内数据项
                 if (curTrackDraw.sTrackType == TypeTrack.分层.ToString())
                 {
-                    //继续读取曲线
                     XmlNodeList xnList = el_Track.SelectNodes(".//dataList/dataItem");
                     foreach (XmlElement xnLayer in xnList)
                     {
