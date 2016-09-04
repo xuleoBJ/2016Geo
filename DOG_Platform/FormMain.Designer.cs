@@ -207,6 +207,9 @@
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsDataSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiSectionWellOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -248,6 +251,7 @@
             this.cmsSectionWell.SuspendLayout();
             this.cmsSectionGeo.SuspendLayout();
             this.cmsSectionFence.SuspendLayout();
+            this.cmsDataSectionWell.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsNavigationPanel
@@ -1780,6 +1784,27 @@
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
             // 
+            // cmsDataSectionWell
+            // 
+            this.cmsDataSectionWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiSectionWellOpen,
+            this.tsmiSectionWellSave});
+            this.cmsDataSectionWell.Name = "cmsWebSVG";
+            this.cmsDataSectionWell.Size = new System.Drawing.Size(153, 70);
+            // 
+            // tsmiSectionWellOpen
+            // 
+            this.tsmiSectionWellOpen.Name = "tsmiSectionWellOpen";
+            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionWellOpen.Text = "打开";
+            this.tsmiSectionWellOpen.Click += new System.EventHandler(this.tsmiSectionWellOpen_Click);
+            // 
+            // tsmiSectionWellSave
+            // 
+            this.tsmiSectionWellSave.Name = "tsmiSectionWellSave";
+            this.tsmiSectionWellSave.Size = new System.Drawing.Size(100, 22);
+            this.tsmiSectionWellSave.Text = "导出";
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -1846,6 +1871,7 @@
             this.cmsSectionWell.ResumeLayout(false);
             this.cmsSectionGeo.ResumeLayout(false);
             this.cmsSectionFence.ResumeLayout(false);
+            this.cmsDataSectionWell.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2029,6 +2055,9 @@
         private System.Windows.Forms.ToolStripStatusLabel tssLabelPosition;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFileDir;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphEdit;
+        private System.Windows.Forms.ContextMenuStrip cmsDataSectionWell;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellOpen;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellSave;
     }
 }
 

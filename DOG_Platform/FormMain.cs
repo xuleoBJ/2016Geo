@@ -730,6 +730,8 @@ namespace DOGPlatform
                         this.tvProjectData.ContextMenuStrip = this.cmsWellLogNode;
                     if (selectNode.Tag.ToString() == TypeProjectNode.globalLog.ToString())  //全局菜单的测井曲线
                         makeCMSGlobleLog(selectNode);
+                    if ( selectNode.Tag.ToString() == TypeProjectNode.sectionWell.ToString()) //当前选中井，index=0 是全局测井曲线
+                        this.tvProjectData.ContextMenuStrip = this.cmsDataSectionWell;
                     break;
                 case 3://第4级菜单，右键快捷菜单配置
                     if (selectNode.Parent.Text == "well logs")
@@ -1523,15 +1525,7 @@ namespace DOGPlatform
             TreeNode selectNode = this.tvProjectData.SelectedNode;
             if (selectNode != null)
             {
-                if (selectNode.Level >= 1 &&selectNode.Tag.ToString() == TypeProjectNode.sectionWell.ToString())
-                {
-                    string sJH= selectNode.Parent.Name;
-                    string filePathOper = Path.Combine(cProjectManager.dirPathWellDir, sJH, sJH + cProjectManager.fileExtensionSectionWell);
-                    if(selectNode.Parent.Tag.ToString()==TypeProjectNode.sectionWellDir.ToString())
-                        filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, selectNode.Name + cProjectManager.fileExtensionSectionWell);
-                    FormSectionWell newSection = new FormSectionWell(filePathOper);
-                    newSection.Show();
-                } //end
+               
                 if (selectNode.Level == 2 && selectNode.Tag.ToString() == TypeProjectNode.layerMap.ToString())
                 {
                     string sLayer = selectNode.Parent.Name;
@@ -2063,6 +2057,17 @@ namespace DOGPlatform
             string _filename = getSelectSVGGraphtNodePath(tnSelected) + ".svg";
             string svgfilepath = Path.Combine(cProjectManager.dirPathMap, _filename);
             if (File.Exists(svgfilepath)) cCallInkscape.callInk(svgfilepath);
+        }
+
+        private void tsmiSectionWellOpen_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string sJH = tnSelected.Parent.Name;
+            string filePathOper = Path.Combine(cProjectManager.dirPathWellDir, sJH, sJH + cProjectManager.fileExtensionSectionWell);
+            if (tnSelected.Parent.Tag.ToString() == TypeProjectNode.sectionWellDir.ToString())
+                filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, tnSelected.Name + cProjectManager.fileExtensionSectionWell);
+            FormSectionWell newSection = new FormSectionWell(filePathOper);
+            newSection.Show(); 
         }
        
      

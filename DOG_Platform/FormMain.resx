@@ -136,10 +136,10 @@
     <value>271, 89</value>
   </metadata>
   <metadata name="statusStripLayer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>921, 46</value>
+    <value>839, 55</value>
   </metadata>
   <metadata name="statusStripLayer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>921, 46</value>
+    <value>839, 55</value>
   </metadata>
   <metadata name="cmsWebSVG.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>480, 96</value>
@@ -339,7 +339,7 @@
     <value>830, 16</value>
   </metadata>
   <metadata name="cmsInputWell.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1243, 16</value>
+    <value>1103, 21</value>
   </metadata>
   <metadata name="cmsProjectGrapthSVG.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>623, 96</value>
@@ -361,6 +361,9 @@
   </metadata>
   <metadata name="cmsSectionFence.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>660, 53</value>
+  </metadata>
+  <metadata name="cmsDataSectionWell.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>805, 96</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>238</value>
