@@ -20,12 +20,14 @@ namespace DOGPlatform
             tnWells.Name = TypeProjectNode.wells.ToString();
             tnWells.Text = "井";
             tnWells.Tag = TypeProjectNode.wells;
+            //加载全局测井曲线结点
             setupTNGlobeWellLog(_tv,tnWells);
             foreach (string sJH in cProjectData.ltStrProjectJH)
             {
                 TreeNode tnJH = new TreeNode(sJH,3,3);
                 tnJH.Name = sJH;
                 tnJH.Tag = TypeProjectNode.well;
+                //加载单井结点
                 setupTNwellChild(tnJH); 
                 tnWells.Nodes.Add(tnJH);
             }
@@ -210,12 +212,12 @@ namespace DOGPlatform
                 tnSectionWell.Tag = TypeProjectNode.sectionWell;
                 tnWell.Nodes.Add(tnSectionWell);
                 //读单井综合图，增加图道节点
-                setupSectionWellNode(tnSectionWell, filePathWellSection, sJH);
+                setupSectionWellChildNode(tnSectionWell, filePathWellSection, sJH);
             }
         }
 
 
-        public static void setupSectionWellNode(TreeNode tn, string filePathOper, string sJHSelected)
+        public static void setupSectionWellChildNode(TreeNode tn, string filePathOper, string sJHSelected)
         {
             //read xml and treeview
             foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathOper))

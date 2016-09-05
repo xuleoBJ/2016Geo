@@ -40,6 +40,12 @@
         "Entry"
         {
         "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
+        "OwnerKey" = "8:_9B36CD283BD08B6CCF7A969048EBCFD3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -47,18 +53,6 @@
         {
         "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
         "OwnerKey" = "8:_3623343173BE27179D1B24C32C348766"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
-        "OwnerKey" = "8:_ED70A330CCFA1175A89D55C90F320944"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4C188A6AB059EC7F039D120585B64522"
-        "OwnerKey" = "8:_BDB1072FDD85553113163DF29A221875"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,6 +87,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9B36CD283BD08B6CCF7A969048EBCFD3"
+        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A2DB9FDC163E42F48125740050BE7D84"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -101,18 +101,6 @@
         {
         "MsmKey" = "8:_AD73E49BDA854D2384907164748188F0"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BDB1072FDD85553113163DF29A221875"
-        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BDB1072FDD85553113163DF29A221875"
-        "OwnerKey" = "8:_ED70A330CCFA1175A89D55C90F320944"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -135,14 +123,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_ED70A330CCFA1175A89D55C90F320944"
+        "MsmKey" = "8:_FC68511EB9EC6C8FA346A349FBCB1117"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FC68511EB9EC6C8FA346A349FBCB1117"
-        "OwnerKey" = "8:_BDB1072FDD85553113163DF29A221875"
+        "OwnerKey" = "8:_9B36CD283BD08B6CCF7A969048EBCFD3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -153,20 +141,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FC68511EB9EC6C8FA346A349FBCB1117"
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FC68511EB9EC6C8FA346A349FBCB1117"
-        "OwnerKey" = "8:_ED70A330CCFA1175A89D55C90F320944"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
+        "OwnerKey" = "8:_9B36CD283BD08B6CCF7A969048EBCFD3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -179,18 +161,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3623343173BE27179D1B24C32C348766"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ED70A330CCFA1175A89D55C90F320944"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BDB1072FDD85553113163DF29A221875"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -509,6 +479,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9B36CD283BD08B6CCF7A969048EBCFD3"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9B36CD283BD08B6CCF7A969048EBCFD3"
+                    {
+                    "Name" = "8:IronPython.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:IronPython.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A2DB9FDC163E42F48125740050BE7D84"
             {
             "SourcePath" = "8:..\\code\\colorCode.txt"
@@ -549,37 +550,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BDB1072FDD85553113163DF29A221875"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:IronPython, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_BDB1072FDD85553113163DF29A221875"
-                    {
-                    "Name" = "8:IronPython.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:IronPython.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D32F7D16A8CF4992BBF9072A3936425B"
             {
             "SourcePath" = "8:..\\DOG_Platform\\bin\\Debug\\Script\\drawPosition.js"
@@ -614,37 +584,6 @@
                     }
                 }
             "SourcePath" = "8:Microsoft.Scripting.Metadata.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ED70A330CCFA1175A89D55C90F320944"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_ED70A330CCFA1175A89D55C90F320944"
-                    {
-                    "Name" = "8:IronPython.Modules.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:IronPython.Modules.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
@@ -783,7 +722,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:geoScape2016"
         "ProductCode" = "8:{14F56315-DCCB-4156-9CA1-2A3D83C3F1F7}"
-        "PackageCode" = "8:{27348F23-BD33-44D5-B8B6-523679DE0E86}"
+        "PackageCode" = "8:{B702092B-6C32-4DB8-814C-F4343C1CE626}"
         "UpgradeCode" = "8:{AED19D8B-12FA-496E-8B91-0704E80D5D2F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

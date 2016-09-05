@@ -108,7 +108,6 @@
             this.tsbPageSet = new System.Windows.Forms.ToolStripButton();
             this.tsbTreeView = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
             this.tsbUndo = new System.Windows.Forms.ToolStripButton();
             this.tsbRedo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -126,6 +125,9 @@
             this.tsbFault = new System.Windows.Forms.ToolStripButton();
             this.tslblFaulDisplacement = new System.Windows.Forms.ToolStripLabel();
             this.tsTextFaultDisplacement = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiCloseRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
             this.menuStripSectionGeo = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,8 +154,6 @@
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCloseRefresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tbcSectionGeo.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
@@ -270,7 +270,7 @@
             this.tsmiRemoveWell,
             this.tsmiAdjustShowDepth});
             this.cmsTVedit.Name = "treeviewContextMenuStrip";
-            this.cmsTVedit.Size = new System.Drawing.Size(145, 312);
+            this.cmsTVedit.Size = new System.Drawing.Size(153, 334);
             // 
             // tsmiInsertTrack
             // 
@@ -283,62 +283,62 @@
             this.tsmiInsertTrackLitho});
             this.tsmiInsertTrack.Name = "tsmiInsertTrack";
             this.tsmiInsertTrack.ShowShortcutKeys = false;
-            this.tsmiInsertTrack.Size = new System.Drawing.Size(144, 22);
+            this.tsmiInsertTrack.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrack.Text = "插入图道";
             // 
             // tsmiInsertTrackDepthRuler
             // 
             this.tsmiInsertTrackDepthRuler.Name = "tsmiInsertTrackDepthRuler";
-            this.tsmiInsertTrackDepthRuler.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackDepthRuler.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackDepthRuler.Text = "深度尺";
             this.tsmiInsertTrackDepthRuler.Click += new System.EventHandler(this.tsmiInsertTrackDepthRuler_Click);
             // 
             // tsmiInsertTrackLog
             // 
             this.tsmiInsertTrackLog.Name = "tsmiInsertTrackLog";
-            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackLog.Text = "曲线道";
             this.tsmiInsertTrackLog.Click += new System.EventHandler(this.tsmiInsertTrackLog_Click);
             // 
             // tsmiInsertTrackLayer
             // 
             this.tsmiInsertTrackLayer.Name = "tsmiInsertTrackLayer";
-            this.tsmiInsertTrackLayer.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackLayer.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackLayer.Text = "地层道";
             this.tsmiInsertTrackLayer.Click += new System.EventHandler(this.地层道ToolStripMenuItem_Click);
             // 
             // tsmiInsertTrackText
             // 
             this.tsmiInsertTrackText.Name = "tsmiInsertTrackText";
-            this.tsmiInsertTrackText.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackText.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackText.Text = "文本道";
             this.tsmiInsertTrackText.Click += new System.EventHandler(this.tsmiInsertTrackText_Click);
             // 
             // tsmiInsertTrackCJSJ
             // 
             this.tsmiInsertTrackCJSJ.Name = "tsmiInsertTrackCJSJ";
-            this.tsmiInsertTrackCJSJ.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackCJSJ.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackCJSJ.Text = "测井解释";
             this.tsmiInsertTrackCJSJ.Click += new System.EventHandler(this.tsmiInsertTrackCJSJ_Click);
             // 
             // tsmiInsertTrackLitho
             // 
             this.tsmiInsertTrackLitho.Name = "tsmiInsertTrackLitho";
-            this.tsmiInsertTrackLitho.Size = new System.Drawing.Size(124, 22);
+            this.tsmiInsertTrackLitho.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertTrackLitho.Text = "岩性道";
             this.tsmiInsertTrackLitho.Click += new System.EventHandler(this.tsmiInsertTrackLitho_Click);
             // 
             // tsmiTrackSetting
             // 
             this.tsmiTrackSetting.Name = "tsmiTrackSetting";
-            this.tsmiTrackSetting.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackSetting.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackSetting.Text = "图道设置";
             this.tsmiTrackSetting.Click += new System.EventHandler(this.tsmiTrackSetting_Click);
             // 
             // tsmiTrackDataImport
             // 
             this.tsmiTrackDataImport.Name = "tsmiTrackDataImport";
-            this.tsmiTrackDataImport.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackDataImport.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackDataImport.Text = "图道数据";
             this.tsmiTrackDataImport.Click += new System.EventHandler(this.tsmiTrackDataImport_Click);
             // 
@@ -348,7 +348,7 @@
             this.tsmiAddLog,
             this.tsmiDelLog});
             this.tsmiTrackLogSub.Name = "tsmiTrackLogSub";
-            this.tsmiTrackLogSub.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackLogSub.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackLogSub.Text = "测井曲线";
             // 
             // tsmiAddLog
@@ -368,70 +368,70 @@
             // tsmiTrackDel
             // 
             this.tsmiTrackDel.Name = "tsmiTrackDel";
-            this.tsmiTrackDel.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackDel.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackDel.Text = "图道删除";
             this.tsmiTrackDel.Click += new System.EventHandler(this.tsmiTrackDel_Click);
             // 
             // tsmiTrackWidthAdd
             // 
             this.tsmiTrackWidthAdd.Name = "tsmiTrackWidthAdd";
-            this.tsmiTrackWidthAdd.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackWidthAdd.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackWidthAdd.Text = "图道增宽";
             this.tsmiTrackWidthAdd.Click += new System.EventHandler(this.tsmiTrackWidthAdd_Click);
             // 
             // tsmiTrackWidthMinus
             // 
             this.tsmiTrackWidthMinus.Name = "tsmiTrackWidthMinus";
-            this.tsmiTrackWidthMinus.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackWidthMinus.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackWidthMinus.Text = "图道收窄";
             this.tsmiTrackWidthMinus.Click += new System.EventHandler(this.tsmiTrackWidthMinus_Click);
             // 
             // tsmiTrackUp
             // 
             this.tsmiTrackUp.Name = "tsmiTrackUp";
-            this.tsmiTrackUp.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackUp.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackUp.Text = "图道上移";
             this.tsmiTrackUp.Click += new System.EventHandler(this.tsmiTrackUp_Click);
             // 
             // tsmiTrackDown
             // 
             this.tsmiTrackDown.Name = "tsmiTrackDown";
-            this.tsmiTrackDown.Size = new System.Drawing.Size(144, 22);
+            this.tsmiTrackDown.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackDown.Text = "图道下移";
             this.tsmiTrackDown.Click += new System.EventHandler(this.tsmiTrackDown_Click);
             // 
             // tsmiEditWell
             // 
             this.tsmiEditWell.Name = "tsmiEditWell";
-            this.tsmiEditWell.Size = new System.Drawing.Size(144, 22);
+            this.tsmiEditWell.Size = new System.Drawing.Size(152, 22);
             this.tsmiEditWell.Text = "编辑井";
             this.tsmiEditWell.Click += new System.EventHandler(this.tsmiEditWell_Click);
             // 
             // tsmiInsertWellBefore
             // 
             this.tsmiInsertWellBefore.Name = "tsmiInsertWellBefore";
-            this.tsmiInsertWellBefore.Size = new System.Drawing.Size(144, 22);
+            this.tsmiInsertWellBefore.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertWellBefore.Text = "添加井(井前)";
             this.tsmiInsertWellBefore.Click += new System.EventHandler(this.tsmiInsertWellBefore_Click);
             // 
             // tsmiInsertWellAfter
             // 
             this.tsmiInsertWellAfter.Name = "tsmiInsertWellAfter";
-            this.tsmiInsertWellAfter.Size = new System.Drawing.Size(144, 22);
+            this.tsmiInsertWellAfter.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertWellAfter.Text = "添加井(井后)";
             this.tsmiInsertWellAfter.Click += new System.EventHandler(this.tsmiInsertWell_Click);
             // 
             // tsmiRemoveWell
             // 
             this.tsmiRemoveWell.Name = "tsmiRemoveWell";
-            this.tsmiRemoveWell.Size = new System.Drawing.Size(144, 22);
+            this.tsmiRemoveWell.Size = new System.Drawing.Size(152, 22);
             this.tsmiRemoveWell.Text = "移除井";
             this.tsmiRemoveWell.Click += new System.EventHandler(this.tsmiRemoveWell_Click);
             // 
             // tsmiAdjustShowDepth
             // 
             this.tsmiAdjustShowDepth.Name = "tsmiAdjustShowDepth";
-            this.tsmiAdjustShowDepth.Size = new System.Drawing.Size(144, 22);
+            this.tsmiAdjustShowDepth.Size = new System.Drawing.Size(152, 22);
             this.tsmiAdjustShowDepth.Text = "显示深度";
             this.tsmiAdjustShowDepth.Click += new System.EventHandler(this.tsmiShowState_Click);
             // 
@@ -861,16 +861,6 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // tsBtnReflush
-            // 
-            this.tsBtnReflush.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBtnReflush.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnReflush.Image")));
-            this.tsBtnReflush.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnReflush.Name = "tsBtnReflush";
-            this.tsBtnReflush.Size = new System.Drawing.Size(23, 22);
-            this.tsBtnReflush.Text = "刷新";
-            this.tsBtnReflush.Click += new System.EventHandler(this.tsBtnReflush_Click);
-            // 
             // tsbUndo
             // 
             this.tsbUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1022,6 +1012,31 @@
             this.tsTextFaultDisplacement.Size = new System.Drawing.Size(50, 25);
             this.tsTextFaultDisplacement.Text = "10";
             this.tsTextFaultDisplacement.Visible = false;
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsmiCloseRefresh
+            // 
+            this.tsmiCloseRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsmiCloseRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsmiCloseRefresh.Image")));
+            this.tsmiCloseRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsmiCloseRefresh.Name = "tsmiCloseRefresh";
+            this.tsmiCloseRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsmiCloseRefresh.Text = "暂时关闭实时刷新";
+            this.tsmiCloseRefresh.Click += new System.EventHandler(this.tsmiCloseRefresh_Click);
+            // 
+            // tsBtnReflush
+            // 
+            this.tsBtnReflush.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtnReflush.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnReflush.Image")));
+            this.tsBtnReflush.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnReflush.Name = "tsBtnReflush";
+            this.tsBtnReflush.Size = new System.Drawing.Size(23, 22);
+            this.tsBtnReflush.Text = "刷新";
+            this.tsBtnReflush.Click += new System.EventHandler(this.tsBtnReflush_Click);
             // 
             // menuStripSectionGeo
             // 
@@ -1232,21 +1247,6 @@
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
-            // 
-            // tsmiCloseRefresh
-            // 
-            this.tsmiCloseRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsmiCloseRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsmiCloseRefresh.Image")));
-            this.tsmiCloseRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsmiCloseRefresh.Name = "tsmiCloseRefresh";
-            this.tsmiCloseRefresh.Size = new System.Drawing.Size(23, 22);
-            this.tsmiCloseRefresh.Text = "暂时关闭实时刷新";
-            this.tsmiCloseRefresh.Click += new System.EventHandler(this.tsmiCloseRefresh_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // FormSectionGeo
             // 

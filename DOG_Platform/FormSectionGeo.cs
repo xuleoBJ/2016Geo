@@ -106,8 +106,8 @@ namespace DOGPlatform
                      tvSectionEdit.Nodes.Add(tnWell);
                  }
              }
-
-             foreach (TreeNode tn in tvSectionEdit.Nodes) tn.Expand();
+             foreach (TreeNode tn in tvSectionEdit.Nodes)
+                 if (tn.Level  == 1) tn.Expand();
          }
 
         private void FormWellGeo_Load(object sender, EventArgs e)

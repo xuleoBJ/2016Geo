@@ -210,6 +210,8 @@
             this.cmsDataSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSectionWellOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsDataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -252,6 +254,7 @@
             this.cmsSectionGeo.SuspendLayout();
             this.cmsSectionFence.SuspendLayout();
             this.cmsDataSectionWell.SuspendLayout();
+            this.cmsDataSectionWellChildItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsNavigationPanel
@@ -1289,7 +1292,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1790,12 +1793,12 @@
             this.tsmiSectionWellOpen,
             this.tsmiSectionWellSave});
             this.cmsDataSectionWell.Name = "cmsWebSVG";
-            this.cmsDataSectionWell.Size = new System.Drawing.Size(153, 70);
+            this.cmsDataSectionWell.Size = new System.Drawing.Size(101, 48);
             // 
             // tsmiSectionWellOpen
             // 
             this.tsmiSectionWellOpen.Name = "tsmiSectionWellOpen";
-            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(100, 22);
             this.tsmiSectionWellOpen.Text = "打开";
             this.tsmiSectionWellOpen.Click += new System.EventHandler(this.tsmiSectionWellOpen_Click);
             // 
@@ -1804,6 +1807,20 @@
             this.tsmiSectionWellSave.Name = "tsmiSectionWellSave";
             this.tsmiSectionWellSave.Size = new System.Drawing.Size(100, 22);
             this.tsmiSectionWellSave.Text = "导出";
+            // 
+            // cmsDataSectionWellChildItem
+            // 
+            this.cmsDataSectionWellChildItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDataSectionWellChildItemImport});
+            this.cmsDataSectionWellChildItem.Name = "cmsWebSVG";
+            this.cmsDataSectionWellChildItem.Size = new System.Drawing.Size(125, 26);
+            // 
+            // tsmiDataSectionWellChildItemImport
+            // 
+            this.tsmiDataSectionWellChildItemImport.Name = "tsmiDataSectionWellChildItemImport";
+            this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
+            this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
             // 
             // FormMain
             // 
@@ -1872,6 +1889,7 @@
             this.cmsSectionGeo.ResumeLayout(false);
             this.cmsSectionFence.ResumeLayout(false);
             this.cmsDataSectionWell.ResumeLayout(false);
+            this.cmsDataSectionWellChildItem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2058,6 +2076,8 @@
         private System.Windows.Forms.ContextMenuStrip cmsDataSectionWell;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellOpen;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellSave;
+        private System.Windows.Forms.ContextMenuStrip cmsDataSectionWellChildItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDataSectionWellChildItemImport;
     }
 }
 

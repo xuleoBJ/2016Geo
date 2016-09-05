@@ -43,6 +43,7 @@
             this.tsmiDataImport = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcDataImportSingleWell = new System.Windows.Forms.TabControl();
             this.tbgData = new System.Windows.Forms.TabPage();
+            this.tsmiFromSectionWell = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataTable)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tbcDataImportSingleWell.SuspendLayout();
@@ -78,6 +79,7 @@
             this.数据ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCilpCopy,
             this.tsmiFromDB,
+            this.tsmiFromSectionWell,
             this.tsmiCopyData,
             this.tsmiSelectAllAndCopy,
             this.toolStripSeparator1,
@@ -91,7 +93,7 @@
             // 
             this.tsmiCilpCopy.Name = "tsmiCilpCopy";
             this.tsmiCilpCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.tsmiCilpCopy.Size = new System.Drawing.Size(203, 22);
+            this.tsmiCilpCopy.Size = new System.Drawing.Size(209, 22);
             this.tsmiCilpCopy.Text = "粘贴";
             this.tsmiCilpCopy.Click += new System.EventHandler(this.tsmiCilpCopy_Click);
             // 
@@ -99,7 +101,7 @@
             // 
             this.tsmiFromDB.Name = "tsmiFromDB";
             this.tsmiFromDB.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.tsmiFromDB.Size = new System.Drawing.Size(203, 22);
+            this.tsmiFromDB.Size = new System.Drawing.Size(209, 22);
             this.tsmiFromDB.Text = "工区";
             this.tsmiFromDB.Click += new System.EventHandler(this.tsmiFromDB_Click);
             // 
@@ -107,7 +109,7 @@
             // 
             this.tsmiCopyData.Name = "tsmiCopyData";
             this.tsmiCopyData.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.tsmiCopyData.Size = new System.Drawing.Size(203, 22);
+            this.tsmiCopyData.Size = new System.Drawing.Size(209, 22);
             this.tsmiCopyData.Text = "复制";
             this.tsmiCopyData.Click += new System.EventHandler(this.tsmiCopyData_Click);
             // 
@@ -116,20 +118,20 @@
             this.tsmiSelectAllAndCopy.Name = "tsmiSelectAllAndCopy";
             this.tsmiSelectAllAndCopy.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.tsmiSelectAllAndCopy.Size = new System.Drawing.Size(203, 22);
+            this.tsmiSelectAllAndCopy.Size = new System.Drawing.Size(209, 22);
             this.tsmiSelectAllAndCopy.Text = "全选复制";
             this.tsmiSelectAllAndCopy.Click += new System.EventHandler(this.tsmiSelectAllAndCopy_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(200, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(206, 6);
             // 
             // tsmiDeleteCurrentLine
             // 
             this.tsmiDeleteCurrentLine.Name = "tsmiDeleteCurrentLine";
             this.tsmiDeleteCurrentLine.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(203, 22);
+            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(209, 22);
             this.tsmiDeleteCurrentLine.Text = "删除行";
             this.tsmiDeleteCurrentLine.Click += new System.EventHandler(this.tsmiDeleteCurrentLine_Click);
             // 
@@ -139,7 +141,7 @@
             this.tsmiExport2Txt,
             this.tsmiExportExcel});
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(203, 22);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(209, 22);
             this.ToolStripMenuItem3.Text = "数据导出";
             // 
             // tsmiExport2Txt
@@ -185,6 +187,14 @@
             this.tbgData.Text = "数据";
             this.tbgData.UseVisualStyleBackColor = true;
             // 
+            // tsmiFromSectionWell
+            // 
+            this.tsmiFromSectionWell.Name = "tsmiFromSectionWell";
+            this.tsmiFromSectionWell.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.tsmiFromSectionWell.Size = new System.Drawing.Size(209, 22);
+            this.tsmiFromSectionWell.Text = "单井综合图导入";
+            this.tsmiFromSectionWell.Click += new System.EventHandler(this.tsmiFromSectionWell_Click);
+            // 
             // FormDataImportWell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -222,5 +232,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyData;
         private System.Windows.Forms.ToolStripMenuItem tsmiSelectAllAndCopy;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFromSectionWell;
     }
 }

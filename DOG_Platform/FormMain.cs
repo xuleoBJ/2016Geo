@@ -148,15 +148,19 @@ namespace DOGPlatform
             tvProjectData.CheckBoxes = true;
             //清空tv
             tvProjectData.Nodes.Clear();
-            //setup well treenode
+            //加载井结点
             TreeViewProjectData.setupTNwell2TV(tvProjectData);
-            //
+            //加载层结点
             TreeViewProjectData.setupTNLayer2TV(tvProjectData);
-
+            //柱状剖面
             TreeViewProjectData.setupTNsectionWell2TV(tvProjectData);
+            //联井剖面
             TreeViewProjectData.setupTNsectionGeo2TV(tvProjectData);
+            //栅状图
             TreeViewProjectData.setupTNsectionFence2TV(tvProjectData);
+            //计算结果
             TreeViewProjectData.setupTNCalText2TV(tvProjectData);
+            //成果图
             TreeViewProjectData.setupTNsvgMap2TV(tvProjectData);
             //只展开第一层井菜单
             foreach (TreeNode tn in tvProjectData.Nodes) if (tn.Level == 0 && tn.Index==0) tn.Expand();
@@ -736,6 +740,8 @@ namespace DOGPlatform
                 case 3://第4级菜单，右键快捷菜单配置
                     if (selectNode.Parent.Text == "well logs")
                         this.tvProjectData.ContextMenuStrip = this.cmsWellLogItem;
+                    if (selectNode.Parent.Tag.ToString()== TypeProjectNode.sectionWell.ToString())
+                        this.tvProjectData.ContextMenuStrip = this.cmsDataSectionWellChildItem;
                     break;
 
                 default:
@@ -2068,6 +2074,25 @@ namespace DOGPlatform
                 filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, tnSelected.Name + cProjectManager.fileExtensionSectionWell);
             FormSectionWell newSection = new FormSectionWell(filePathOper);
             newSection.Show(); 
+        }
+
+        private void tsmiDataSectionWellChildItemImport_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvProjectData.SelectedNode;
+            if (currentNode != null)
+            {
+                string sJHSelected = currentNode.Parent.Parent.Text;
+                string filePathOper = Path.Combine(cProjectManager.dirPathWellDir, sJHSelected, sJHSelected + cProjectManager.fileExtensionSectionWell);
+                if (sJHSelected != "")
+                {
+                    string typeTrackstr = currentNode.Tag.ToString();
+                    string sTrackID = currentNode.Name;
+                    FormDataImportWell formInputDataTableSingleWell = new
+                          FormDataImportWell(sJHSelected, typeTrackstr, filePathOper, sTrackID);
+                    formInputDataTableSingleWell.ShowDialog();
+                }
+            }
+
         }
        
      

@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using DOGPlatform.XML;
+using System.Xml;
 
 namespace DOGPlatform
 {
@@ -26,14 +27,15 @@ namespace DOGPlatform
             trackTypeStr = _trackTypeStr;
             filePathOper = _filePathOper;
             sTrackID = _sTrackID;
-            initializaForm();
+            initializaForm(filePathOper, sTrackID);
         }
-
-        void initializaForm()
+        //由于有剖面井的存在导数据的问题
+        void initializaForm(string m_filePathOperSource,string m_sTrackID)
         {
             if(sJH!="")
             {
-                listDataItem = cXmlDocSectionWell.getListDataItemIntervalPropertyValue(filePathOper, sTrackID);
+                this.Text = trackTypeStr +"数据导入: "+ sJH;
+                listDataItem = cXmlDocSectionWell.getListDataItemIntervalPropertyValue(m_filePathOperSource, m_sTrackID);
                 if (trackTypeStr == TypeTrack.分层.ToString())
                 {
                     this.dgvDataTable .Columns.Clear();
@@ -293,6 +295,32 @@ namespace DOGPlatform
                 for (int j = 0; j < dgvDataTable.Columns.Count; j++)
                     dgvDataTable.Rows[i].Cells[j].Selected = true;
             cPublicMethodForm.copyDGVselect2Clipboard(this.dgvDataTable);
+        }
+
+        private void tsmiFromSectionWell_Click(object sender, EventArgs e)
+        {
+            if (sJH != "")
+            {
+                //根据井号找到单井综合图配置文件路径
+                string filePathWellSection = Path.Combine(cProjectManager.dirPathWellDir, sJH, sJH + cProjectManager.fileExtensionSectionWell);
+                //加入测井图
+                if (File.Exists(filePathWellSection))
+                {
+                    //读取单井文件，读取图道
+                    string sTrackID_match="";
+                    foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathWellSection))
+                    {
+                        trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                        if (curTrackDraw.sTrackType == trackTypeStr)
+                        {
+                            sTrackID_match = curTrackDraw.sTrackID;  //结点name
+                            break;
+                        }
+                    }
+                    if (sTrackID_match != "") initializaForm(filePathWellSection, sTrackID_match);
+                }
+               
+            }   
         }
 
     }
