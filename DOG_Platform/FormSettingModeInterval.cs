@@ -85,11 +85,11 @@ namespace DOGPlatform
 
         private void btnFlattedByTop_Click(object sender, EventArgs e)
         {
-            makeFlattedByLayer();
+            makeFlattedByLayer(cbxFlattedTrans2TVD.Checked);
             this.DialogResult = DialogResult.OK;
         }
 
-        void makeFlattedByLayer()
+        void makeFlattedByLayer(bool bFlattedTVD)
         {
             string sTopXCM = this.cbbTopXCM.SelectedItem.ToString();
             cXmlBase.setNodeInnerText(filePathSectionGeoCss, cXETrackRuler.xmlFullPathiVisible, "0");
@@ -112,10 +112,12 @@ namespace DOGPlatform
                 }
                 if (fTop > 0)  //返回值-999 说明未找到 
                 {
-                    cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTop).ToString());
-                    //拉平不用md教程tvd
-                    // float fTVD = cIOinputWellPath.getTVDByJHAndMD(sJH, fTop); //md->tvd
-                    //cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTVD).ToString());
+                    if( bFlattedTVD == false) cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTop).ToString());
+                    else
+                    {
+                        float fTVD = cIOinputWellPath.getTVDByJHAndMD(sJH, fTop); //md->tvd
+                        cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTVD).ToString());
+                    }
                 }
             } 
         }

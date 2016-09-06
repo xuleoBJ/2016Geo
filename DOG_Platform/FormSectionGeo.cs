@@ -352,7 +352,7 @@ namespace DOGPlatform
              {
                  if (cSectionUIoperate.updateTrackData(this.sJH, currentNode, this.filePathOper) == DialogResult.OK) 
                  {
-                     updateTVandList();
+                     TreeViewSectionEditView.updateWellNode(currentNode, this.filePathOper);
                      makeSVGmap(); 
                  }
              }
@@ -857,7 +857,7 @@ namespace DOGPlatform
                 {
                     ItemLogHeadInfor logHead = formAddLog.logHeadRet;
                     cXmlDocSectionWell.addLog(filePathOper, sIDcurrentTrack, logHead);
-                    updateTVandList();
+                     TreeViewSectionEditView.updateWellNode(currentNode, this.filePathOper);
                     makeSVGmap();
                 }
             }
@@ -885,16 +885,16 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.曲线道);
+                addTrackCss(currentNode,TypeTrack.曲线道);
             }
         }
 
-        void addTrackCss(TypeTrack eTypeTrack)
+        void addTrackCss(TreeNode currentNode,TypeTrack eTypeTrack)
         {
             int iTrackWidth = 50;
             if (eTypeTrack == TypeTrack.曲线道) iTrackWidth = 100;
             cXmlDocSectionWell.addTrackCss(filePathOper, eTypeTrack, iTrackWidth);
-            updateTVandList();
+            TreeViewSectionEditView.updateWellNode(currentNode, this.filePathOper);
         }
 
         private void tvSectionEdit_MouseUp(object sender, MouseEventArgs e)
@@ -974,7 +974,7 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.文本道);
+                addTrackCss(currentNode,TypeTrack.文本道);
             }
         }
 
@@ -984,7 +984,7 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.测井解释);
+                addTrackCss(currentNode,TypeTrack.测井解释);
             }
         }
 
@@ -994,7 +994,7 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.岩性层段);
+                addTrackCss(currentNode,TypeTrack.岩性层段);
             }
         }
 
@@ -1015,7 +1015,7 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.分层);
+                addTrackCss(currentNode,TypeTrack.分层);
             }
         }
 
@@ -1112,7 +1112,7 @@ namespace DOGPlatform
             if (currentNode != null)
             {
                 setUpIDByTN(currentNode);
-                addTrackCss(TypeTrack.深度尺);
+                addTrackCss(currentNode,TypeTrack.深度尺);
             }
         }
 

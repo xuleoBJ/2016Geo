@@ -44,6 +44,7 @@
             this.btnByElevation = new System.Windows.Forms.Button();
             this.btnConnectLayerByTop = new System.Windows.Forms.Button();
             this.btnClearConnectLayer = new System.Windows.Forms.Button();
+            this.cbxFlattedTrans2TVD = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).BeginInit();
@@ -161,7 +162,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(195, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 16);
@@ -171,7 +172,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.Location = new System.Drawing.Point(194, 31);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(17, 16);
@@ -190,7 +191,7 @@
             // 
             // btnFlattedByTop
             // 
-            this.btnFlattedByTop.Location = new System.Drawing.Point(16, 188);
+            this.btnFlattedByTop.Location = new System.Drawing.Point(16, 227);
             this.btnFlattedByTop.Name = "btnFlattedByTop";
             this.btnFlattedByTop.Size = new System.Drawing.Size(128, 23);
             this.btnFlattedByTop.TabIndex = 71;
@@ -220,7 +221,7 @@
             // 
             // btnClearConnectLayer
             // 
-            this.btnClearConnectLayer.Location = new System.Drawing.Point(16, 231);
+            this.btnClearConnectLayer.Location = new System.Drawing.Point(16, 186);
             this.btnClearConnectLayer.Name = "btnClearConnectLayer";
             this.btnClearConnectLayer.Size = new System.Drawing.Size(128, 23);
             this.btnClearConnectLayer.TabIndex = 74;
@@ -228,11 +229,22 @@
             this.btnClearConnectLayer.UseVisualStyleBackColor = true;
             this.btnClearConnectLayer.Click += new System.EventHandler(this.btnClearConnectLayer_Click);
             // 
+            // cbxFlattedTrans2TVD
+            // 
+            this.cbxFlattedTrans2TVD.AutoSize = true;
+            this.cbxFlattedTrans2TVD.Location = new System.Drawing.Point(175, 233);
+            this.cbxFlattedTrans2TVD.Name = "cbxFlattedTrans2TVD";
+            this.cbxFlattedTrans2TVD.Size = new System.Drawing.Size(90, 16);
+            this.cbxFlattedTrans2TVD.TabIndex = 75;
+            this.cbxFlattedTrans2TVD.Text = "换算TVD拉平";
+            this.cbxFlattedTrans2TVD.UseVisualStyleBackColor = true;
+            // 
             // FormSettingModeInterval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 298);
+            this.Controls.Add(this.cbxFlattedTrans2TVD);
             this.Controls.Add(this.btnClearConnectLayer);
             this.Controls.Add(this.btnConnectLayerByTop);
             this.Controls.Add(this.btnByElevation);
@@ -248,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,5 +282,6 @@
         private System.Windows.Forms.Button btnByElevation;
         private System.Windows.Forms.Button btnConnectLayerByTop;
         private System.Windows.Forms.Button btnClearConnectLayer;
+        private System.Windows.Forms.CheckBox cbxFlattedTrans2TVD;
     }
 }

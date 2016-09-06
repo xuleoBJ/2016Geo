@@ -93,6 +93,14 @@ namespace DOGPlatform
             }
         }
 
+        public static void updateWellNode(TreeNode tn, string filePathOper)
+        {
+            cPublicMethodForm.removeTreeNodeAllChildNodes(tn);
+            setupWellNode( tn,  filePathOper); 
+            tn.TreeView.SelectedNode = tn; 
+        }
+
+
         public static void setupWellNode(TreeNode tn, string filePathOper)
         {
             //read xml and treeview
@@ -167,7 +175,8 @@ namespace DOGPlatform
                         else tnLog.Checked = false;
                     }
                 }
-            }
+            }//end foreach
+
 
         }
      

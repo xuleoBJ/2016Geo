@@ -942,6 +942,16 @@ namespace DOGPlatform
               Cursor.Current = Cursors.Default;
         }
 
+        public static void removeTreeNodeAllChildNodes(TreeNode aNode)
+        {
+            if (aNode.Nodes.Count > 0)
+            {
+                for (int i = aNode.Nodes.Count - 1; i >= 0; i--)
+                {
+                    aNode.Nodes[i].Remove();
+                }
+            }
+        }
 
         //获取ListBox中的被选items
           public static List<string> ltStrSelectedItemsReturnFromListBox(ListBox lbx)
@@ -954,7 +964,6 @@ namespace DOGPlatform
               }
               return ltStrReturn;
           }
-
         //上移treeview节点
           public static void upTreeViewNote(TreeView TVdepartment)
         {
@@ -976,7 +985,6 @@ namespace DOGPlatform
                 TVdepartment.SelectedNode = NewNode;
             }
         }
-
           //下移treeview节点
           public static void downTreeViewNote(TreeView TVdepartment)
           {
@@ -997,7 +1005,6 @@ namespace DOGPlatform
                   TVdepartment.SelectedNode = NewNode;
               }
           }
-
           public static void setDataGridViewNotSorted(DataGridView dgv) 
           {
               for (int i = 0; i < dgv.Columns.Count; i++)

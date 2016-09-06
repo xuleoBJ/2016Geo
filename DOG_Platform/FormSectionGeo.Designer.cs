@@ -673,32 +673,33 @@
             this.tsmiAdjustScaleHorizonalAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiAdjustScaleHorizonalAdd.Name = "tsmiAdjustScaleHorizonalAdd";
             this.tsmiAdjustScaleHorizonalAdd.Size = new System.Drawing.Size(29, 22);
+            this.tsmiAdjustScaleHorizonalAdd.Text = "横向井距布局拉升调整";
             // 
             // tsBtnZoonOutHItem1_1
             // 
             this.tsBtnZoonOutHItem1_1.Name = "tsBtnZoonOutHItem1_1";
-            this.tsBtnZoonOutHItem1_1.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem1_1.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem1_1.Text = "X 1.1";
             this.tsBtnZoonOutHItem1_1.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_1_Click);
             // 
             // tsBtnZoonOutHItem1_2
             // 
             this.tsBtnZoonOutHItem1_2.Name = "tsBtnZoonOutHItem1_2";
-            this.tsBtnZoonOutHItem1_2.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem1_2.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem1_2.Text = "X 1.2";
             this.tsBtnZoonOutHItem1_2.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_2_Click);
             // 
             // tsBtnZoonOutHItem1_5
             // 
             this.tsBtnZoonOutHItem1_5.Name = "tsBtnZoonOutHItem1_5";
-            this.tsBtnZoonOutHItem1_5.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem1_5.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem1_5.Text = "X 1.5";
             this.tsBtnZoonOutHItem1_5.Click += new System.EventHandler(this.tsBtnZoonOutHItem1_5_Click);
             // 
             // tsBtnZoonOutHItem2
             // 
             this.tsBtnZoonOutHItem2.Name = "tsBtnZoonOutHItem2";
-            this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem2.Text = "X 2";
             this.tsBtnZoonOutHItem2.Click += new System.EventHandler(this.tsBtnZoonOutHItem2_Click_1);
             // 
@@ -713,26 +714,26 @@
             this.tsmiAdjustScaleHorizonalMin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiAdjustScaleHorizonalMin.Name = "tsmiAdjustScaleHorizonalMin";
             this.tsmiAdjustScaleHorizonalMin.Size = new System.Drawing.Size(29, 22);
-            this.tsmiAdjustScaleHorizonalMin.Text = "水平井间距缩短调整";
+            this.tsmiAdjustScaleHorizonalMin.Text = "横向井距布局压缩调整";
             // 
             // tsBtnZoonOutHItem0_9
             // 
             this.tsBtnZoonOutHItem0_9.Name = "tsBtnZoonOutHItem0_9";
-            this.tsBtnZoonOutHItem0_9.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_9.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem0_9.Text = "X 0.9";
             this.tsBtnZoonOutHItem0_9.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_9_Click);
             // 
             // tsBtnZoonOutHItem0_8
             // 
             this.tsBtnZoonOutHItem0_8.Name = "tsBtnZoonOutHItem0_8";
-            this.tsBtnZoonOutHItem0_8.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_8.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem0_8.Text = "X 0.8";
             this.tsBtnZoonOutHItem0_8.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_8_Click);
             // 
             // tsBtnZoonOutHItem0_5
             // 
             this.tsBtnZoonOutHItem0_5.Name = "tsBtnZoonOutHItem0_5";
-            this.tsBtnZoonOutHItem0_5.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_5.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonOutHItem0_5.Text = "X 0.5";
             this.tsBtnZoonOutHItem0_5.Click += new System.EventHandler(this.tsBtnZoonOutHItem0_5_Click);
             // 
@@ -747,26 +748,26 @@
             this.tsBtnZoonOutVertical.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBtnZoonOutVertical.Name = "tsBtnZoonOutVertical";
             this.tsBtnZoonOutVertical.Size = new System.Drawing.Size(29, 22);
-            this.tsBtnZoonOutVertical.Text = "垂直间距拉升调整";
+            this.tsBtnZoonOutVertical.Text = "垂直比例拉升调整";
             // 
             // tsBtnZoonInV1_1
             // 
             this.tsBtnZoonInV1_1.Name = "tsBtnZoonInV1_1";
-            this.tsBtnZoonInV1_1.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_1.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV1_1.Text = "1.1";
             this.tsBtnZoonInV1_1.Click += new System.EventHandler(this.tsBtnZoonInV1_1_Click);
             // 
             // tsBtnZoonInV1_2
             // 
             this.tsBtnZoonInV1_2.Name = "tsBtnZoonInV1_2";
-            this.tsBtnZoonInV1_2.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_2.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV1_2.Text = "1.2";
             this.tsBtnZoonInV1_2.Click += new System.EventHandler(this.tsBtnZoonInV1_2_Click);
             // 
             // tsBtnZoonInV1_5
             // 
             this.tsBtnZoonInV1_5.Name = "tsBtnZoonInV1_5";
-            this.tsBtnZoonInV1_5.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_5.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV1_5.Text = "1.5";
             this.tsBtnZoonInV1_5.Click += new System.EventHandler(this.tsBtnZoonInV1_5_Click);
             // 
@@ -781,24 +782,24 @@
             this.tsBtnZoonInVertical.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsBtnZoonInVertical.Name = "tsBtnZoonInVertical";
             this.tsBtnZoonInVertical.Size = new System.Drawing.Size(29, 22);
-            this.tsBtnZoonInVertical.Text = "垂直间距缩短调整";
+            this.tsBtnZoonInVertical.Text = "垂直比例压缩调整";
             // 
             // tsBtnZoonInV0_9
             // 
             this.tsBtnZoonInV0_9.Name = "tsBtnZoonInV0_9";
-            this.tsBtnZoonInV0_9.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_9.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV0_9.Text = "X 0.9";
             // 
             // tsBtnZoonInV0_8
             // 
             this.tsBtnZoonInV0_8.Name = "tsBtnZoonInV0_8";
-            this.tsBtnZoonInV0_8.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_8.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV0_8.Text = "X 0.8";
             // 
             // tsBtnZoonInV0_5
             // 
             this.tsBtnZoonInV0_5.Name = "tsBtnZoonInV0_5";
-            this.tsBtnZoonInV0_5.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_5.Size = new System.Drawing.Size(152, 22);
             this.tsBtnZoonInV0_5.Text = "X 0.5";
             // 
             // toolStripSeparator6
@@ -843,7 +844,7 @@
             this.tsbPageSet.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPageSet.Name = "tsbPageSet";
             this.tsbPageSet.Size = new System.Drawing.Size(23, 22);
-            this.tsbPageSet.Text = "页面设置";
+            this.tsbPageSet.Text = "页面设置,道头统一设置";
             this.tsbPageSet.Click += new System.EventHandler(this.tsbPageSet_Click);
             // 
             // tsbTreeView
@@ -1025,7 +1026,7 @@
             this.tsmiCloseRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsmiCloseRefresh.Name = "tsmiCloseRefresh";
             this.tsmiCloseRefresh.Size = new System.Drawing.Size(23, 22);
-            this.tsmiCloseRefresh.Text = "暂时关闭实时刷新";
+            this.tsmiCloseRefresh.Text = "关闭实时刷新和定位,刷新打开";
             this.tsmiCloseRefresh.Click += new System.EventHandler(this.tsmiCloseRefresh_Click);
             // 
             // tsBtnReflush
