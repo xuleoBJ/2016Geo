@@ -334,7 +334,6 @@ namespace DOGPlatform.XML
             XDocument xDoc = XDocument.Load(xmlFilePath);
             xDoc.Element("SectionMap").Add(cXETrackLayer.trackLayer(id, iTrackWidth));
             xDoc.Save(xmlFilePath);
-
         }
 
     }

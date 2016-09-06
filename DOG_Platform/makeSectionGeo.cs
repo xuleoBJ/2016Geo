@@ -116,8 +116,7 @@ namespace DOGPlatform
                         string sIDtrack1 = rect1.Attributes["sIDtrack"].Value;
                         string wellID1 = rect1.Attributes["wellID"].Value;
                         string sIDitem1 = rect1.Attributes["sIDitem"].Value;
-                        if(wellID1!="")
-                        {
+                       
                         string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
                         cDataItemConnect item1 = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
 
@@ -128,7 +127,8 @@ namespace DOGPlatform
                         string filePathOperWell2 = dirSectionData + "//" + wellID2 + ".xml";
                         cDataItemConnect item2 = new cDataItemConnect(pathSectionCss, filePathOperWell2, wellID2, sIDtrack2, sIDitem2);
 
-                      //  string d = makeConnectPath.makePathd(item1, item2);
+                        if (wellID1 != "" && sIDtrack1 != "" && wellID2 != "" && sIDtrack2 != "")
+                        {
                         List<string> ltPathd = makeConnectPath.makePathd(listFaultItem, item1, item2);
                         foreach (string d in ltPathd)
                         {
@@ -167,7 +167,7 @@ namespace DOGPlatform
                     }
                     #endregion
 
-                    #region 非连接层
+                    #region 尖灭模式
                     else
                     {
                         XmlNode rect1 = xn.SelectSingleNode("rect1");
@@ -175,106 +175,109 @@ namespace DOGPlatform
                         string wellID1 = rect1.Attributes["wellID"].Value;
                         string sIDitem1 = rect1.Attributes["sIDitem"].Value;
 
-                        string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
-                        cDataItemConnect connectItem = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
+                        if (wellID1 != "" && sIDtrack1 != "")
+                        {
+                            string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
+                            cDataItemConnect connectItem = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
 
-                        double fExtanceLength = 100;
-                        int indexWell=listWellsSection.IndexOf(listWellsSection.SingleOrDefault(p => p.sJH == wellID1));
-                        if (indexWell < listWellsSection.Count - 1) fExtanceLength = (listWellsSection[indexWell + 1].fXview - listWellsSection[indexWell].fXview) * 0.35;
+                            double fExtanceLength = 100;
+                            int indexWell = listWellsSection.IndexOf(listWellsSection.SingleOrDefault(p => p.sJH == wellID1));
+                            if (indexWell < listWellsSection.Count - 1) fExtanceLength = (listWellsSection[indexWell + 1].fXview - listWellsSection[indexWell].fXview) * 0.35;
 
-                        string d="";
-                        if (iShowMode == (int)TypeModeGeoOperate.channelRight) //右河道
-                        {
-                            double x1 = connectItem.x1 + connectItem.width;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1 + connectItem.width;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            double x3 = x1 + fExtanceLength;
-                            double y3 = y2;
-                            double x4 = x1 + fExtanceLength;
-                            double y4 = y1;
-                            d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
-                                 " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
-                        }
-                        if (iShowMode == (int)TypeModeGeoOperate.channelLeft) //左河道
-                        {
-                            double x1 = connectItem.x1;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            double x3 = x1 - fExtanceLength;
-                            double y3 = y2;
-                            double x4 = x1 - fExtanceLength;
-                            double y4 = y1;
-                            d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
-                                 " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
-                        }
+                            string d = "";
+                            if (iShowMode == (int)TypeModeGeoOperate.channelRight) //右河道
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 + fExtanceLength;
+                                double y3 = y2;
+                                double x4 = x1 + fExtanceLength;
+                                double y4 = y1;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+                            if (iShowMode == (int)TypeModeGeoOperate.channelLeft) //左河道
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 - fExtanceLength;
+                                double y3 = y2;
+                                double x4 = x1 - fExtanceLength;
+                                double y4 = y1;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
 
-                        if (iShowMode == (int)TypeModeGeoOperate.barRight) //右坝
-                        {
-                            double x1 = connectItem.x1 + connectItem.width;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1 + connectItem.width;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            double x3 = x1 + fExtanceLength;
-                            double y3 = y1;
-                            double x4 = x1 + fExtanceLength;
-                            double y4 = y2;
-                            d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
-                                 " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
-                        }
+                            if (iShowMode == (int)TypeModeGeoOperate.barRight) //右坝
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 + fExtanceLength;
+                                double y3 = y1;
+                                double x4 = x1 + fExtanceLength;
+                                double y4 = y2;
+                                d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
 
-                        if (iShowMode == (int)TypeModeGeoOperate.barLeft) //左坝
-                        {
-                            double x1 = connectItem.x1;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            double x3 = x1 - fExtanceLength;
-                            double y3 = y1;
-                            double x4 = x1 - fExtanceLength;
-                            double y4 = y2;
-                            d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
-                                 " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
-                        }
-                        if (iShowMode == (int)TypeModeGeoOperate.pinchOutRight) //右尖灭
-                        {
-                            double x1 = connectItem.x1 + connectItem.width;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1 + connectItem.width;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            d = "M " + x1.ToString() + " " + y1.ToString() + "h " + fExtanceLength.ToString() + "l -" + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l "+(0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
-                                + " L " + x2.ToString() + " " + y2.ToString() + " z ";
-                        }
+                            if (iShowMode == (int)TypeModeGeoOperate.barLeft) //左坝
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 - fExtanceLength;
+                                double y3 = y1;
+                                double x4 = x1 - fExtanceLength;
+                                double y4 = y2;
+                                d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+                            if (iShowMode == (int)TypeModeGeoOperate.pinchOutRight) //右尖灭
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + "h " + fExtanceLength.ToString() + "l -" + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l " + (0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
+                                    + " L " + x2.ToString() + " " + y2.ToString() + " z ";
+                            }
 
-                        if (iShowMode == (int)TypeModeGeoOperate.pinchOutLeft) //左尖灭
-                        {
-                            double x1 = connectItem.x1;
-                            double y1 = connectItem.y1;
-                            double x2 = connectItem.x1;
-                            double y2 = connectItem.y1 + connectItem.height;
-                            d = "M " + x1.ToString() + " " + y1.ToString() + "h-" + fExtanceLength.ToString() + "l " + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l -" + (0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
-                                + " L " + x2.ToString() + " " + y2.ToString() + " z ";
-                        }
-                        XmlElement connectPath = svgSection.svgDoc.CreateElement("path");
-                        connectPath.SetAttribute("id", sID);
-                        connectPath.SetAttribute("stroke-width", "1");
-                        connectPath.SetAttribute("onclick", "getID(evt)");
-                        connectPath.SetAttribute("stroke", "black");
-                        connectPath.SetAttribute("d", d);
-                        string fillType = "none";
-                        if (strTypeTrack == TypeTrack.测井解释.ToString())
-                        {
-                            fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill);
-                            connectPath.SetAttribute("fill", fillType);
-                            svgSection.addgElement2Layer(gLayerConnectJSJL, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
-                        }
-                        else if (strTypeTrack == TypeTrack.分层.ToString())
-                        {
-                            fillType = cSVGSectionTrackLayer.getLayerFillColor(sFill);
-                            connectPath.SetAttribute("fill", fillType);
-                            svgSection.addgElement2Layer(gLayerConnectLayer, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
-                        }
+                            if (iShowMode == (int)TypeModeGeoOperate.pinchOutLeft) //左尖灭
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + "h-" + fExtanceLength.ToString() + "l " + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l -" + (0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
+                                    + " L " + x2.ToString() + " " + y2.ToString() + " z ";
+                            }
+                            XmlElement connectPath = svgSection.svgDoc.CreateElement("path");
+                            connectPath.SetAttribute("id", sID);
+                            connectPath.SetAttribute("stroke-width", "1");
+                            connectPath.SetAttribute("onclick", "getID(evt)");
+                            connectPath.SetAttribute("stroke", "black");
+                            connectPath.SetAttribute("d", d);
+                            string fillType = "none";
+                            if (strTypeTrack == TypeTrack.测井解释.ToString())
+                            {
+                                fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill);
+                                connectPath.SetAttribute("fill", fillType);
+                                svgSection.addgElement2Layer(gLayerConnectJSJL, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                            }
+                            else if (strTypeTrack == TypeTrack.分层.ToString())
+                            {
+                                fillType = cSVGSectionTrackLayer.getLayerFillColor(sFill);
+                                connectPath.SetAttribute("fill", fillType);
+                                svgSection.addgElement2Layer(gLayerConnectLayer, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                            }
+                        } //end if wellID 不能为空
                     }
                     #endregion
                 }

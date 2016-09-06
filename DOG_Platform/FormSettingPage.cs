@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using DOGPlatform.XML;
+using System.Xml;
+using System.IO;
 
 namespace DOGPlatform
 {
@@ -70,6 +72,51 @@ namespace DOGPlatform
         private void nUDFirstWellPosition_ValueChanged(object sender, EventArgs e)
         {
             cXmlBase.setNodeInnerText(xmlPath, cXEGeopage.xmlFullPathPageFirstWellXposition, nUDFirstWellPosition.Value.ToString("0"));
+        }
+
+        private void FormSettingPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUDTrackHeadFontSize_ValueChanged(object sender, EventArgs e)
+        {
+            //找到所有的单井模板文件，然后更新
+            string dirCurrent = Path.GetDirectoryName(xmlPath);
+            string dirWellTemplate =Path.Combine(dirCurrent, Path.GetFileNameWithoutExtension(xmlPath));
+            string[] wellFileItems = Directory.GetFiles(dirWellTemplate, "*" + ".xml");
+            foreach (string wellFile in wellFileItems)
+            {
+                foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(wellFile))
+                {
+                    trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                    string sIDtrack = curTrackDraw.sTrackID;  //结点name
+                    cXmlBase.setSelectedNodeChildNodeValue(wellFile, sIDtrack, "trackHeadFontSize", nUDTrackHeadFontSize.Value.ToString("0"));
+                }
+            } 
+        }
+
+        private void nUDMapTitleHeight_ValueChanged(object sender, EventArgs e)
+        {
+            string dirCurrent = Path.GetDirectoryName(xmlPath);
+            string dirWellTemplate = Path.Combine(dirCurrent, Path.GetFileNameWithoutExtension(xmlPath));
+            string[] wellFileItems = Directory.GetFiles(dirWellTemplate, "*" + ".xml");
+            foreach (string wellFile in wellFileItems)
+            {
+                cXmlBase.setNodeInnerText(wellFile, cXEWellPage.fullPathMapTitleRectHeight, nUDMapTitleHeight.Value.ToString("0"));
+            } 
+        }
+
+        private void nUDTrackHeadHeight_ValueChanged(object sender, EventArgs e)
+        {
+            string dirCurrent = Path.GetDirectoryName(xmlPath);
+            string dirWellTemplate = Path.Combine(dirCurrent, Path.GetFileNameWithoutExtension(xmlPath));
+            string[] wellFileItems = Directory.GetFiles(dirWellTemplate, "*" + ".xml");
+            foreach (string wellFile in wellFileItems)
+            {
+                cXmlBase.setNodeInnerText(wellFile, cXEWellPage.fullPathTrackRectHeight, nUDTrackHeadHeight.Value.ToString("0"));
+            } 
+
         }
 
       

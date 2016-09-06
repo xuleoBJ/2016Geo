@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using DOGPlatform.XML;
+using System.Xml;
 
 namespace DOGPlatform
 {
@@ -61,5 +62,14 @@ namespace DOGPlatform
             cXmlBase.setNodeInnerText(xmlPath, cXEWellPage.fullPathMapTitleRectHeight, nUDMapTitleHeight.Value.ToString("0"));
         }
 
+        private void nUDTrackHeadFontSize_ValueChanged(object sender, EventArgs e)
+        {
+            foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(xmlPath))
+            {
+                trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                string sIDtrack = curTrackDraw.sTrackID;  //结点name
+                cXmlBase.setSelectedNodeChildNodeValue(xmlPath, sIDtrack, "trackHeadFontSize", nUDTrackHeadFontSize.Value.ToString("0"));
+            }
+        }
    }
 }

@@ -23,16 +23,8 @@ namespace DOGPlatform
             }
             if (selectNode.Level == 1) //道内设置
             {
-                if (selectNode.Tag.ToString() == TypeTrack.深度尺.ToString())
-                {
-                    FormSettingSectionDepthRuler setRuler = new FormSettingSectionDepthRuler(filePathOper, selectNodeID);
-                    result=setRuler.ShowDialog();
-                }
-                else
-                {
-                    FormSettingSectionTrack newForm = new FormSettingSectionTrack(filePathOper, selectNode.Name);
-                    result=newForm.ShowDialog();
-                }
+                FormSettingSectionTrack newForm = new FormSettingSectionTrack(filePathOper, selectNode.Name);
+                result = newForm.ShowDialog(); 
             }
 
             if (selectNode.Level == 2) //道内属性设置
@@ -71,9 +63,17 @@ namespace DOGPlatform
             DialogResult resultRet = DialogResult.OK;
             if (selectNode.Level == 1) 
             {
-                FormDataImportWell formInputDataTableSingleWell = new
-                          FormDataImportWell(sJHSelected, typeTrackstr, filePathOper, sTrackID);
-                resultRet=formInputDataTableSingleWell.ShowDialog();
+                if (selectNode.Tag.ToString() == TypeTrack.深度尺.ToString())
+                {
+                    FormSettingSectionDepthRuler setRuler = new FormSettingSectionDepthRuler(filePathOper, sTrackID);
+                    resultRet = setRuler.ShowDialog();
+                }
+                else
+                {
+                    FormDataImportWell formInputDataTableSingleWell = new
+                              FormDataImportWell(sJHSelected, typeTrackstr, filePathOper, sTrackID);
+                    resultRet = formInputDataTableSingleWell.ShowDialog();
+                }
             }
 
             if (selectNode.Level == 2)

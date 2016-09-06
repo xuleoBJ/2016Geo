@@ -762,6 +762,11 @@ namespace DOGPlatform
 
         private void tsmiAncorClose_Click(object sender, EventArgs e)
         {
+            closeAncor();
+        }
+
+        void closeAncor() 
+        {
             this.lblClick.Visible = false;
             this.lblCrossH.Visible = false;
             this.lblCrossV.Visible = false;
@@ -1329,6 +1334,7 @@ namespace DOGPlatform
         private void tsmiCloseRefresh_Click(object sender, EventArgs e)
         {
             bRefreshNow = false;
+            closeAncor();
         }
 
        

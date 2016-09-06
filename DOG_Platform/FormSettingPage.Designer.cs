@@ -42,11 +42,22 @@
             this.cbxTrackRect = new System.Windows.Forms.CheckBox();
             this.cbxTrackHeadRect = new System.Windows.Forms.CheckBox();
             this.cbxTitleRect = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nUDTrackHeadFontSize = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nUDMapTitleHeight = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nUDTrackHeadHeight = new System.Windows.Forms.NumericUpDown();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDpageTopElevation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDFirstWellPosition)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDMapTitleHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadHeight)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox18
@@ -55,11 +66,11 @@
             this.groupBox18.Controls.Add(this.nUDPageWidth);
             this.groupBox18.Controls.Add(this.label20);
             this.groupBox18.Controls.Add(this.label60);
-            this.groupBox18.Location = new System.Drawing.Point(25, 182);
+            this.groupBox18.Location = new System.Drawing.Point(25, 315);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Size = new System.Drawing.Size(288, 91);
+            this.groupBox18.Size = new System.Drawing.Size(346, 74);
             this.groupBox18.TabIndex = 61;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "页面尺寸设置(单位:px)";
@@ -72,7 +83,7 @@
             0,
             0,
             0});
-            this.nUDPageHeight.Location = new System.Drawing.Point(186, 43);
+            this.nUDPageHeight.Location = new System.Drawing.Point(233, 30);
             this.nUDPageHeight.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -101,7 +112,7 @@
             0,
             0,
             0});
-            this.nUDPageWidth.Location = new System.Drawing.Point(66, 41);
+            this.nUDPageWidth.Location = new System.Drawing.Point(66, 29);
             this.nUDPageWidth.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -125,7 +136,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(19, 43);
+            this.label20.Location = new System.Drawing.Point(19, 33);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(41, 12);
             this.label20.TabIndex = 37;
@@ -134,7 +145,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(139, 43);
+            this.label60.Location = new System.Drawing.Point(176, 35);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(41, 12);
             this.label60.TabIndex = 27;
@@ -175,7 +186,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(184, 296);
+            this.btnCancel.Location = new System.Drawing.Point(240, 411);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(73, 24);
             this.btnCancel.TabIndex = 66;
@@ -184,7 +195,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(75, 296);
+            this.btnOK.Location = new System.Drawing.Point(94, 411);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(73, 24);
             this.btnOK.TabIndex = 65;
@@ -233,7 +244,7 @@
             // cbxTrackRect
             // 
             this.cbxTrackRect.AutoSize = true;
-            this.cbxTrackRect.Location = new System.Drawing.Point(25, 136);
+            this.cbxTrackRect.Location = new System.Drawing.Point(238, 78);
             this.cbxTrackRect.Name = "cbxTrackRect";
             this.cbxTrackRect.Size = new System.Drawing.Size(72, 16);
             this.cbxTrackRect.TabIndex = 69;
@@ -243,7 +254,7 @@
             // cbxTrackHeadRect
             // 
             this.cbxTrackHeadRect.AutoSize = true;
-            this.cbxTrackHeadRect.Location = new System.Drawing.Point(103, 136);
+            this.cbxTrackHeadRect.Location = new System.Drawing.Point(238, 119);
             this.cbxTrackHeadRect.Name = "cbxTrackHeadRect";
             this.cbxTrackHeadRect.Size = new System.Drawing.Size(84, 16);
             this.cbxTrackHeadRect.TabIndex = 70;
@@ -253,21 +264,151 @@
             // cbxTitleRect
             // 
             this.cbxTitleRect.AutoSize = true;
-            this.cbxTitleRect.Location = new System.Drawing.Point(193, 136);
+            this.cbxTitleRect.Location = new System.Drawing.Point(238, 31);
             this.cbxTitleRect.Name = "cbxTitleRect";
             this.cbxTitleRect.Size = new System.Drawing.Size(84, 16);
             this.cbxTitleRect.TabIndex = 71;
             this.cbxTitleRect.Text = "显示标题框";
             this.cbxTitleRect.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.nUDMapTitleHeight);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.nUDTrackHeadHeight);
+            this.groupBox3.Controls.Add(this.nUDTrackHeadFontSize);
+            this.groupBox3.Controls.Add(this.cbxTitleRect);
+            this.groupBox3.Controls.Add(this.cbxTrackHeadRect);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.cbxTrackRect);
+            this.groupBox3.Location = new System.Drawing.Point(25, 124);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(354, 157);
+            this.groupBox3.TabIndex = 72;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "图头布局";
+            // 
+            // nUDTrackHeadFontSize
+            // 
+            this.nUDTrackHeadFontSize.AllowDrop = true;
+            this.nUDTrackHeadFontSize.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Location = new System.Drawing.Point(151, 114);
+            this.nUDTrackHeadFontSize.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Minimum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Name = "nUDTrackHeadFontSize";
+            this.nUDTrackHeadFontSize.Size = new System.Drawing.Size(57, 21);
+            this.nUDTrackHeadFontSize.TabIndex = 72;
+            this.nUDTrackHeadFontSize.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.ValueChanged += new System.EventHandler(this.nUDTrackHeadFontSize_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 12);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "统一设置道头字体大小";
+            // 
+            // nUDMapTitleHeight
+            // 
+            this.nUDMapTitleHeight.AllowDrop = true;
+            this.nUDMapTitleHeight.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nUDMapTitleHeight.Location = new System.Drawing.Point(151, 31);
+            this.nUDMapTitleHeight.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nUDMapTitleHeight.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.nUDMapTitleHeight.Name = "nUDMapTitleHeight";
+            this.nUDMapTitleHeight.Size = new System.Drawing.Size(57, 21);
+            this.nUDMapTitleHeight.TabIndex = 76;
+            this.nUDMapTitleHeight.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.nUDMapTitleHeight.ValueChanged += new System.EventHandler(this.nUDMapTitleHeight_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(35, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "统一设置道头框高";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 12);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "统一设置标题框高";
+            // 
+            // nUDTrackHeadHeight
+            // 
+            this.nUDTrackHeadHeight.AllowDrop = true;
+            this.nUDTrackHeadHeight.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadHeight.Location = new System.Drawing.Point(151, 75);
+            this.nUDTrackHeadHeight.Maximum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadHeight.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadHeight.Name = "nUDTrackHeadHeight";
+            this.nUDTrackHeadHeight.Size = new System.Drawing.Size(57, 21);
+            this.nUDTrackHeadHeight.TabIndex = 75;
+            this.nUDTrackHeadHeight.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadHeight.ValueChanged += new System.EventHandler(this.nUDTrackHeadHeight_ValueChanged);
+            // 
             // FormSettingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 348);
-            this.Controls.Add(this.cbxTitleRect);
-            this.Controls.Add(this.cbxTrackHeadRect);
-            this.Controls.Add(this.cbxTrackRect);
+            this.ClientSize = new System.Drawing.Size(539, 502);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.nUDFirstWellPosition);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nUDpageTopElevation);
@@ -279,12 +420,18 @@
             this.Name = "FormSettingPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "页面设置";
+            this.Load += new System.EventHandler(this.FormSettingPage_Load);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDpageTopElevation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDFirstWellPosition)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDMapTitleHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadHeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +453,12 @@
         private System.Windows.Forms.CheckBox cbxTrackRect;
         private System.Windows.Forms.CheckBox cbxTrackHeadRect;
         private System.Windows.Forms.CheckBox cbxTitleRect;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown nUDTrackHeadFontSize;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nUDMapTitleHeight;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown nUDTrackHeadHeight;
     }
 }

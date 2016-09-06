@@ -112,8 +112,10 @@ namespace DOGPlatform
                 }
                 if (fTop > 0)  //返回值-999 说明未找到 
                 {
-                    float fTVD = cIOinputWellPath.getTVDByJHAndMD(sJH, fTop); //md->tvd
-                    cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTVD).ToString());
+                    cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTop).ToString());
+                    //拉平不用md教程tvd
+                    // float fTVD = cIOinputWellPath.getTVDByJHAndMD(sJH, fTop); //md->tvd
+                    //cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "Yview", (-fTVD).ToString());
                 }
             } 
         }

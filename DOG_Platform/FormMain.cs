@@ -706,16 +706,14 @@ namespace DOGPlatform
         void makeupProjectTVCMS(TreeNode selectNode) 
         {
             this.tvProjectData.ContextMenuStrip = this.cmsDefaultProjectTV;
-          
+            tsmiMakeWellSection.Visible = false; 
             switch (selectNode.Level)
             {
                 case 0: //第一级菜单
-                    switch (selectNode.Name)
-                    {
-                        case "tnWellTops": //当前选中小层管理
+                    if (selectNode.Tag.ToString() == TypeProjectNode.wells.ToString())  
+                        tsmiMakeWellSection.Visible = true;
+                    if (selectNode.Tag.ToString() == TypeProjectNode.wellTopDir.ToString())
                             this.tvProjectData.ContextMenuStrip = this.cmsProjectLayer;
-                            break;
-                    }
                     break;
                 case 1://第2级菜单
                     if (selectNode.Parent.Text == "井" && selectNode.Index > 0) //当前选中井，index=0 是全局测井曲线
@@ -728,6 +726,8 @@ namespace DOGPlatform
                         this.tvProjectData.ContextMenuStrip = this.cmsSectionGeo;
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionFenceDir.ToString())  //sectionGeo
                         this.tvProjectData.ContextMenuStrip = this.cmsSectionFence;
+                    if (selectNode.Tag.ToString() == TypeProjectNode.svgMap.ToString())  //成果图
+                        this.tvProjectData.ContextMenuStrip = this.cmsProjectGrapthSVG;
                     break;
                 case 2://第3级菜单，右键快捷菜单配置
                     if (selectNode.Text == "well logs")
@@ -747,11 +747,7 @@ namespace DOGPlatform
                 default:
                     break;
             }
-            if (selectNode.Level >= 1)
-            {
-                if (selectNode.Tag.ToString() == TypeProjectNode.svgMap.ToString())  //成果图
-                    this.tvProjectData.ContextMenuStrip = this.cmsProjectGrapthSVG;
-            }
+          
         }
 
         void makeCMSGlobleLog(TreeNode selectNode)
@@ -1886,7 +1882,31 @@ namespace DOGPlatform
 
         private void tsmiSectionGeoRename_Click(object sender, EventArgs e)
         {
-
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string originalFileName = tnSelected.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+            //原分层方案的数据将出清
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newInputFileName = inputBox.ReturnValueStr;
+                string newfilepath = originalFilePath.Replace(tnSelected.Text, newInputFileName);
+                File.Copy(originalFilePath, newfilepath); 
+                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
+                File.Delete(originalFilePath);
+                if (Directory.Exists(originalDir)) Directory.Delete(originalDir, true);
+                TreeNode tnNew = TreeViewProjectData.setupTNSectionGeoItem(tnSelected.Parent, newInputFileName);
+                tnSelected.Remove(); 
+                tnNew.TreeView.SelectedNode = tnNew; 
+            }
+        }
+        void deleteFileAndRemoveTreeNode(TreeNode tnSelected, string filepathDel, string dirpathDel) 
+        {
+            File.Delete(filepathDel);
+            if (Directory.Exists(dirpathDel)) Directory.Delete(dirpathDel, true);
+            tnSelected.Remove(); 
         }
 
         void deleteFileFromDirProjectDataByTreeNodeText(string dir,string fileExtensionName) 
@@ -1897,12 +1917,7 @@ namespace DOGPlatform
             if (File.Exists(filepathDel))
             {
                 DialogResult dialogResult = MessageBox.Show(tnSelected.Text + " 确认删除？", "删除文件", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    File.Delete(filepathDel);
-                    if(Directory.Exists(dirpathDel)) Directory.Delete(dirpathDel, true);
-                    tnSelected.Remove();
-                }
+                if (dialogResult == DialogResult.Yes) deleteFileAndRemoveTreeNode(tnSelected, filepathDel, dirpathDel);
             }
         }
 
@@ -2054,7 +2069,21 @@ namespace DOGPlatform
 
         private void tsmiSectionGeoCopy_Click(object sender, EventArgs e)
         {
-
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string originalFileName = tnSelected.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newInputFileName = inputBox.ReturnValueStr;
+                string newfilepath = originalFilePath.Replace(tnSelected.Text, newInputFileName);
+                File.Copy(originalFilePath, newfilepath);
+                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
+                TreeNode tnNew = TreeViewProjectData.setupTNSectionGeoItem(tnSelected.Parent, newInputFileName);
+                tnNew.TreeView.SelectedNode = tnNew;
+            }
         }
 
         private void tsmiGraphEdit_Click(object sender, EventArgs e)

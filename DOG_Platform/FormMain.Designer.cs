@@ -1292,7 +1292,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1441,7 +1441,7 @@
             this.tsmiColapseAll,
             this.tsmiMakeWellSection});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(149, 114);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(153, 136);
             // 
             // tsmiExpandAll
             // 
@@ -1474,8 +1474,9 @@
             // tsmiMakeWellSection
             // 
             this.tsmiMakeWellSection.Name = "tsmiMakeWellSection";
-            this.tsmiMakeWellSection.Size = new System.Drawing.Size(148, 22);
+            this.tsmiMakeWellSection.Size = new System.Drawing.Size(152, 22);
             this.tsmiMakeWellSection.Text = "生成单井剖面";
+            this.tsmiMakeWellSection.Visible = false;
             this.tsmiMakeWellSection.Click += new System.EventHandler(this.tsmiMakeWellSection_Click);
             // 
             // 根据有效层段处理分层数据ToolStripMenuItem
@@ -1818,7 +1819,7 @@
             // tsmiDataSectionWellChildItemImport
             // 
             this.tsmiDataSectionWellChildItemImport.Name = "tsmiDataSectionWellChildItemImport";
-            this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
             // 
