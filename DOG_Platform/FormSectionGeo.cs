@@ -79,6 +79,7 @@ namespace DOGPlatform
             cPublicMethodForm.initialMapScale(tsbcbbVScale);
             this.webBrowserSVG.ContextMenuStrip = cmsWebSVG;
             webBrowserSVG.ObjectForScripting = this;
+            closeAncor();
         }
 
         List<string> ltSelectID = new List<string>();
@@ -927,6 +928,8 @@ namespace DOGPlatform
                 tsmiRemoveWell.Visible = true;
                 tsmiEditWell.Visible = true;
                 tsmiAdjustShowDepth.Visible = true;
+                tsmiTemplateSaveAs.Visible = true;
+                tsmiTemplateUse.Visible = true;
             }
             if (selectedNode.Level == 1)
             {
@@ -1335,6 +1338,47 @@ namespace DOGPlatform
         {
             bRefreshNow = false;
             closeAncor();
+        }
+
+        private void tsmiSaveAsTemplate_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog modelFileSaveDialog = new SaveFileDialog();
+            modelFileSaveDialog.Filter = "模板文件 | *" + cProjectManager.fileExtensionTemplate;
+            modelFileSaveDialog.DefaultExt = cProjectManager.fileExtensionTemplate;
+            modelFileSaveDialog.InitialDirectory = cProjectManager.dirPathTemplate;
+            if (modelFileSaveDialog.ShowDialog() == DialogResult.OK)
+            {
+                string xtlFilePath = modelFileSaveDialog.FileName;
+                TreeNode currentNode = this.tvSectionEdit.SelectedNode;
+                setUpIDByTN(currentNode);
+                File.Copy(this.filePathOper, xtlFilePath, true);
+                cXmlDocSectionWell.save2XTM(xtlFilePath);
+            }
+        }
+
+        private void tsmiTemplateUse_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = this.tvSectionEdit.SelectedNode;
+            setUpIDByTN(currentNode);
+
+            FormSectAddNewWell formNew = new FormSectAddNewWell(2); //通过2 构造函数 通知模板选择 模板从剖面分析来，不要井号
+            var result = formNew.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string xtlFileName = formNew.ReturnFileNameXMT;
+                bool bNew = true;
+                if (File.Exists(filePathOper))
+                {
+                    DialogResult dialogResult = MessageBox.Show("确认应用新模板？", this.sJH + "剖面已存在", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No) bNew = false;
+                }
+                if (bNew == true)
+                {
+                    string xtmPath = Path.Combine(cProjectManager.dirPathTemplate, xtlFileName);
+                    cIOtemplate.copyTemplate(xtmPath, filePathOper, this.sJH);
+                }
+            }
+           
         }
 
        

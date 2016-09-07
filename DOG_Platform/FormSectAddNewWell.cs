@@ -31,9 +31,13 @@ namespace DOGPlatform
         public FormSectAddNewWell(int i):this()
         {
             this.lblJH.Visible = false;
-            this.cbbJH.Visible = false; //从主面板来。
+            this.cbbJH.Visible = false; 
             this.lblTemplate.Location = new Point(15, 30);
             this.cbbSelectWellTemplate.Location = new Point(50, 30);
+            if (i == 2)  //从联井剖面选择更换模板
+            {
+                this.Text = "选择模板";
+            }
         }
 
         private void btnOK_Click(object sender, EventArgs e)

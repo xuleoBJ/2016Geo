@@ -171,35 +171,35 @@
             this.根据井号筛选测井解释ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除缺失分层数据的井ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListMain = new System.Windows.Forms.ImageList(this.components);
-            this.cmsProjectLayer = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNprojectLayer = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLayerDataImport = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLayerColorSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsInputWell = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNinputWell = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiWellInfor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiWellData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteWell = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsProjectGrapthSVG = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNprojectGrapthSVG = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiGraphEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsGlobalLog = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNglobalLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExportAllLog = new System.Windows.Forms.ToolStripMenuItem();
             this.全局设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsWellLogNode = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNwellLogNode = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLogdataInput = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemCal = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleAllLog = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExportWellLog = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsWellLogItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNwellLogItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLogItemRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemDel = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiSectionWellRename = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSectionWellCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSectionWellDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsSectionGeo = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiSectionSingleRename = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionSingleCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionSingleDel = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTNsectionGeo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSectionGeoRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionGeoCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionGeoDel = new System.Windows.Forms.ToolStripMenuItem();
@@ -207,11 +207,12 @@
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsDataSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNdataSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSectionWellOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsDataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionSingleOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -244,17 +245,17 @@
             this.msMain.SuspendLayout();
             this.ToolStripMain.SuspendLayout();
             this.cmsDefaultProjectTV.SuspendLayout();
-            this.cmsProjectLayer.SuspendLayout();
-            this.cmsInputWell.SuspendLayout();
-            this.cmsProjectGrapthSVG.SuspendLayout();
-            this.cmsGlobalLog.SuspendLayout();
-            this.cmsWellLogNode.SuspendLayout();
-            this.cmsWellLogItem.SuspendLayout();
+            this.cmsTNprojectLayer.SuspendLayout();
+            this.cmsTNinputWell.SuspendLayout();
+            this.cmsTNprojectGrapthSVG.SuspendLayout();
+            this.cmsTNglobalLog.SuspendLayout();
+            this.cmsTNwellLogNode.SuspendLayout();
+            this.cmsTNwellLogItem.SuspendLayout();
             this.cmsSectionWell.SuspendLayout();
-            this.cmsSectionGeo.SuspendLayout();
+            this.cmsTNsectionGeo.SuspendLayout();
             this.cmsSectionFence.SuspendLayout();
-            this.cmsDataSectionWell.SuspendLayout();
-            this.cmsDataSectionWellChildItem.SuspendLayout();
+            this.cmsTNdataSectionWell.SuspendLayout();
+            this.cmsTNdataSectionWellChildItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsNavigationPanel
@@ -1292,7 +1293,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1441,7 +1442,7 @@
             this.tsmiColapseAll,
             this.tsmiMakeWellSection});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(153, 136);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(149, 114);
             // 
             // tsmiExpandAll
             // 
@@ -1474,7 +1475,7 @@
             // tsmiMakeWellSection
             // 
             this.tsmiMakeWellSection.Name = "tsmiMakeWellSection";
-            this.tsmiMakeWellSection.Size = new System.Drawing.Size(152, 22);
+            this.tsmiMakeWellSection.Size = new System.Drawing.Size(148, 22);
             this.tsmiMakeWellSection.Text = "生成单井剖面";
             this.tsmiMakeWellSection.Visible = false;
             this.tsmiMakeWellSection.Click += new System.EventHandler(this.tsmiMakeWellSection_Click);
@@ -1519,13 +1520,13 @@
             this.imageListMain.Images.SetKeyName(11, "layMap.ico");
             this.imageListMain.Images.SetKeyName(12, "16X16Track.png");
             // 
-            // cmsProjectLayer
+            // cmsTNprojectLayer
             // 
-            this.cmsProjectLayer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNprojectLayer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLayerDataImport,
             this.tsmiLayerColorSetting});
-            this.cmsProjectLayer.Name = "cmsProjectLayer";
-            this.cmsProjectLayer.Size = new System.Drawing.Size(125, 48);
+            this.cmsTNprojectLayer.Name = "cmsProjectLayer";
+            this.cmsTNprojectLayer.Size = new System.Drawing.Size(125, 48);
             // 
             // tsmiLayerDataImport
             // 
@@ -1541,14 +1542,14 @@
             this.tsmiLayerColorSetting.Text = "颜色设置";
             this.tsmiLayerColorSetting.Click += new System.EventHandler(this.tsmiLayerColorSetting_Click);
             // 
-            // cmsInputWell
+            // cmsTNinputWell
             // 
-            this.cmsInputWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNinputWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiWellInfor,
             this.tsmiWellData,
             this.tsmiDeleteWell});
-            this.cmsInputWell.Name = "cmsInputWell";
-            this.cmsInputWell.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNinputWell.Name = "cmsInputWell";
+            this.cmsTNinputWell.Size = new System.Drawing.Size(113, 70);
             // 
             // tsmiWellInfor
             // 
@@ -1571,15 +1572,15 @@
             this.tsmiDeleteWell.Text = "删除井";
             this.tsmiDeleteWell.Click += new System.EventHandler(this.tsmiDeleteWell_Click);
             // 
-            // cmsProjectGrapthSVG
+            // cmsTNprojectGrapthSVG
             // 
-            this.cmsProjectGrapthSVG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNprojectGrapthSVG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiGraphEdit,
             this.tsmiGraphRename,
             this.tsmiGraphCopy,
             this.tsmiGraphDelete});
-            this.cmsProjectGrapthSVG.Name = "cmsProjectGrapth";
-            this.cmsProjectGrapthSVG.Size = new System.Drawing.Size(113, 92);
+            this.cmsTNprojectGrapthSVG.Name = "cmsProjectGrapth";
+            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiGraphEdit
             // 
@@ -1609,13 +1610,13 @@
             this.tsmiGraphDelete.Text = "删除";
             this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
-            // cmsGlobalLog
+            // cmsTNglobalLog
             // 
-            this.cmsGlobalLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNglobalLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiExportAllLog,
             this.全局设置ToolStripMenuItem});
-            this.cmsGlobalLog.Name = "cmsGlobalLog";
-            this.cmsGlobalLog.Size = new System.Drawing.Size(149, 48);
+            this.cmsTNglobalLog.Name = "cmsGlobalLog";
+            this.cmsTNglobalLog.Size = new System.Drawing.Size(149, 48);
             // 
             // tsmiExportAllLog
             // 
@@ -1631,15 +1632,15 @@
             this.全局设置ToolStripMenuItem.Text = "全局设置";
             this.全局设置ToolStripMenuItem.Click += new System.EventHandler(this.全局设置ToolStripMenuItem_Click);
             // 
-            // cmsWellLogNode
+            // cmsTNwellLogNode
             // 
-            this.cmsWellLogNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNwellLogNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLogdataInput,
             this.tsmiLogItemCal,
             this.tsmiDeleAllLog,
             this.tsmiExportWellLog});
-            this.cmsWellLogNode.Name = "cmsGlobalLog";
-            this.cmsWellLogNode.Size = new System.Drawing.Size(125, 92);
+            this.cmsTNwellLogNode.Name = "cmsGlobalLog";
+            this.cmsTNwellLogNode.Size = new System.Drawing.Size(125, 92);
             // 
             // tsmiLogdataInput
             // 
@@ -1669,14 +1670,14 @@
             this.tsmiExportWellLog.Text = "曲线导出";
             this.tsmiExportWellLog.Click += new System.EventHandler(this.tsmiExportWellLog_Click);
             // 
-            // cmsWellLogItem
+            // cmsTNwellLogItem
             // 
-            this.cmsWellLogItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNwellLogItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLogItemRename,
             this.tsmiLogItemData,
             this.tsmiLogItemDel});
-            this.cmsWellLogItem.Name = "cmsGlobalLog";
-            this.cmsWellLogItem.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNwellLogItem.Name = "cmsGlobalLog";
+            this.cmsTNwellLogItem.Size = new System.Drawing.Size(113, 70);
             // 
             // tsmiLogItemRename
             // 
@@ -1702,41 +1703,42 @@
             // cmsSectionWell
             // 
             this.cmsSectionWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiSectionWellRename,
-            this.tsmiSectionWellCopy,
-            this.tsmiSectionWellDel});
+            this.tsmiSectionSingleOpen,
+            this.tsmiSectionSingleCopy,
+            this.tsmiSectionSingleRename,
+            this.tsmiSectionSingleDel});
             this.cmsSectionWell.Name = "cmsProjectGrapth";
-            this.cmsSectionWell.Size = new System.Drawing.Size(113, 70);
+            this.cmsSectionWell.Size = new System.Drawing.Size(113, 92);
             // 
-            // tsmiSectionWellRename
+            // tsmiSectionSingleRename
             // 
-            this.tsmiSectionWellRename.Name = "tsmiSectionWellRename";
-            this.tsmiSectionWellRename.Size = new System.Drawing.Size(112, 22);
-            this.tsmiSectionWellRename.Text = "重命名";
-            this.tsmiSectionWellRename.Click += new System.EventHandler(this.tsmiSectionWellRename_Click);
+            this.tsmiSectionSingleRename.Name = "tsmiSectionSingleRename";
+            this.tsmiSectionSingleRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleRename.Text = "重命名";
+            this.tsmiSectionSingleRename.Click += new System.EventHandler(this.tsmiSectionWellRename_Click);
             // 
-            // tsmiSectionWellCopy
+            // tsmiSectionSingleCopy
             // 
-            this.tsmiSectionWellCopy.Name = "tsmiSectionWellCopy";
-            this.tsmiSectionWellCopy.Size = new System.Drawing.Size(112, 22);
-            this.tsmiSectionWellCopy.Text = "复制";
-            this.tsmiSectionWellCopy.Click += new System.EventHandler(this.tsmiSectionCopy_Click);
+            this.tsmiSectionSingleCopy.Name = "tsmiSectionSingleCopy";
+            this.tsmiSectionSingleCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleCopy.Text = "复制";
+            this.tsmiSectionSingleCopy.Click += new System.EventHandler(this.tsmiSectionCopy_Click);
             // 
-            // tsmiSectionWellDel
+            // tsmiSectionSingleDel
             // 
-            this.tsmiSectionWellDel.Name = "tsmiSectionWellDel";
-            this.tsmiSectionWellDel.Size = new System.Drawing.Size(112, 22);
-            this.tsmiSectionWellDel.Text = "删除";
-            this.tsmiSectionWellDel.Click += new System.EventHandler(this.tsmiSectionDel_Click);
+            this.tsmiSectionSingleDel.Name = "tsmiSectionSingleDel";
+            this.tsmiSectionSingleDel.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleDel.Text = "删除";
+            this.tsmiSectionSingleDel.Click += new System.EventHandler(this.tsmiSectionDel_Click);
             // 
-            // cmsSectionGeo
+            // cmsTNsectionGeo
             // 
-            this.cmsSectionGeo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNsectionGeo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiSectionGeoRename,
             this.tsmiSectionGeoCopy,
             this.tsmiSectionGeoDel});
-            this.cmsSectionGeo.Name = "cmsProjectGrapth";
-            this.cmsSectionGeo.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNsectionGeo.Name = "cmsProjectGrapth";
+            this.cmsTNsectionGeo.Size = new System.Drawing.Size(113, 70);
             // 
             // tsmiSectionGeoRename
             // 
@@ -1788,33 +1790,33 @@
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
             // 
-            // cmsDataSectionWell
+            // cmsTNdataSectionWell
             // 
-            this.cmsDataSectionWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNdataSectionWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiSectionWellOpen,
             this.tsmiSectionWellSave});
-            this.cmsDataSectionWell.Name = "cmsWebSVG";
-            this.cmsDataSectionWell.Size = new System.Drawing.Size(101, 48);
+            this.cmsTNdataSectionWell.Name = "cmsWebSVG";
+            this.cmsTNdataSectionWell.Size = new System.Drawing.Size(101, 48);
             // 
             // tsmiSectionWellOpen
             // 
             this.tsmiSectionWellOpen.Name = "tsmiSectionWellOpen";
-            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(100, 22);
+            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionWellOpen.Text = "打开";
             this.tsmiSectionWellOpen.Click += new System.EventHandler(this.tsmiSectionWellOpen_Click);
             // 
             // tsmiSectionWellSave
             // 
             this.tsmiSectionWellSave.Name = "tsmiSectionWellSave";
-            this.tsmiSectionWellSave.Size = new System.Drawing.Size(100, 22);
+            this.tsmiSectionWellSave.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionWellSave.Text = "导出";
             // 
-            // cmsDataSectionWellChildItem
+            // cmsTNdataSectionWellChildItem
             // 
-            this.cmsDataSectionWellChildItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNdataSectionWellChildItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiDataSectionWellChildItemImport});
-            this.cmsDataSectionWellChildItem.Name = "cmsWebSVG";
-            this.cmsDataSectionWellChildItem.Size = new System.Drawing.Size(125, 26);
+            this.cmsTNdataSectionWellChildItem.Name = "cmsWebSVG";
+            this.cmsTNdataSectionWellChildItem.Size = new System.Drawing.Size(125, 26);
             // 
             // tsmiDataSectionWellChildItemImport
             // 
@@ -1822,6 +1824,13 @@
             this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
+            // 
+            // tsmiSectionSingleOpen
+            // 
+            this.tsmiSectionSingleOpen.Name = "tsmiSectionSingleOpen";
+            this.tsmiSectionSingleOpen.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleOpen.Text = "打开";
+            this.tsmiSectionSingleOpen.Click += new System.EventHandler(this.tsmiSectionSingleOpen_Click);
             // 
             // FormMain
             // 
@@ -1880,17 +1889,17 @@
             this.ToolStripMain.ResumeLayout(false);
             this.ToolStripMain.PerformLayout();
             this.cmsDefaultProjectTV.ResumeLayout(false);
-            this.cmsProjectLayer.ResumeLayout(false);
-            this.cmsInputWell.ResumeLayout(false);
-            this.cmsProjectGrapthSVG.ResumeLayout(false);
-            this.cmsGlobalLog.ResumeLayout(false);
-            this.cmsWellLogNode.ResumeLayout(false);
-            this.cmsWellLogItem.ResumeLayout(false);
+            this.cmsTNprojectLayer.ResumeLayout(false);
+            this.cmsTNinputWell.ResumeLayout(false);
+            this.cmsTNprojectGrapthSVG.ResumeLayout(false);
+            this.cmsTNglobalLog.ResumeLayout(false);
+            this.cmsTNwellLogNode.ResumeLayout(false);
+            this.cmsTNwellLogItem.ResumeLayout(false);
             this.cmsSectionWell.ResumeLayout(false);
-            this.cmsSectionGeo.ResumeLayout(false);
+            this.cmsTNsectionGeo.ResumeLayout(false);
             this.cmsSectionFence.ResumeLayout(false);
-            this.cmsDataSectionWell.ResumeLayout(false);
-            this.cmsDataSectionWellChildItem.ResumeLayout(false);
+            this.cmsTNdataSectionWell.ResumeLayout(false);
+            this.cmsTNdataSectionWellChildItem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2006,7 +2015,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiVoiAna;
         private System.Windows.Forms.ToolStripMenuItem tsmiVorReserver;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleWell;
-        private System.Windows.Forms.ContextMenuStrip cmsProjectLayer;
+        private System.Windows.Forms.ContextMenuStrip cmsTNprojectLayer;
         private System.Windows.Forms.ToolStripMenuItem tsmiLayerDataImport;
         private System.Windows.Forms.ToolStripMenuItem tsmiLayerColorSetting;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
@@ -2027,29 +2036,29 @@
         private System.Windows.Forms.ContextMenuStrip cmsWebSVG;
         private System.Windows.Forms.ToolStripMenuItem tsmiSVGedit;
         private System.Windows.Forms.ToolStripMenuItem 窗口打开ToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip cmsInputWell;
+        private System.Windows.Forms.ContextMenuStrip cmsTNinputWell;
         private System.Windows.Forms.ToolStripMenuItem tsmiWellInfor;
         private System.Windows.Forms.ToolStripMenuItem tsmiWellData;
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleteWell;
-        private System.Windows.Forms.ContextMenuStrip cmsProjectGrapthSVG;
+        private System.Windows.Forms.ContextMenuStrip cmsTNprojectGrapthSVG;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphRename;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphDelete;
-        private System.Windows.Forms.ContextMenuStrip cmsGlobalLog;
+        private System.Windows.Forms.ContextMenuStrip cmsTNglobalLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportAllLog;
         private System.Windows.Forms.ToolStripMenuItem 全局设置ToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip cmsWellLogNode;
+        private System.Windows.Forms.ContextMenuStrip cmsTNwellLogNode;
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleAllLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportWellLog;
-        private System.Windows.Forms.ContextMenuStrip cmsWellLogItem;
+        private System.Windows.Forms.ContextMenuStrip cmsTNwellLogItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogItemData;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogItemDel;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphCopy;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogdataInput;
         private System.Windows.Forms.ContextMenuStrip cmsSectionWell;
-        private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellRename;
-        private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellCopy;
-        private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellDel;
-        private System.Windows.Forms.ContextMenuStrip cmsSectionGeo;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleRename;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleCopy;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleDel;
+        private System.Windows.Forms.ContextMenuStrip cmsTNsectionGeo;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoRename;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoCopy;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoDel;
@@ -2074,11 +2083,12 @@
         private System.Windows.Forms.ToolStripStatusLabel tssLabelPosition;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFileDir;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphEdit;
-        private System.Windows.Forms.ContextMenuStrip cmsDataSectionWell;
+        private System.Windows.Forms.ContextMenuStrip cmsTNdataSectionWell;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellOpen;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionWellSave;
-        private System.Windows.Forms.ContextMenuStrip cmsDataSectionWellChildItem;
+        private System.Windows.Forms.ContextMenuStrip cmsTNdataSectionWellChildItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiDataSectionWellChildItemImport;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleOpen;
     }
 }
 

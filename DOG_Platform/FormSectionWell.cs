@@ -211,24 +211,7 @@ namespace DOGPlatform
                 File.Copy(this.filePathOper, xtlFilePath, true);
                 cXmlDocSectionWell.save2XTM(xtlFilePath);
             }
-            //FormInputBox inputBox = new FormInputBox("保存模板：", "输入模板文件名:");
-            //var result = inputBox.ShowDialog();
-            //if (result == DialogResult.OK)
-            //{
-            //    string fileXLT = inputBox.ReturnValueStr;
-            //    if (fileXLT != "")
-            //    {
-            //        string xtlFilePath = Path.Combine(cProjectManager.dirPathTemplate, fileXLT + cProjectManager.fileExtensionTemplate);
-            //        File.Copy(this.filePathOper, xtlFilePath,true);
-            //        cXmlDocSectionWell.save2XTM(xtlFilePath);
-            //        MessageBox.Show("模板已保存。");
-            //    }
-            //    else
-            //    {
-
-            //    }
-            //}
-           
+            
         }
 
         private void tsmiNew_Click(object sender, EventArgs e)

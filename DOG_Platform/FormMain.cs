@@ -713,35 +713,35 @@ namespace DOGPlatform
                     if (selectNode.Tag.ToString() == TypeProjectNode.wells.ToString())  
                         tsmiMakeWellSection.Visible = true;
                     if (selectNode.Tag.ToString() == TypeProjectNode.wellTopDir.ToString())
-                            this.tvProjectData.ContextMenuStrip = this.cmsProjectLayer;
+                            this.tvProjectData.ContextMenuStrip = this.cmsTNprojectLayer;
                     break;
                 case 1://第2级菜单
                     if (selectNode.Parent.Text == "井" && selectNode.Index > 0) //当前选中井，index=0 是全局测井曲线
-                        this.tvProjectData.ContextMenuStrip = this.cmsInputWell;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNinputWell;
                     if (selectNode.Tag.ToString()  == TypeProjectNode.globalLogDir.ToString())  //当前 全局测井曲线
                         makeCMSGlobleLog(selectNode);
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionWellDir.ToString() )  //柱状剖面菜单
                         this.tvProjectData.ContextMenuStrip = this.cmsSectionWell;
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionGeoDir.ToString())  //sectionGeo
-                        this.tvProjectData.ContextMenuStrip = this.cmsSectionGeo;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNsectionGeo;
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionFenceDir.ToString())  //sectionGeo
                         this.tvProjectData.ContextMenuStrip = this.cmsSectionFence;
                     if (selectNode.Tag.ToString() == TypeProjectNode.svgMap.ToString())  //成果图
-                        this.tvProjectData.ContextMenuStrip = this.cmsProjectGrapthSVG;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNprojectGrapthSVG;
                     break;
                 case 2://第3级菜单，右键快捷菜单配置
                     if (selectNode.Text == "well logs")
-                        this.tvProjectData.ContextMenuStrip = this.cmsWellLogNode;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNwellLogNode;
                     if (selectNode.Tag.ToString() == TypeProjectNode.globalLog.ToString())  //全局菜单的测井曲线
                         makeCMSGlobleLog(selectNode);
                     if ( selectNode.Tag.ToString() == TypeProjectNode.sectionWell.ToString()) //当前选中井，index=0 是全局测井曲线
-                        this.tvProjectData.ContextMenuStrip = this.cmsDataSectionWell;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNdataSectionWell;
                     break;
                 case 3://第4级菜单，右键快捷菜单配置
                     if (selectNode.Parent.Text == "well logs")
-                        this.tvProjectData.ContextMenuStrip = this.cmsWellLogItem;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNwellLogItem;
                     if (selectNode.Parent.Tag.ToString()== TypeProjectNode.sectionWell.ToString())
-                        this.tvProjectData.ContextMenuStrip = this.cmsDataSectionWellChildItem;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNdataSectionWellChildItem;
                     break;
 
                 default:
@@ -752,12 +752,12 @@ namespace DOGPlatform
 
         void makeCMSGlobleLog(TreeNode selectNode)
         {
-            foreach (ToolStripMenuItem item in cmsGlobalLog.Items) item.Visible = false;
+            foreach (ToolStripMenuItem item in cmsTNglobalLog.Items) item.Visible = false;
             if (selectNode.Tag.ToString() == TypeProjectNode.globalLogDir.ToString())
-                cmsGlobalLog.Items[0].Visible = true;
+                cmsTNglobalLog.Items[0].Visible = true;
             if (selectNode.Tag.ToString() == TypeProjectNode.globalLog.ToString())
-                cmsGlobalLog.Items[1].Visible = true;
-            this.tvProjectData.ContextMenuStrip = this.cmsGlobalLog;
+                cmsTNglobalLog.Items[1].Visible = true;
+            this.tvProjectData.ContextMenuStrip = this.cmsTNglobalLog;
         }
         
         private void 动态地质分析ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2073,17 +2073,13 @@ namespace DOGPlatform
             string originalFileName = tnSelected.Text;
             string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
             string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
-            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
-            var result = inputBox.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string newInputFileName = inputBox.ReturnValueStr;
-                string newfilepath = originalFilePath.Replace(tnSelected.Text, newInputFileName);
-                File.Copy(originalFilePath, newfilepath);
-                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
-                TreeNode tnNew = TreeViewProjectData.setupTNSectionGeoItem(tnSelected.Parent, newInputFileName);
-                tnNew.TreeView.SelectedNode = tnNew;
-            }
+
+            string newfilepath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + "copy" + cProjectManager.fileExtensionSectionGeo);
+            string newDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + "copy"); 
+            File.Copy(originalFilePath, newfilepath);
+            cPublicMethodBase.DirectoryCopy(originalDir, newDir, true);
+            TreeNode tnNew = TreeViewProjectData.setupTNSectionGeoItem(tnSelected.Parent, originalFileName + "copy");
+            tnNew.TreeView.SelectedNode = tnNew; 
         }
 
         private void tsmiGraphEdit_Click(object sender, EventArgs e)
@@ -2120,6 +2116,18 @@ namespace DOGPlatform
                           FormDataImportWell(sJHSelected, typeTrackstr, filePathOper, sTrackID);
                     formInputDataTableSingleWell.ShowDialog();
                 }
+            }
+
+        }
+
+        private void tsmiSectionSingleOpen_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            if (tnSelected != null)
+            {
+                string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, tnSelected.Text + cProjectManager.fileExtensionSectionWell);
+                FormSectionWell newSection = new FormSectionWell(filePathOper);
+                newSection.Show();
             }
 
         }
