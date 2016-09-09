@@ -921,6 +921,7 @@ namespace DOGPlatform
             foreach (ToolStripMenuItem item in this.cmsTVedit.Items) item.Visible = false;
             if (selectedNode.Level == 0)
             {
+                tsmiWellHeadInfor.Visible = true;
                 tsmiPageSetting.Visible = true;
                 tsmiInsertTrack.Visible = true;
                 tsmiInsertWellAfter.Visible = true;
@@ -1379,6 +1380,14 @@ namespace DOGPlatform
                 }
             }
            
+        }
+
+        private void tsmiWellHeadInfor_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = this.tvSectionEdit.SelectedNode;
+            setUpIDByTN(currentNode);
+            FormWellInfor form = new FormWellInfor(this.sJH);
+            form.ShowDialog();
         }
 
        
