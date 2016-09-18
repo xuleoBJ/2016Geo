@@ -200,5 +200,14 @@ namespace DOGPlatform
         {
             cPublicMethodForm.DataGridViewCellPaste(this.dgvCurrent);
         }
+
+        private void tsmiAllLineCopy_Click(object sender, EventArgs e)
+        {
+            dgvCurrent.ClearSelection();
+            for (int i = 0; i < dgvCurrent.Rows.Count; i++)
+                for (int j = 0; j < dgvCurrent.Columns.Count; j++)
+                    dgvCurrent.Rows[i].Cells[j].Selected = true;
+            cPublicMethodForm.copyDGVselect2Clipboard(this.dgvCurrent);
+        }
     }
 }

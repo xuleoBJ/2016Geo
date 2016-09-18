@@ -196,8 +196,9 @@
             this.tsmiLogItemData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemDel = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsSectionWell = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiSectionSingleRename = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionSingleOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionSingleCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionSingleRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionSingleDel = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNsectionGeo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSectionGeoRename = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,7 +213,6 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSectionSingleOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1121,9 +1121,8 @@
             // tsmiSectionFence
             // 
             this.tsmiSectionFence.Name = "tsmiSectionFence";
-            this.tsmiSectionFence.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSectionFence.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFence.Text = "井组分析";
-            this.tsmiSectionFence.Visible = false;
             this.tsmiSectionFence.Click += new System.EventHandler(this.tsmiSectionFence_Click);
             // 
             // tsmiProfileDecision
@@ -1293,7 +1292,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1710,12 +1709,12 @@
             this.cmsSectionWell.Name = "cmsProjectGrapth";
             this.cmsSectionWell.Size = new System.Drawing.Size(113, 92);
             // 
-            // tsmiSectionSingleRename
+            // tsmiSectionSingleOpen
             // 
-            this.tsmiSectionSingleRename.Name = "tsmiSectionSingleRename";
-            this.tsmiSectionSingleRename.Size = new System.Drawing.Size(112, 22);
-            this.tsmiSectionSingleRename.Text = "重命名";
-            this.tsmiSectionSingleRename.Click += new System.EventHandler(this.tsmiSectionWellRename_Click);
+            this.tsmiSectionSingleOpen.Name = "tsmiSectionSingleOpen";
+            this.tsmiSectionSingleOpen.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleOpen.Text = "打开";
+            this.tsmiSectionSingleOpen.Click += new System.EventHandler(this.tsmiSectionSingleOpen_Click);
             // 
             // tsmiSectionSingleCopy
             // 
@@ -1723,6 +1722,13 @@
             this.tsmiSectionSingleCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionSingleCopy.Text = "复制";
             this.tsmiSectionSingleCopy.Click += new System.EventHandler(this.tsmiSectionCopy_Click);
+            // 
+            // tsmiSectionSingleRename
+            // 
+            this.tsmiSectionSingleRename.Name = "tsmiSectionSingleRename";
+            this.tsmiSectionSingleRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionSingleRename.Text = "重命名";
+            this.tsmiSectionSingleRename.Click += new System.EventHandler(this.tsmiSectionWellRename_Click);
             // 
             // tsmiSectionSingleDel
             // 
@@ -1801,14 +1807,14 @@
             // tsmiSectionWellOpen
             // 
             this.tsmiSectionWellOpen.Name = "tsmiSectionWellOpen";
-            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionWellOpen.Size = new System.Drawing.Size(100, 22);
             this.tsmiSectionWellOpen.Text = "打开";
             this.tsmiSectionWellOpen.Click += new System.EventHandler(this.tsmiSectionWellOpen_Click);
             // 
             // tsmiSectionWellSave
             // 
             this.tsmiSectionWellSave.Name = "tsmiSectionWellSave";
-            this.tsmiSectionWellSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionWellSave.Size = new System.Drawing.Size(100, 22);
             this.tsmiSectionWellSave.Text = "导出";
             // 
             // cmsTNdataSectionWellChildItem
@@ -1824,13 +1830,6 @@
             this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
-            // 
-            // tsmiSectionSingleOpen
-            // 
-            this.tsmiSectionSingleOpen.Name = "tsmiSectionSingleOpen";
-            this.tsmiSectionSingleOpen.Size = new System.Drawing.Size(112, 22);
-            this.tsmiSectionSingleOpen.Text = "打开";
-            this.tsmiSectionSingleOpen.Click += new System.EventHandler(this.tsmiSectionSingleOpen_Click);
             // 
             // FormMain
             // 

@@ -1188,8 +1188,6 @@ namespace DOGPlatform
             if (e.Node.Level >= 0) e.CancelEdit = false;
         }
 
-
-
         private void tsmiAdjustProfile_Click(object sender, EventArgs e)
         {
             FormProfileSelectWells _form = new FormProfileSelectWells();

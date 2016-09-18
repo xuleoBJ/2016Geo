@@ -114,6 +114,7 @@
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbbJH = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsmiAllLineCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tbcProjectDataInput.SuspendLayout();
             this.tbgWellPath.SuspendLayout();
@@ -154,6 +155,7 @@
             this.tsmiData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiOpenFile,
             this.tsmiDeleteCurrentLine,
+            this.tsmiAllLineCopy,
             this.ToolStripMenuSave,
             this.ToolStripMenuItem3,
             this.ToolStripMenuItem6});
@@ -164,21 +166,21 @@
             // tsmiOpenFile
             // 
             this.tsmiOpenFile.Name = "tsmiOpenFile";
-            this.tsmiOpenFile.Size = new System.Drawing.Size(136, 22);
+            this.tsmiOpenFile.Size = new System.Drawing.Size(152, 22);
             this.tsmiOpenFile.Text = "打开文件";
             this.tsmiOpenFile.Click += new System.EventHandler(this.tsmiOpenFile_Click);
             // 
             // tsmiDeleteCurrentLine
             // 
             this.tsmiDeleteCurrentLine.Name = "tsmiDeleteCurrentLine";
-            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(136, 22);
-            this.tsmiDeleteCurrentLine.Text = "删除选中行";
+            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDeleteCurrentLine.Text = "删选中行";
             this.tsmiDeleteCurrentLine.Click += new System.EventHandler(this.tsmiDeleteCurrentLine_Click);
             // 
             // ToolStripMenuSave
             // 
             this.ToolStripMenuSave.Name = "ToolStripMenuSave";
-            this.ToolStripMenuSave.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuSave.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuSave.Text = "保存修改";
             // 
             // ToolStripMenuItem3
@@ -187,7 +189,7 @@
             this.ToolStripMenuItem4,
             this.ToolStripMenuItem5});
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItem3.Text = "数据导出";
             // 
             // ToolStripMenuItem4
@@ -205,7 +207,7 @@
             // ToolStripMenuItem6
             // 
             this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
-            this.ToolStripMenuItem6.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
             this.ToolStripMenuItem6.Text = "退出";
             // 
             // tsmiCopyFromExcel
@@ -770,6 +772,13 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 200;
             // 
+            // tsmiAllLineCopy
+            // 
+            this.tsmiAllLineCopy.Name = "tsmiAllLineCopy";
+            this.tsmiAllLineCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAllLineCopy.Text = "全选复制";
+            this.tsmiAllLineCopy.Click += new System.EventHandler(this.tsmiAllLineCopy_Click);
+            // 
             // FormDataImportWells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -894,5 +903,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAllLineCopy;
     }
 }

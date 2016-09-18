@@ -91,13 +91,51 @@
             this.tsmiTreeviewHide = new System.Windows.Forms.ToolStripMenuItem();
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.层位拉平ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.海拔ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.顶面拉平ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.底面拉平ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOperation = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmidebug = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAdjustScaleHorizonalAdd = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsBtnZoonOutHItem1_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonOutHItem1_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonOutHItem1_5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonOutHItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAdjustScaleHorizonalMin = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsBtnZoonOutHItem0_9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonOutHItem0_8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonOutHItem0_5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsBtnZoonInV1_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonInV1_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonInV1_5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsBtnZoonInV0_9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonInV0_8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsBtnZoonInV0_5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbPageSet = new System.Windows.Forms.ToolStripButton();
+            this.tsbTreeView = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbSelect = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelSelect = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectLeftChannel = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectRightChannel = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectLeftBar = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectRightBar = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectLeftPinout = new System.Windows.Forms.ToolStripButton();
+            this.tsbConnectRightPinout = new System.Windows.Forms.ToolStripButton();
+            this.tsbFault = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temiReselect = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUndo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiRedo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiConnectJSJL = new System.Windows.Forms.ToolStripMenuItem();
+            this.右尖灭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.左尖灭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.插入断层ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.井排列ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.实际井距比ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.等井距ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcWellsGroup.SuspendLayout();
             this.tbgEditView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -395,16 +433,34 @@
             this.tsBtnOpenProject,
             this.tsBtnSaveProject,
             this.toolStripSeparator3,
+            this.tsUndo,
+            this.tsRedo,
+            this.ToolStripSeparator2,
             this.tsBtnZoonIn,
             this.tsBtnZoomOut,
             this.tsBtnZoonOutVertical,
             this.tsBtnZoonInVertical,
-            this.ToolStripSeparator2,
-            this.tsUndo,
-            this.tsRedo,
-            this.tsBtnReflush,
             this.toolStripSeparator1,
-            this.tsbConnectLayer});
+            this.tsmiAdjustScaleHorizonalAdd,
+            this.tsmiAdjustScaleHorizonalMin,
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton2,
+            this.toolStripSeparator6,
+            this.tsbPageSet,
+            this.tsbTreeView,
+            this.toolStripSeparator5,
+            this.tsbConnectLayer,
+            this.tsbConnectLeftChannel,
+            this.tsbConnectRightChannel,
+            this.tsbConnectLeftBar,
+            this.tsbConnectRightBar,
+            this.tsbConnectLeftPinout,
+            this.tsbConnectRightPinout,
+            this.tsbFault,
+            this.toolStripSeparator4,
+            this.tsbSelect,
+            this.tsbDelSelect,
+            this.tsBtnReflush});
             this.ToolStripMain.Location = new System.Drawing.Point(0, 25);
             this.ToolStripMain.Name = "ToolStripMain";
             this.ToolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -534,8 +590,10 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFile,
+            this.编辑ToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.tsmiShowMode,
-            this.tsmiOperation});
+            this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(871, 25);
@@ -584,10 +642,9 @@
             // tsmiShowMode
             // 
             this.tsmiShowMode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiControlTree,
             this.普通ToolStripMenuItem,
             this.简化ToolStripMenuItem,
-            this.层位拉平ToolStripMenuItem});
+            this.tsmiControlTree});
             this.tsmiShowMode.Name = "tsmiShowMode";
             this.tsmiShowMode.Size = new System.Drawing.Size(44, 21);
             this.tsmiShowMode.Text = "视图";
@@ -625,54 +682,355 @@
             this.简化ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.简化ToolStripMenuItem.Text = "简化";
             // 
-            // 层位拉平ToolStripMenuItem
+            // tsmiAdjustScaleHorizonalAdd
             // 
-            this.层位拉平ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.海拔ToolStripMenuItem,
-            this.顶面拉平ToolStripMenuItem,
-            this.底面拉平ToolStripMenuItem});
-            this.层位拉平ToolStripMenuItem.Name = "层位拉平ToolStripMenuItem";
-            this.层位拉平ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.层位拉平ToolStripMenuItem.Text = "层位拉平";
+            this.tsmiAdjustScaleHorizonalAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsmiAdjustScaleHorizonalAdd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtnZoonOutHItem1_1,
+            this.tsBtnZoonOutHItem1_2,
+            this.tsBtnZoonOutHItem1_5,
+            this.tsBtnZoonOutHItem2});
+            this.tsmiAdjustScaleHorizonalAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAdjustScaleHorizonalAdd.Image")));
+            this.tsmiAdjustScaleHorizonalAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsmiAdjustScaleHorizonalAdd.Name = "tsmiAdjustScaleHorizonalAdd";
+            this.tsmiAdjustScaleHorizonalAdd.Size = new System.Drawing.Size(29, 22);
+            this.tsmiAdjustScaleHorizonalAdd.Text = "横向井距布局拉升调整";
             // 
-            // 海拔ToolStripMenuItem
+            // tsBtnZoonOutHItem1_1
             // 
-            this.海拔ToolStripMenuItem.Name = "海拔ToolStripMenuItem";
-            this.海拔ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.海拔ToolStripMenuItem.Text = "真实海拔";
+            this.tsBtnZoonOutHItem1_1.Name = "tsBtnZoonOutHItem1_1";
+            this.tsBtnZoonOutHItem1_1.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_1.Text = "X 1.1";
             // 
-            // 顶面拉平ToolStripMenuItem
+            // tsBtnZoonOutHItem1_2
             // 
-            this.顶面拉平ToolStripMenuItem.Name = "顶面拉平ToolStripMenuItem";
-            this.顶面拉平ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.顶面拉平ToolStripMenuItem.Text = "顶面拉平";
+            this.tsBtnZoonOutHItem1_2.Name = "tsBtnZoonOutHItem1_2";
+            this.tsBtnZoonOutHItem1_2.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_2.Text = "X 1.2";
             // 
-            // 底面拉平ToolStripMenuItem
+            // tsBtnZoonOutHItem1_5
             // 
-            this.底面拉平ToolStripMenuItem.Name = "底面拉平ToolStripMenuItem";
-            this.底面拉平ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.底面拉平ToolStripMenuItem.Text = "底面拉平";
+            this.tsBtnZoonOutHItem1_5.Name = "tsBtnZoonOutHItem1_5";
+            this.tsBtnZoonOutHItem1_5.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem1_5.Text = "X 1.5";
             // 
-            // tsmiOperation
+            // tsBtnZoonOutHItem2
             // 
-            this.tsmiOperation.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmidebug,
-            this.删除ToolStripMenuItem});
-            this.tsmiOperation.Name = "tsmiOperation";
-            this.tsmiOperation.Size = new System.Drawing.Size(44, 21);
-            this.tsmiOperation.Text = "操作";
+            this.tsBtnZoonOutHItem2.Name = "tsBtnZoonOutHItem2";
+            this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(152, 22);
+            this.tsBtnZoonOutHItem2.Text = "X 2";
             // 
-            // tsmidebug
+            // tsmiAdjustScaleHorizonalMin
             // 
-            this.tsmidebug.Name = "tsmidebug";
-            this.tsmidebug.Size = new System.Drawing.Size(100, 22);
-            this.tsmidebug.Text = "连接";
+            this.tsmiAdjustScaleHorizonalMin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsmiAdjustScaleHorizonalMin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtnZoonOutHItem0_9,
+            this.tsBtnZoonOutHItem0_8,
+            this.tsBtnZoonOutHItem0_5});
+            this.tsmiAdjustScaleHorizonalMin.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAdjustScaleHorizonalMin.Image")));
+            this.tsmiAdjustScaleHorizonalMin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsmiAdjustScaleHorizonalMin.Name = "tsmiAdjustScaleHorizonalMin";
+            this.tsmiAdjustScaleHorizonalMin.Size = new System.Drawing.Size(29, 22);
+            this.tsmiAdjustScaleHorizonalMin.Text = "横向井距布局压缩调整";
             // 
-            // 删除ToolStripMenuItem
+            // tsBtnZoonOutHItem0_9
             // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
+            this.tsBtnZoonOutHItem0_9.Name = "tsBtnZoonOutHItem0_9";
+            this.tsBtnZoonOutHItem0_9.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_9.Text = "X 0.9";
+            // 
+            // tsBtnZoonOutHItem0_8
+            // 
+            this.tsBtnZoonOutHItem0_8.Name = "tsBtnZoonOutHItem0_8";
+            this.tsBtnZoonOutHItem0_8.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_8.Text = "X 0.8";
+            // 
+            // tsBtnZoonOutHItem0_5
+            // 
+            this.tsBtnZoonOutHItem0_5.Name = "tsBtnZoonOutHItem0_5";
+            this.tsBtnZoonOutHItem0_5.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonOutHItem0_5.Text = "X 0.5";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtnZoonInV1_1,
+            this.tsBtnZoonInV1_2,
+            this.tsBtnZoonInV1_5});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "垂直比例拉升调整";
+            // 
+            // tsBtnZoonInV1_1
+            // 
+            this.tsBtnZoonInV1_1.Name = "tsBtnZoonInV1_1";
+            this.tsBtnZoonInV1_1.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_1.Text = "1.1";
+            // 
+            // tsBtnZoonInV1_2
+            // 
+            this.tsBtnZoonInV1_2.Name = "tsBtnZoonInV1_2";
+            this.tsBtnZoonInV1_2.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_2.Text = "1.2";
+            // 
+            // tsBtnZoonInV1_5
+            // 
+            this.tsBtnZoonInV1_5.Name = "tsBtnZoonInV1_5";
+            this.tsBtnZoonInV1_5.Size = new System.Drawing.Size(93, 22);
+            this.tsBtnZoonInV1_5.Text = "1.5";
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsBtnZoonInV0_9,
+            this.tsBtnZoonInV0_8,
+            this.tsBtnZoonInV0_5});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton2.Text = "垂直比例压缩调整";
+            // 
+            // tsBtnZoonInV0_9
+            // 
+            this.tsBtnZoonInV0_9.Name = "tsBtnZoonInV0_9";
+            this.tsBtnZoonInV0_9.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_9.Text = "X 0.9";
+            // 
+            // tsBtnZoonInV0_8
+            // 
+            this.tsBtnZoonInV0_8.Name = "tsBtnZoonInV0_8";
+            this.tsBtnZoonInV0_8.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_8.Text = "X 0.8";
+            // 
+            // tsBtnZoonInV0_5
+            // 
+            this.tsBtnZoonInV0_5.Name = "tsBtnZoonInV0_5";
+            this.tsBtnZoonInV0_5.Size = new System.Drawing.Size(105, 22);
+            this.tsBtnZoonInV0_5.Text = "X 0.5";
+            // 
+            // tsbPageSet
+            // 
+            this.tsbPageSet.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbPageSet.Image = ((System.Drawing.Image)(resources.GetObject("tsbPageSet.Image")));
+            this.tsbPageSet.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbPageSet.Name = "tsbPageSet";
+            this.tsbPageSet.Size = new System.Drawing.Size(23, 22);
+            this.tsbPageSet.Text = "页面设置,道头统一设置";
+            // 
+            // tsbTreeView
+            // 
+            this.tsbTreeView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbTreeView.Image = ((System.Drawing.Image)(resources.GetObject("tsbTreeView.Image")));
+            this.tsbTreeView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbTreeView.Name = "tsbTreeView";
+            this.tsbTreeView.Size = new System.Drawing.Size(23, 22);
+            this.tsbTreeView.Text = "控制树";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbSelect
+            // 
+            this.tsbSelect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSelect.Image = ((System.Drawing.Image)(resources.GetObject("tsbSelect.Image")));
+            this.tsbSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSelect.Name = "tsbSelect";
+            this.tsbSelect.Size = new System.Drawing.Size(23, 22);
+            this.tsbSelect.Text = "重选";
+            // 
+            // tsbDelSelect
+            // 
+            this.tsbDelSelect.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelSelect.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelSelect.Image")));
+            this.tsbDelSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelSelect.Name = "tsbDelSelect";
+            this.tsbDelSelect.Size = new System.Drawing.Size(23, 22);
+            this.tsbDelSelect.Text = "删除选中";
+            // 
+            // tsbConnectLeftChannel
+            // 
+            this.tsbConnectLeftChannel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectLeftChannel.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectLeftChannel.Image")));
+            this.tsbConnectLeftChannel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectLeftChannel.Name = "tsbConnectLeftChannel";
+            this.tsbConnectLeftChannel.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectLeftChannel.Text = "左河道";
+            // 
+            // tsbConnectRightChannel
+            // 
+            this.tsbConnectRightChannel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectRightChannel.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectRightChannel.Image")));
+            this.tsbConnectRightChannel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectRightChannel.Name = "tsbConnectRightChannel";
+            this.tsbConnectRightChannel.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectRightChannel.Text = "右河道";
+            // 
+            // tsbConnectLeftBar
+            // 
+            this.tsbConnectLeftBar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectLeftBar.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectLeftBar.Image")));
+            this.tsbConnectLeftBar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectLeftBar.Name = "tsbConnectLeftBar";
+            this.tsbConnectLeftBar.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectLeftBar.Text = "左坝型";
+            // 
+            // tsbConnectRightBar
+            // 
+            this.tsbConnectRightBar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectRightBar.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectRightBar.Image")));
+            this.tsbConnectRightBar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectRightBar.Name = "tsbConnectRightBar";
+            this.tsbConnectRightBar.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectRightBar.Text = "右坝型";
+            // 
+            // tsbConnectLeftPinout
+            // 
+            this.tsbConnectLeftPinout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectLeftPinout.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectLeftPinout.Image")));
+            this.tsbConnectLeftPinout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectLeftPinout.Name = "tsbConnectLeftPinout";
+            this.tsbConnectLeftPinout.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectLeftPinout.Text = "左尖灭";
+            // 
+            // tsbConnectRightPinout
+            // 
+            this.tsbConnectRightPinout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbConnectRightPinout.Image = ((System.Drawing.Image)(resources.GetObject("tsbConnectRightPinout.Image")));
+            this.tsbConnectRightPinout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConnectRightPinout.Name = "tsbConnectRightPinout";
+            this.tsbConnectRightPinout.Size = new System.Drawing.Size(23, 22);
+            this.tsbConnectRightPinout.Text = "右尖灭";
+            // 
+            // tsbFault
+            // 
+            this.tsbFault.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbFault.Image = ((System.Drawing.Image)(resources.GetObject("tsbFault.Image")));
+            this.tsbFault.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFault.Name = "tsbFault";
+            this.tsbFault.Size = new System.Drawing.Size(23, 22);
+            this.tsbFault.Text = "断层";
+            this.tsbFault.ToolTipText = "断层模式，逆断层断距输入负值";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 编辑ToolStripMenuItem
+            // 
+            this.编辑ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.temiReselect,
+            this.tsmiDelete,
+            this.tsmiUndo,
+            this.tsmiRedo});
+            this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
+            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.编辑ToolStripMenuItem.Text = "编辑";
+            // 
+            // temiReselect
+            // 
+            this.temiReselect.Name = "temiReselect";
+            this.temiReselect.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.temiReselect.Size = new System.Drawing.Size(152, 22);
+            this.temiReselect.Text = "选择";
+            // 
+            // tsmiDelete
+            // 
+            this.tsmiDelete.Name = "tsmiDelete";
+            this.tsmiDelete.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Text = "删除";
+            // 
+            // tsmiUndo
+            // 
+            this.tsmiUndo.Enabled = false;
+            this.tsmiUndo.Name = "tsmiUndo";
+            this.tsmiUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.tsmiUndo.Size = new System.Drawing.Size(152, 22);
+            this.tsmiUndo.Text = "撤销";
+            // 
+            // tsmiRedo
+            // 
+            this.tsmiRedo.Enabled = false;
+            this.tsmiRedo.Name = "tsmiRedo";
+            this.tsmiRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.tsmiRedo.Size = new System.Drawing.Size(152, 22);
+            this.tsmiRedo.Text = "重做";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiConnectJSJL,
+            this.右尖灭ToolStripMenuItem,
+            this.左尖灭ToolStripMenuItem,
+            this.插入断层ToolStripMenuItem,
+            this.井排列ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
+            this.toolStripMenuItem1.Text = "操作";
+            // 
+            // tsmiConnectJSJL
+            // 
+            this.tsmiConnectJSJL.Name = "tsmiConnectJSJL";
+            this.tsmiConnectJSJL.Size = new System.Drawing.Size(152, 22);
+            this.tsmiConnectJSJL.Text = "连接储层";
+            // 
+            // 右尖灭ToolStripMenuItem
+            // 
+            this.右尖灭ToolStripMenuItem.Name = "右尖灭ToolStripMenuItem";
+            this.右尖灭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.右尖灭ToolStripMenuItem.Text = "右尖灭";
+            // 
+            // 左尖灭ToolStripMenuItem
+            // 
+            this.左尖灭ToolStripMenuItem.Name = "左尖灭ToolStripMenuItem";
+            this.左尖灭ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.左尖灭ToolStripMenuItem.Text = "左尖灭";
+            // 
+            // 插入断层ToolStripMenuItem
+            // 
+            this.插入断层ToolStripMenuItem.Name = "插入断层ToolStripMenuItem";
+            this.插入断层ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.插入断层ToolStripMenuItem.Text = "插入断层";
+            // 
+            // 井排列ToolStripMenuItem
+            // 
+            this.井排列ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.实际井距比ToolStripMenuItem,
+            this.等井距ToolStripMenuItem});
+            this.井排列ToolStripMenuItem.Name = "井排列ToolStripMenuItem";
+            this.井排列ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.井排列ToolStripMenuItem.Text = "井排列";
+            // 
+            // 实际井距比ToolStripMenuItem
+            // 
+            this.实际井距比ToolStripMenuItem.Name = "实际井距比ToolStripMenuItem";
+            this.实际井距比ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.实际井距比ToolStripMenuItem.Text = "实际井距比";
+            // 
+            // 等井距ToolStripMenuItem
+            // 
+            this.等井距ToolStripMenuItem.Name = "等井距ToolStripMenuItem";
+            this.等井距ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.等井距ToolStripMenuItem.Text = "等井距";
             // 
             // FormSectionGroup
             // 
@@ -738,13 +1096,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiTreeviewHide;
         private System.Windows.Forms.ToolStripMenuItem 普通ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 简化ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 层位拉平ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 海拔ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 顶面拉平ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 底面拉平ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tsmiOperation;
-        private System.Windows.Forms.ToolStripMenuItem tsmidebug;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip cmsWebSVG;
         private System.Windows.Forms.ToolStripMenuItem tsmiWellArrange;
         private System.Windows.Forms.ToolStripMenuItem tsmiPageSetting;
@@ -780,5 +1131,50 @@
         private System.Windows.Forms.ToolStripButton tsbConnectLayer;
         private System.Windows.Forms.ToolStripButton tsBtnZoonOutVertical;
         private System.Windows.Forms.ToolStripButton tsBtnZoonInVertical;
+        private System.Windows.Forms.ToolStripDropDownButton tsmiAdjustScaleHorizonalAdd;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem1_1;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem1_2;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem1_5;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem2;
+        private System.Windows.Forms.ToolStripDropDownButton tsmiAdjustScaleHorizonalMin;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem0_9;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem0_8;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonOutHItem0_5;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV1_1;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV1_2;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV1_5;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV0_9;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV0_8;
+        private System.Windows.Forms.ToolStripMenuItem tsBtnZoonInV0_5;
+        private System.Windows.Forms.ToolStripButton tsbPageSet;
+        private System.Windows.Forms.ToolStripButton tsbTreeView;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton tsbSelect;
+        private System.Windows.Forms.ToolStripButton tsbDelSelect;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton tsbConnectLeftChannel;
+        private System.Windows.Forms.ToolStripButton tsbConnectRightChannel;
+        private System.Windows.Forms.ToolStripButton tsbConnectLeftBar;
+        private System.Windows.Forms.ToolStripButton tsbConnectRightBar;
+        private System.Windows.Forms.ToolStripButton tsbConnectLeftPinout;
+        private System.Windows.Forms.ToolStripButton tsbConnectRightPinout;
+        private System.Windows.Forms.ToolStripButton tsbFault;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temiReselect;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmiUndo;
+        private System.Windows.Forms.ToolStripMenuItem tsmiRedo;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiConnectJSJL;
+        private System.Windows.Forms.ToolStripMenuItem 右尖灭ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 左尖灭ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 插入断层ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 井排列ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 实际井距比ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 等井距ToolStripMenuItem;
     }
 }
