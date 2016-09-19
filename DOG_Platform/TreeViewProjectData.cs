@@ -148,6 +148,19 @@ namespace DOGPlatform
                     TreeNode tn = new TreeNode(_filename,9,9);
                     tn.Name = _filename;
                     tn.Tag = TypeProjectNode.sectionGeo;
+                    List<ItemWellSection> listWellsSection = cXmlDocSectionGeo.makeListWellSection(_item);
+                    //解析sectioncss文件，增加节点
+                    foreach (ItemWellSection item in listWellsSection)
+                    {
+                        if (item.sJH != "")
+                        {
+                            TreeNode tnWell = new TreeNode(item.sJH,12,12);
+                            tnWell.Tag = item.sJH;
+                            tnWell.Text = item.sJH;
+                            tnWell.Name = item.sJH;
+                            tn.Nodes.Add(tnWell);
+                        }
+                    }
                     tnSectionNode.Nodes.Add(tn);
                 }
             }

@@ -1535,10 +1535,7 @@ namespace DOGPlatform
                 } //end
                 else if (selectNode.Level == 1 && selectNode.Tag.ToString() == TypeProjectNode.sectionGeo.ToString())
                 {
-                    string fileName = selectNode.Text;
-                    string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionGeo);
-                    FormSectionGeo newSection = new FormSectionGeo(filePathOper);
-                    newSection.Show();
+                   
                 }
                 else if (selectNode.Level == 1 && selectNode.Tag.ToString() == TypeProjectNode.sectionFence.ToString())
                 {
@@ -1884,7 +1881,6 @@ namespace DOGPlatform
             string originalFileName = tnSelected.Text;
             string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
             string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
-            //原分层方案的数据将出清
             FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
             var result = inputBox.ShowDialog();
             if (result == DialogResult.OK)
@@ -2128,6 +2124,15 @@ namespace DOGPlatform
                 newSection.Show();
             }
 
+        }
+
+        private void tsmiSectionGeoOpen_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string fileName = tnSelected.Text;
+            string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionGeo);
+            FormSectionGeo newSection = new FormSectionGeo(filePathOper);
+            newSection.Show();
         }
        
      

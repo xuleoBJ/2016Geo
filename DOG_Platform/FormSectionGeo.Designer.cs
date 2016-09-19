@@ -200,8 +200,8 @@
             // 
             // splitContainerSection.Panel1
             // 
-            this.splitContainerSection.Panel1.Controls.Add(this.statusStripTV);
             this.splitContainerSection.Panel1.Controls.Add(this.tvSectionEdit);
+            this.splitContainerSection.Panel1.Controls.Add(this.statusStripTV);
             // 
             // splitContainerSection.Panel2
             // 
@@ -250,7 +250,7 @@
             this.tvSectionEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvSectionEdit.Location = new System.Drawing.Point(0, 0);
             this.tvSectionEdit.Name = "tvSectionEdit";
-            this.tvSectionEdit.Size = new System.Drawing.Size(227, 566);
+            this.tvSectionEdit.Size = new System.Drawing.Size(227, 544);
             this.tvSectionEdit.TabIndex = 0;
             this.tvSectionEdit.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvEditSection_NodeMouseDoubleClick);
             this.tvSectionEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tvSectionEdit_MouseUp);

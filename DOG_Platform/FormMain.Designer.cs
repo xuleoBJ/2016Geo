@@ -213,6 +213,7 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionGeoOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1121,7 +1122,7 @@
             // tsmiSectionFence
             // 
             this.tsmiSectionFence.Name = "tsmiSectionFence";
-            this.tsmiSectionFence.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFence.Size = new System.Drawing.Size(124, 22);
             this.tsmiSectionFence.Text = "井组分析";
             this.tsmiSectionFence.Click += new System.EventHandler(this.tsmiSectionFence_Click);
             // 
@@ -1740,30 +1741,31 @@
             // cmsTNsectionGeo
             // 
             this.cmsTNsectionGeo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiSectionGeoOpen,
             this.tsmiSectionGeoRename,
             this.tsmiSectionGeoCopy,
             this.tsmiSectionGeoDel});
             this.cmsTNsectionGeo.Name = "cmsProjectGrapth";
-            this.cmsTNsectionGeo.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNsectionGeo.Size = new System.Drawing.Size(153, 114);
             // 
             // tsmiSectionGeoRename
             // 
             this.tsmiSectionGeoRename.Name = "tsmiSectionGeoRename";
-            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoRename.Text = "重命名";
             this.tsmiSectionGeoRename.Click += new System.EventHandler(this.tsmiSectionGeoRename_Click);
             // 
             // tsmiSectionGeoCopy
             // 
             this.tsmiSectionGeoCopy.Name = "tsmiSectionGeoCopy";
-            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoCopy.Text = "复制";
             this.tsmiSectionGeoCopy.Click += new System.EventHandler(this.tsmiSectionGeoCopy_Click);
             // 
             // tsmiSectionGeoDel
             // 
             this.tsmiSectionGeoDel.Name = "tsmiSectionGeoDel";
-            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoDel.Text = "删除";
             this.tsmiSectionGeoDel.Click += new System.EventHandler(this.tsmiSectionGeoDel_Click);
             // 
@@ -1830,6 +1832,13 @@
             this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
+            // 
+            // tsmiSectionGeoOpen
+            // 
+            this.tsmiSectionGeoOpen.Name = "tsmiSectionGeoOpen";
+            this.tsmiSectionGeoOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoOpen.Text = "打开";
+            this.tsmiSectionGeoOpen.Click += new System.EventHandler(this.tsmiSectionGeoOpen_Click);
             // 
             // FormMain
             // 
@@ -2088,6 +2097,7 @@
         private System.Windows.Forms.ContextMenuStrip cmsTNdataSectionWellChildItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiDataSectionWellChildItemImport;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionSingleOpen;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoOpen;
     }
 }
 

@@ -323,7 +323,8 @@ namespace DOGPlatform.SVG
                     ltdfminTickDepth.Add(iTinyTickValue);
                     iTinyTickValue = iTinyTickValue + m_tickInveral_min;
                 }
-                ItemDicWellPath topWellPath = cIOinputWellPath.getWellPathItemByJHAndMD(curWell, (float)ltdfminTickDepth[0]);
+                ItemDicWellPath topWellPath = new ItemDicWellPath();
+                if (ltdfminTickDepth.Count > 0) topWellPath = cIOinputWellPath.getWellPathItemByJHAndMD(curWell, (float)ltdfminTickDepth[0]);
                 dx0 = topWellPath.f_dx;
                 dy0 = dfVscale * topWellPath.f_TVD;
 

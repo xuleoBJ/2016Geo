@@ -300,15 +300,16 @@ namespace DOGPlatform
             }
            
         }
+
         public static void updateWellInfor2Project(ItemWellHead sttNewWell)
         {
             cIOinputWellHead.updateWellHead(sttNewWell);
             cProjectManager.createWellDir(sttNewWell.sJH);
-            MessageBox.Show(sttNewWell.sJH + "入库成功。");
-            cProjectData.setProjectWellsInfor();
             if (cProjectData.ltStrProjectJH.IndexOf(sttNewWell.sJH)<0) cProjectData.ltStrProjectJH.Add(sttNewWell.sJH);
-
+            cProjectData.setProjectWellsInfor();
+            MessageBox.Show(sttNewWell.sJH + "入库成功。");
         }
+
         public static void createLayerDir()
         {
             if (!Directory.Exists(cProjectManager.dirPathLayerDir)) System.IO.Directory.CreateDirectory(cProjectManager.dirPathLayerDir);

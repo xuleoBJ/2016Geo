@@ -25,7 +25,7 @@ namespace DOGPlatform
 
         public string filepathSVGRet = "";
 
-        string filePathSectionCss = Path.Combine(cProjectManager.dirPathTemp, "sectionGeo" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml");
+        string filePathSectionCss = Path.Combine(cProjectManager.dirPathTemp, "新联井剖面" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml");
 
         public FormSectionAddNewGeo(string _pathSectionCss, string _dirSectionData)
         {
@@ -80,7 +80,7 @@ namespace DOGPlatform
                 ltStrSelectedJH.Add(strItem);
             }
             //创建模板，2个模板 一个是描述整体布局的模板，每个单井又是一个模板。
-
+          //  if (ltStrSelectedJH.Count > 0) filePathSectionCss = Path.Combine(cProjectManager.dirPathTemp, ltStrSelectedJH[0] + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml");
             cXmlDocSectionGeo.generateSectionCssXML(filePathSectionCss);
         }
        
