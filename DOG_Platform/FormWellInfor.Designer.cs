@@ -42,6 +42,7 @@
             this.tbxWellBase = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,7 +136,7 @@
             // 
             // btnAddWell
             // 
-            this.btnAddWell.Location = new System.Drawing.Point(128, 286);
+            this.btnAddWell.Location = new System.Drawing.Point(66, 286);
             this.btnAddWell.Name = "btnAddWell";
             this.btnAddWell.Size = new System.Drawing.Size(75, 23);
             this.btnAddWell.TabIndex = 10;
@@ -181,16 +182,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "新井信息输入";
             // 
-            // FormAddNewWell
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(172, 286);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // FormWellInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 344);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddWell);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormAddNewWell";
+            this.Name = "FormWellInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "井信息";
             this.groupBox1.ResumeLayout(false);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.TextBox tbxWellBase;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -43,7 +43,7 @@ namespace DOGPlatform
         static string mapID = "sectionGeo" + DateTime.Now.ToString("MMddHHmmss");
         static string dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
         string filePathSectionGeoCss = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID + cProjectManager.fileExtensionSectionGeo);
-        
+
         double fVscale = 1000 / 500;  //默认是用1：500比例尺 //是用sunit单位换算过的
         float fWellDistanceHScale =1;
        
@@ -167,9 +167,15 @@ namespace DOGPlatform
         {
           createNewFile();
         }
-     
+        void makeNewFiles()
+        {
+            mapID = "sectionGeo" + DateTime.Now.ToString("MMddHHmmss");
+            dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
+            filePathSectionGeoCss = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID + cProjectManager.fileExtensionSectionGeo);
+        }
         void createNewFile()
         {
+            makeNewFiles();
             FormSectionAddNewGeo formNew = new FormSectionAddNewGeo(filePathSectionGeoCss, dirSectionData);
             var result = formNew.ShowDialog();
             if (result == DialogResult.OK)
@@ -200,6 +206,7 @@ namespace DOGPlatform
         DateTime dtLastStop = DateTime.Now;
         void makeSVGmap()
         {
+            this.tbgViewEdit.Text = Path.GetFileNameWithoutExtension(this.filePathSectionGeoCss);
             if (bRefreshNow)
             {
                 updateSVGMap();
@@ -272,12 +279,12 @@ namespace DOGPlatform
 
          private void tsmiOpen_Click(object sender, EventArgs e)
          {
-         openExist();
+          openExist();
          }
 
          private void tsBtnNewProject_Click(object sender, EventArgs e)
          {
-          createNewFile();
+           createNewFile();
          }
 
          private void tsmiSettingPage_Click(object sender, EventArgs e)
@@ -1388,6 +1395,27 @@ namespace DOGPlatform
             setUpIDByTN(currentNode);
             FormWellInfor form = new FormWellInfor(this.sJH);
             form.ShowDialog();
+        }
+
+        private void tsmiSectionGeoRename_Click(object sender, EventArgs e)
+        {
+            string originalFileName = this.tbgViewEdit.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", originalFileName);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newInputFileName = inputBox.ReturnValueStr;
+                string newfilepath = originalFilePath.Replace(originalFileName, newInputFileName);
+                File.Copy(originalFilePath, newfilepath);
+                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
+                File.Delete(originalFilePath);
+                if (Directory.Exists(originalDir)) Directory.Delete(originalDir, true);
+                dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName);
+                filePathSectionGeoCss = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName + cProjectManager.fileExtensionSectionGeo);
+                this.tbgViewEdit.Text = newInputFileName;
+            }
         }
 
        

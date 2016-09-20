@@ -1881,12 +1881,12 @@ namespace DOGPlatform
             string originalFileName = tnSelected.Text;
             string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionGeo);
             string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
-            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", originalFileName);
             var result = inputBox.ShowDialog();
             if (result == DialogResult.OK)
             {
                 string newInputFileName = inputBox.ReturnValueStr;
-                string newfilepath = originalFilePath.Replace(tnSelected.Text, newInputFileName);
+                string newfilepath = originalFilePath.Replace(originalFileName, newInputFileName);
                 File.Copy(originalFilePath, newfilepath); 
                 cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
                 File.Delete(originalFilePath);
@@ -2133,6 +2133,19 @@ namespace DOGPlatform
             string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionGeo);
             FormSectionGeo newSection = new FormSectionGeo(filePathOper);
             newSection.Show();
+        }
+
+        private void tsmiOpenAppSectionGeo_Click(object sender, EventArgs e)
+        {
+            FormSectionGeo FormWellsGroup = new FormSectionGeo();
+            FormWellsGroup.Show();
+           
+        }
+
+        private void tsmiOpenAppSectionFence_Click(object sender, EventArgs e)
+        {
+            FormSectionGroup formFD = new FormSectionGroup();
+            formFD.Show();
         }
        
      

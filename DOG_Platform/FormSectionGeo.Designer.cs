@@ -33,10 +33,6 @@
             this.tbcSectionGeo = new System.Windows.Forms.TabControl();
             this.tbgViewEdit = new System.Windows.Forms.TabPage();
             this.splitContainerSection = new System.Windows.Forms.SplitContainer();
-            this.statusStripTV = new System.Windows.Forms.StatusStrip();
-            this.tsslblJH = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tsslblTrack = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tssTVInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tvSectionEdit = new System.Windows.Forms.TreeView();
             this.cmsTVedit = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiWellHeadInfor = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +60,10 @@
             this.tsmiAdjustShowDepth = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTemplateSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTemplateUse = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStripTV = new System.Windows.Forms.StatusStrip();
+            this.tsslblJH = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslblTrack = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssTVInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCrossV = new System.Windows.Forms.Label();
             this.lblCrossH = new System.Windows.Forms.Label();
             this.webBrowserSVG = new System.Windows.Forms.WebBrowser();
@@ -157,14 +157,15 @@
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionGeoRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcSectionGeo.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
             this.splitContainerSection.Panel1.SuspendLayout();
             this.splitContainerSection.Panel2.SuspendLayout();
             this.splitContainerSection.SuspendLayout();
-            this.statusStripTV.SuspendLayout();
             this.cmsTVedit.SuspendLayout();
+            this.statusStripTV.SuspendLayout();
             this.statusStripWeb.SuspendLayout();
             this.cmsWebSVG.SuspendLayout();
             this.ToolStripMain.SuspendLayout();
@@ -189,7 +190,7 @@
             this.tbgViewEdit.Padding = new System.Windows.Forms.Padding(3);
             this.tbgViewEdit.Size = new System.Drawing.Size(1005, 572);
             this.tbgViewEdit.TabIndex = 3;
-            this.tbgViewEdit.Text = "显示";
+            this.tbgViewEdit.Text = "图形";
             this.tbgViewEdit.UseVisualStyleBackColor = true;
             // 
             // splitContainerSection
@@ -213,36 +214,6 @@
             this.splitContainerSection.Size = new System.Drawing.Size(999, 566);
             this.splitContainerSection.SplitterDistance = 227;
             this.splitContainerSection.TabIndex = 0;
-            // 
-            // statusStripTV
-            // 
-            this.statusStripTV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsslblJH,
-            this.tsslblTrack,
-            this.tssTVInfor});
-            this.statusStripTV.Location = new System.Drawing.Point(0, 544);
-            this.statusStripTV.Name = "statusStripTV";
-            this.statusStripTV.Size = new System.Drawing.Size(227, 22);
-            this.statusStripTV.TabIndex = 1;
-            this.statusStripTV.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStripTV_ItemClicked);
-            // 
-            // tsslblJH
-            // 
-            this.tsslblJH.Name = "tsslblJH";
-            this.tsslblJH.Size = new System.Drawing.Size(32, 17);
-            this.tsslblJH.Text = "井号";
-            // 
-            // tsslblTrack
-            // 
-            this.tsslblTrack.Name = "tsslblTrack";
-            this.tsslblTrack.Size = new System.Drawing.Size(20, 17);
-            this.tsslblTrack.Text = "道";
-            // 
-            // tssTVInfor
-            // 
-            this.tssTVInfor.Name = "tssTVInfor";
-            this.tssTVInfor.Size = new System.Drawing.Size(32, 17);
-            this.tssTVInfor.Text = "提示";
             // 
             // tvSectionEdit
             // 
@@ -462,6 +433,36 @@
             this.tsmiTemplateUse.Text = "应用模板";
             this.tsmiTemplateUse.Click += new System.EventHandler(this.tsmiTemplateUse_Click);
             // 
+            // statusStripTV
+            // 
+            this.statusStripTV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslblJH,
+            this.tsslblTrack,
+            this.tssTVInfor});
+            this.statusStripTV.Location = new System.Drawing.Point(0, 544);
+            this.statusStripTV.Name = "statusStripTV";
+            this.statusStripTV.Size = new System.Drawing.Size(227, 22);
+            this.statusStripTV.TabIndex = 1;
+            this.statusStripTV.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStripTV_ItemClicked);
+            // 
+            // tsslblJH
+            // 
+            this.tsslblJH.Name = "tsslblJH";
+            this.tsslblJH.Size = new System.Drawing.Size(32, 17);
+            this.tsslblJH.Text = "井号";
+            // 
+            // tsslblTrack
+            // 
+            this.tsslblTrack.Name = "tsslblTrack";
+            this.tsslblTrack.Size = new System.Drawing.Size(20, 17);
+            this.tsslblTrack.Text = "道";
+            // 
+            // tssTVInfor
+            // 
+            this.tssTVInfor.Name = "tssTVInfor";
+            this.tssTVInfor.Size = new System.Drawing.Size(32, 17);
+            this.tssTVInfor.Text = "提示";
+            // 
             // lblCrossV
             // 
             this.lblCrossV.BackColor = System.Drawing.Color.Black;
@@ -538,21 +539,22 @@
             this.tsmiPageSetting,
             this.tsmiIntervalMode,
             this.tsmiPositionRuler,
+            this.tsmiSectionGeoRename,
             this.tsmiRefresh});
             this.cmsWebSVG.Name = "cmsWebSVG";
-            this.cmsWebSVG.Size = new System.Drawing.Size(125, 92);
+            this.cmsWebSVG.Size = new System.Drawing.Size(153, 136);
             // 
             // tsmiPageSetting
             // 
             this.tsmiPageSetting.Name = "tsmiPageSetting";
-            this.tsmiPageSetting.Size = new System.Drawing.Size(124, 22);
+            this.tsmiPageSetting.Size = new System.Drawing.Size(152, 22);
             this.tsmiPageSetting.Text = "页面设置";
             this.tsmiPageSetting.Click += new System.EventHandler(this.tsbPageSet_Click);
             // 
             // tsmiIntervalMode
             // 
             this.tsmiIntervalMode.Name = "tsmiIntervalMode";
-            this.tsmiIntervalMode.Size = new System.Drawing.Size(124, 22);
+            this.tsmiIntervalMode.Size = new System.Drawing.Size(152, 22);
             this.tsmiIntervalMode.Text = "层段模式";
             this.tsmiIntervalMode.Click += new System.EventHandler(this.tsmiIntervalMode_Click);
             // 
@@ -562,7 +564,7 @@
             this.tsmiAncorPoint,
             this.tsmiAncorClose});
             this.tsmiPositionRuler.Name = "tsmiPositionRuler";
-            this.tsmiPositionRuler.Size = new System.Drawing.Size(124, 22);
+            this.tsmiPositionRuler.Size = new System.Drawing.Size(152, 22);
             this.tsmiPositionRuler.Text = "定位锚点";
             this.tsmiPositionRuler.Click += new System.EventHandler(this.tsmiPositionRuler_Click);
             // 
@@ -583,7 +585,7 @@
             // tsmiRefresh
             // 
             this.tsmiRefresh.Name = "tsmiRefresh";
-            this.tsmiRefresh.Size = new System.Drawing.Size(124, 22);
+            this.tsmiRefresh.Size = new System.Drawing.Size(152, 22);
             this.tsmiRefresh.Text = "页面刷新";
             this.tsmiRefresh.Click += new System.EventHandler(this.tsmiRefresh_Click);
             // 
@@ -1276,6 +1278,13 @@
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
+            // tsmiSectionGeoRename
+            // 
+            this.tsmiSectionGeoRename.Name = "tsmiSectionGeoRename";
+            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoRename.Text = "重命名";
+            this.tsmiSectionGeoRename.Click += new System.EventHandler(this.tsmiSectionGeoRename_Click);
+            // 
             // FormSectionGeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1300,9 +1309,9 @@
             this.splitContainerSection.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).EndInit();
             this.splitContainerSection.ResumeLayout(false);
+            this.cmsTVedit.ResumeLayout(false);
             this.statusStripTV.ResumeLayout(false);
             this.statusStripTV.PerformLayout();
-            this.cmsTVedit.ResumeLayout(false);
             this.statusStripWeb.ResumeLayout(false);
             this.statusStripWeb.PerformLayout();
             this.cmsWebSVG.ResumeLayout(false);
@@ -1444,5 +1453,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiTemplateSaveAs;
         private System.Windows.Forms.ToolStripMenuItem tsmiTemplateUse;
         private System.Windows.Forms.ToolStripMenuItem tsmiWellHeadInfor;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoRename;
     }
 }
