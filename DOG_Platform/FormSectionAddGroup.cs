@@ -37,8 +37,6 @@ namespace DOGPlatform
         private void InitFormWellsGroupControl()
         {
             cPublicMethodForm.inialListBox(lbxJH, cProjectData.ltStrProjectJH);
-            cPublicMethodForm.inialComboBox(cbbTopXCM, cProjectData.ltStrProjectXCM);
-            cPublicMethodForm.inialComboBox(cbbBottomXCM, cProjectData.ltStrProjectXCM);
             List<string> ltFileNameXMT = cProjectManager.getTemplateFileNameList();
             cPublicMethodForm.inialComboBox(this.cbbSelectTemplate, ltFileNameXMT);
             cbbSelectTemplate.SelectedIndex = 0;
@@ -77,47 +75,18 @@ namespace DOGPlatform
             List<ItemWellHead> listWellHead = cIOinputWellHead.readWellHead2Struct();
             cXmlDocSectionGeo.generateSectionCssXML(filePathSectionCss);
             //初始化 ItemWellSection
-            string sTopXCM = this.cbbTopXCM.SelectedItem.ToString();
-            int iTopIndex = cProjectData.ltStrProjectXCM.IndexOf(sTopXCM);
-            string sBottomXCM = this.cbbBottomXCM.SelectedItem.ToString();
-            int iBottomIndex = cProjectData.ltStrProjectXCM.IndexOf(sBottomXCM);
-            if (iBottomIndex - iTopIndex >= 0)
+            for (int i = 0; i < ltStrSelectedJH.Count; i++)
             {
-                List<string> ltStrSelectedXCM = cProjectData.ltStrProjectXCM.GetRange(iTopIndex, iBottomIndex - iTopIndex + 1);
-                int _up = Convert.ToInt16(this.nUDtopDepthUp.Value);
-                int _down = Convert.ToInt16(this.nUDbottomDepthDown.Value);
-
-                for (int i = 0; i < ltStrSelectedJH.Count; i++)
-                {
-                    ItemWellSection _wellSection = new ItemWellSection(ltStrSelectedJH[i], 0, 0);
-                    //有可能上下层有缺失。。。所以这块的技巧是找出深度序列，取最大最小值
-                    cIOinputLayerDepth fileLayerDepth = new cIOinputLayerDepth();
-                    List<float> fListDS1Return = fileLayerDepth.selectDepthListFromLayerDepthByJHAndXCMList(ltStrSelectedJH[i], ltStrSelectedXCM);
-                    if (fListDS1Return.Count > 0)  //返回值为空 说明所选层段整个缺失！
-                    {
-                        _wellSection.fShowedDepthTop = fListDS1Return.Min() - _up;
-                        _wellSection.fShowedDepthBase = fListDS1Return.Max() + _down;
-                    }
-                    else 
-                    {
-                        _wellSection.fShowedDepthTop = 0;
-                        _wellSection.fShowedDepthBase = _wellSection.fWellBase;
-                    }
-                    listWellsSection.Add(_wellSection);
-                }
+                ItemWellSection _wellSection = new ItemWellSection(ltStrSelectedJH[i], 0, 0);
+                //默认把显示深度设为全井段
+                _wellSection.fShowedDepthTop = 0;
+                _wellSection.fShowedDepthBase = _wellSection.fWellBase;
+                if (_wellSection.fShowedDepthBase >= _wellSection.fWellBase) _wellSection.fShowedDepthBase = _wellSection.fWellBase;
+                listWellsSection.Add(_wellSection);
             }
-            else
-            {
-                MessageBox.Show("上层应该比下层选择高，请重新选择。");
-            }
-            cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss);
+            cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss); 
         }
 
-        private void cbbTopXCM_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbBottomXCM.Items.Count > 0)
-                this.cbbBottomXCM.SelectedIndex = cbbTopXCM.SelectedIndex + 1;
-        }
 
         private void btnDataPre_Click(object sender, EventArgs e)
         {
@@ -128,6 +97,7 @@ namespace DOGPlatform
                 //插入数据
                 if (cbbSelectTemplate.SelectedIndex < 0) cbbSelectTemplate.SelectedIndex = 0;
                 string fileNameSelectTemplate = this.cbbSelectTemplate.SelectedItem.ToString();
+
                 foreach (ItemWellSection item in listWellsSection)
                 {
                     string filePathGoal = Path.Combine(dirSectionData, item.sJH + ".xml");

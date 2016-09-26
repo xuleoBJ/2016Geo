@@ -35,24 +35,9 @@
             this.btn_deleteWell = new System.Windows.Forms.Button();
             this.btn_addWell = new System.Windows.Forms.Button();
             this.lbxJHSeclected = new System.Windows.Forms.ListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.nUDbottomDepthDown = new System.Windows.Forms.NumericUpDown();
-            this.nUDtopDepthUp = new System.Windows.Forms.NumericUpDown();
-            this.btnSetLayerDepth = new System.Windows.Forms.Button();
-            this.cbbTopXCM = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbbBottomXCM = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.lblChooseModle = new System.Windows.Forms.Label();
             this.btnDataPre = new System.Windows.Forms.Button();
             this.cbbSelectTemplate = new System.Windows.Forms.ComboBox();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelectAll
@@ -132,151 +117,10 @@
             this.lbxJHSeclected.Size = new System.Drawing.Size(114, 244);
             this.lbxJHSeclected.TabIndex = 40;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.nUDbottomDepthDown);
-            this.groupBox3.Controls.Add(this.nUDtopDepthUp);
-            this.groupBox3.Controls.Add(this.btnSetLayerDepth);
-            this.groupBox3.Controls.Add(this.cbbTopXCM);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.cbbBottomXCM);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(12, 272);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(342, 102);
-            this.groupBox3.TabIndex = 47;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "根据层位设置井段绘制深度";
-            // 
-            // nUDbottomDepthDown
-            // 
-            this.nUDbottomDepthDown.AllowDrop = true;
-            this.nUDbottomDepthDown.DecimalPlaces = 1;
-            this.nUDbottomDepthDown.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.nUDbottomDepthDown.Location = new System.Drawing.Point(200, 57);
-            this.nUDbottomDepthDown.Name = "nUDbottomDepthDown";
-            this.nUDbottomDepthDown.Size = new System.Drawing.Size(40, 21);
-            this.nUDbottomDepthDown.TabIndex = 26;
-            this.nUDbottomDepthDown.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            // 
-            // nUDtopDepthUp
-            // 
-            this.nUDtopDepthUp.AllowDrop = true;
-            this.nUDtopDepthUp.DecimalPlaces = 1;
-            this.nUDtopDepthUp.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.nUDtopDepthUp.Location = new System.Drawing.Point(200, 27);
-            this.nUDtopDepthUp.Name = "nUDtopDepthUp";
-            this.nUDtopDepthUp.Size = new System.Drawing.Size(40, 21);
-            this.nUDtopDepthUp.TabIndex = 26;
-            this.nUDtopDepthUp.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            // 
-            // btnSetLayerDepth
-            // 
-            this.btnSetLayerDepth.Location = new System.Drawing.Point(267, 39);
-            this.btnSetLayerDepth.Name = "btnSetLayerDepth";
-            this.btnSetLayerDepth.Size = new System.Drawing.Size(64, 23);
-            this.btnSetLayerDepth.TabIndex = 63;
-            this.btnSetLayerDepth.Text = "层位确认";
-            this.btnSetLayerDepth.UseVisualStyleBackColor = true;
-            this.btnSetLayerDepth.Click += new System.EventHandler(this.btnCollectWells_Click);
-            // 
-            // cbbTopXCM
-            // 
-            this.cbbTopXCM.FormattingEnabled = true;
-            this.cbbTopXCM.Location = new System.Drawing.Point(56, 28);
-            this.cbbTopXCM.Name = "cbbTopXCM";
-            this.cbbTopXCM.Size = new System.Drawing.Size(122, 20);
-            this.cbbTopXCM.TabIndex = 7;
-            this.cbbTopXCM.SelectedIndexChanged += new System.EventHandler(this.cbbTopXCM_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(17, 12);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "米";
-            // 
-            // cbbBottomXCM
-            // 
-            this.cbbBottomXCM.FormattingEnabled = true;
-            this.cbbBottomXCM.Location = new System.Drawing.Point(56, 58);
-            this.cbbBottomXCM.Name = "cbbBottomXCM";
-            this.cbbBottomXCM.Size = new System.Drawing.Size(122, 20);
-            this.cbbBottomXCM.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 12);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "米";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "最上层";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 62);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 12);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "最下层";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 12);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "+";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(184, 60);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(11, 12);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "-";
-            // 
             // lblChooseModle
             // 
             this.lblChooseModle.AutoSize = true;
-            this.lblChooseModle.Location = new System.Drawing.Point(12, 389);
+            this.lblChooseModle.Location = new System.Drawing.Point(5, 311);
             this.lblChooseModle.Name = "lblChooseModle";
             this.lblChooseModle.Size = new System.Drawing.Size(53, 12);
             this.lblChooseModle.TabIndex = 65;
@@ -284,7 +128,7 @@
             // 
             // btnDataPre
             // 
-            this.btnDataPre.Location = new System.Drawing.Point(258, 383);
+            this.btnDataPre.Location = new System.Drawing.Point(251, 305);
             this.btnDataPre.Name = "btnDataPre";
             this.btnDataPre.Size = new System.Drawing.Size(96, 26);
             this.btnDataPre.TabIndex = 70;
@@ -295,7 +139,7 @@
             // cbbSelectTemplate
             // 
             this.cbbSelectTemplate.FormattingEnabled = true;
-            this.cbbSelectTemplate.Location = new System.Drawing.Point(67, 387);
+            this.cbbSelectTemplate.Location = new System.Drawing.Point(60, 309);
             this.cbbSelectTemplate.Name = "cbbSelectTemplate";
             this.cbbSelectTemplate.Size = new System.Drawing.Size(176, 20);
             this.cbbSelectTemplate.TabIndex = 72;
@@ -304,11 +148,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 437);
+            this.ClientSize = new System.Drawing.Size(371, 350);
             this.Controls.Add(this.cbbSelectTemplate);
             this.Controls.Add(this.btnDataPre);
             this.Controls.Add(this.lblChooseModle);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnSelectAll);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbxJH);
@@ -321,10 +164,6 @@
             this.Name = "FormSectionAddGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "新建剖面";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,19 +178,7 @@
         private System.Windows.Forms.Button btn_deleteWell;
         private System.Windows.Forms.Button btn_addWell;
         protected System.Windows.Forms.ListBox lbxJHSeclected;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown nUDbottomDepthDown;
-        private System.Windows.Forms.NumericUpDown nUDtopDepthUp;
-        protected System.Windows.Forms.ComboBox cbbTopXCM;
-        private System.Windows.Forms.Label label5;
-        protected System.Windows.Forms.ComboBox cbbBottomXCM;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblChooseModle;
-        private System.Windows.Forms.Button btnSetLayerDepth;
         private System.Windows.Forms.Button btnDataPre;
         private System.Windows.Forms.ComboBox cbbSelectTemplate;
     }

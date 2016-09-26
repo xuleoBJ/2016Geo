@@ -277,7 +277,6 @@ E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionTrack.re
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingShowState.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingWellArrange.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectAddNewWell.resources
-E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPage.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormProfileSelectWells.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionDataItemView.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionLayer.resources
@@ -443,3 +442,5 @@ D:\2016Geo\DOG_Platform\bin\Debug\IronPython.dll
 D:\2016Geo\DOG_Platform\bin\Debug\DigRobot.pdb
 D:\2016Geo\DOG_Platform\bin\Debug\Microsoft.Scripting.AspNet.xml
 E:\2016geo\2016Geo\DOG_Platform\bin\Debug\IronPython.dll
+E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageFence.resources
+E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageSection.resources

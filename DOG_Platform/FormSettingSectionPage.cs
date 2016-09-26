@@ -13,10 +13,10 @@ using System.IO;
 
 namespace DOGPlatform
 {
-    public partial class FormSettingPage : Form
+    public partial class FormSettingPageSection : Form
     {
         string xmlPath = "";
-        public FormSettingPage(string inputXmlPath)
+        public FormSettingPageSection(string inputXmlPath)
         {
             InitializeComponent();
             this.btnOK.DialogResult = DialogResult.OK;

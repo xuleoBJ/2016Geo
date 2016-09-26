@@ -722,7 +722,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:geoScape2016"
         "ProductCode" = "8:{14F56315-DCCB-4156-9CA1-2A3D83C3F1F7}"
-        "PackageCode" = "8:{EA1BE9C6-E774-4D3B-AEB7-FA707334D65B}"
+        "PackageCode" = "8:{D4269A5A-8BB3-40B6-83C5-32F7F292A44E}"
         "UpgradeCode" = "8:{AED19D8B-12FA-496E-8B91-0704E80D5D2F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

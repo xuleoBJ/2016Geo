@@ -1,6 +1,6 @@
 ﻿namespace DOGPlatform
 {
-    partial class FormSettingPage
+    partial class FormSettingPageSection
     {
         /// <summary>
         /// Required designer variable.
@@ -43,21 +43,21 @@
             this.cbxTrackHeadRect = new System.Windows.Forms.CheckBox();
             this.cbxTitleRect = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.nUDTrackHeadFontSize = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
             this.nUDMapTitleHeight = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nUDTrackHeadHeight = new System.Windows.Forms.NumericUpDown();
+            this.nUDTrackHeadFontSize = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDpageTopElevation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDFirstWellPosition)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDMapTitleHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox18
@@ -186,7 +186,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(240, 411);
+            this.btnCancel.Location = new System.Drawing.Point(203, 411);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(73, 24);
             this.btnCancel.TabIndex = 66;
@@ -289,44 +289,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "图头布局";
             // 
-            // nUDTrackHeadFontSize
-            // 
-            this.nUDTrackHeadFontSize.AllowDrop = true;
-            this.nUDTrackHeadFontSize.Increment = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.nUDTrackHeadFontSize.Location = new System.Drawing.Point(151, 114);
-            this.nUDTrackHeadFontSize.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.nUDTrackHeadFontSize.Minimum = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.nUDTrackHeadFontSize.Name = "nUDTrackHeadFontSize";
-            this.nUDTrackHeadFontSize.Size = new System.Drawing.Size(57, 21);
-            this.nUDTrackHeadFontSize.TabIndex = 72;
-            this.nUDTrackHeadFontSize.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.nUDTrackHeadFontSize.ValueChanged += new System.EventHandler(this.nUDTrackHeadFontSize_ValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 12);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "统一设置道头字体大小";
-            // 
             // nUDMapTitleHeight
             // 
             this.nUDMapTitleHeight.AllowDrop = true;
@@ -403,11 +365,49 @@
             0});
             this.nUDTrackHeadHeight.ValueChanged += new System.EventHandler(this.nUDTrackHeadHeight_ValueChanged);
             // 
-            // FormSettingPage
+            // nUDTrackHeadFontSize
+            // 
+            this.nUDTrackHeadFontSize.AllowDrop = true;
+            this.nUDTrackHeadFontSize.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Location = new System.Drawing.Point(151, 114);
+            this.nUDTrackHeadFontSize.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Minimum = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.Name = "nUDTrackHeadFontSize";
+            this.nUDTrackHeadFontSize.Size = new System.Drawing.Size(57, 21);
+            this.nUDTrackHeadFontSize.TabIndex = 72;
+            this.nUDTrackHeadFontSize.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nUDTrackHeadFontSize.ValueChanged += new System.EventHandler(this.nUDTrackHeadFontSize_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 12);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "统一设置道头字体大小";
+            // 
+            // FormSettingPageSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 502);
+            this.ClientSize = new System.Drawing.Size(442, 462);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.nUDFirstWellPosition);
             this.Controls.Add(this.label2);
@@ -417,7 +417,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox18);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormSettingPage";
+            this.Name = "FormSettingPageSection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "页面设置";
             this.Load += new System.EventHandler(this.FormSettingPage_Load);
@@ -429,9 +429,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUDFirstWellPosition)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDMapTitleHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTrackHeadFontSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -166,6 +166,8 @@
             this.tsmiUnSelectAllWells = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiColapseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMakeWellSection = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiOpenAppSectionGeo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiOpenAppSectionFence = new System.Windows.Forms.ToolStripMenuItem();
             this.根据有效层段处理分层数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSelecDataInproject = new System.Windows.Forms.ToolStripMenuItem();
             this.根据井号筛选测井解释ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -205,7 +207,7 @@
             this.tsmiSectionGeoRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionGeoCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionGeoDel = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsSectionFence = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsTNSectionFence = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
@@ -214,8 +216,7 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenAppSectionGeo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiOpenAppSectionFence = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSectionFenceOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -256,7 +257,7 @@
             this.cmsTNwellLogItem.SuspendLayout();
             this.cmsSectionWell.SuspendLayout();
             this.cmsTNsectionGeo.SuspendLayout();
-            this.cmsSectionFence.SuspendLayout();
+            this.cmsTNSectionFence.SuspendLayout();
             this.cmsTNdataSectionWell.SuspendLayout();
             this.cmsTNdataSectionWellChildItem.SuspendLayout();
             this.SuspendLayout();
@@ -1110,21 +1111,21 @@
             // tsmiSectionSingleWell
             // 
             this.tsmiSectionSingleWell.Name = "tsmiSectionSingleWell";
-            this.tsmiSectionSingleWell.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionSingleWell.Size = new System.Drawing.Size(124, 22);
             this.tsmiSectionSingleWell.Text = "单井综合";
             this.tsmiSectionSingleWell.Click += new System.EventHandler(this.tsmiSectionSingleWell_Click);
             // 
             // tsmiSectionGeology
             // 
             this.tsmiSectionGeology.Name = "tsmiSectionGeology";
-            this.tsmiSectionGeology.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeology.Size = new System.Drawing.Size(124, 22);
             this.tsmiSectionGeology.Text = "联井分析";
             this.tsmiSectionGeology.Click += new System.EventHandler(this.tsmiSectionGeology_Click);
             // 
             // tsmiSectionFence
             // 
             this.tsmiSectionFence.Name = "tsmiSectionFence";
-            this.tsmiSectionFence.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFence.Size = new System.Drawing.Size(124, 22);
             this.tsmiSectionFence.Text = "井组分析";
             this.tsmiSectionFence.Click += new System.EventHandler(this.tsmiSectionFence_Click);
             // 
@@ -1295,7 +1296,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1446,7 +1447,7 @@
             this.tsmiOpenAppSectionGeo,
             this.tsmiOpenAppSectionFence});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 180);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 158);
             // 
             // tsmiExpandAll
             // 
@@ -1483,6 +1484,20 @@
             this.tsmiMakeWellSection.Text = "制作单井剖面";
             this.tsmiMakeWellSection.Visible = false;
             this.tsmiMakeWellSection.Click += new System.EventHandler(this.tsmiMakeWellSection_Click);
+            // 
+            // tsmiOpenAppSectionGeo
+            // 
+            this.tsmiOpenAppSectionGeo.Name = "tsmiOpenAppSectionGeo";
+            this.tsmiOpenAppSectionGeo.Size = new System.Drawing.Size(160, 22);
+            this.tsmiOpenAppSectionGeo.Text = "新建联井剖面";
+            this.tsmiOpenAppSectionGeo.Click += new System.EventHandler(this.tsmiOpenAppSectionGeo_Click);
+            // 
+            // tsmiOpenAppSectionFence
+            // 
+            this.tsmiOpenAppSectionFence.Name = "tsmiOpenAppSectionFence";
+            this.tsmiOpenAppSectionFence.Size = new System.Drawing.Size(160, 22);
+            this.tsmiOpenAppSectionFence.Text = "新建井组栅状图";
+            this.tsmiOpenAppSectionFence.Click += new System.EventHandler(this.tsmiOpenAppSectionFence_Click);
             // 
             // 根据有效层段处理分层数据ToolStripMenuItem
             // 
@@ -1780,32 +1795,33 @@
             this.tsmiSectionGeoDel.Text = "删除";
             this.tsmiSectionGeoDel.Click += new System.EventHandler(this.tsmiSectionGeoDel_Click);
             // 
-            // cmsSectionFence
+            // cmsTNSectionFence
             // 
-            this.cmsSectionFence.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsTNSectionFence.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiSectionFenceOpen,
             this.tsmiSectionFenceRename,
             this.tsmiSectionFenceCopy,
             this.tsmiSectionFenceDel});
-            this.cmsSectionFence.Name = "cmsProjectGrapth";
-            this.cmsSectionFence.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNSectionFence.Name = "cmsProjectGrapth";
+            this.cmsTNSectionFence.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiSectionFenceRename
             // 
             this.tsmiSectionFenceRename.Name = "tsmiSectionFenceRename";
-            this.tsmiSectionFenceRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionFenceRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFenceRename.Text = "重命名";
             this.tsmiSectionFenceRename.Click += new System.EventHandler(this.tsmiSectionFenceRename_Click);
             // 
             // tsmiSectionFenceCopy
             // 
             this.tsmiSectionFenceCopy.Name = "tsmiSectionFenceCopy";
-            this.tsmiSectionFenceCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionFenceCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFenceCopy.Text = "复制";
             // 
             // tsmiSectionFenceDel
             // 
             this.tsmiSectionFenceDel.Name = "tsmiSectionFenceDel";
-            this.tsmiSectionFenceDel.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionFenceDel.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
             // 
@@ -1844,19 +1860,12 @@
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
             // 
-            // tsmiOpenAppSectionGeo
+            // tsmiSectionFenceOpen
             // 
-            this.tsmiOpenAppSectionGeo.Name = "tsmiOpenAppSectionGeo";
-            this.tsmiOpenAppSectionGeo.Size = new System.Drawing.Size(160, 22);
-            this.tsmiOpenAppSectionGeo.Text = "新建联井剖面";
-            this.tsmiOpenAppSectionGeo.Click += new System.EventHandler(this.tsmiOpenAppSectionGeo_Click);
-            // 
-            // tsmiOpenAppSectionFence
-            // 
-            this.tsmiOpenAppSectionFence.Name = "tsmiOpenAppSectionFence";
-            this.tsmiOpenAppSectionFence.Size = new System.Drawing.Size(160, 22);
-            this.tsmiOpenAppSectionFence.Text = "新建井组栅状图";
-            this.tsmiOpenAppSectionFence.Click += new System.EventHandler(this.tsmiOpenAppSectionFence_Click);
+            this.tsmiSectionFenceOpen.Name = "tsmiSectionFenceOpen";
+            this.tsmiSectionFenceOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFenceOpen.Text = "打开";
+            this.tsmiSectionFenceOpen.Click += new System.EventHandler(this.tsmiSectionFenceOpen_Click);
             // 
             // FormMain
             // 
@@ -1923,7 +1932,7 @@
             this.cmsTNwellLogItem.ResumeLayout(false);
             this.cmsSectionWell.ResumeLayout(false);
             this.cmsTNsectionGeo.ResumeLayout(false);
-            this.cmsSectionFence.ResumeLayout(false);
+            this.cmsTNSectionFence.ResumeLayout(false);
             this.cmsTNdataSectionWell.ResumeLayout(false);
             this.cmsTNdataSectionWellChildItem.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2088,7 +2097,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoRename;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoCopy;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoDel;
-        private System.Windows.Forms.ContextMenuStrip cmsSectionFence;
+        private System.Windows.Forms.ContextMenuStrip cmsTNSectionFence;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionFenceRename;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionFenceCopy;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionFenceDel;
@@ -2118,6 +2127,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoOpen;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenAppSectionGeo;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenAppSectionFence;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSectionFenceOpen;
     }
 }
 

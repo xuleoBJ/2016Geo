@@ -306,6 +306,12 @@
     <Compile Include="FormSectionAddSymbol.Designer.cs">
       <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSettingPageFence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingPageFence.Designer.cs">
+      <DependentUpon>FormSettingPageFence.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSVGplygon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,11 +490,11 @@
     <Compile Include="FormSectAddNewWell.Designer.cs">
       <DependentUpon>FormSectAddNewWell.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSettingPage.cs">
+    <Compile Include="FormSettingSectionPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSettingPage.Designer.cs">
-      <DependentUpon>FormSettingPage.cs</DependentUpon>
+    <Compile Include="FormSettingSectionPage.Designer.cs">
+      <DependentUpon>FormSettingSectionPage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProfilePIcal.cs">
       <SubType>Form</SubType>
@@ -1024,6 +1030,9 @@
     <EmbeddedResource Include="FormSectionAddSymbol.resx">
       <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingPageFence.resx">
+      <DependentUpon>FormSettingPageFence.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSVGplygon.resx">
       <DependentUpon>FormSVGplygon.cs</DependentUpon>
     </EmbeddedResource>
@@ -1063,8 +1072,8 @@
     <EmbeddedResource Include="FormSectAddNewWell.resx">
       <DependentUpon>FormSectAddNewWell.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSettingPage.resx">
-      <DependentUpon>FormSettingPage.cs</DependentUpon>
+    <EmbeddedResource Include="FormSettingSectionPage.resx">
+      <DependentUpon>FormSettingSectionPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProfileSelectWells.resx">
       <DependentUpon>FormProfileSelectWells.cs</DependentUpon>

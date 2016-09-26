@@ -137,7 +137,6 @@ namespace DOGPlatform
             makeSVGmap(); 
         }
 
-
         private void tsmiTVEditSetting_Click(object sender, EventArgs e)
         {
             //根据节点的tag里的内容弹出不同的对话框进行节点配置
@@ -167,12 +166,14 @@ namespace DOGPlatform
         {
           createNewFile();
         }
+
         void makeNewFiles()
         {
             mapID = "sectionGeo" + DateTime.Now.ToString("MMddHHmmss");
             dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
             filePathSectionGeoCss = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID + cProjectManager.fileExtensionSectionGeo);
         }
+
         void createNewFile()
         {
             makeNewFiles();
@@ -1248,7 +1249,7 @@ namespace DOGPlatform
 
         private void tsbPageSet_Click(object sender, EventArgs e)
         {
-            FormSettingPage newSetPage = new FormSettingPage(filePathSectionGeoCss);
+            FormSettingPageSection newSetPage = new FormSettingPageSection(filePathSectionGeoCss);
             if (newSetPage.ShowDialog() == DialogResult.OK) makeSVGmap();
         }
 

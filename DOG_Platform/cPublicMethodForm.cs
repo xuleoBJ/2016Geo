@@ -13,6 +13,7 @@ namespace DOGPlatform
 {
     class cPublicMethodForm :cPublicMethodBase
     {
+
         public static bool checkRenameSameFile(string filePath)
         {
             bool bDelete = true;
@@ -23,6 +24,7 @@ namespace DOGPlatform
             }
             return bDelete;
         }
+
         public static void copyDGVselect2Clipboard(DataGridView dgvDataTable) 
         {
             if (dgvDataTable.GetCellCount(DataGridViewElementStates.Selected) > 0)

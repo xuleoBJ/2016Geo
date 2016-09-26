@@ -44,7 +44,6 @@ namespace DOGPlatform
             svgSection.makeSVGfile(fileSVG);
             return fileSVG;
         }
-
         
         //导出带深度范围内的图形图像，这个作为画连井的基础。
         public static cSVGSectionWell makeSectionWellBodyByDepth(cSVGDocSection svgSection, string pathSectionCss, string filePathTemplatOper,float fVScale)

@@ -725,7 +725,7 @@ namespace DOGPlatform
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionGeoDir.ToString())  //sectionGeo
                         this.tvProjectData.ContextMenuStrip = this.cmsTNsectionGeo;
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionFenceDir.ToString())  //sectionGeo
-                        this.tvProjectData.ContextMenuStrip = this.cmsSectionFence;
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNSectionFence;
                     if (selectNode.Tag.ToString() == TypeProjectNode.svgMap.ToString())  //成果图
                         this.tvProjectData.ContextMenuStrip = this.cmsTNprojectGrapthSVG;
                     break;
@@ -1539,10 +1539,7 @@ namespace DOGPlatform
                 }
                 else if (selectNode.Level == 1 && selectNode.Tag.ToString() == TypeProjectNode.sectionFence.ToString())
                 {
-                    string fileName = selectNode.Text;
-                    string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionFence);
-                    FormSectionGroup newSection = new FormSectionGroup(filePathOper);
-                    newSection.Show();
+                   
                 }
                 else if (selectNode.Level == 1 && selectNode.Tag.ToString() == TypeProjectNode.calResultText.ToString()) 
                 {
@@ -2123,7 +2120,6 @@ namespace DOGPlatform
                 FormSectionWell newSection = new FormSectionWell(filePathOper);
                 newSection.Show();
             }
-
         }
 
         private void tsmiSectionGeoOpen_Click(object sender, EventArgs e)
@@ -2139,7 +2135,6 @@ namespace DOGPlatform
         {
             FormSectionGeo FormWellsGroup = new FormSectionGeo();
             FormWellsGroup.Show();
-           
         }
 
         private void tsmiOpenAppSectionFence_Click(object sender, EventArgs e)
@@ -2147,7 +2142,15 @@ namespace DOGPlatform
             FormSectionGroup formFD = new FormSectionGroup();
             formFD.Show();
         }
-       
+
+        private void tsmiSectionFenceOpen_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string fileName = tnSelected.Text;
+            string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionFence);
+            FormSectionGroup newSection = new FormSectionGroup(filePathOper);
+            newSection.Show();
+        }
      
     }
 }

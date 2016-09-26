@@ -385,6 +385,24 @@ namespace DOGPlatform
             }
         }
 
+        private void tsbTreeView_Click(object sender, EventArgs e)
+        {
+            this.splitContainerSection.Panel1Collapsed = !this.splitContainerSection.Panel1Collapsed;
+            if (this.splitContainerSection.Panel1Collapsed == false) updateTVandList();
+        }
+
+        private void tsbPageSet_Click(object sender, EventArgs e)
+        {
+            FormSettingPageFence newSetPage = new FormSettingPageFence(filePathSectionCss);
+            if (newSetPage.ShowDialog() == DialogResult.OK) updateSVGmap();
+        }
+
+        private void tsmiIntervalMode_Click(object sender, EventArgs e)
+        {
+            FormSettingModeInterval newSetPage = new FormSettingModeInterval(this.filePathSectionCss, dirSectionData);
+            if (newSetPage.ShowDialog() == DialogResult.OK) updateSVGmap();
+        }
+
          
     }
 } 
