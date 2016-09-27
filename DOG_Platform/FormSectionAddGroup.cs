@@ -23,8 +23,7 @@ namespace DOGPlatform
 
         public string filepathSVGRet = "";
 
-        string filePathSectionCss = Path.Combine(cProjectManager.dirPathTemp, "sectionGeo" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml");
-
+        string filePathSectionCss = Path.Combine(cProjectManager.dirPathTemp, "sectionFence" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xml");
 
         public FormSectionAddGroup(string _pathSectionCss, string _dirSectionData)
         {
@@ -87,30 +86,50 @@ namespace DOGPlatform
             cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss); 
         }
 
+         void initialSectionData()
+         {
+             listWellsSection.Clear();
+             ltStrSelectedJH.Clear();
 
+             foreach (object selecteditem in lbxJHSeclected.Items)
+             {
+                 string strItem = selecteditem as String;
+                 ltStrSelectedJH.Add(strItem);
+             }
+             //创建模板，2个模板 一个是描述整体布局的模板，每个单井又是一个模板。
+             cXmlDocSectionGeo.generateSectionCssXML(filePathSectionCss);
+         }
         private void btnDataPre_Click(object sender, EventArgs e)
         {
-            if (listWellsSection.Count > 0)
+            if (cbbSelectTemplate.Items.Count == 0) { MessageBox.Show("请自定义模板。"); return; }
+            initialSectionData();
+            for (int i = 0; i < ltStrSelectedJH.Count; i++)
             {
-                if (Directory.Exists(dirSectionData)) Directory.Delete(dirSectionData, true);
-                Directory.CreateDirectory(dirSectionData);
-                //插入数据
-                if (cbbSelectTemplate.SelectedIndex < 0) cbbSelectTemplate.SelectedIndex = 0;
-                string fileNameSelectTemplate = this.cbbSelectTemplate.SelectedItem.ToString();
+                ItemWellSection _wellSection = new ItemWellSection(ltStrSelectedJH[i], 0, 0);
+                //默认把显示深度设为全井段，需要时再按层段或者深度截取
+                _wellSection.fShowedDepthTop = 0;
+                _wellSection.fShowedDepthBase = _wellSection.fWellBase;
+                if (_wellSection.fShowedDepthBase >= _wellSection.fWellBase) _wellSection.fShowedDepthBase = _wellSection.fWellBase;
+                listWellsSection.Add(_wellSection);
+            }
 
-                foreach (ItemWellSection item in listWellsSection)
-                {
-                    string filePathGoal = Path.Combine(dirSectionData, item.sJH + ".xml");
-                    cIOtemplate.copyTemplate(fileNameSelectTemplate, filePathGoal, item.sJH, item.fShowedDepthTop, item.fShowedDepthBase);
-                    //在道中循环插入道数据
-                }
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else 
+            //设定井的放置位置
+            makeSectionFence.setXPositionViewFence(filePathSectionCss, listWellsSection);
+            makeSectionFence.setYPositionViewFence(filePathSectionCss, listWellsSection);
+            cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss);
+
+            if (Directory.Exists(dirSectionData)) Directory.Delete(dirSectionData, true);
+            Directory.CreateDirectory(dirSectionData);
+            //插入数据
+            string fileNameSelectTemplate = this.cbbSelectTemplate.SelectedItem.ToString();
+            foreach (ItemWellSection item in listWellsSection)
             {
-                MessageBox.Show("请先选择层段。");
+                string filePathGoal = Path.Combine(dirSectionData, item.sJH + ".xml");
+                cIOtemplate.copyTemplate(fileNameSelectTemplate, filePathGoal, item.sJH, item.fShowedDepthTop, item.fShowedDepthBase);
+                //在道中循环插入道数据
             }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

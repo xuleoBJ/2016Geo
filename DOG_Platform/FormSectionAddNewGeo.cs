@@ -100,17 +100,11 @@ namespace DOGPlatform
             }
 
             makeSectionGeo.setXPositionView(filePathSectionCss, listWellsSection);
-
             cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss);
 
         }
 
-        private void setDepthIntervalShowedBYBaseDepth()
-        {
-            inintialSectionFlow();
-        }
-
-
+       
         private void btnDataPre_Click(object sender, EventArgs e)
         {
             if (cbbSelectTemplate.Items.Count == 0) { MessageBox.Show("请自定义模板。"); return; }

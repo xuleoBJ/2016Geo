@@ -14,7 +14,6 @@ namespace DOGPlatform
     class makeSectionGeo
     {
         public static int  iPositionXFirstWell=200;
-
         public static string generateSectionGraph( string dirSectionData, string pathSectionCss, string filenameSVGMap)
         {
             //定义页面大小 及 纵向平移
@@ -363,7 +362,6 @@ namespace DOGPlatform
                 }
             }
         }
-
         public static void setYPositionView(string pathSectionCss, List<ItemWellSection> listWellsSection)
         {
             for (int i = 0; i < listWellsSection.Count; i++)

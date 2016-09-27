@@ -11,7 +11,7 @@ using System.IO;
 
 namespace DOGPlatform
 {
-    class makeSectionFence:makeSectionGeo 
+    class makeSectionFence
     {
         public static string generateFence(string dirSectionData, string pathSectionCss, string filenameSVGMap)
         {
@@ -34,7 +34,7 @@ namespace DOGPlatform
                 cSVGSectionWell currentWell = makePathWell(svgSection, pathSectionCss, filePathTemplatOper,
                 listWellsSection[i].fShowedDepthTop, listWellsSection[i].fShowedDepthBase, curPage.fVscale, curPage);
 
-                svgSection.addgElement2BaseLayer(currentWell.gWell, listWellsSection[i].fXview, -listWellsSection[i].fShowedDepthTop*curPage.fVscale);
+                svgSection.addgElement2BaseLayer(currentWell.gWell, listWellsSection[i].fXview,listWellsSection[i].fYview);
                 //加个井位标识
                 returnElemment = cSVGSectionWell.gWellHead(svgSection.svgDoc,sJH, listWellsSection[i].fXview, listWellsSection[i].fYview, 18);
                 svgSection.addgElement2BaseLayer(returnElemment, 0, 0);
@@ -44,66 +44,73 @@ namespace DOGPlatform
             svgSection.makeSVGfile(fileSVG);
             return fileSVG;
         }
-        
-        //导出带深度范围内的图形图像，这个作为画连井的基础。
-        public static cSVGSectionWell makeSectionWellBodyByDepth(cSVGDocSection svgSection, string pathSectionCss, string filePathTemplatOper,float fVScale)
+
+        //设置well的摆放位置
+        public static void setXPositionViewFence(string pathSectionCss, List<ItemWellSection> listWellsSection)
         {
+            float fHScale = float.Parse(cXmlBase.getNodeInnerText(pathSectionCss, cXEGeopage.xmlFullPathPageHorizonWellDistanceScale));
+            //设置拉平高度 就是 给 fxview和fyview 赋值
+            //第一口井默认位置,乘以水平系数 为了连接层；
+            for (int i = 0; i < listWellsSection.Count; i++)
+            {
+                ItemWellSection itemWell = listWellsSection[i];
+                //计算前后井的距离
+                int iDistance = Convert.ToInt16(c2DGeometryAlgorithm.calDistance2D(listWellsSection[i].dbX, listWellsSection[i].dbY, listWellsSection[i - 1].dbX, listWellsSection[i - 1].dbY));
+                //注意加上基准点的100
+                itemWell.fXview = listWellsSection[i - 1].fXview + iDistance * fHScale; 
+            }
+        }
+        public static void setYPositionViewFence(string pathSectionCss, List<ItemWellSection> listWellsSection)
+        {
+            for (int i = 0; i < listWellsSection.Count; i++)
+            {
+                ItemWellSection itemWell = listWellsSection[i];
+                itemWell.fYview = 0;
+            }
+        }
+
+        public static cSVGSectionWell makePathWell(cSVGDocSection svgSection, string pathSectionCss, string filePathTemplatOper, double dfDS1Show, double dfDS2Show, float fVScale, cXEGeopage curPage)
+        {
+            cSVGSectionWell wellGeoSingle = new cSVGSectionWell(svgSection.svgDoc);
             List<int> iListTrackWidth = new List<int>();
             //从配置文件读取显示深度
-            cSVGSectionWell curWell = new cSVGSectionWell(svgSection.svgDoc);
             string sJH = cXmlBase.getNodeInnerText(filePathTemplatOper, cXmlDocSectionWell.fullPathJH);
-            string sMapTitle = cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathMapTitle);
-            //图幅全部用px基本单位，fVScale已经包含了 px-> 到应用单位的转换。
-            double dfDS1Show = double.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathTopDepth));
-            double dfDS2Show = double.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathBotDepth));
-            double iDy = -dfDS1Show;
-
-            //这种是上移式图头绘制模式 与 遮盖式图头绘制模式严格位置不同
-            int iHeightTrackHead = int.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathTrackRectHeight));
-            double iYpositionTrackHead = dfDS1Show  - iHeightTrackHead;
+            //绝对值不放大fvscale，位置放大。
+            ItemWell wellItem = cProjectData.ltProjectWell.FirstOrDefault(p => p.sJH == sJH);
             int iHeightMapTitle = int.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathMapTitleRectHeight));
-            double iYpositionTitle = iYpositionTrackHead - iHeightMapTitle;
-            int iShowMode = int.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathShowMode));
-            //以上代码执行2毫秒，不必优化了
-
+            int iHeightTrackHead = int.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathTrackRectHeight));
             iListTrackWidth.Clear();
             XmlElement returnElemment;
+
+            float dfDS1ShowTVD = cIOinputWellPath.getTVDByJHAndMD(wellItem, (float)dfDS1Show);
+
+            int iYpositionTrackHead = Convert.ToInt16(dfDS1ShowTVD * fVScale) - iHeightTrackHead;
+
             foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathTemplatOper))
             {
+                //初始化绘制道的基本信息
                 trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
-                if (curTrackDraw.iVisible > 0) //判断是否可见，可见才绘制
+                //增加道头
+                returnElemment = cSVGSectionTrack.trackHead(svgSection.svgDoc, curTrackDraw.sTrackID, curTrackDraw.sTrackTitle, iYpositionTrackHead, iHeightTrackHead, curTrackDraw.iTrackWidth, curTrackDraw.iTrackHeadFontSize, curTrackDraw.sWriteMode);
+                wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+
+                //增加距离位置节点
+                cXmlDocSectionGeo.addWellTrackXviewNode(pathSectionCss, sJH, curTrackDraw.sTrackID, iListTrackWidth.Sum());
+                //先画曲线，再画道头和道框，这样好看
+                #region  判断是否可见，可见才绘制
+                if (curTrackDraw.iVisible > 0)
                 {
-                    #region 深度道
-                    if (curTrackDraw.sTrackType == TypeTrack.深度尺.ToString())
+                    #region 井深结构尺
+                    if (el_Track["trackType"].InnerText == TypeTrack.深度尺.ToString())
                     {
-                        int mainTick = int.Parse(el_Track["mainScale"].InnerText);
-                        int minTick = int.Parse(el_Track["minScale"].InnerText);
-                        int tickFontSize = int.Parse(el_Track["fontSize"].InnerText);
-                        returnElemment = cSVGSectionTrackWellRuler.gMDRuler(svgSection.svgDoc, svgSection.svgDefs, svgSection.svgCss, Convert.ToInt16(dfDS1Show), Convert.ToInt16(dfDS2Show), mainTick, minTick, fVScale, tickFontSize);
-                        curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                    }
-                    # endregion
-                    #region 地层道
-                    if (curTrackDraw.sTrackType == TypeTrack.分层.ToString())
-                    {
-                        XmlNode dataList = el_Track.SelectSingleNode("dataList");
-                        if (dataList != null)
-                        {
-                            XmlNodeList dataItem = dataList.SelectNodes("dataItem");
-                            foreach (XmlNode xn in dataItem)
-                            {
-                                itemDrawDataIntervalValue itemLayer = new itemDrawDataIntervalValue(xn);
-                                if (itemLayer.top >= dfDS1Show && itemLayer.bot <= dfDS2Show)
-                                {
-                                    returnElemment = cSVGSectionTrackLayer.gTrackItemLayer(svgSection.svgDoc, itemLayer, fVScale, curTrackDraw.iTrackFontSize, curTrackDraw.iTrackWidth);
-                                    curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                }
-                            }
-                        }
+                        itemDrawDataDepthRuler itemRuler = new itemDrawDataDepthRuler(el_Track);
+                        //测试斜井gPathWellCone
+                        returnElemment = cSVGSectionTrackWellRuler.gPathWellRuler(wellItem, svgSection, Convert.ToInt16(dfDS1Show), Convert.ToInt16(dfDS2Show), fVScale, itemRuler);
+                        wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
                     }
                     #endregion
-                    #region 测井解释，岩性，旋回
-                    if (cProjectManager.ltStrTrackTypeIntervalProperty.IndexOf(curTrackDraw.sTrackType) >= 0)
+                    #region 地层道
+                    if (curTrackDraw.sTrackType == TypeTrack.分层.ToString())
                     {
                         XmlNode dataList = el_Track.SelectSingleNode("dataList");
                         if (dataList != null)
@@ -114,10 +121,48 @@ namespace DOGPlatform
                                 ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn);
                                 if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
                                 {
-                                    returnElemment = cSVGSectionTrackJSJL.gTrackItemJSJL(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
-                                    if (curTrackDraw.sTrackType == TypeTrack.沉积旋回.ToString()) returnElemment = cSVGSectionTrackCycle.gTrackGeoCycle(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
-                                    curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                } 
+                                    returnElemment = cSVGSectionTrackLayer.gTrackItemTVDLayer(svgSection.svgDoc, item, fVScale, curTrackDraw.iTrackFontSize, curTrackDraw.iTrackWidth);
+                                    wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+                                }
+                            }
+                        }
+                    }
+                    #endregion
+                    #region 测井解释，旋回,化石道
+                    if (cProjectManager.ltStrTrackTypeIntervalProperty.IndexOf(curTrackDraw.sTrackType) >= 0)
+                    {
+                        XmlNode dataList = el_Track.SelectSingleNode("dataList");
+                        if (dataList != null)
+                        {
+                            XmlNodeList dataItem = dataList.SelectNodes("dataItem");
+                            foreach (XmlNode xn in dataItem)
+                            {
+                                ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn); if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
+                                {
+                                    returnElemment = cSVGSectionTrackJSJL.gTrackItemTVDJSJL(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
+                                    if (curTrackDraw.sTrackType == TypeTrack.沉积旋回.ToString()) returnElemment = cSVGSectionTrackCycle.gTrackItemTVDGeoCycle(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
+                                    //     if (curTrackDraw.sTrackType == TypeTrack.描述.ToString()) returnElemment = cSVGSectionTrackDes.gTrackItemFossil(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
+                                    wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+                                }
+                            }
+                        }
+                    }
+                    #endregion
+                    #region 岩性
+                    if (curTrackDraw.sTrackType == TypeTrack.岩性层段.ToString())
+                    {
+                        XmlNode dataList = el_Track.SelectSingleNode("dataList");
+                        if (dataList != null)
+                        {
+                            XmlNodeList dataItem = dataList.SelectNodes("dataItem");
+                            foreach (XmlNode xn in dataItem)
+                            {
+                                itemDrawDataIntervalValue item = new itemDrawDataIntervalValue(xn);
+                                if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
+                                {
+                                    returnElemment = cSVGSectionTrackLitho.gTrackLithoTVDItem(wellItem, svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
+                                    wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+                                }
                             }
                         }
                     }
@@ -129,6 +174,7 @@ namespace DOGPlatform
                         cSVGSectionTrackLogCurveFill.listLogViewData4fill.Clear();
                         XmlNodeList xnList = el_Track.SelectNodes(".//Log");
                         int iLogNum = 0;
+                        bool bGrid = false; //记录网格是否绘制过。
                         foreach (XmlElement xnLog in xnList)
                         {
                             iLogNum++;
@@ -143,58 +189,23 @@ namespace DOGPlatform
                                 }
                                 curLogHead.iLogGridGrade = cSVGSectionTrackLog.getNumGridGroupInLog(curLogHead.fLeftValue, curLogHead.fRightValue);
                             }
+
+                            //曲线是否可见
                             if (curLogHead.iLogCurveVisible > 0)
                             {
-                                XmlNode nodeData = xnLog.SelectSingleNode("sData");
+                                trackDataListLog dlTrackDataListLog = cSVGSectionTrackLog.getLogSeriersFromLogFile(sJH, curLogHead.sLogName, dfDS1Show, dfDS2Show);
 
-                                if (nodeData != null)
-                                {
-                                    string sData = nodeData.InnerText;
-                                    trackDataListLog dlTrackDataListLog = cSVGSectionTrackLog.getLogSeriersFromSectionWell(sData, curLogHead.sLogName, dfDS1Show, dfDS2Show, fVScale);
-                                    returnElemment = cSVGSectionTrackLog.gTrackLog(svgSection.svgDoc, curLogHead, curTrackDraw.iTrackWidth, dlTrackDataListLog.fListMD, dlTrackDataListLog.fListValue, fVScale);
-                                    curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                }
-                            }//结束曲线循环
-                            //绘制填充
-                            XmlNodeList xnFillList = el_Track.SelectNodes(".//FillItem");
-                            foreach (XmlElement xn in xnFillList)
-                            {
-                                itemDrawDataTrackFill itemFill = new itemDrawDataTrackFill(xn);
-                                trackDataListLog main =cSVGSectionTrackLogCurveFill.listLogViewData4fill.SingleOrDefault(p => p.itemHeadInforDraw.sIDLog == itemFill.sIDmainLog);
-                                if (main != null && itemFill.iFillMode == 0)
-                                {
-                                    string sIDSub = xn["idLogSub"].InnerText;
-                                    trackDataListLog sub = cSVGSectionTrackLogCurveFill.listLogViewData4fill.SingleOrDefault(p => p.itemHeadInforDraw.sIDLog == sIDSub);
-                                    if (sub != null)
-                                    {
-                                        returnElemment = cSVGSectionTrackLogCurveFill.gLogCurveFillByLog(svgSection.svgDoc, main, sub, itemFill, fVScale);
-                                       curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                    }
-                                }
+                                //画曲线
+                                returnElemment = cSVGSectionTrackLog.gTrackTVDLog(wellItem, svgSection.svgDoc, curLogHead, curTrackDraw.iTrackWidth, dlTrackDataListLog.fListMD, dlTrackDataListLog.fListValue, fVScale);
+                                wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+                               
+                            }//曲线可见
 
-                                if (main != null && itemFill.iFillMode == 1)
-                                {
-                                    double fValueCutOff = itemFill.fValueCutoff;
-                                    float fLeftValue = main.itemHeadInforDraw.fLeftValue;
-                                    double xViewCutOff = curTrackDraw.iTrackWidth * (fValueCutOff - fLeftValue) / (main.itemHeadInforDraw.fRightValue - fLeftValue);
-                                    if (main.itemHeadInforDraw.iIsLog == 1) xViewCutOff = curTrackDraw.iTrackWidth * (Math.Log10(fValueCutOff / fLeftValue)) / main.itemHeadInforDraw.iLogGridGrade;
-                                    returnElemment = cSVGSectionTrackLogCurveFill.gLogCurveFillByCutOff(svgSection.svgDoc, itemFill.sID, main, xViewCutOff, itemFill, fVScale);
-                                   curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                }
-
-                            }
-
-                        }
+                        }//结束曲线循环
+                    } //结束曲线if
                     #endregion 结束曲线道
-                    } //if 是否可见
-
-                    #region 增加图道道头及测井曲线头,道头ID 对应节点 后画道头是因为要覆盖。测井头最后画 是因为要放在最上面不被遮盖
-                    returnElemment = cSVGSectionTrack.trackHead(svgSection.svgDoc, curTrackDraw.sTrackID, curTrackDraw.sTrackTitle, iYpositionTrackHead, iHeightTrackHead, curTrackDraw.iTrackWidth, curTrackDraw.iTrackHeadFontSize, curTrackDraw.sWriteMode);
-                    curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                    #endregion
-                  
                     #region 绘制测井图头,测井图信息很重要，图形加载数据要捕捉测井头的ID
-                  if (curTrackDraw.sTrackType == TypeTrack.曲线道.ToString())
+                    if (curTrackDraw.sTrackType == TypeTrack.曲线道.ToString())
                     {
                         int iLogNum = 0;
                         foreach (itemLogHeadInforDraw curLogHead in ltItemLogHeadInforDraw)
@@ -208,100 +219,30 @@ namespace DOGPlatform
                             if (curLogHead.iLogCurveVisible > 0)
                             {
                                 //增加测井头
-                                int iUpLine = 15; //不同测井曲线间隔距离
-                                int iFirstLogheadLinePosition = 3;  //首条logheadLine线距离下边框的距离
-                                returnElemment = cSVGSectionTrack.addTrackItemLogHeadInfor(svgSection.svgDoc, curLogHead, iYpositionTrackHead + iHeightTrackHead - iUpLine * (iLogNum - 1) - iFirstLogheadLinePosition, curTrackDraw.iTrackWidth,14);
-                              curWell.addTrack(returnElemment, iListTrackWidth.Sum());
+                                int iHeadLogSize = 14;
+                                returnElemment = cSVGSectionTrack.addTrackItemLogHeadInfor(svgSection.svgDoc, curLogHead, iYpositionTrackHead + iHeightTrackHead, iLogNum, curTrackDraw.iTrackWidth, iHeadLogSize);
+                                wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
                             }
                         }
                     }
                     #endregion
-
-                    # region 绘制道框
-                    if (iShowMode == 1)
+                    //绘制道框
+                    if (curPage.iShowTrackRect == 1)
                     {
-                        returnElemment = cSVGSectionTrack.trackRect(svgSection.svgDoc, curTrackDraw.sTrackID, dfDS1Show, dfDS2Show, fVScale, curTrackDraw.iTrackWidth);
-                       curWell.addTrack(returnElemment, iListTrackWidth.Sum());
+                        returnElemment = cSVGSectionTrack.trackRect(svgSection.svgDoc, curTrackDraw.sTrackID, dfDS1ShowTVD, dfDS2Show, fVScale, curTrackDraw.iTrackWidth);
+                        wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
                     }
-                    #endregion
-
                     iListTrackWidth.Add(curTrackDraw.iTrackWidth);
                 }
-            }//结束图道循环绘制
+                #endregion
 
-            //增加图头圆点
-            returnElemment = curWell.gWellHead(sJH, Convert.ToInt16(dfDS1Show) - iHeightTrackHead - iHeightMapTitle, Convert.ToInt16(dfDS1Show) - iHeightTrackHead, iHeightMapTitle, iListTrackWidth.Sum(), 18);
-            curWell.addTrack(returnElemment, 0);
-            return curWell;
-        }
-
-        public static cSVGSectionWell makeWellsimple(cSVGDocSection svgSection, string pathSectionCss, string filePathTemplatOper, int _iShowMode)
-        {
-            cSVGSectionWell curWell = new cSVGSectionWell(svgSection.svgDoc);
-            List<int> iListTrackWidth = new List<int>();
-            //从配置文件读取显示深度
-            string sJH = cXmlBase.getNodeInnerText(filePathTemplatOper, cXmlDocSectionWell.fullPathJH);
-
-            double dfDS1Show = double.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathTopDepth));
-            double dfDS2Show = double.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathBotDepth));
-            float fVScale = float.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXEWellPage.fullPathVSacle));
-            float fKB = float.Parse(cXmlBase.getNodeInnerText(filePathTemplatOper, cXmlDocSectionWell.fullPathKB));
-            double iDy = - dfDS1Show;
-
-            //这块需要加入提升距离代码,100为头遮照距离
-            int iHeightMapTitle = 30;
-            int iHeightTrackHead = 45; //暂时写固定
-            int iShowMode = _iShowMode; //showmode不同 
-            iListTrackWidth.Clear();
-            XmlElement returnElemment;
-
-            foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathTemplatOper))
-            {
-                trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
-
-                //增加道头
-                returnElemment = cSVGSectionTrack.trackHead(svgSection.svgDoc, curTrackDraw.sTrackID, curTrackDraw.sTrackTitle, Convert.ToInt16(dfDS1Show) - iHeightTrackHead, iHeightTrackHead, curTrackDraw.iTrackWidth, curTrackDraw.iTrackHeadFontSize, curTrackDraw.sWriteMode);
-                curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                //增加距离位置节点
-                cXmlDocSectionGeo.addWellTrackXviewNode(pathSectionCss, sJH, curTrackDraw.sTrackID, iListTrackWidth.Sum());
-                if (curTrackDraw.iVisible > 0) //判断是否可见，可见才绘制
-                {
-                    if (el_Track["trackType"].InnerText == TypeTrack.深度尺.ToString())
-                    {
-                        int mainTick = int.Parse(el_Track["mainScale"].InnerText);
-                        int minTick = int.Parse(el_Track["minScale"].InnerText);
-                        returnElemment = cSVGSectionTrackWellRuler.gMDRuler(svgSection.svgDoc, svgSection.svgDefs, svgSection.svgCss, Convert.ToInt16(dfDS1Show), Convert.ToInt16(dfDS2Show), mainTick, minTick, 1, curTrackDraw.iTrackFontSize);
-                        curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                    }
-                    #region 测井解释，岩性，旋回
-                    if (cProjectManager.ltStrTrackTypeIntervalProperty.IndexOf(curTrackDraw.sTrackType) >= 0)
-                    {
-                        XmlNode dataList = el_Track.SelectSingleNode("dataList");
-                        if (dataList != null)
-                        {
-                            XmlNodeList dataItem = dataList.SelectNodes("dataItem");
-                            foreach (XmlNode xn in dataItem)
-                            {
-                                ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn);
-                                if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
-                                {
-                                    returnElemment = cSVGSectionTrackJSJL.gTrackItemJSJL(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
-                                    if (curTrackDraw.sTrackType == TypeTrack.沉积旋回.ToString()) returnElemment = cSVGSectionTrackCycle.gTrackGeoCycle(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
-                                    curWell.addTrack(returnElemment, iListTrackWidth.Sum());
-                                }
-                            }
-                        }
-                    }
-                    #endregion
-
-                    iListTrackWidth.Add(curTrackDraw.iTrackWidth);
-                }
             } //end of for add track
-            //增加图头圆点
-            returnElemment = curWell.gWellHead(sJH, Convert.ToInt16(dfDS1Show) - iHeightTrackHead - iHeightMapTitle, Convert.ToInt16(dfDS1Show) - iHeightTrackHead, iHeightMapTitle, iListTrackWidth.Sum(), 18);
-            curWell.addTrack(returnElemment, 0);
-            return curWell;
-        }
+            //增加图头
+            returnElemment = wellGeoSingle.mapHeadTitle(sJH, iYpositionTrackHead - iHeightMapTitle, iYpositionTrackHead, iHeightMapTitle, iListTrackWidth.Sum(), iHeightMapTitle * 2 / 3);
+            wellGeoSingle.addTrack(returnElemment, 0);
+            return wellGeoSingle;
+        }  
+        
 
     }
 }
