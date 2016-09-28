@@ -70,6 +70,7 @@ namespace DOGPlatform.XML
             return listWellsSection; 
     }
 
+       
         public static void deleteWellSelect(string pathTemplateCss, string sJH)
         {
             //根据sIDtrack查找XML并删除

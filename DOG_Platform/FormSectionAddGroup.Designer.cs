@@ -120,7 +120,7 @@
             // lblChooseModle
             // 
             this.lblChooseModle.AutoSize = true;
-            this.lblChooseModle.Location = new System.Drawing.Point(5, 311);
+            this.lblChooseModle.Location = new System.Drawing.Point(5, 290);
             this.lblChooseModle.Name = "lblChooseModle";
             this.lblChooseModle.Size = new System.Drawing.Size(53, 12);
             this.lblChooseModle.TabIndex = 65;
@@ -128,7 +128,7 @@
             // 
             // btnDataPre
             // 
-            this.btnDataPre.Location = new System.Drawing.Point(251, 305);
+            this.btnDataPre.Location = new System.Drawing.Point(251, 284);
             this.btnDataPre.Name = "btnDataPre";
             this.btnDataPre.Size = new System.Drawing.Size(96, 26);
             this.btnDataPre.TabIndex = 70;
@@ -139,7 +139,7 @@
             // cbbSelectTemplate
             // 
             this.cbbSelectTemplate.FormattingEnabled = true;
-            this.cbbSelectTemplate.Location = new System.Drawing.Point(60, 309);
+            this.cbbSelectTemplate.Location = new System.Drawing.Point(60, 288);
             this.cbbSelectTemplate.Name = "cbbSelectTemplate";
             this.cbbSelectTemplate.Size = new System.Drawing.Size(176, 20);
             this.cbbSelectTemplate.TabIndex = 72;
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 350);
+            this.ClientSize = new System.Drawing.Size(381, 332);
             this.Controls.Add(this.cbbSelectTemplate);
             this.Controls.Add(this.btnDataPre);
             this.Controls.Add(this.lblChooseModle);

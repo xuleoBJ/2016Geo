@@ -37,5 +37,20 @@ namespace DOGPlatform
         {
             InitializeComponent();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nUDPageWidth_ValueChanged(object sender, EventArgs e)
+        {
+            cXmlBase.setNodeInnerText(xmlPath, cXEGeopage.xmlFullPathPageWidth, nUDPageWidth.Value.ToString("0"));
+        }
+
+        private void nUDPageHeight_ValueChanged(object sender, EventArgs e)
+        {
+            cXmlBase.setNodeInnerText(xmlPath, cXEGeopage.xmlFullPathPageHeight, nUDPageHeight.Value.ToString("0"));
+        }
     }
 }

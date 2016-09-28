@@ -1960,10 +1960,7 @@ namespace DOGPlatform
             }
         }
 
-        private void tsmiSectionFenceRename_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void tsmiSetProject_Click(object sender, EventArgs e)
         {
@@ -2150,6 +2147,43 @@ namespace DOGPlatform
             string filePathOper = Path.Combine(cProjectManager.dirPathUsedProjectData, fileName + cProjectManager.fileExtensionSectionFence);
             FormSectionGroup newSection = new FormSectionGroup(filePathOper);
             newSection.Show();
+        }
+
+        private void tsmiSectionFenceRename_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string originalFileName = tnSelected.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionFence);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", originalFileName);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newInputFileName = inputBox.ReturnValueStr;
+                string newfilepath = originalFilePath.Replace(originalFileName, newInputFileName);
+                File.Copy(originalFilePath, newfilepath);
+                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
+                File.Delete(originalFilePath);
+                if (Directory.Exists(originalDir)) Directory.Delete(originalDir, true);
+                TreeNode tnNew = TreeViewProjectData.setupTNSectionFenceItem(tnSelected.Parent, newInputFileName);
+                tnSelected.Remove();
+                tnNew.TreeView.SelectedNode = tnNew;
+            }
+        }
+
+        private void tsmiSectionFenceCopy_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string originalFileName = tnSelected.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionFence);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+
+            string newfilepath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + "copy" + cProjectManager.fileExtensionSectionFence);
+            string newDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + "copy");
+            File.Copy(originalFilePath, newfilepath);
+            cPublicMethodBase.DirectoryCopy(originalDir, newDir, true);
+            TreeNode tnNew = TreeViewProjectData.setupTNSectionFenceItem(tnSelected.Parent, originalFileName + "copy");
+            tnNew.TreeView.SelectedNode = tnNew; 
         }
      
     }

@@ -66,11 +66,11 @@
             this.groupBox18.Controls.Add(this.nUDPageWidth);
             this.groupBox18.Controls.Add(this.label20);
             this.groupBox18.Controls.Add(this.label60);
-            this.groupBox18.Location = new System.Drawing.Point(25, 315);
+            this.groupBox18.Location = new System.Drawing.Point(25, 314);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Size = new System.Drawing.Size(346, 74);
+            this.groupBox18.Size = new System.Drawing.Size(354, 74);
             this.groupBox18.TabIndex = 61;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "页面尺寸设置(单位:px)";
@@ -211,7 +211,7 @@
             0,
             0,
             0});
-            this.nUDFirstWellPosition.Location = new System.Drawing.Point(166, 79);
+            this.nUDFirstWellPosition.Location = new System.Drawing.Point(166, 76);
             this.nUDFirstWellPosition.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -235,7 +235,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 81);
+            this.label2.Location = new System.Drawing.Point(23, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 12);
             this.label2.TabIndex = 67;
@@ -407,7 +407,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 462);
+            this.ClientSize = new System.Drawing.Size(428, 462);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.nUDFirstWellPosition);
             this.Controls.Add(this.label2);

@@ -13,6 +13,7 @@ namespace DOGPlatform
 {
     class makeSectionFence
     {
+        public static int iPositionXFirstWell = 200;
         public static string generateFence(string dirSectionData, string pathSectionCss, string filenameSVGMap)
         {
             //定义页面大小 及 纵向平移
@@ -33,8 +34,8 @@ namespace DOGPlatform
                 //斜井模式
                 cSVGSectionWell currentWell = makePathWell(svgSection, pathSectionCss, filePathTemplatOper,
                 listWellsSection[i].fShowedDepthTop, listWellsSection[i].fShowedDepthBase, curPage.fVscale, curPage);
-
-                svgSection.addgElement2BaseLayer(currentWell.gWell, listWellsSection[i].fXview,listWellsSection[i].fYview);
+                //按显示的顶深拉高
+                svgSection.addgElement2BaseLayer(currentWell.gWell, listWellsSection[i].fXview, listWellsSection[i].fYview - listWellsSection[i].fShowedDepthTop*curPage.fVscale);
                 //加个井位标识
                 returnElemment = cSVGSectionWell.gWellHead(svgSection.svgDoc,sJH, listWellsSection[i].fXview, listWellsSection[i].fYview, 18);
                 svgSection.addgElement2BaseLayer(returnElemment, 0, 0);
@@ -46,7 +47,7 @@ namespace DOGPlatform
         }
 
         //设置well的摆放位置
-        public static void setXPositionViewFence(string pathSectionCss, List<ItemWellSection> listWellsSection)
+        public static void setXYPositionViewFence(string pathSectionCss, List<ItemWellSection> listWellsSection)
         {
             float fHScale = float.Parse(cXmlBase.getNodeInnerText(pathSectionCss, cXEGeopage.xmlFullPathPageHorizonWellDistanceScale));
             //设置拉平高度 就是 给 fxview和fyview 赋值
@@ -54,21 +55,37 @@ namespace DOGPlatform
             for (int i = 0; i < listWellsSection.Count; i++)
             {
                 ItemWellSection itemWell = listWellsSection[i];
-                //计算前后井的距离
-                int iDistance = Convert.ToInt16(c2DGeometryAlgorithm.calDistance2D(listWellsSection[i].dbX, listWellsSection[i].dbY, listWellsSection[i - 1].dbX, listWellsSection[i - 1].dbY));
-                //注意加上基准点的100
-                itemWell.fXview = listWellsSection[i - 1].fXview + iDistance * fHScale; 
-            }
-        }
-        public static void setYPositionViewFence(string pathSectionCss, List<ItemWellSection> listWellsSection)
-        {
-            for (int i = 0; i < listWellsSection.Count; i++)
-            {
-                ItemWellSection itemWell = listWellsSection[i];
-                itemWell.fYview = 0;
+                Point headView = cCordinationTransform.transRealPointF2ViewPoint(
+                   listWellsSection[i].WellPathList[0].dbX,  listWellsSection[i].WellPathList[0].dbY, cProjectData.dfMapXrealRefer, cProjectData.dfMapYrealRefer, cProjectData.dfMapScale);
+                itemWell.fXview = headView.X;
+                itemWell.fYview = headView.Y;
             }
         }
 
+        public static void makeNewShowDepth(string pathSectionCss, List<ItemWellSection> listWellsSection)
+        {
+            List<string> ltStrSelectedXCM = cProjectData.ltStrProjectXCM;
+            int _up = 10;
+            int _down = 10;
+            if (ltStrSelectedXCM.Count > 0)
+            {
+                //重新给显示的顶底赋值
+                foreach (ItemWellSection item in listWellsSection)
+                {
+                    string sJH = item.sJH;
+                    //有可能上下层有缺失。。。所以这块的技巧是找出深度序列，取最大最小值
+                    cIOinputLayerDepth fileLayerDepth = new cIOinputLayerDepth();
+                    List<float> fListDS1Return = fileLayerDepth.selectDepthListFromLayerDepthByJHAndXCMList(sJH, ltStrSelectedXCM);
+                    if (fListDS1Return.Count > 0)  //返回值为空 说明所选层段整个缺失！
+                    {
+                        item.fShowedDepthTop = fListDS1Return.Min() - _up;
+                        item.fShowedDepthBase = fListDS1Return.Max() + _down;
+                        cXmlBase.setSelectedNodeChildNodeValue(pathSectionCss, sJH, "fShowTop", item.fShowedDepthTop.ToString("0"));
+                        cXmlBase.setSelectedNodeChildNodeValue(pathSectionCss, sJH, "fShowBot", item.fShowedDepthBase.ToString("0"));
+                    }
+                }//end foreach
+            }//end if
+        }
         public static cSVGSectionWell makePathWell(cSVGDocSection svgSection, string pathSectionCss, string filePathTemplatOper, double dfDS1Show, double dfDS2Show, float fVScale, cXEGeopage curPage)
         {
             cSVGSectionWell wellGeoSingle = new cSVGSectionWell(svgSection.svgDoc);

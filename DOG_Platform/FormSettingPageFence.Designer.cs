@@ -230,6 +230,7 @@
             this.btnOK.TabIndex = 76;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupBox18
             // 
@@ -237,11 +238,11 @@
             this.groupBox18.Controls.Add(this.nUDPageWidth);
             this.groupBox18.Controls.Add(this.label20);
             this.groupBox18.Controls.Add(this.label60);
-            this.groupBox18.Location = new System.Drawing.Point(22, 208);
+            this.groupBox18.Location = new System.Drawing.Point(23, 203);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Size = new System.Drawing.Size(346, 74);
+            this.groupBox18.Size = new System.Drawing.Size(353, 74);
             this.groupBox18.TabIndex = 75;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "页面尺寸设置(单位:px)";
@@ -273,6 +274,7 @@
             0,
             0,
             0});
+            this.nUDPageHeight.ValueChanged += new System.EventHandler(this.nUDPageHeight_ValueChanged);
             // 
             // nUDPageWidth
             // 
@@ -301,6 +303,7 @@
             0,
             0,
             0});
+            this.nUDPageWidth.ValueChanged += new System.EventHandler(this.nUDPageWidth_ValueChanged);
             // 
             // label20
             // 

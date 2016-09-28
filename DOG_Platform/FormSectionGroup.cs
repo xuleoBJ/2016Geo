@@ -14,7 +14,6 @@ using DOGPlatform.SVG;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
-
 namespace DOGPlatform
 {
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
@@ -28,7 +27,7 @@ namespace DOGPlatform
         List<ItemWellSection> listWellsSection = new List<ItemWellSection>();
 
         //tempXML存储路径
-        static string mapID = DateTime.Now.ToString("MMddHHmmss");
+        static string mapID = "sectionFence" + DateTime.Now.ToString("MMddHHmmss");
         static string dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
         string filePathSectionCss = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID + cProjectManager.fileExtensionSectionFence);
        
@@ -114,14 +113,15 @@ namespace DOGPlatform
             if (result == DialogResult.OK)
             {
                 updateTVandList();
-                updateSVGmap();
+                makeSVGmap();
             }
         }
-        void updateSVGmap()
+        void makeSVGmap()
         {
             PscrollOffset = cSectionUIoperate.getOffSet(this.webBrowserSVG);
             if (listWellsSection.Count > 0)
             {
+                this.tbgEditView.Text = Path.GetFileNameWithoutExtension(this.filePathSectionCss);
                 filePathSVG = makeSectionFence.generateFence( dirSectionData, this.filePathSectionCss, "testFence.svg");
                 this.webBrowserSVG.Navigate(new Uri(filePathSVG));
             }
@@ -168,7 +168,7 @@ namespace DOGPlatform
             filePathSectionCss = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID + cProjectManager.fileExtensionSectionFence);
             dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, mapID);
             updateTVandList();
-            updateSVGmap();
+            makeSVGmap();
         }
 
         private void tsBtnOpenProject_Click(object sender, EventArgs e)
@@ -178,12 +178,14 @@ namespace DOGPlatform
 
         private void tsBtnZoonIn_Click(object sender, EventArgs e)
         {
-           scaleMap(0.1F); 
+            webBrowserSVG.Focus();
+            SendKeys.Send("^{+}");
         }
 
         private void tsBtnZoomOut_Click(object sender, EventArgs e)
         {
-            scaleMap(-0.1F); 
+            webBrowserSVG.Focus();
+            SendKeys.Send("^{-}");
         }
 
         void scaleMap(float fCoeffect) 
@@ -205,7 +207,7 @@ namespace DOGPlatform
         private void tsBtnReflush_Click(object sender, EventArgs e)
         {
             updateTVandList();
-            updateSVGmap(); 
+            makeSVGmap(); 
         }
 
         private void tsmiTrackDataImport_Click(object sender, EventArgs e)
@@ -394,15 +396,98 @@ namespace DOGPlatform
         private void tsbPageSet_Click(object sender, EventArgs e)
         {
             FormSettingPageFence newSetPage = new FormSettingPageFence(filePathSectionCss);
-            if (newSetPage.ShowDialog() == DialogResult.OK) updateSVGmap();
+            if (newSetPage.ShowDialog() == DialogResult.OK) makeSVGmap();
         }
 
         private void tsmiIntervalMode_Click(object sender, EventArgs e)
         {
             FormSettingModeInterval newSetPage = new FormSettingModeInterval(this.filePathSectionCss, dirSectionData);
-            if (newSetPage.ShowDialog() == DialogResult.OK) updateSVGmap();
+            if (newSetPage.ShowDialog() == DialogResult.OK) makeSVGmap();
         }
 
-         
+        private void tsBtnZoonOutHItem2_Click(object sender, EventArgs e)
+        {
+            setXYview(2.0F);
+        }
+
+        void setXYview(float inputHscale)
+        {
+            //修改每口井的Xview，Yview，在配置文件内
+            if (File.Exists(filePathSectionCss))
+            {
+                XmlDocument XDocSection = new XmlDocument();
+                XDocSection.Load(filePathSectionCss);
+                string pathTrack = "/SectionMap/WellCollection/well";
+                XmlNodeList selectedWellNodes = XDocSection.SelectNodes(pathTrack);
+                foreach (XmlNode xnWell in selectedWellNodes) 
+                {
+                        string _childTag = "Xview";
+                        if (xnWell != null && xnWell[_childTag] != null) 
+                        {
+                            float origilValue = float.Parse(xnWell[_childTag].InnerText);
+                            xnWell[_childTag].InnerText = (origilValue * inputHscale).ToString(); 
+                        }
+                         _childTag = "Yview";
+                        if (xnWell != null && xnWell[_childTag] != null) 
+                        {
+                            float origilValue = float.Parse(xnWell[_childTag].InnerText);
+                            xnWell[_childTag].InnerText = (origilValue * inputHscale).ToString(); 
+                        }
+                }
+                XDocSection.Save(filePathSectionCss);
+            }
+            makeSVGmap();
+        }
+
+        private void tsBtnZoonOutHItem1_5_Click(object sender, EventArgs e)
+        {
+            setXYview(1.5F);
+        }
+
+        private void tsBtnZoonOutHItem1_2_Click(object sender, EventArgs e)
+        {
+            setXYview(1.2F);
+        }
+
+        private void tsBtnZoonOutHItem0_5_Click(object sender, EventArgs e)
+        {
+            setXYview(0.5F);
+        }
+
+        private void tsBtnZoonOutHItem0_8_Click(object sender, EventArgs e)
+        {
+            setXYview(0.8F);
+        }
+
+        private void tsBtnZoonOutHItem0_9_Click(object sender, EventArgs e)
+        {
+            setXYview(0.9F);
+        }
+
+        private void tsBtnZoonOutHItem1_1_Click(object sender, EventArgs e)
+        {
+            setXYview(1.1F);
+        }
+
+        private void tsmiRename_Click(object sender, EventArgs e)
+        {
+            string originalFileName = this.tbgEditView.Text;
+            string originalFilePath = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName + cProjectManager.fileExtensionSectionFence);
+            string originalDir = Path.Combine(cProjectManager.dirPathUsedProjectData, originalFileName);
+            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", originalFileName);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newInputFileName = inputBox.ReturnValueStr;
+                string newfilepath = originalFilePath.Replace(originalFileName, newInputFileName);
+                File.Copy(originalFilePath, newfilepath);
+                cPublicMethodBase.DirectoryCopy(originalDir, Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName), true);
+                File.Delete(originalFilePath);
+                if (Directory.Exists(originalDir)) Directory.Delete(originalDir, true);
+                dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName);
+                filePathSectionCss = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName + cProjectManager.fileExtensionSectionFence);
+                this.tbgEditView.Text = newInputFileName;
+            }
+        }
     }
 } 

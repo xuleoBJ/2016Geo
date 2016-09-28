@@ -1333,10 +1333,7 @@ namespace DOGPlatform
             zoomDepth(2); 
         }
 
-        private void tsBtnZoonOutHItem2_Click_1(object sender, EventArgs e)
-        {
-            setXYview(2.0F);
-        }
+       
 
         private void 井排列ToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -208,6 +208,7 @@
             this.tsmiSectionGeoCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionGeoDel = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNSectionFence = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiSectionFenceOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSectionFenceDel = new System.Windows.Forms.ToolStripMenuItem();
@@ -216,7 +217,6 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSectionFenceOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1296,7 +1296,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1803,12 +1803,19 @@
             this.tsmiSectionFenceCopy,
             this.tsmiSectionFenceDel});
             this.cmsTNSectionFence.Name = "cmsProjectGrapth";
-            this.cmsTNSectionFence.Size = new System.Drawing.Size(113, 92);
+            this.cmsTNSectionFence.Size = new System.Drawing.Size(153, 114);
+            // 
+            // tsmiSectionFenceOpen
+            // 
+            this.tsmiSectionFenceOpen.Name = "tsmiSectionFenceOpen";
+            this.tsmiSectionFenceOpen.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionFenceOpen.Text = "打开";
+            this.tsmiSectionFenceOpen.Click += new System.EventHandler(this.tsmiSectionFenceOpen_Click);
             // 
             // tsmiSectionFenceRename
             // 
             this.tsmiSectionFenceRename.Name = "tsmiSectionFenceRename";
-            this.tsmiSectionFenceRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFenceRename.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionFenceRename.Text = "重命名";
             this.tsmiSectionFenceRename.Click += new System.EventHandler(this.tsmiSectionFenceRename_Click);
             // 
@@ -1817,11 +1824,12 @@
             this.tsmiSectionFenceCopy.Name = "tsmiSectionFenceCopy";
             this.tsmiSectionFenceCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFenceCopy.Text = "复制";
+            this.tsmiSectionFenceCopy.Click += new System.EventHandler(this.tsmiSectionFenceCopy_Click);
             // 
             // tsmiSectionFenceDel
             // 
             this.tsmiSectionFenceDel.Name = "tsmiSectionFenceDel";
-            this.tsmiSectionFenceDel.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFenceDel.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionFenceDel.Text = "删除";
             this.tsmiSectionFenceDel.Click += new System.EventHandler(this.tsmiSectionFenceDel_Click);
             // 
@@ -1859,13 +1867,6 @@
             this.tsmiDataSectionWellChildItemImport.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
-            // 
-            // tsmiSectionFenceOpen
-            // 
-            this.tsmiSectionFenceOpen.Name = "tsmiSectionFenceOpen";
-            this.tsmiSectionFenceOpen.Size = new System.Drawing.Size(152, 22);
-            this.tsmiSectionFenceOpen.Text = "打开";
-            this.tsmiSectionFenceOpen.Click += new System.EventHandler(this.tsmiSectionFenceOpen_Click);
             // 
             // FormMain
             // 

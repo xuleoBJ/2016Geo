@@ -96,6 +96,14 @@ namespace DOGPlatform
              return tnSub; 
          }
 
+        public static TreeNode setupTNSectionFenceItem(TreeNode tn, string tnText)
+        {
+            TreeNode tnSub = new TreeNode(tnText, 9, 9);
+            tnSub.Name = tnText;
+            tnSub.Tag = TypeProjectNode.sectionFence;
+            tn.Nodes.Insert(0, tnSub);
+            return tnSub;
+        }
         public static TreeNode setupTNSectionGeoItem(TreeNode tn, string tnText)
         {
             TreeNode tnSub = new TreeNode(tnText, 9, 9);

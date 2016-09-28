@@ -542,19 +542,19 @@
             this.tsmiSectionGeoRename,
             this.tsmiRefresh});
             this.cmsWebSVG.Name = "cmsWebSVG";
-            this.cmsWebSVG.Size = new System.Drawing.Size(125, 114);
+            this.cmsWebSVG.Size = new System.Drawing.Size(153, 136);
             // 
             // tsmiPageSetting
             // 
             this.tsmiPageSetting.Name = "tsmiPageSetting";
-            this.tsmiPageSetting.Size = new System.Drawing.Size(124, 22);
+            this.tsmiPageSetting.Size = new System.Drawing.Size(152, 22);
             this.tsmiPageSetting.Text = "页面设置";
             this.tsmiPageSetting.Click += new System.EventHandler(this.tsbPageSet_Click);
             // 
             // tsmiIntervalMode
             // 
             this.tsmiIntervalMode.Name = "tsmiIntervalMode";
-            this.tsmiIntervalMode.Size = new System.Drawing.Size(124, 22);
+            this.tsmiIntervalMode.Size = new System.Drawing.Size(152, 22);
             this.tsmiIntervalMode.Text = "层段模式";
             this.tsmiIntervalMode.Click += new System.EventHandler(this.tsmiIntervalMode_Click);
             // 
@@ -564,7 +564,7 @@
             this.tsmiAncorPoint,
             this.tsmiAncorClose});
             this.tsmiPositionRuler.Name = "tsmiPositionRuler";
-            this.tsmiPositionRuler.Size = new System.Drawing.Size(124, 22);
+            this.tsmiPositionRuler.Size = new System.Drawing.Size(152, 22);
             this.tsmiPositionRuler.Text = "定位锚点";
             this.tsmiPositionRuler.Click += new System.EventHandler(this.tsmiPositionRuler_Click);
             // 
@@ -585,14 +585,14 @@
             // tsmiSectionGeoRename
             // 
             this.tsmiSectionGeoRename.Name = "tsmiSectionGeoRename";
-            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoRename.Text = "重命名";
             this.tsmiSectionGeoRename.Click += new System.EventHandler(this.tsmiSectionGeoRename_Click);
             // 
             // tsmiRefresh
             // 
             this.tsmiRefresh.Name = "tsmiRefresh";
-            this.tsmiRefresh.Size = new System.Drawing.Size(124, 22);
+            this.tsmiRefresh.Size = new System.Drawing.Size(152, 22);
             this.tsmiRefresh.Text = "页面刷新";
             this.tsmiRefresh.Click += new System.EventHandler(this.tsmiRefresh_Click);
             // 
@@ -737,7 +737,7 @@
             this.tsBtnZoonOutHItem2.Name = "tsBtnZoonOutHItem2";
             this.tsBtnZoonOutHItem2.Size = new System.Drawing.Size(105, 22);
             this.tsBtnZoonOutHItem2.Text = "X 2";
-            this.tsBtnZoonOutHItem2.Click += new System.EventHandler(this.tsBtnZoonOutHItem2_Click_1);
+            this.tsBtnZoonOutHItem2.Click += new System.EventHandler(this.tsBtnZoonOutHItem2_Click);
             // 
             // tsmiAdjustScaleHorizonalMin
             // 
