@@ -401,7 +401,7 @@ namespace DOGPlatform
 
         private void tsmiIntervalMode_Click(object sender, EventArgs e)
         {
-            FormSettingModeInterval newSetPage = new FormSettingModeInterval(this.filePathSectionCss, dirSectionData);
+            FormSettingModeIntervalFence newSetPage = new FormSettingModeIntervalFence(this.filePathSectionCss, dirSectionData);
             if (newSetPage.ShowDialog() == DialogResult.OK) makeSVGmap();
         }
 
@@ -417,24 +417,9 @@ namespace DOGPlatform
             {
                 XmlDocument XDocSection = new XmlDocument();
                 XDocSection.Load(filePathSectionCss);
-                string pathTrack = "/SectionMap/WellCollection/well";
-                XmlNodeList selectedWellNodes = XDocSection.SelectNodes(pathTrack);
-                foreach (XmlNode xnWell in selectedWellNodes) 
-                {
-                        string _childTag = "Xview";
-                        if (xnWell != null && xnWell[_childTag] != null) 
-                        {
-                            float origilValue = float.Parse(xnWell[_childTag].InnerText);
-                            xnWell[_childTag].InnerText = (origilValue * inputHscale).ToString(); 
-                        }
-                         _childTag = "Yview";
-                        if (xnWell != null && xnWell[_childTag] != null) 
-                        {
-                            float origilValue = float.Parse(xnWell[_childTag].InnerText);
-                            xnWell[_childTag].InnerText = (origilValue * inputHscale).ToString(); 
-                        }
-                }
-                XDocSection.Save(filePathSectionCss);
+                //应该换配置文件里面的放大系数
+                float fScaleMap = float.Parse(cXmlBase.getNodeInnerText(filePathSectionCss, cXEGeopage.fullPathSacleMap)) ;
+                cXmlBase.setNodeInnerText(filePathSectionCss, cXEGeopage.fullPathSacleMap,(fScaleMap*inputHscale).ToString());
             }
             makeSVGmap();
         }
@@ -466,7 +451,7 @@ namespace DOGPlatform
 
         private void tsBtnZoonOutHItem1_1_Click(object sender, EventArgs e)
         {
-            setXYview(1.1F);
+            setXYview(5.0F);
         }
 
         private void tsmiRename_Click(object sender, EventArgs e)
@@ -488,6 +473,205 @@ namespace DOGPlatform
                 filePathSectionCss = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName + cProjectManager.fileExtensionSectionFence);
                 this.tbgEditView.Text = newInputFileName;
             }
+        }
+
+
+
+        private void tsmiTemplateSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog modelFileSaveDialog = new SaveFileDialog();
+            modelFileSaveDialog.Filter = "模板文件 | *" + cProjectManager.fileExtensionTemplate;
+            modelFileSaveDialog.DefaultExt = cProjectManager.fileExtensionTemplate;
+            modelFileSaveDialog.InitialDirectory = cProjectManager.dirPathTemplate;
+            if (modelFileSaveDialog.ShowDialog() == DialogResult.OK)
+            {
+                string xtlFilePath = modelFileSaveDialog.FileName;
+                TreeNode currentNode = this.tvSectionEdit.SelectedNode;
+                setUpIDByTN(currentNode);
+                File.Copy(this.filePathOper, xtlFilePath, true);
+                cXmlDocSectionWell.save2XTM(xtlFilePath);
+            }
+            
+        }
+
+        private void tsmiTemplateUse_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = this.tvSectionEdit.SelectedNode;
+            setUpIDByTN(currentNode);
+
+            FormSectAddNewWell formNew = new FormSectAddNewWell(2); //通过2 构造函数 通知模板选择 模板从剖面分析来，不要井号
+            var result = formNew.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string xtlFileName = formNew.ReturnFileNameXMT;
+                bool bNew = true;
+                if (File.Exists(filePathOper))
+                {
+                    DialogResult dialogResult = MessageBox.Show("确认应用新模板？", this.sJH + "剖面已存在", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No) bNew = false;
+                }
+                if (bNew == true)
+                {
+                    string xtmPath = Path.Combine(cProjectManager.dirPathTemplate, xtlFileName);
+                    cIOtemplate.copyTemplate(xtmPath, filePathOper, this.sJH);
+                }
+            }
+        }
+
+        private void tsmiEditWell_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                float fTopShow = 0;
+                XmlNode selectWell = cXmlDocSectionGeo.selectNodeByID(this.filePathSectionCss, this.sJH);
+                if (selectWell != null) fTopShow = float.Parse(selectWell["fShowTop"].InnerText);
+                FormSectionWell editWell = new FormSectionWell(this.filePathOper, fTopShow);
+                if (editWell.ShowDialog() == DialogResult.OK)
+                {
+                    updateTVandList();
+                    makeSVGmap();
+                }
+            }
+        }
+
+        private void tsmiRemoveWell_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                DialogResult dialogResult = MessageBox.Show("确认移除: " + this.sJH, "移除井", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    cXmlDocSectionGeo.deleteWellSelect(this.filePathSectionCss, this.sJH);
+                    File.Delete(this.filePathOper);
+                    updateTVandList();
+                    makeSVGmap();
+                }
+            }
+        }
+
+        private void tsmiInsertWell_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                insertWell();
+            }
+        }
+
+        void insertWell()
+        {
+            FormSectAddNewWell formNew = new FormSectAddNewWell();
+            var result = formNew.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string sJHInsert = formNew.ReturnJH;            //values preserved after close
+                string xtlFileName = formNew.ReturnFileNameXMT;
+                bool bNew = true;
+                filePathOper = dirSectionData + "//" + sJHInsert + ".xml";
+                if (File.Exists(filePathOper))
+                {
+                    DialogResult dialogResult = MessageBox.Show("是否新建并覆盖？", "文件已存在", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.No) bNew = false;
+                }
+                if (bNew == true)
+                {
+                    ItemWellSection wellSectionInsert = new ItemWellSection(sJHInsert, 0, 0);
+                    //默认把显示深度设为全井段
+                    wellSectionInsert.fShowedDepthTop = 0;
+                    wellSectionInsert.fShowedDepthBase = wellSectionInsert.fWellBase;
+                    Point headView = cCordinationTransform.transRealPointF2ViewPoint(
+                   wellSectionInsert.WellPathList[0].dbX, wellSectionInsert.WellPathList[0].dbY, cProjectData.dfMapXrealRefer, cProjectData.dfMapYrealRefer, cProjectData.dfMapScale);
+                    wellSectionInsert.fXview = headView.X;
+                    wellSectionInsert.fYview = headView.Y;
+                    //CSS的加入井 
+                    cXmlDocSectionGeo.insertWell(this.filePathSectionCss, this.sJH, wellSectionInsert, 0);
+                    //copy文件到目录
+                    cIOtemplate.copyTemplate(xtlFileName, filePathOper, wellSectionInsert.sJH, wellSectionInsert.fShowedDepthTop, wellSectionInsert.fShowedDepthBase);
+                    updateTVandList();
+                    makeSVGmap();
+                }
+            }
+        }
+
+        private void tsBtnZoonInV1_1_Click(object sender, EventArgs e)
+        {
+            zoomDepth(1.1F); 
+        }
+
+        void zoomDepth(float inputUpVscale)
+        {
+            if (File.Exists(this.filePathSectionCss))
+            {
+                float fVscale = inputUpVscale * float.Parse(cXmlBase.getNodeInnerText(this.filePathSectionCss, cXEGeopage.fullPathSacleV));
+                cXmlBase.setNodeInnerText(this.filePathSectionCss, cXEGeopage.fullPathSacleV, fVscale.ToString("0.00"));
+                makeSVGmap();
+            }
+        }
+
+        private void tsBtnZoonInV1_5_Click(object sender, EventArgs e)
+        {
+            zoomDepth(1.5F); 
+        }
+
+        private void tsBtnZoonInV1_2_Click(object sender, EventArgs e)
+        {
+            zoomDepth(1.2F); 
+        }
+
+        private void tsBtnZoonInV0_9_Click(object sender, EventArgs e)
+        {
+            zoomDepth(0.9F); 
+        }
+
+        private void tsBtnZoonInV0_8_Click(object sender, EventArgs e)
+        {
+            zoomDepth(0.8F); 
+        }
+
+        private void tsBtnZoonInV0_5_Click(object sender, EventArgs e)
+        {
+            zoomDepth(0.5F); 
+        }
+
+        private void tsBtnZoonInV2_Click(object sender, EventArgs e)
+        {
+            zoomDepth(2F); 
+        }
+
+        private void tsmiImportDataFromSectionWell_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                if ( sJH != "")
+                {
+                    //根据井号找到单井综合图配置文件路径
+                    //加入测井图
+                    if (File.Exists(filePathOper))
+                    {
+                        //读取单井文件，读取图道
+                        string sTrackID_match = "";
+                        //foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathOper))
+                        //{
+                        //    trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
+                        //    if (curTrackDraw.sTrackType == trackTypeStr)
+                        //    {
+                        //        sTrackID_match = curTrackDraw.sTrackID;  //结点name
+                        //        break;
+                        //    }
+                        //}
+                        //if (sTrackID_match != "") initializaForm(filePathWellSection, sTrackID_match);
+                    }
+
+                }   
+            }
+          
         }
     }
 } 

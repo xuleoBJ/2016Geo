@@ -35,9 +35,9 @@ namespace DOGPlatform
                 cSVGSectionWell currentWell = makePathWell(svgSection, pathSectionCss, filePathTemplatOper,
                 listWellsSection[i].fShowedDepthTop, listWellsSection[i].fShowedDepthBase, curPage.fVscale, curPage);
                 //按显示的顶深拉高
-                svgSection.addgElement2BaseLayer(currentWell.gWell, listWellsSection[i].fXview, listWellsSection[i].fYview - listWellsSection[i].fShowedDepthTop*curPage.fVscale);
+                svgSection.addgElement2BaseLayer(currentWell.gWell, curPage.fMapScale * listWellsSection[i].fXview, curPage.fMapScale * listWellsSection[i].fYview - listWellsSection[i].fShowedDepthTop * curPage.fVscale);
                 //加个井位标识
-                returnElemment = cSVGSectionWell.gWellHead(svgSection.svgDoc,sJH, listWellsSection[i].fXview, listWellsSection[i].fYview, 18);
+                returnElemment = cSVGSectionWell.gWellHead(svgSection.svgDoc, sJH, curPage.fMapScale * listWellsSection[i].fXview, curPage.fMapScale * listWellsSection[i].fYview, 18);
                 svgSection.addgElement2BaseLayer(returnElemment, 0, 0);
             }
 

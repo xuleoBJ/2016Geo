@@ -12,12 +12,12 @@ using System.Xml;
 
 namespace DOGPlatform
 {
-    public partial class FormSettingModeInterval : Form
+    public partial class FormSettingModeIntervalGeo : Form
     {
         string filePathSectionGeoCss;
         string dirSectionData;
         List<ItemWellSection> listWellsSection = new List<ItemWellSection>();
-        public FormSettingModeInterval(string _filePathSectionGeoCss, string _dirSectionData)
+        public FormSettingModeIntervalGeo(string _filePathSectionGeoCss, string _dirSectionData)
         {
             InitializeComponent();
             filePathSectionGeoCss = _filePathSectionGeoCss;

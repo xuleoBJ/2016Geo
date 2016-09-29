@@ -1,6 +1,6 @@
 ﻿namespace DOGPlatform
 {
-    partial class FormSettingModeIntervalGeo
+    partial class FormSettingModeIntervalFence
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnClearConnectLayer = new System.Windows.Forms.Button();
+            this.btnConnectLayerByTop = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.nUDbottomDepthDown = new System.Windows.Forms.NumericUpDown();
             this.nUDtopDepthUp = new System.Windows.Forms.NumericUpDown();
@@ -40,15 +42,28 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSectionShowDepth = new System.Windows.Forms.Button();
-            this.btnFlattedByTop = new System.Windows.Forms.Button();
-            this.btnByElevation = new System.Windows.Forms.Button();
-            this.btnConnectLayerByTop = new System.Windows.Forms.Button();
-            this.btnClearConnectLayer = new System.Windows.Forms.Button();
-            this.cbxFlattedTrans2TVD = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnClearConnectLayer
+            // 
+            this.btnClearConnectLayer.Location = new System.Drawing.Point(207, 159);
+            this.btnClearConnectLayer.Name = "btnClearConnectLayer";
+            this.btnClearConnectLayer.Size = new System.Drawing.Size(128, 23);
+            this.btnClearConnectLayer.TabIndex = 81;
+            this.btnClearConnectLayer.Text = "清除所有层段连接";
+            this.btnClearConnectLayer.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectLayerByTop
+            // 
+            this.btnConnectLayerByTop.Location = new System.Drawing.Point(44, 210);
+            this.btnConnectLayerByTop.Name = "btnConnectLayerByTop";
+            this.btnConnectLayerByTop.Size = new System.Drawing.Size(128, 23);
+            this.btnConnectLayerByTop.TabIndex = 80;
+            this.btnConnectLayerByTop.Text = "同名层段连接";
+            this.btnConnectLayerByTop.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -62,12 +77,12 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(11, 21);
+            this.groupBox3.Location = new System.Drawing.Point(44, 33);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(303, 106);
-            this.groupBox3.TabIndex = 70;
+            this.groupBox3.TabIndex = 77;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "层段选择";
             // 
@@ -181,95 +196,41 @@
             // 
             // btnSectionShowDepth
             // 
-            this.btnSectionShowDepth.Location = new System.Drawing.Point(16, 145);
+            this.btnSectionShowDepth.Location = new System.Drawing.Point(44, 159);
             this.btnSectionShowDepth.Name = "btnSectionShowDepth";
             this.btnSectionShowDepth.Size = new System.Drawing.Size(128, 23);
-            this.btnSectionShowDepth.TabIndex = 11;
+            this.btnSectionShowDepth.TabIndex = 76;
             this.btnSectionShowDepth.Text = "选择层位显示";
             this.btnSectionShowDepth.UseVisualStyleBackColor = true;
             this.btnSectionShowDepth.Click += new System.EventHandler(this.btnSectionShowDepth_Click);
             // 
-            // btnFlattedByTop
-            // 
-            this.btnFlattedByTop.Location = new System.Drawing.Point(16, 227);
-            this.btnFlattedByTop.Name = "btnFlattedByTop";
-            this.btnFlattedByTop.Size = new System.Drawing.Size(128, 23);
-            this.btnFlattedByTop.TabIndex = 71;
-            this.btnFlattedByTop.Text = "顶层拉平";
-            this.btnFlattedByTop.UseVisualStyleBackColor = true;
-            this.btnFlattedByTop.Click += new System.EventHandler(this.btnFlattedByTop_Click);
-            // 
-            // btnByElevation
-            // 
-            this.btnByElevation.Location = new System.Drawing.Point(175, 145);
-            this.btnByElevation.Name = "btnByElevation";
-            this.btnByElevation.Size = new System.Drawing.Size(128, 23);
-            this.btnByElevation.TabIndex = 72;
-            this.btnByElevation.Text = "实际海拔显示";
-            this.btnByElevation.UseVisualStyleBackColor = true;
-            this.btnByElevation.Click += new System.EventHandler(this.btnByElevation_Click);
-            // 
-            // btnConnectLayerByTop
-            // 
-            this.btnConnectLayerByTop.Location = new System.Drawing.Point(16, 186);
-            this.btnConnectLayerByTop.Name = "btnConnectLayerByTop";
-            this.btnConnectLayerByTop.Size = new System.Drawing.Size(128, 23);
-            this.btnConnectLayerByTop.TabIndex = 73;
-            this.btnConnectLayerByTop.Text = "同名层段连接";
-            this.btnConnectLayerByTop.UseVisualStyleBackColor = true;
-            this.btnConnectLayerByTop.Click += new System.EventHandler(this.btnConnectLayerByTop_Click);
-            // 
-            // btnClearConnectLayer
-            // 
-            this.btnClearConnectLayer.Location = new System.Drawing.Point(175, 186);
-            this.btnClearConnectLayer.Name = "btnClearConnectLayer";
-            this.btnClearConnectLayer.Size = new System.Drawing.Size(128, 23);
-            this.btnClearConnectLayer.TabIndex = 74;
-            this.btnClearConnectLayer.Text = "清除所有层段连接";
-            this.btnClearConnectLayer.UseVisualStyleBackColor = true;
-            this.btnClearConnectLayer.Click += new System.EventHandler(this.btnClearConnectLayer_Click);
-            // 
-            // cbxFlattedTrans2TVD
-            // 
-            this.cbxFlattedTrans2TVD.AutoSize = true;
-            this.cbxFlattedTrans2TVD.Location = new System.Drawing.Point(175, 233);
-            this.cbxFlattedTrans2TVD.Name = "cbxFlattedTrans2TVD";
-            this.cbxFlattedTrans2TVD.Size = new System.Drawing.Size(90, 16);
-            this.cbxFlattedTrans2TVD.TabIndex = 75;
-            this.cbxFlattedTrans2TVD.Text = "换算TVD拉平";
-            this.cbxFlattedTrans2TVD.UseVisualStyleBackColor = true;
-            // 
-            // FormSettingModeIntervalGeo
+            // FormSettingModeIntervalFence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 298);
-            this.Controls.Add(this.cbxFlattedTrans2TVD);
+            this.ClientSize = new System.Drawing.Size(377, 277);
             this.Controls.Add(this.btnClearConnectLayer);
             this.Controls.Add(this.btnConnectLayerByTop);
-            this.Controls.Add(this.btnByElevation);
-            this.Controls.Add(this.btnFlattedByTop);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnSectionShowDepth);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormSettingModeIntervalGeo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "层段模式";
+            this.Name = "FormSettingModeIntervalFence";
+            this.Text = "层段操作";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDbottomDepthDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDtopDepthUp)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnClearConnectLayer;
+        private System.Windows.Forms.Button btnConnectLayerByTop;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown nUDbottomDepthDown;
         private System.Windows.Forms.NumericUpDown nUDtopDepthUp;
-        private System.Windows.Forms.Button btnSectionShowDepth;
         private System.Windows.Forms.ComboBox cbbTopXCM;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbbBottomXCM;
@@ -278,10 +239,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnFlattedByTop;
-        private System.Windows.Forms.Button btnByElevation;
-        private System.Windows.Forms.Button btnConnectLayerByTop;
-        private System.Windows.Forms.Button btnClearConnectLayer;
-        private System.Windows.Forms.CheckBox cbxFlattedTrans2TVD;
+        private System.Windows.Forms.Button btnSectionShowDepth;
     }
 }

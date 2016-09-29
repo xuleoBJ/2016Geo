@@ -1109,7 +1109,7 @@ namespace DOGPlatform
 
         private void tsmiIntervalMode_Click(object sender, EventArgs e)
         {
-            FormSettingModeInterval newSetPage = new FormSettingModeInterval(this.filePathSectionGeoCss,dirSectionData);
+            FormSettingModeIntervalGeo newSetPage = new FormSettingModeIntervalGeo(this.filePathSectionGeoCss,dirSectionData);
             if (newSetPage.ShowDialog() == DialogResult.OK) makeSVGmap();
         }
 

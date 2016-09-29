@@ -267,7 +267,6 @@ E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionAddSymbol.resou
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSVGplygon.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionLogInforByDepth.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionWellCrossplot.resources
-E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeInterval.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSetGlobleLog.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingConnect.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingLayerColor.resources
@@ -444,3 +443,5 @@ D:\2016Geo\DOG_Platform\bin\Debug\Microsoft.Scripting.AspNet.xml
 E:\2016geo\2016Geo\DOG_Platform\bin\Debug\IronPython.dll
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageFence.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageSection.resources
+E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalFence.resources
+E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalGeo.resources
