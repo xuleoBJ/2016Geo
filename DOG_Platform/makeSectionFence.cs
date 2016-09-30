@@ -62,6 +62,28 @@ namespace DOGPlatform
             }
         }
 
+        public static void setXYPositionViewFenceRelative(string pathSectionCss, List<ItemWellSection> listWellsSection)
+        {
+            float fHScale = float.Parse(cXmlBase.getNodeInnerText(pathSectionCss, cXEGeopage.xmlFullPathPageHorizonWellDistanceScale));
+            //设置拉平高度 就是 给 fxview和fyview 赋值
+            double dfMapXrealRefer = 0;
+            double dfMapYrealRefer = 10000;
+            if (listWellsSection.Count > 0)
+            {
+                int iSacleUnit = 1000;
+                dfMapXrealRefer = Math.Floor(listWellsSection.Select(p => p.dbX).ToList().Min() / iSacleUnit - 1) * iSacleUnit;
+                dfMapYrealRefer = (Math.Ceiling(listWellsSection.Select(p => p.dbY).ToList().Max() / iSacleUnit) + 1) * iSacleUnit;
+            }
+            for (int i = 0; i < listWellsSection.Count; i++)
+            {
+                ItemWellSection itemWell = listWellsSection[i];
+                Point headView = cCordinationTransform.transRealPointF2ViewPoint(
+                   listWellsSection[i].WellPathList[0].dbX, listWellsSection[i].WellPathList[0].dbY, dfMapXrealRefer, dfMapYrealRefer, cProjectData.dfMapScale);
+                itemWell.fXview = headView.X;
+                itemWell.fYview = headView.Y;
+            } 
+        }
+
         public static void makeNewShowDepth(string pathSectionCss, List<ItemWellSection> listWellsSection)
         {
             List<string> ltStrSelectedXCM = cProjectData.ltStrProjectXCM;

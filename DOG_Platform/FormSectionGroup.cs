@@ -20,6 +20,10 @@ namespace DOGPlatform
     [System.Runtime.InteropServices.ComVisibleAttribute(true)] 
     public partial class FormSectionGroup : Form
     {
+        private Stack<string> UndoList = new Stack<string>();
+        private Stack<string> RedoList = new Stack<string>();
+        private string dirHisUnto = cProjectManager.dirPathHis;
+        int iSwichHis = 0; //是否备份开关
         //定义绘图数据的临时目录
         //定义联井剖面井号存储List
         public List<string> ltStrSelectedJH = new List<string>();
@@ -116,6 +120,7 @@ namespace DOGPlatform
                 makeSVGmap();
             }
         }
+        DateTime dtLastStop = DateTime.Now;
         void makeSVGmap()
         {
             PscrollOffset = cSectionUIoperate.getOffSet(this.webBrowserSVG);
@@ -125,6 +130,21 @@ namespace DOGPlatform
                 filePathSVG = makeSectionFence.generateFence( dirSectionData, this.filePathSectionCss, "testFence.svg");
                 this.webBrowserSVG.Navigate(new Uri(filePathSVG));
             }
+
+            //更新前把 数据备份，copy到历史数据，准备回退。
+            if (iSwichHis == 0 && cPublicMethodBase.ExecDateDiff(dtLastStop, DateTime.Now).TotalSeconds >= 2) //0表示重新生成的，1表示回退的 回退的不用备份。
+            {
+                string dirPathUndo = Path.Combine(this.dirHisUnto, cIDmake.generateRandomDirName());
+                Directory.CreateDirectory(dirPathUndo);
+                string backFileName = Path.Combine(dirPathUndo, mapID + cProjectManager.fileExtensionSectionFence);
+                File.Copy(this.filePathSectionCss, backFileName, true);
+                cPublicMethodForm.DirectoryCopy(dirSectionData, dirPathUndo, true);
+                UndoList.Push(dirPathUndo);
+                if (UndoList.Count > 1) this.tsbUndo.Enabled = true;
+                if (RedoList.Count > 1) this.tsbRedo.Enabled = true;
+            }
+            iSwichHis = 0;
+            dtLastStop = DateTime.Now;
         }
         private void webBrowserSVG_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
@@ -652,26 +672,131 @@ namespace DOGPlatform
                 if ( sJH != "")
                 {
                     //根据井号找到单井综合图配置文件路径
-                    //加入测井图
                     if (File.Exists(filePathOper))
                     {
                         //读取单井文件，读取图道
                         string sTrackID_match = "";
-                        //foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathOper))
-                        //{
-                        //    trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
-                        //    if (curTrackDraw.sTrackType == trackTypeStr)
-                        //    {
-                        //        sTrackID_match = curTrackDraw.sTrackID;  //结点name
-                        //        break;
-                        //    }
-                        //}
-                        //if (sTrackID_match != "") initializaForm(filePathWellSection, sTrackID_match);
                     }
 
                 }   
             }
           
+        }
+
+        private void tsbViewGlobe_Click(object sender, EventArgs e)
+        {
+            int PageWidth = int.Parse(cXmlBase.getNodeInnerText(filePathSectionCss, cXEGeopage.xmlFullPathPageWidth));
+            int PageHeight = int.Parse(cXmlBase.getNodeInnerText(filePathSectionCss, cXEGeopage.xmlFullPathPageHeight));
+            cSectionUIoperate.setOffSet(this.webBrowserSVG, new Point(PageHeight, PageWidth));
+        }
+
+        private void tsmiViewWell_Click(object sender, EventArgs e)
+        {
+            TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                //获取井的位置
+                XmlNode selectWell = cXmlDocSectionGeo.selectNodeByID(this.filePathSectionCss, this.sJH);
+                if (selectWell != null)
+                {
+                    float fMapScale = float.Parse(cXmlBase.getNodeInnerText(filePathSectionCss, cXEGeopage.fullPathSacleMap));
+                    int xView = (int)(fMapScale*float.Parse(selectWell["Xview"].InnerText));
+                    int yView = (int)(fMapScale*float.Parse(selectWell["Yview"].InnerText));
+                    cSectionUIoperate.setOffSet(this.webBrowserSVG, new Point(xView, yView));
+                }
+                
+            }
+        }
+
+        private void tsmiWellPositionAdjust_Click(object sender, EventArgs e)
+        {
+            FormSettingFenceWellPositionView newset = new FormSettingFenceWellPositionView(this.filePathSectionCss, this.sJH);
+            newset.ShowDialog();
+        }
+
+        private void tsUndo_Click(object sender, EventArgs e)
+        {
+            undo();
+        }
+
+        private void tsRedo_Click(object sender, EventArgs e)
+        {
+            redo();
+        }
+        void setUnDoRedoEnable()
+        {
+            if (RedoList.Count == 0)
+            {
+                this.tsbRedo.Enabled = false;
+                this.tsmiRedo.Enabled = false;
+            }
+            else
+            {
+                this.tsbRedo.Enabled = true;
+                this.tsmiRedo.Enabled = true;
+            }
+            if (UndoList.Count <= 1)
+            {
+                this.tsbUndo.Enabled = false;
+                this.tsmiUndo.Enabled = false;
+            }
+            else
+            {
+                this.tsbUndo.Enabled = true;
+                this.tsmiUndo.Enabled = true;
+            }
+        }
+        void redo()
+        {
+            if (RedoList.Count > 0)
+            {
+                iSwichHis = 1;
+                UndoList.Push(RedoList.Pop());
+                string curHisDir = UndoList.Peek();
+                //文件还原
+                // 还原联井文件
+                string sectionHisCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionCss));
+                File.Copy(sectionHisCss, this.filePathSectionCss, true);
+                string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
+                foreach (string filePath in filePaths)
+                {
+                    string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
+                    File.Copy(filePath, newFilePath, true);
+                }
+                updateTVandList();
+                makeSVGmap();
+            }
+            setUnDoRedoEnable();
+        }
+
+        void undo()
+        {
+            if (UndoList.Count > 1)
+            {
+                iSwichHis = 1;
+                RedoList.Push(UndoList.Pop());
+                if (RedoList.Count > 0)
+                {
+                    this.tsbRedo.Enabled = true;
+                    this.tsmiUndo.Enabled = true;
+                }
+                string curHisDir = UndoList.Peek();
+                //文件还原
+                // 还原联井文件
+                string sectionCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionCss));
+                File.Copy(sectionCss, this.filePathSectionCss, true);
+                //还原各井文件
+                string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
+                foreach (string filePath in filePaths)
+                {
+                    string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
+                    File.Copy(filePath, newFilePath, true);
+                }
+                updateTVandList();
+                makeSVGmap();
+            }
+            setUnDoRedoEnable();
         }
     }
 } 

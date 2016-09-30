@@ -306,6 +306,12 @@
     <Compile Include="FormSectionAddSymbol.Designer.cs">
       <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSettingFenceWellPositionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingFenceWellPositionView.Designer.cs">
+      <DependentUpon>FormSettingFenceWellPositionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSettingModeIntervalFence.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1035,6 +1041,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSectionAddSymbol.resx">
       <DependentUpon>FormSectionAddSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingFenceWellPositionView.resx">
+      <DependentUpon>FormSettingFenceWellPositionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSettingModeIntervalFence.resx">
       <DependentUpon>FormSettingModeIntervalFence.cs</DependentUpon>

@@ -445,3 +445,4 @@ E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageFence.resou
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageSection.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalFence.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalGeo.resources
+E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingFenceWellPositionView.resources

@@ -1296,7 +1296,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1803,7 +1803,7 @@
             this.tsmiSectionFenceCopy,
             this.tsmiSectionFenceDel});
             this.cmsTNSectionFence.Name = "cmsProjectGrapth";
-            this.cmsTNSectionFence.Size = new System.Drawing.Size(153, 114);
+            this.cmsTNSectionFence.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiSectionFenceOpen
             // 
@@ -1822,7 +1822,7 @@
             // tsmiSectionFenceCopy
             // 
             this.tsmiSectionFenceCopy.Name = "tsmiSectionFenceCopy";
-            this.tsmiSectionFenceCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionFenceCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionFenceCopy.Text = "复制";
             this.tsmiSectionFenceCopy.Click += new System.EventHandler(this.tsmiSectionFenceCopy_Click);
             // 

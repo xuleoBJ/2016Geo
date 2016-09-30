@@ -114,7 +114,10 @@ namespace DOGPlatform
             }
 
             //设定井的放置位置
-            makeSectionFence.setXYPositionViewFence(filePathSectionCss, listWellsSection);
+            if (rbsWellPositionRelative.Checked == true) 
+                makeSectionFence.setXYPositionViewFenceRelative(filePathSectionCss, listWellsSection);
+            else 
+                makeSectionFence.setXYPositionViewFence(filePathSectionCss, listWellsSection);
             //初始化显示层段
             makeSectionFence.makeNewShowDepth(filePathSectionCss, listWellsSection);
             cXmlDocSectionGeo.write2css(listWellsSection, filePathSectionCss);

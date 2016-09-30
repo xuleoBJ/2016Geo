@@ -38,6 +38,8 @@
             this.lblChooseModle = new System.Windows.Forms.Label();
             this.btnDataPre = new System.Windows.Forms.Button();
             this.cbbSelectTemplate = new System.Windows.Forms.ComboBox();
+            this.rdbWellPositionABS = new System.Windows.Forms.RadioButton();
+            this.rbsWellPositionRelative = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnSelectAll
@@ -128,7 +130,7 @@
             // 
             // btnDataPre
             // 
-            this.btnDataPre.Location = new System.Drawing.Point(251, 284);
+            this.btnDataPre.Location = new System.Drawing.Point(233, 330);
             this.btnDataPre.Name = "btnDataPre";
             this.btnDataPre.Size = new System.Drawing.Size(96, 26);
             this.btnDataPre.TabIndex = 70;
@@ -141,14 +143,38 @@
             this.cbbSelectTemplate.FormattingEnabled = true;
             this.cbbSelectTemplate.Location = new System.Drawing.Point(60, 288);
             this.cbbSelectTemplate.Name = "cbbSelectTemplate";
-            this.cbbSelectTemplate.Size = new System.Drawing.Size(176, 20);
+            this.cbbSelectTemplate.Size = new System.Drawing.Size(287, 20);
             this.cbbSelectTemplate.TabIndex = 72;
+            // 
+            // rdbWellPositionABS
+            // 
+            this.rdbWellPositionABS.AutoSize = true;
+            this.rdbWellPositionABS.Checked = true;
+            this.rdbWellPositionABS.Location = new System.Drawing.Point(24, 335);
+            this.rdbWellPositionABS.Name = "rdbWellPositionABS";
+            this.rdbWellPositionABS.Size = new System.Drawing.Size(71, 16);
+            this.rdbWellPositionABS.TabIndex = 73;
+            this.rdbWellPositionABS.TabStop = true;
+            this.rdbWellPositionABS.Text = "绝对井位";
+            this.rdbWellPositionABS.UseVisualStyleBackColor = true;
+            // 
+            // rbsWellPositionRelative
+            // 
+            this.rbsWellPositionRelative.AutoSize = true;
+            this.rbsWellPositionRelative.Location = new System.Drawing.Point(127, 335);
+            this.rbsWellPositionRelative.Name = "rbsWellPositionRelative";
+            this.rbsWellPositionRelative.Size = new System.Drawing.Size(71, 16);
+            this.rbsWellPositionRelative.TabIndex = 74;
+            this.rbsWellPositionRelative.Text = "相对井位";
+            this.rbsWellPositionRelative.UseVisualStyleBackColor = true;
             // 
             // FormSectionAddGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 332);
+            this.ClientSize = new System.Drawing.Size(419, 393);
+            this.Controls.Add(this.rbsWellPositionRelative);
+            this.Controls.Add(this.rdbWellPositionABS);
             this.Controls.Add(this.cbbSelectTemplate);
             this.Controls.Add(this.btnDataPre);
             this.Controls.Add(this.lblChooseModle);
@@ -181,5 +207,7 @@
         private System.Windows.Forms.Label lblChooseModle;
         private System.Windows.Forms.Button btnDataPre;
         private System.Windows.Forms.ComboBox cbbSelectTemplate;
+        private System.Windows.Forms.RadioButton rdbWellPositionABS;
+        private System.Windows.Forms.RadioButton rbsWellPositionRelative;
     }
 }

@@ -176,6 +176,19 @@ namespace DOGPlatform
              }
              return offPointRet;
          }
-        
+
+         public static void setOffSet(WebBrowser wbSVG , Point offPointRet )
+         {
+             if (wbSVG.Document != null)
+             {
+                 HtmlElementCollection eleCol = wbSVG.Document.GetElementsByTagName("svg");
+                 if (eleCol.Count > 0)
+                 {
+                     HtmlElement ele = eleCol[0];
+                     ele.ScrollLeft = offPointRet.X;
+                     ele.ScrollTop = offPointRet.Y; 
+                 }
+             }
+         }
     }
 }

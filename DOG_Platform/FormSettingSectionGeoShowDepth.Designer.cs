@@ -139,7 +139,7 @@
             // 
             this.rdbMD.AutoSize = true;
             this.rdbMD.Checked = true;
-            this.rdbMD.Location = new System.Drawing.Point(32, 23);
+            this.rdbMD.Location = new System.Drawing.Point(17, 23);
             this.rdbMD.Name = "rdbMD";
             this.rdbMD.Size = new System.Drawing.Size(47, 16);
             this.rdbMD.TabIndex = 69;
@@ -150,7 +150,7 @@
             // rdbEle
             // 
             this.rdbEle.AutoSize = true;
-            this.rdbEle.Location = new System.Drawing.Point(133, 23);
+            this.rdbEle.Location = new System.Drawing.Point(79, 23);
             this.rdbEle.Name = "rdbEle";
             this.rdbEle.Size = new System.Drawing.Size(47, 16);
             this.rdbEle.TabIndex = 70;
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 189);
+            this.ClientSize = new System.Drawing.Size(266, 182);
             this.Controls.Add(this.cbxShowWellBase);
             this.Controls.Add(this.rdbEle);
             this.Controls.Add(this.rdbMD);
