@@ -55,6 +55,7 @@
             this.btnClearConnectLayer.TabIndex = 81;
             this.btnClearConnectLayer.Text = "清除所有层段连接";
             this.btnClearConnectLayer.UseVisualStyleBackColor = true;
+            this.btnClearConnectLayer.Click += new System.EventHandler(this.btnClearConnectLayer_Click);
             // 
             // btnConnectLayerByTop
             // 
@@ -64,6 +65,7 @@
             this.btnConnectLayerByTop.TabIndex = 80;
             this.btnConnectLayerByTop.Text = "同名层段连接";
             this.btnConnectLayerByTop.UseVisualStyleBackColor = true;
+            this.btnConnectLayerByTop.Click += new System.EventHandler(this.btnConnectLayerByTop_Click);
             // 
             // groupBox3
             // 

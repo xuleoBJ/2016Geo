@@ -14,6 +14,15 @@ namespace DOGPlatform
     class makeSectionFence
     {
         public static int iPositionXFirstWell = 200;
+
+        static double transformX(double fHScaleWellDistance, string Xpoint)
+        {
+            return transformX(fHScaleWellDistance, double.Parse(Xpoint));
+        }
+        static double transformX(double fHScaleWellDistance, double Xpoint)
+        {
+            return fHScaleWellDistance * Xpoint + makeSectionGeo.iPositionXFirstWell - makeSectionGeo.iPositionXFirstWell * fHScaleWellDistance;
+        }
         public static string generateFence(string dirSectionData, string pathSectionCss, string filenameSVGMap)
         {
             //定义页面大小 及 纵向平移
@@ -21,11 +30,241 @@ namespace DOGPlatform
 
             //读取page设置全局类
             cXEGeopage curPage = new cXEGeopage(pathSectionCss);
+            int iPageTopYOff = 0;
 
             cSVGDocSection svgSection = new cSVGDocSection(curPage.PageWidth, curPage.PageHeight, 0, 0, curPage.sUnit);
 
             //定义返回的xmlElement变量，作为调用各种加入的道的返回值
             XmlElement returnElemment;
+            XmlDocument XDocSection = new XmlDocument();
+            XDocSection.Load(pathSectionCss);
+            #region 断层 绘制断层 并把断层数据存入List 供连层时计算使用
+            XmlElement gLayerFault = svgSection.gLayerElement("断层");
+            string faultPath = "/SectionMap/FaultInfor/FaultItem";
+            List<itemDrawDataFaultItem> listFaultItem = new List<itemDrawDataFaultItem>();
+            foreach (XmlNode xn in XDocSection.SelectNodes(faultPath))
+            {
+                itemDrawDataFaultItem faultItem = new itemDrawDataFaultItem(xn);
+                string sID = xn.Attributes["id"].Value;
+                double x1 = transformX(curPage.fHScaleWellDistance, xn.Attributes["x1"].Value);
+                double y1 = double.Parse(xn.Attributes["y1"].Value) * curPage.fVscale;
+                double x2 = transformX(curPage.fHScaleWellDistance, xn.Attributes["x2"].Value);
+                double y2 = double.Parse(xn.Attributes["y2"].Value) * curPage.fVscale;
+
+                faultItem.x1View = x1;
+                faultItem.y1View = y1;
+                faultItem.x2View = x2;
+                faultItem.y2View = y2;
+                faultItem.displacementView = faultItem.displacement * curPage.fHScaleWellDistance;
+
+                XmlElement faultLine = svgSection.svgDoc.CreateElement("line");
+                faultLine.SetAttribute("id", sID);
+                faultLine.SetAttribute("stroke-width", "2");
+                faultLine.SetAttribute("onclick", "getID(evt)");
+                //左侧的绘制
+                faultLine.SetAttribute("x1", x1.ToString("0.0"));
+                faultLine.SetAttribute("y1", y1.ToString("0.0"));
+                faultLine.SetAttribute("x2", x2.ToString("0.0"));
+                faultLine.SetAttribute("y2", y2.ToString("0.0"));
+
+                faultLine.SetAttribute("stroke", "red");
+                faultLine.SetAttribute("fill", "red");
+                svgSection.addgElement2Layer(gLayerFault, faultLine, svgSection.offsetX_gSVG, iPageTopYOff);
+
+                listFaultItem.Add(faultItem);
+
+            }
+            #endregion
+            #region   先画连接层 判断是否切割，非切割的直接连接，切割的得重画
+            string pathTrack = "/SectionMap/ConnectInfor/ConnectItem";
+            //首先得判断是否多边形与断层线相交
+            XmlElement gLayerConnectJSJL = svgSection.gLayerElement("测井解释");
+            XmlElement gLayerConnectLayer = svgSection.gLayerElement("分层");
+            XmlElement gLayerConnectLitho = svgSection.gLayerElement("岩性");
+            XmlElement gLayerConnectBase = svgSection.gLayerElement("连接");
+            svgSection.addgLayer(gLayerConnectLayer, 0, 0);
+            foreach (XmlNode xn in XDocSection.SelectNodes(pathTrack))
+            {
+                if (xn.Attributes["id"] != null)
+                {
+                    string sID = xn.Attributes["id"].Value;
+                    int iShowMode = int.Parse(xn.Attributes["iShowMode"].Value);
+                    string strTypeTrack = xn.Attributes["trackType"].Value;
+                    string sFill = xn.Attributes["sFill"].Value;
+                    #region 画连接层 模式1
+                    if (iShowMode == 1)
+                    {
+                        XmlNode rect1 = xn.SelectSingleNode("rect1");
+                        string sIDtrack1 = rect1.Attributes["sIDtrack"].Value;
+                        string wellID1 = rect1.Attributes["wellID"].Value;
+                        string sIDitem1 = rect1.Attributes["sIDitem"].Value;
+
+                        string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
+                        cDataItemConnect item1 = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
+
+                        XmlNode rect2 = xn.SelectSingleNode("rect2");
+                        string sIDtrack2 = rect2.Attributes["sIDtrack"].Value;
+                        string wellID2 = rect2.Attributes["wellID"].Value;
+                        string sIDitem2 = rect2.Attributes["sIDitem"].Value;
+                        string filePathOperWell2 = dirSectionData + "//" + wellID2 + ".xml";
+                        cDataItemConnect item2 = new cDataItemConnect(pathSectionCss, filePathOperWell2, wellID2, sIDtrack2, sIDitem2);
+                        if (wellID1 != "" && sIDtrack1 != "" && wellID2 != "" && sIDtrack2 != "")
+                        {
+                            List<string> ltPathd = makeConnectPath.makePathd(listFaultItem, item1, item2);
+                            foreach (string d in ltPathd)
+                            {
+                                XmlElement connectPath = svgSection.svgDoc.CreateElement("path");
+                                connectPath.SetAttribute("id", sID);
+                                connectPath.SetAttribute("stroke-width", "1");
+                                connectPath.SetAttribute("onclick", "getID(evt)");
+                                connectPath.SetAttribute("stroke", "black");
+                                connectPath.SetAttribute("d", d);
+                                string fillType = "none";
+                                if (strTypeTrack == TypeTrack.测井解释.ToString())
+                                {
+                                    fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill);
+                                    connectPath.SetAttribute("fill", fillType);
+                                    svgSection.addgElement2Layer(gLayerConnectJSJL, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                                }
+                                else if (strTypeTrack == TypeTrack.分层.ToString())
+                                {
+                                    fillType = cSVGSectionTrackLayer.getLayerFillColor(sFill);
+                                    connectPath.SetAttribute("fill", fillType);
+                                    svgSection.addgElement2Layer(gLayerConnectLayer, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                                }
+                                else if (strTypeTrack == TypeTrack.岩性层段.ToString())
+                                {
+                                    fillType = cSVGSectionTrackLayer.getLayerFillColor(sFill);
+                                    connectPath.SetAttribute("fill", fillType);
+                                    svgSection.addgElement2Layer(gLayerConnectLitho, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                                }
+                                else
+                                {
+                                    connectPath.SetAttribute("fill", "none");
+                                    svgSection.addgElement2Layer(gLayerConnectBase, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                                }
+                            }
+                        }
+                    }
+                    #endregion
+
+                    #region 尖灭模式
+                    else
+                    {
+                        XmlNode rect1 = xn.SelectSingleNode("rect1");
+                        string sIDtrack1 = rect1.Attributes["sIDtrack"].Value;
+                        string wellID1 = rect1.Attributes["wellID"].Value;
+                        string sIDitem1 = rect1.Attributes["sIDitem"].Value;
+
+                        if (wellID1 != "" && sIDtrack1 != "")
+                        {
+                            string filePathOperWell1 = dirSectionData + "//" + wellID1 + ".xml";
+                            cDataItemConnect connectItem = new cDataItemConnect(pathSectionCss, filePathOperWell1, wellID1, sIDtrack1, sIDitem1);
+
+                            double fExtanceLength = 100;
+                            int indexWell = listWellsSection.IndexOf(listWellsSection.SingleOrDefault(p => p.sJH == wellID1));
+                            if (indexWell < listWellsSection.Count - 1) fExtanceLength = (listWellsSection[indexWell + 1].fXview - listWellsSection[indexWell].fXview) * 0.35;
+
+                            string d = "";
+                            if (iShowMode == (int)TypeModeGeoOperate.channelRight) //右河道
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 + fExtanceLength;
+                                double y3 = y2;
+                                double x4 = x1 + fExtanceLength;
+                                double y4 = y1;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+                            if (iShowMode == (int)TypeModeGeoOperate.channelLeft) //左河道
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 - fExtanceLength;
+                                double y3 = y2;
+                                double x4 = x1 - fExtanceLength;
+                                double y4 = y1;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + " L " + x2.ToString() + " " + y2.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+
+                            if (iShowMode == (int)TypeModeGeoOperate.barRight) //右坝
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 + fExtanceLength;
+                                double y3 = y1;
+                                double x4 = x1 + fExtanceLength;
+                                double y4 = y2;
+                                d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+
+                            if (iShowMode == (int)TypeModeGeoOperate.barLeft) //左坝
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                double x3 = x1 - fExtanceLength;
+                                double y3 = y1;
+                                double x4 = x1 - fExtanceLength;
+                                double y4 = y2;
+                                d = "M " + x2.ToString() + " " + y2.ToString() + " L " + x1.ToString() + " " + y1.ToString() +
+                                     " Q " + x3.ToString() + " " + y3.ToString() + " " + x4.ToString() + " " + y4.ToString() + " z ";
+                            }
+                            if (iShowMode == (int)TypeModeGeoOperate.pinchOutRight) //右尖灭
+                            {
+                                double x1 = connectItem.x1 + connectItem.width;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1 + connectItem.width;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + "h " + fExtanceLength.ToString() + "l -" + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l " + (0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
+                                    + " L " + x2.ToString() + " " + y2.ToString() + " z ";
+                            }
+
+                            if (iShowMode == (int)TypeModeGeoOperate.pinchOutLeft) //左尖灭
+                            {
+                                double x1 = connectItem.x1;
+                                double y1 = connectItem.y1;
+                                double x2 = connectItem.x1;
+                                double y2 = connectItem.y1 + connectItem.height;
+                                d = "M " + x1.ToString() + " " + y1.ToString() + "h-" + fExtanceLength.ToString() + "l " + (0.2 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " " + "l -" + (0.1 * fExtanceLength).ToString() + " " + (connectItem.height / 2).ToString() + " "
+                                    + " L " + x2.ToString() + " " + y2.ToString() + " z ";
+                            }
+                            XmlElement connectPath = svgSection.svgDoc.CreateElement("path");
+                            connectPath.SetAttribute("id", sID);
+                            connectPath.SetAttribute("stroke-width", "1");
+                            connectPath.SetAttribute("onclick", "getID(evt)");
+                            connectPath.SetAttribute("stroke", "black");
+                            connectPath.SetAttribute("d", d);
+                            string fillType = "none";
+                            if (strTypeTrack == TypeTrack.测井解释.ToString())
+                            {
+                                fillType = codeReplace.codeReplaceJSJL2FillUrl(sFill);
+                                connectPath.SetAttribute("fill", fillType);
+                                svgSection.addgElement2Layer(gLayerConnectJSJL, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                            }
+                            else if (strTypeTrack == TypeTrack.分层.ToString())
+                            {
+                                fillType = cSVGSectionTrackLayer.getLayerFillColor(sFill);
+                                connectPath.SetAttribute("fill", fillType);
+                                svgSection.addgElement2Layer(gLayerConnectLayer, connectPath, svgSection.offsetX_gSVG, iPageTopYOff);
+                            }
+                        } //end if wellID 不能为空
+                    }
+                    #endregion
+                }
+
+            }
+            #endregion
             //在listWellSection中循环，一口一口井的加入剖面
             for (int i = 0; i < listWellsSection.Count; i++)
             {
@@ -40,7 +279,10 @@ namespace DOGPlatform
                 returnElemment = cSVGSectionWell.gWellHead(svgSection.svgDoc, sJH, curPage.fMapScale * listWellsSection[i].fXview, curPage.fMapScale * listWellsSection[i].fYview, 18);
                 svgSection.addgElement2BaseLayer(returnElemment, 0, 0);
             }
-
+            svgSection.addgLayer(gLayerConnectBase, 0, 0);
+            svgSection.addgLayer(gLayerConnectLitho, 0, 0);
+            svgSection.addgLayer(gLayerConnectJSJL, 0, 0);
+            svgSection.addgLayer(gLayerFault, 0, 0);
             string fileSVG = Path.Combine(cProjectManager.dirPathTemp, filenameSVGMap);
             svgSection.makeSVGfile(fileSVG);
             return fileSVG;

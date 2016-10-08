@@ -146,14 +146,62 @@ namespace DOGPlatform
             iSwichHis = 0;
             dtLastStop = DateTime.Now;
         }
+
+        HtmlDocument htmlDoc;
         private void webBrowserSVG_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            // 定位上次页面位置
-            if (webBrowserSVG.Url == e.Url)
+            htmlDoc = webBrowserSVG.Document;
+            if (htmlDoc != null)
             {
-                //记录元素的位置，实现刷新页面自动滚动
-                webBrowserSVG.Document.Window.ScrollTo(PscrollOffset);
+                // 定位上次页面位置
+                if (webBrowserSVG.Url == e.Url)
+                {
+                    //记录元素的位置，实现刷新页面自动滚动
+                    webBrowserSVG.Document.Window.ScrollTo(PscrollOffset);
+                }
+                htmlDoc.MouseDown -= htmlDoc_MouseDown;
+                htmlDoc.MouseDown += htmlDoc_MouseDown;
             }
+        }
+
+        PointD docCoord = new PointD();
+        
+
+        void htmlDoc_MouseDown(object sender, HtmlElementEventArgs e)
+        {
+            PscrollOffset = cSectionUIoperate.getOffSet(this.webBrowserSVG);
+            Point ScreenCoord = new Point(e.MousePosition.X, e.MousePosition.Y);
+            //double currentX = (ScreenCoord.X + PscrollOffset.X - makeSectionGeo.iPositionXFirstWell) / fWellDistanceHScale + makeSectionGeo.iPositionXFirstWell;
+            //double currentDepth = (ScreenCoord.Y + PscrollOffset.Y) / fVscale - iPageTopElevation;
+            //PointD docCoord = new PointD(currentX, currentDepth);
+            //lblClick.Location = ScreenCoord;
+            //ltMousePos.Add(docCoord);
+            // Point BrowserCoord = webBrowserSVG.PointToClient(ScreenCoord);
+            this.tsslblWb.Text = "记录点数=" + ltMousePos.Count.ToString() + " X=" + docCoord.X.ToString("0.00") + " Y=" + docCoord.Y.ToString("0.00");
+            if (iOperateMode == (int)TypeModeGeoOperate.fault || iOperateMode == (int)TypeModeGeoOperate.revertFault)
+            {
+                if (ltMousePos.Count == 1)
+                {
+                    tsslblWb.Text = "正等待点击确认第二个断点位置。";
+                }
+                if (ltMousePos.Count == 2)
+                {
+                    faultMode(iOperateMode);
+                    ltMousePos.Clear();
+                    iOperateMode = 0;
+                }
+            }
+        }
+
+        void faultMode(int iOperateMode)
+        {
+            double displacement = 1.0;
+            //string strRet = tsTextFaultDisplacement.Text;
+            //double.TryParse(strRet, out displacement);
+            //cXmlDocSectionGeo.addFaultItem(this.filePathSectionGeoCss, ltMousePos[0], ltMousePos[1], displacement);
+            //tsTextFaultDisplacement.Visible = false;
+            //tslblFaulDisplacement.Visible = false;
+            //makeSVGmap();
         }
 
         private void tsBtnNewProject_Click(object sender, EventArgs e)
@@ -444,6 +492,7 @@ namespace DOGPlatform
             makeSVGmap();
         }
 
+        #region 横向缩放
         private void tsBtnZoonOutHItem1_5_Click(object sender, EventArgs e)
         {
             setXYview(1.5F);
@@ -474,6 +523,8 @@ namespace DOGPlatform
             setXYview(5.0F);
         }
 
+        #endregion
+
         private void tsmiRename_Click(object sender, EventArgs e)
         {
             string originalFileName = this.tbgEditView.Text;
@@ -494,8 +545,6 @@ namespace DOGPlatform
                 this.tbgEditView.Text = newInputFileName;
             }
         }
-
-
 
         private void tsmiTemplateSaveAs_Click(object sender, EventArgs e)
         {
@@ -715,11 +764,11 @@ namespace DOGPlatform
             newset.ShowDialog();
         }
 
+        #region 撤销重做
         private void tsUndo_Click(object sender, EventArgs e)
         {
             undo();
         }
-
         private void tsRedo_Click(object sender, EventArgs e)
         {
             redo();
@@ -769,7 +818,6 @@ namespace DOGPlatform
             }
             setUnDoRedoEnable();
         }
-
         void undo()
         {
             if (UndoList.Count > 1)
@@ -797,6 +845,23 @@ namespace DOGPlatform
                 makeSVGmap();
             }
             setUnDoRedoEnable();
+        }
+        #endregion
+
+        private void tsbConnectLayer_Click(object sender, EventArgs e)
+        {
+             selectConnectMode((int)TypeModeGeoOperate.connectTwo);
+        }
+
+        List<string> ltSelectID = new List<string>();
+        List<PointD> ltMousePos = new List<PointD>();
+        int iOperateMode = 0;
+
+        void selectConnectMode(int iOption)
+        {
+            ltSelectID.Clear();
+            iOperateMode = iOption;
+            this.tsslblIDinfor.Text = string.Format("已选择{0}个对象,操作模式{1}", ltSelectID.Count, (TypeModeGeoOperate)iOperateMode);
         }
     }
 } 

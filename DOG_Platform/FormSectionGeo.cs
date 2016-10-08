@@ -662,7 +662,7 @@ namespace DOGPlatform
              iOperateMode = (int)TypeModeGeoOperate.revertFault ; //逆断层模式
              tsslblWb.Text = "开启逆断层模式，请点击确认2个断点。"; //方法在 webdocument的 mousedown事件内
          }
-
+         #region redo undo
          private Stack<string> UndoList = new Stack<string>();
          private Stack<string> RedoList = new Stack<string>();
          private string dirHisUnto = cProjectManager.dirPathHis;
@@ -700,60 +700,60 @@ namespace DOGPlatform
          {
              redo();
          }
-        
-        void redo() 
-        {
-            if (RedoList.Count > 0)
-            {
-                iSwichHis = 1;
-                UndoList.Push(RedoList.Pop());
-                string curHisDir = UndoList.Peek();
-                //文件还原
-                // 还原联井文件
-                string sectionHisCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionGeoCss));
-                File.Copy(sectionHisCss, this.filePathSectionGeoCss, true);
-                string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
-                foreach (string filePath in filePaths) 
-                {
-                    string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
-                    File.Copy(filePath, newFilePath, true);
-                }
-                updateTVandList();
-                makeSVGmap();
-            }
-            setUnDoRedoEnable();
-        }
-        
-        void undo()
-        {
-            if (UndoList.Count > 1)
-            {
-                iSwichHis = 1;
-                RedoList.Push(UndoList.Pop());
-                if (RedoList.Count > 0)
-                {
-                    this.tsbRedo.Enabled = true;
-                    this.tsmiUndo.Enabled = true;
-                }
-                string curHisDir = UndoList.Peek();
-                //文件还原
-                // 还原联井文件
-                string sectionCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionGeoCss));
-                File.Copy(sectionCss, this.filePathSectionGeoCss, true);
-                //还原各井文件
-                string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
-                foreach (string filePath in filePaths)
-                {
-                    string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
-                    File.Copy(filePath, newFilePath, true);
-                }
-                updateTVandList();
-                makeSVGmap();
-            }
-            setUnDoRedoEnable();
-        }
 
-        private void FormSectionGeo_FormClosed(object sender, FormClosedEventArgs e)
+         void redo()
+         {
+             if (RedoList.Count > 0)
+             {
+                 iSwichHis = 1;
+                 UndoList.Push(RedoList.Pop());
+                 string curHisDir = UndoList.Peek();
+                 //文件还原
+                 // 还原联井文件
+                 string sectionHisCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionGeoCss));
+                 File.Copy(sectionHisCss, this.filePathSectionGeoCss, true);
+                 string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
+                 foreach (string filePath in filePaths)
+                 {
+                     string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
+                     File.Copy(filePath, newFilePath, true);
+                 }
+                 updateTVandList();
+                 makeSVGmap();
+             }
+             setUnDoRedoEnable();
+         }
+
+         void undo()
+         {
+             if (UndoList.Count > 1)
+             {
+                 iSwichHis = 1;
+                 RedoList.Push(UndoList.Pop());
+                 if (RedoList.Count > 0)
+                 {
+                     this.tsbRedo.Enabled = true;
+                     this.tsmiUndo.Enabled = true;
+                 }
+                 string curHisDir = UndoList.Peek();
+                 //文件还原
+                 // 还原联井文件
+                 string sectionCss = Path.Combine(curHisDir, Path.GetFileName(this.filePathSectionGeoCss));
+                 File.Copy(sectionCss, this.filePathSectionGeoCss, true);
+                 //还原各井文件
+                 string[] filePaths = Directory.GetFiles(curHisDir, "*.xml");
+                 foreach (string filePath in filePaths)
+                 {
+                     string newFilePath = Path.Combine(dirSectionData, Path.GetFileName(filePath));
+                     File.Copy(filePath, newFilePath, true);
+                 }
+                 updateTVandList();
+                 makeSVGmap();
+             }
+             setUnDoRedoEnable();
+         }
+         #endregion 
+         private void FormSectionGeo_FormClosed(object sender, FormClosedEventArgs e)
         {
             cPublicMethodBase.DirectoryDelAllFiles(dirHisUnto);
         }

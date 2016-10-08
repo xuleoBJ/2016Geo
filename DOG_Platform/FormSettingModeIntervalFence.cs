@@ -13,13 +13,13 @@ namespace DOGPlatform
 {
     public partial class FormSettingModeIntervalFence : Form
     {
-         string filePathSectionGeoCss;
+        string filePathSectionCss;
         string dirSectionData;
         List<ItemWellSection> listWellsSection = new List<ItemWellSection>();
-        public FormSettingModeIntervalFence(string _filePathSectionGeoCss, string _dirSectionData)
+        public FormSettingModeIntervalFence(string _filePathSectionCss, string _dirSectionData)
         {
             InitializeComponent();
-            filePathSectionGeoCss = _filePathSectionGeoCss;
+            filePathSectionCss = _filePathSectionCss;
             dirSectionData = _dirSectionData;
             initialForm();
         }
@@ -31,7 +31,7 @@ namespace DOGPlatform
         {
             cPublicMethodForm.inialComboBox(cbbTopXCM, cProjectData.ltStrProjectXCM);
             cPublicMethodForm.inialComboBox(cbbBottomXCM, cProjectData.ltStrProjectXCM);
-            foreach (XmlElement elWell in cXmlDocSectionGeo.getWellNodes(filePathSectionGeoCss))
+            foreach (XmlElement elWell in cXmlDocSectionGeo.getWellNodes(filePathSectionCss))
             {
                 ItemWellSection item = new ItemWellSection(elWell["JH"].InnerText);
                 item.fShowedDepthTop = float.Parse(elWell["fShowTop"].InnerText);
@@ -78,11 +78,67 @@ namespace DOGPlatform
                     {
                         item.fShowedDepthTop = fListDS1Return.Min() - _up;
                         item.fShowedDepthBase = fListDS1Return.Max() + _down;
-                        cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "fShowTop", item.fShowedDepthTop.ToString("0"));
-                        cXmlBase.setSelectedNodeChildNodeValue(filePathSectionGeoCss, sJH, "fShowBot", item.fShowedDepthBase.ToString("0"));
+                        cXmlBase.setSelectedNodeChildNodeValue(filePathSectionCss, sJH, "fShowTop", item.fShowedDepthTop.ToString("0"));
+                        cXmlBase.setSelectedNodeChildNodeValue(filePathSectionCss, sJH, "fShowBot", item.fShowedDepthBase.ToString("0"));
                     }
                 }//end foreach
             }//end if
+        }
+
+        private void btnConnectLayerByTop_Click(object sender, EventArgs e)
+        {
+            List<string> ltStrSelectedXCM = getSelectListLayer();
+            foreach (string sXCM in ltStrSelectedXCM)
+            {
+                for (int i = 0; i < listWellsSection.Count - 1; i++)
+                {
+                    //搜索单井和下一口井的地层名；地层名必须唯一
+                    cDataItemConnect selectItem1 = getLayerItem(listWellsSection[i].sJH, sXCM);
+                    cDataItemConnect selectItem2 = getLayerItem(listWellsSection[i + 1].sJH, sXCM);
+                    cXmlDocSectionGeo.addConnectDataItem(this.filePathSectionCss, 1, selectItem1, selectItem2);
+                }
+            }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        cDataItemConnect getLayerItem(string sJH, string sLayer)
+        {
+            cDataItemConnect dataItemConnect = new cDataItemConnect();
+
+            string filePathOper = dirSectionData + "//" + sJH + ".xml";
+
+            XmlDocument wellTemplateXML = new XmlDocument();
+            wellTemplateXML.Load(filePathOper);
+            //在文件道中循环，找到第一个地层道
+            XmlNodeList trackNodeList = cXmlDocSectionWell.getTrackNodes(filePathOper);
+            foreach (XmlNode xnTrack in trackNodeList)
+            {
+                if (xnTrack["trackType"].InnerText == TypeTrack.分层.ToString())
+                {
+                    dataItemConnect.sIDTrack = xnTrack.Attributes["id"].Value;
+                    dataItemConnect.sJH = sJH;
+                    dataItemConnect.typeTrack = TypeTrack.分层.ToString();
+                    string sPath = string.Format(".//sProperty[text()=\"{0}\"]", sLayer);
+                    XmlNode selectNode = xnTrack.SelectSingleNode(sPath);
+                    if (selectNode != null)
+                    {
+                        XmlNode dataItem = selectNode.ParentNode;
+                        dataItemConnect.sIDDataItem = dataItem.Attributes["id"].Value;
+                        dataItemConnect.sFill = sLayer;
+                        return dataItemConnect;
+                    }
+                }
+            }
+            return dataItemConnect;
+
+        }
+
+        private void btnClearConnectLayer_Click(object sender, EventArgs e)
+        {
+            cXmlDocSectionGeo.clearAllConnectDataItem(this.filePathSectionCss);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
