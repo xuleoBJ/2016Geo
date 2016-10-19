@@ -264,6 +264,15 @@ namespace DOGPlatform
             }   
         }
 
+        private void btnOpenFileDir_Click(object sender, EventArgs e)
+        {
+            if (filePathSourceLogFile != "")
+            {
+                string dirCurrent = Path.GetDirectoryName(filePathSourceLogFile); 
+                System.Diagnostics.Process.Start("explorer.exe", dirCurrent);
+            }
+        }
+
       
 
        

@@ -42,6 +42,7 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.tbxView = new System.Windows.Forms.TextBox();
             this.btnShowLogHead = new System.Windows.Forms.Button();
+            this.btnOpenFileDir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,15 +61,15 @@
             this.btnOpenDir.Name = "btnOpenDir";
             this.btnOpenDir.Size = new System.Drawing.Size(75, 23);
             this.btnOpenDir.TabIndex = 1;
-            this.btnOpenDir.Text = "目录";
+            this.btnOpenDir.Text = "选择文件";
             this.btnOpenDir.UseVisualStyleBackColor = true;
             this.btnOpenDir.Click += new System.EventHandler(this.btnOpenEX_Click);
             // 
             // tbxUserFilePath
             // 
-            this.tbxUserFilePath.Location = new System.Drawing.Point(93, 17);
+            this.tbxUserFilePath.Location = new System.Drawing.Point(107, 17);
             this.tbxUserFilePath.Name = "tbxUserFilePath";
-            this.tbxUserFilePath.Size = new System.Drawing.Size(543, 21);
+            this.tbxUserFilePath.Size = new System.Drawing.Size(529, 21);
             this.tbxUserFilePath.TabIndex = 2;
             // 
             // cbbLogFormat
@@ -82,9 +83,9 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(97, 556);
+            this.btnDelete.Location = new System.Drawing.Point(119, 556);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(91, 23);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "删除系列";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -130,9 +131,9 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(252, 556);
+            this.btnImport.Location = new System.Drawing.Point(226, 556);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(75, 23);
+            this.btnImport.Size = new System.Drawing.Size(91, 23);
             this.btnImport.TabIndex = 7;
             this.btnImport.Text = "导入系列";
             this.btnImport.UseVisualStyleBackColor = true;
@@ -159,12 +160,23 @@
             this.btnShowLogHead.UseVisualStyleBackColor = true;
             this.btnShowLogHead.Click += new System.EventHandler(this.btnShowLogHead_Click);
             // 
+            // btnOpenFileDir
+            // 
+            this.btnOpenFileDir.Location = new System.Drawing.Point(12, 556);
+            this.btnOpenFileDir.Name = "btnOpenFileDir";
+            this.btnOpenFileDir.Size = new System.Drawing.Size(91, 23);
+            this.btnOpenFileDir.TabIndex = 10;
+            this.btnOpenFileDir.Text = "打开文件目录";
+            this.btnOpenFileDir.UseVisualStyleBackColor = true;
+            this.btnOpenFileDir.Click += new System.EventHandler(this.btnOpenFileDir_Click);
+            // 
             // FormDataImportLog
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 596);
+            this.Controls.Add(this.btnOpenFileDir);
             this.Controls.Add(this.btnShowLogHead);
             this.Controls.Add(this.tbxView);
             this.Controls.Add(this.btnImport);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn logNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn logNameNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn logSUnit;
+        private System.Windows.Forms.Button btnOpenFileDir;
     }
 }
