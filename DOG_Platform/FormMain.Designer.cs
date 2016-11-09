@@ -1447,7 +1447,7 @@
             this.tsmiOpenAppSectionGeo,
             this.tsmiOpenAppSectionFence});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 158);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 180);
             // 
             // tsmiExpandAll
             // 
@@ -1474,7 +1474,7 @@
             // 
             this.tsmiColapseAll.Name = "tsmiColapseAll";
             this.tsmiColapseAll.Size = new System.Drawing.Size(160, 22);
-            this.tsmiColapseAll.Text = "收起";
+            this.tsmiColapseAll.Text = "折叠";
             this.tsmiColapseAll.Click += new System.EventHandler(this.tsmiColapseAll_Click);
             // 
             // tsmiMakeWellSection
@@ -1599,33 +1599,33 @@
             this.tsmiGraphCopy,
             this.tsmiGraphDelete});
             this.cmsTNprojectGrapthSVG.Name = "cmsProjectGrapth";
-            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(153, 114);
+            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiGraphEdit
             // 
             this.tsmiGraphEdit.Name = "tsmiGraphEdit";
-            this.tsmiGraphEdit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphEdit.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphEdit.Text = "编辑";
             this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
             // 
             // tsmiGraphRename
             // 
             this.tsmiGraphRename.Name = "tsmiGraphRename";
-            this.tsmiGraphRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphRename.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphRename.Text = "重命名";
             this.tsmiGraphRename.Click += new System.EventHandler(this.tsmiGraphRename_Click);
             // 
             // tsmiGraphCopy
             // 
             this.tsmiGraphCopy.Name = "tsmiGraphCopy";
-            this.tsmiGraphCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphCopy.Text = "复制";
             this.tsmiGraphCopy.Click += new System.EventHandler(this.tsmiGraphCopy_Click);
             // 
             // tsmiGraphDelete
             // 
             this.tsmiGraphDelete.Name = "tsmiGraphDelete";
-            this.tsmiGraphDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphDelete.Size = new System.Drawing.Size(112, 22);
             this.tsmiGraphDelete.Text = "删除";
             this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 

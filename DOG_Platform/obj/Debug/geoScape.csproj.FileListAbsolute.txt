@@ -370,7 +370,6 @@ D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionAddSymbol.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSVGplygon.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionLogInforByDepth.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectionWellCrossplot.resources
-D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeInterval.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSetGlobleLog.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingConnect.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingLayerColor.resources
@@ -380,7 +379,6 @@ D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionTrack.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingShowState.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingWellArrange.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSectAddNewWell.resources
-D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPage.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormProfileSelectWells.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionDataItemView.resources
 D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingSectionLayer.resources
@@ -439,10 +437,14 @@ D:\2016Geo\DOG_Platform\bin\Debug\DOGPlatform.pdb
 D:\2016Geo\DOG_Platform\bin\Debug\DigRobot.exe
 D:\2016Geo\DOG_Platform\bin\Debug\IronPython.dll
 D:\2016Geo\DOG_Platform\bin\Debug\DigRobot.pdb
-D:\2016Geo\DOG_Platform\bin\Debug\Microsoft.Scripting.AspNet.xml
 E:\2016geo\2016Geo\DOG_Platform\bin\Debug\IronPython.dll
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageFence.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageSection.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalFence.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalGeo.resources
 E:\2016geo\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingFenceWellPositionView.resources
+D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingFenceWellPositionView.resources
+D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalFence.resources
+D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageFence.resources
+D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingModeIntervalGeo.resources
+D:\2016Geo\DOG_Platform\obj\Debug\DOGPlatform.FormSettingPageSection.resources

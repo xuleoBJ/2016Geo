@@ -1,11 +1,11 @@
-﻿SP	自然电位	MV	blue	0	100	0	1	0
+﻿SP	自然电位	mV	blue	0	100	0	1	0
 CAL	井径	IN	black	20	40	0	1	0
-GR	自然伽玛	API	black	0	100	0	1	0
+GR	自然伽玛	gAPI	black	0	100	0	1	0
 Rt	地层真电阻率	OMM	red	2	200	1	1	0
 BS	BitSize	IN	black	5	15	0	1	0
-DT	声波时差	US/F	black	50	100	0	1	0
+DT	声波时差	us/ft	black	50	100	0	1	0
 AC	声波时差	μ/m	black	200	300	0	1	0
-RHOB	密度	G/C3	black	2	3	0	1	0
+RHOB	密度	g/cm3	black	2	3	0	1	0
 DEN	密度	g/cm3	black	2	3	0	1	0
 Rxo	冲洗带地层电阻率	OHMM	red	2	200	1	1	0
 Rd	深双侧向电阻率测井	OHMM	red	2	200	1	1	0
@@ -25,7 +25,13 @@ NGR	中子伽马	API	black	0	100	0	1	0
 U	铀	ppm	black	0	100	0	1	0
 K	钾	%	black	0	100	0	1	0
 TH	钍	ppm	black	0	100	0	1	0
-CALI	CALI		black	0	100	0	1	0
-MSFL	MSFL		black	0	100	0	1	0
-NPHI	NPHI		black	0	100	0	1	0
-RT	RT		black	0	100	0	1	0
+POR	POR	m3/m3	black	0	100	0	1	0
+CALI	CALI	in	black	0	100	0	1	0
+PHIN	PHIN	m3/m3	black	0	100	0	1	0
+RT	RT	ohm.m	black	0	100	0	1	0
+RXO	RXO	ohm.m	black	0	100	0	1	0
+PERM	PERM	mD	black	0	100	0	1	0
+SO	SO		black	0	100	0	1	0
+SW	SW		black	0	100	0	1	0
+OFLG	OFLG		black	0	100	0	1	0
+RI	RI		black	0	100	0	1	0

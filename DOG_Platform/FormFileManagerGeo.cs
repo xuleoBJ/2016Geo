@@ -300,21 +300,23 @@ namespace DOGPlatform
             System.Diagnostics.Process.Start("explorer.exe", dirCurrent);
         }
 
+       void addFile2WellDir()
+       {
+           OpenFileDialog ofdProjectPath = new OpenFileDialog();
+
+           ofdProjectPath.Title = " 添加文件到目录：";
+           ofdProjectPath.Filter = "所有文件|*.*";
+           //设置默认文件类型显示顺序 
+           ofdProjectPath.FilterIndex = 1;
+           //保存对话框是否记忆上次打开的目录 
+           ofdProjectPath.RestoreDirectory = true;
+
+           if (ofdProjectPath.ShowDialog() == DialogResult.OK) addFile(ofdProjectPath.FileName);
+       }
+
         private void tsmiAdd_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofdProjectPath = new OpenFileDialog();
-
-            ofdProjectPath.Title = " 打开项目：";
-            ofdProjectPath.Filter = "所有文件|*.*";
-            //设置默认文件类型显示顺序 
-            ofdProjectPath.FilterIndex = 1;
-            //保存对话框是否记忆上次打开的目录 
-            ofdProjectPath.RestoreDirectory = true;
-
-            if (ofdProjectPath.ShowDialog() == DialogResult.OK)
-            {
-                addFile(ofdProjectPath.FileName);
-            }
+            addFile2WellDir();
         }
 
         string filePathPDFViewTemp = Path.Combine(cProjectManager.dirPathTemp, "fileViewTemp.pdf");
@@ -417,6 +419,20 @@ namespace DOGPlatform
         private void lvFileGeo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode  == Keys.Delete ) deleteSelectItemInLV(); 
+        }
+
+        private void tsmiTVaddFile_Click(object sender, EventArgs e)
+        {
+            addFile2WellDir();
+        }
+
+        private void tsmiTVcollapseWell_Click(object sender, EventArgs e)
+        {
+            tvFileManage.CollapseAll();
+            foreach (TreeNode tn in this.tvFileManage.Nodes)
+            {
+                if (tn.Level == 0) tn.Expand();
+            }
         }
 
        

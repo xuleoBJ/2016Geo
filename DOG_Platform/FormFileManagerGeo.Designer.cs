@@ -57,6 +57,8 @@
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRefreshDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVaddFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVcollapse2Well = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcSection.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -132,22 +134,24 @@
             // cmsTV
             // 
             this.cmsTV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiTVRefresh,
-            this.tsmiTVOpenDir});
+            this.tsmiTVaddFile,
+            this.tsmiTVOpenDir,
+            this.tsmiTVcollapse2Well,
+            this.tsmiTVRefresh});
             this.cmsTV.Name = "cmsTV";
-            this.cmsTV.Size = new System.Drawing.Size(125, 48);
+            this.cmsTV.Size = new System.Drawing.Size(153, 114);
             // 
             // tsmiTVRefresh
             // 
             this.tsmiTVRefresh.Name = "tsmiTVRefresh";
-            this.tsmiTVRefresh.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVRefresh.Size = new System.Drawing.Size(152, 22);
             this.tsmiTVRefresh.Text = "刷新";
             this.tsmiTVRefresh.Click += new System.EventHandler(this.tsmiTVRefresh_Click);
             // 
             // tsmiTVOpenDir
             // 
             this.tsmiTVOpenDir.Name = "tsmiTVOpenDir";
-            this.tsmiTVOpenDir.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVOpenDir.Size = new System.Drawing.Size(152, 22);
             this.tsmiTVOpenDir.Text = "打开目录";
             this.tsmiTVOpenDir.Click += new System.EventHandler(this.tsmiTVOpenDir_Click);
             // 
@@ -337,6 +341,20 @@
             this.tsmiOpenDir.Text = "打开所在目录";
             this.tsmiOpenDir.Click += new System.EventHandler(this.tsmiOpenDir_Click);
             // 
+            // tsmiTVaddFile
+            // 
+            this.tsmiTVaddFile.Name = "tsmiTVaddFile";
+            this.tsmiTVaddFile.Size = new System.Drawing.Size(152, 22);
+            this.tsmiTVaddFile.Text = "添加文件";
+            this.tsmiTVaddFile.Click += new System.EventHandler(this.tsmiTVaddFile_Click);
+            // 
+            // tsmiTVcollapse2Well
+            // 
+            this.tsmiTVcollapse2Well.Name = "tsmiTVcollapse2Well";
+            this.tsmiTVcollapse2Well.Size = new System.Drawing.Size(152, 22);
+            this.tsmiTVcollapse2Well.Text = "折叠到井";
+            this.tsmiTVcollapse2Well.Click += new System.EventHandler(this.tsmiTVcollapseWell_Click);
+            // 
             // FormFileManagerGeo
             // 
             this.AllowDrop = true;
@@ -400,5 +418,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiTVRefresh;
         private System.Windows.Forms.ToolStripMenuItem tsmiTVOpenDir;
         private System.Windows.Forms.ToolStripMenuItem tsmiRefreshDir;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTVaddFile;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTVcollapse2Well;
     }
 }
