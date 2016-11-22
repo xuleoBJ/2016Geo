@@ -160,8 +160,7 @@ namespace DOGPlatform
                    this.tsmiHeadLogTrackFill.Visible = true;
                    this.tsmiHeadLogRemove.Visible = true;
                }
-               else if (strTypeTrack == TypeTrack.深度尺.ToString() ||
-                   strTypeTrack == TypeTrack.图片道.ToString())
+               else if ( strTypeTrack == TypeTrack.图片道.ToString())
                {
                    this.tsmiHeadTrackDataLoad.Visible = false;
                }

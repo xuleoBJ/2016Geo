@@ -366,35 +366,35 @@
             // tsmiNew
             // 
             this.tsmiNew.Name = "tsmiNew";
-            this.tsmiNew.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNew.Size = new System.Drawing.Size(136, 22);
             this.tsmiNew.Text = "新建";
             this.tsmiNew.Click += new System.EventHandler(this.tsmiNew_Click);
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(136, 22);
             this.tsmiOpen.Text = "打开";
             this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // tsmiSave
             // 
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave.Size = new System.Drawing.Size(136, 22);
             this.tsmiSave.Text = "另存为";
             this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
             // tsmiSave2Project
             // 
             this.tsmiSave2Project.Name = "tsmiSave2Project";
-            this.tsmiSave2Project.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave2Project.Size = new System.Drawing.Size(136, 22);
             this.tsmiSave2Project.Text = "入成果库";
             this.tsmiSave2Project.Click += new System.EventHandler(this.tsmiSave2Project_Click);
             // 
             // tsmiSaveAsTemplate
             // 
             this.tsmiSaveAsTemplate.Name = "tsmiSaveAsTemplate";
-            this.tsmiSaveAsTemplate.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSaveAsTemplate.Size = new System.Drawing.Size(136, 22);
             this.tsmiSaveAsTemplate.Text = "保存为模板";
             this.tsmiSaveAsTemplate.Click += new System.EventHandler(this.tsmiSaveTemplate_Click);
             // 
@@ -719,7 +719,7 @@
             this.tsmiTreeviewShow,
             this.tsmiTreeviewHide});
             this.tsmiControlTree.Name = "tsmiControlTree";
-            this.tsmiControlTree.Size = new System.Drawing.Size(124, 22);
+            this.tsmiControlTree.Size = new System.Drawing.Size(152, 22);
             this.tsmiControlTree.Text = "控制树";
             // 
             // tsmiTreeviewShow
@@ -739,15 +739,15 @@
             // 普通ToolStripMenuItem
             // 
             this.普通ToolStripMenuItem.Name = "普通ToolStripMenuItem";
-            this.普通ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.普通ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.普通ToolStripMenuItem.Text = "分析模式";
             this.普通ToolStripMenuItem.Click += new System.EventHandler(this.普通ToolStripMenuItem_Click);
             // 
             // tsmiModelResult
             // 
             this.tsmiModelResult.Name = "tsmiModelResult";
-            this.tsmiModelResult.Size = new System.Drawing.Size(124, 22);
-            this.tsmiModelResult.Text = "成果模式";
+            this.tsmiModelResult.Size = new System.Drawing.Size(152, 22);
+            this.tsmiModelResult.Text = "出图模式";
             this.tsmiModelResult.Click += new System.EventHandler(this.tsmiModelResult_Click);
             // 
             // tsmiHelp

@@ -35,8 +35,10 @@
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.tvFileManage = new System.Windows.Forms.TreeView();
             this.cmsTV = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmiTVRefresh = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTVOpenDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVaddFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVopenDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVcollapse2Well = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVrefresh = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListFoldManage = new System.Windows.Forms.ImageList(this.components);
             this.statusStripTV = new System.Windows.Forms.StatusStrip();
             this.tsslPathCurrent = new System.Windows.Forms.ToolStripStatusLabel();
@@ -57,8 +59,10 @@
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRefreshDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenDir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTVaddFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTVcollapse2Well = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVautoFind = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReSelectDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSelectedDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tssInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbcSection.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -73,6 +77,7 @@
             this.splitContainerShow.SuspendLayout();
             this.statusStripView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxView)).BeginInit();
+            this.statusStripLV.SuspendLayout();
             this.cmsLV.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +100,7 @@
             this.tbgViewEdit.Padding = new System.Windows.Forms.Padding(3);
             this.tbgViewEdit.Size = new System.Drawing.Size(749, 582);
             this.tbgViewEdit.TabIndex = 3;
-            this.tbgViewEdit.Text = "文件管理";
+            this.tbgViewEdit.Text = "井管理";
             this.tbgViewEdit.UseVisualStyleBackColor = true;
             // 
             // splitContainerMain
@@ -135,25 +140,40 @@
             // 
             this.cmsTV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiTVaddFile,
-            this.tsmiTVOpenDir,
+            this.tsmiTVautoFind,
+            this.tsmiTVopenDir,
             this.tsmiTVcollapse2Well,
-            this.tsmiTVRefresh});
+            this.tsmiTVrefresh});
             this.cmsTV.Name = "cmsTV";
-            this.cmsTV.Size = new System.Drawing.Size(153, 114);
+            this.cmsTV.Size = new System.Drawing.Size(125, 114);
             // 
-            // tsmiTVRefresh
+            // tsmiTVaddFile
             // 
-            this.tsmiTVRefresh.Name = "tsmiTVRefresh";
-            this.tsmiTVRefresh.Size = new System.Drawing.Size(152, 22);
-            this.tsmiTVRefresh.Text = "刷新";
-            this.tsmiTVRefresh.Click += new System.EventHandler(this.tsmiTVRefresh_Click);
+            this.tsmiTVaddFile.Name = "tsmiTVaddFile";
+            this.tsmiTVaddFile.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVaddFile.Text = "添加文件";
+            this.tsmiTVaddFile.Click += new System.EventHandler(this.tsmiTVaddFile_Click);
             // 
-            // tsmiTVOpenDir
+            // tsmiTVopenDir
             // 
-            this.tsmiTVOpenDir.Name = "tsmiTVOpenDir";
-            this.tsmiTVOpenDir.Size = new System.Drawing.Size(152, 22);
-            this.tsmiTVOpenDir.Text = "打开目录";
-            this.tsmiTVOpenDir.Click += new System.EventHandler(this.tsmiTVOpenDir_Click);
+            this.tsmiTVopenDir.Name = "tsmiTVopenDir";
+            this.tsmiTVopenDir.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVopenDir.Text = "打开目录";
+            this.tsmiTVopenDir.Click += new System.EventHandler(this.tsmiTVOpenDir_Click);
+            // 
+            // tsmiTVcollapse2Well
+            // 
+            this.tsmiTVcollapse2Well.Name = "tsmiTVcollapse2Well";
+            this.tsmiTVcollapse2Well.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVcollapse2Well.Text = "折叠到井";
+            this.tsmiTVcollapse2Well.Click += new System.EventHandler(this.tsmiTVcollapseWell_Click);
+            // 
+            // tsmiTVrefresh
+            // 
+            this.tsmiTVrefresh.Name = "tsmiTVrefresh";
+            this.tsmiTVrefresh.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVrefresh.Text = "刷新";
+            this.tsmiTVrefresh.Click += new System.EventHandler(this.tsmiTVRefresh_Click);
             // 
             // imageListFoldManage
             // 
@@ -249,6 +269,8 @@
             // 
             // statusStripLV
             // 
+            this.statusStripLV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssInfor});
             this.statusStripLV.Location = new System.Drawing.Point(0, 554);
             this.statusStripLV.Name = "statusStripLV";
             this.statusStripLV.Size = new System.Drawing.Size(396, 22);
@@ -316,15 +338,15 @@
             // tsmiAdd
             // 
             this.tsmiAdd.Name = "tsmiAdd";
-            this.tsmiAdd.Size = new System.Drawing.Size(148, 22);
-            this.tsmiAdd.Text = "添加";
+            this.tsmiAdd.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAdd.Text = "添加到目录";
             this.tsmiAdd.Click += new System.EventHandler(this.tsmiAdd_Click);
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(148, 22);
-            this.tsmiDelete.Text = "删除";
+            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Text = "目录中移除";
             this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
             // tsmiRefreshDir
@@ -341,19 +363,35 @@
             this.tsmiOpenDir.Text = "打开所在目录";
             this.tsmiOpenDir.Click += new System.EventHandler(this.tsmiOpenDir_Click);
             // 
-            // tsmiTVaddFile
+            // tsmiTVautoFind
             // 
-            this.tsmiTVaddFile.Name = "tsmiTVaddFile";
-            this.tsmiTVaddFile.Size = new System.Drawing.Size(152, 22);
-            this.tsmiTVaddFile.Text = "添加文件";
-            this.tsmiTVaddFile.Click += new System.EventHandler(this.tsmiTVaddFile_Click);
+            this.tsmiTVautoFind.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiReSelectDir,
+            this.tsmiSelectedDir});
+            this.tsmiTVautoFind.Name = "tsmiTVautoFind";
+            this.tsmiTVautoFind.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVautoFind.Text = "智能查找";
+            this.tsmiTVautoFind.Click += new System.EventHandler(this.tsmiTVautoFind_Click);
             // 
-            // tsmiTVcollapse2Well
+            // tsmiReSelectDir
             // 
-            this.tsmiTVcollapse2Well.Name = "tsmiTVcollapse2Well";
-            this.tsmiTVcollapse2Well.Size = new System.Drawing.Size(152, 22);
-            this.tsmiTVcollapse2Well.Text = "折叠到井";
-            this.tsmiTVcollapse2Well.Click += new System.EventHandler(this.tsmiTVcollapseWell_Click);
+            this.tsmiReSelectDir.Name = "tsmiReSelectDir";
+            this.tsmiReSelectDir.Size = new System.Drawing.Size(152, 22);
+            this.tsmiReSelectDir.Text = "选择目录";
+            this.tsmiReSelectDir.Click += new System.EventHandler(this.tsmiReSelectDir_Click);
+            // 
+            // tsmiSelectedDir
+            // 
+            this.tsmiSelectedDir.Name = "tsmiSelectedDir";
+            this.tsmiSelectedDir.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSelectedDir.Text = "已选目录";
+            this.tsmiSelectedDir.Click += new System.EventHandler(this.tsmiSelectedDir_Click);
+            // 
+            // tssInfor
+            // 
+            this.tssInfor.Name = "tssInfor";
+            this.tssInfor.Size = new System.Drawing.Size(32, 17);
+            this.tssInfor.Text = "信息";
             // 
             // FormFileManagerGeo
             // 
@@ -363,7 +401,7 @@
             this.ClientSize = new System.Drawing.Size(757, 608);
             this.Controls.Add(this.tbcSection);
             this.Name = "FormFileManagerGeo";
-            this.Text = "文件管理";
+            this.Text = "井资料管理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tbcSection.ResumeLayout(false);
             this.tbgViewEdit.ResumeLayout(false);
@@ -384,6 +422,8 @@
             this.statusStripView.ResumeLayout(false);
             this.statusStripView.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxView)).EndInit();
+            this.statusStripLV.ResumeLayout(false);
+            this.statusStripLV.PerformLayout();
             this.cmsLV.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -415,10 +455,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ContextMenuStrip cmsTV;
-        private System.Windows.Forms.ToolStripMenuItem tsmiTVRefresh;
-        private System.Windows.Forms.ToolStripMenuItem tsmiTVOpenDir;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTVrefresh;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTVopenDir;
         private System.Windows.Forms.ToolStripMenuItem tsmiRefreshDir;
         private System.Windows.Forms.ToolStripMenuItem tsmiTVaddFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiTVcollapse2Well;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTVautoFind;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReSelectDir;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSelectedDir;
+        private System.Windows.Forms.ToolStripStatusLabel tssInfor;
     }
 }

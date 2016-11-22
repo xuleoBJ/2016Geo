@@ -2185,6 +2185,11 @@ namespace DOGPlatform
             TreeNode tnNew = TreeViewProjectData.setupTNSectionFenceItem(tnSelected.Parent, originalFileName + "copy");
             tnNew.TreeView.SelectedNode = tnNew; 
         }
+
+        private void FormMain_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+
+        }
      
     }
 }

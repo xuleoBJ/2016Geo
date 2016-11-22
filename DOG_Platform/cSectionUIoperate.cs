@@ -102,6 +102,11 @@ namespace DOGPlatform
                 FormSectionDataLogComposition newDataImport = new FormSectionDataLogComposition(sJH, typeTrackstr, filePathOper, sTrackID);
                 resultRet = newDataImport.ShowDialog();
             }
+            else if (typeTrackstr == TypeTrack.深度尺.ToString())
+            {
+                FormSettingSectionDepthRuler setRuler = new FormSettingSectionDepthRuler(filePathOper, sTrackID);
+                resultRet = setRuler.ShowDialog();
+            }
             else if (typeTrackstr != TypeTrack.曲线道.ToString())
             {
                 FormDataImportWell formInputDataTableSingleWell = new

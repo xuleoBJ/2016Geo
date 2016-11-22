@@ -273,6 +273,13 @@ namespace DOGPlatform
             }
         }
 
+        private void btnClearUnit_Click(object sender, EventArgs e)
+        {
+             for (int i = 0; i < dgvLog.Rows.Count - 1; i++)
+                 dgvLog.Rows[i].Cells[3].Value = null;
+            
+        }
+
       
 
        

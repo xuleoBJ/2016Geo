@@ -11,7 +11,7 @@ namespace DOGPlatform
          public static bool checkWrap(string filePathSourceLog)
         {
             bool bWrap = false; 
-            if (filePathSourceLog.EndsWith(".las")) 
+            if (filePathSourceLog.ToLower().EndsWith(".las")) 
             {
                 using (StreamReader sr = new StreamReader(filePathSourceLog, Encoding.Default))
                 {

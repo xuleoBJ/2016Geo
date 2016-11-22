@@ -1447,7 +1447,7 @@
             this.tsmiOpenAppSectionGeo,
             this.tsmiOpenAppSectionFence});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 180);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 158);
             // 
             // tsmiExpandAll
             // 
@@ -1880,6 +1880,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeoScape";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormMain_HelpButtonClicked);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);

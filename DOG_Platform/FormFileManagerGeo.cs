@@ -136,6 +136,7 @@ namespace DOGPlatform
                 addFile(fileDrop);
             }   
         }
+
         string makeUniqueFilePath(string filePath)
         {
             while (File.Exists(filePath))
@@ -145,8 +146,8 @@ namespace DOGPlatform
                 filePath = Path.Combine(dirFile, "copy_" + fileName);
             }
             return filePath;
-
         }
+
         void addFile(string filePathSource)
         {
             if (sJHCurrent != "" && subDir != "")
@@ -185,6 +186,7 @@ namespace DOGPlatform
                 {
                     addItem2LV(file);
                 }
+                setClearViewControl();
             }
         }
 
@@ -245,6 +247,7 @@ namespace DOGPlatform
                     }
                 }
             }
+            loadFiles2LV();
         }
 
         void setClearViewControl() 
@@ -282,6 +285,7 @@ namespace DOGPlatform
                 }
             }
         }
+
         bool checkRenameSameFile(string filePath)
         {
             bool bDelete = true;
@@ -395,6 +399,9 @@ namespace DOGPlatform
             }//end 点击查看
         }
 
+    
+
+
         private void tsmiTVOpenDir_Click(object sender, EventArgs e)
         {
             setupDir();
@@ -433,6 +440,68 @@ namespace DOGPlatform
             {
                 if (tn.Level == 0) tn.Expand();
             }
+        }
+
+        private void tsmiTVautoFind_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        string dirAtuoSelect = "c:\\";
+        private void tsmiReSelectDir_Click(object sender, EventArgs e)
+        { //打开搜索路径
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择搜索路径";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                dirAtuoSelect = dialog.SelectedPath;
+                searchFileAdd2List();
+            }
+
+        }
+
+        void searchFileAdd2List() 
+        {
+            if (sJHCurrent != "" && subDir != "")
+            {
+                DirectoryInfo TheFolder = new DirectoryInfo(dirAtuoSelect);
+                this.tssInfor.Text ="智能搜索路径："+ dirAtuoSelect;
+                //遍历文件
+                foreach (FileInfo NextFile in TheFolder.GetFiles())
+                    if (NextFile.Name.IndexOf(sJHCurrent) >= 0)
+                    {
+                        string filepathSelected = Path.Combine(dirAtuoSelect, NextFile.Name);
+                        //查找文件，添加到文件
+                        if (NextFile.Name.ToLower().IndexOf(sJHCurrent.ToLower()) >= 0)
+                        {
+                            DialogResult dialogResult = MessageBox.Show("目录下搜索到 " + NextFile.Name+" ,是否添加到资料库？", sJHCurrent + " 智能查找", MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.Yes) addFile(filepathSelected);
+                        }
+                    }
+                
+                ////遍历文件夹
+                //foreach (DirectoryInfo NextFolder in TheFolder.GetDirectories())
+                //    foreach (FileInfo NextFile in NextFolder.GetFiles())
+                //    {
+                //        string filepathSelected = Path.Combine(dirAtuoSelect, NextFile.Name);
+                //        //查找文件，添加到文件
+                //        if (NextFile.Name.IndexOf(sJHCurrent) >= 0)
+                //        {
+                //                DialogResult dialogResult = MessageBox.Show("目录下搜索到" + NextFile.Name, "智能查找", MessageBoxButtons.YesNo);
+                //                if (dialogResult == DialogResult.Yes) addFile(filepathSelected);
+                //        }
+                //    }
+
+            }
+            else
+            {
+                MessageBox.Show("请选择操作目标路径。");
+            }
+            //在目录下迭代搜索井号相似文件
+        }
+        private void tsmiSelectedDir_Click(object sender, EventArgs e)
+        {
+            searchFileAdd2List(); 
         }
 
        

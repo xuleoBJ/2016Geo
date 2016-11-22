@@ -49,7 +49,7 @@ namespace DOGPlatform
                         else 
                         {  
                             if(i==3||i==4) dataGridView.Rows[j].Cells[i].Value = "0"; //井型设置为0和海拔
-                            if(i==5) dataGridView.Rows[j].Cells[i].Value = "10"; //井底深度设为0
+                            if(i==5) dataGridView.Rows[j].Cells[i].Value = "5000"; //如果井底深度为输入，设置成5000，单井模块的错误
                         }
                     }
                 }

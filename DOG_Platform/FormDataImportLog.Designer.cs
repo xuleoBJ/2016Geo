@@ -43,6 +43,7 @@
             this.tbxView = new System.Windows.Forms.TextBox();
             this.btnShowLogHead = new System.Windows.Forms.Button();
             this.btnOpenFileDir = new System.Windows.Forms.Button();
+            this.btnClearUnit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(119, 556);
+            this.btnDelete.Location = new System.Drawing.Point(126, 556);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 23);
             this.btnDelete.TabIndex = 4;
@@ -131,7 +132,7 @@
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(226, 556);
+            this.btnImport.Location = new System.Drawing.Point(354, 556);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(91, 23);
             this.btnImport.TabIndex = 7;
@@ -170,12 +171,23 @@
             this.btnOpenFileDir.UseVisualStyleBackColor = true;
             this.btnOpenFileDir.Click += new System.EventHandler(this.btnOpenFileDir_Click);
             // 
+            // btnClearUnit
+            // 
+            this.btnClearUnit.Location = new System.Drawing.Point(240, 556);
+            this.btnClearUnit.Name = "btnClearUnit";
+            this.btnClearUnit.Size = new System.Drawing.Size(91, 23);
+            this.btnClearUnit.TabIndex = 11;
+            this.btnClearUnit.Text = "删除单位";
+            this.btnClearUnit.UseVisualStyleBackColor = true;
+            this.btnClearUnit.Click += new System.EventHandler(this.btnClearUnit_Click);
+            // 
             // FormDataImportLog
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 596);
+            this.Controls.Add(this.btnClearUnit);
             this.Controls.Add(this.btnOpenFileDir);
             this.Controls.Add(this.btnShowLogHead);
             this.Controls.Add(this.tbxView);
@@ -214,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn logNameNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn logSUnit;
         private System.Windows.Forms.Button btnOpenFileDir;
+        private System.Windows.Forms.Button btnClearUnit;
     }
 }
