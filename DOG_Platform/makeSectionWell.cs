@@ -269,7 +269,7 @@ namespace DOGPlatform
                         }
                     }
                     #endregion
-                    #region 测井解释，旋回, 地质描述
+                    #region 测井解释，旋回, 地质描述，含油级别
                     if (cProjectManager.ltStrTrackTypeIntervalProperty.IndexOf(curTrackDraw.sTrackType) >= 0 )
                     {
                         XmlNode dataList = el_Track.SelectSingleNode("dataList");
@@ -282,6 +282,7 @@ namespace DOGPlatform
                                 if (item.top >= curPage.dfDS1Show && item.bot <= curPage.dfDS2Show)
                                 {
                                     returnElemment = cSVGSectionTrackJSJL.gTrackItemJSJL(cSingleWell.svgDoc, cSingleWell.svgDefs, item, curPage.fVScale, curTrackDraw.iTrackWidth);
+                                    if (curTrackDraw.sTrackType == TypeTrack.含油级别.ToString()) returnElemment = cSVGSectionTrackOilGrade.gTrackOilGrade(cSingleWell.svgDoc, cSingleWell.svgDefs, item, curPage.fVScale, curTrackDraw.iTrackWidth);
                                     if (curTrackDraw.sTrackType == TypeTrack.沉积旋回.ToString()) returnElemment = cSVGSectionTrackCycle.gTrackGeoCycle(cSingleWell.svgDoc, cSingleWell.svgDefs, item, curPage.fVScale, curTrackDraw.iTrackWidth);
                                     if (curTrackDraw.sTrackType == TypeTrack.描述.ToString()) returnElemment = cSVGSectionTrackDes.gTrackItemFossil(cSingleWell.svgDoc, cSingleWell.svgDefs, item, curPage.fVScale, curTrackDraw.iTrackWidth);
                                     if (curTrackDraw.sTrackType == TypeTrack.管柱.ToString()) returnElemment = cSVGSectionTrackWellBone.gTrackItemWellBone(cSingleWell.svgDoc, cSingleWell.svgDefs, item, curPage.fVScale, curTrackDraw.iTrackWidth);

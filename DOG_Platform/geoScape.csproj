@@ -412,6 +412,7 @@
     <Compile Include="SVG\cSVGoperate.cs" />
     <Compile Include="SVG\cSVGsectionFaultLine.cs" />
     <Compile Include="SVG\cSVGSectionTrackLogComposite.cs" />
+    <Compile Include="SVG\cSVGSectionTrackOilGrade.cs" />
     <Compile Include="SVG\cSVGSectionTrackWellBone.cs" />
     <Compile Include="SVG\cXMLLayerMapWellLog.cs" />
     <Compile Include="trackDataItemIntervalProperty.cs" />

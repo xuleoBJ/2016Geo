@@ -31,12 +31,19 @@ namespace DOGPlatform
             {
                 cPublicMethodForm.inialComboBox(this.cbbSelect, codeReplace.ltStrJSJL);
                 string sRetJSJL = cXmlBase.getSelectedNodeChildNodeValue(filePathTemple, sIDdataItem, "sProperty");
-                cbbSelect.SelectedIndex = codeReplace.codeReplaceJSJL2int(sRetJSJL);
+                cbbSelect.SelectedIndex = codeReplace.ltStrHYJB.IndexOf(sRetJSJL);
+            }
+            if (sTypeTrack == TypeTrack.含油级别.ToString())
+            {
+                cPublicMethodForm.inialComboBox(this.cbbSelect, codeReplace.ltStrHYJB);
+                string sRetHYJB = cXmlBase.getSelectedNodeChildNodeValue(filePathTemple, sIDdataItem, "sProperty");
+                cbbSelect.SelectedIndex = codeReplace.ltStrHYJB.IndexOf (sRetHYJB);
             }
             if (sTypeTrack == TypeTrack.沉积旋回.ToString())
             {
                 cPublicMethodForm.inialComboBox(this.cbbSelect, codeReplace.ltStrGeoCycle);
-                string sRetJSJL = cXmlBase.getSelectedNodeChildNodeValue(filePathTemple, sIDdataItem, "sProperty");
+                string sRetCycle = cXmlBase.getSelectedNodeChildNodeValue(filePathTemple, sIDdataItem, "sProperty");
+                cbbSelect.SelectedIndex = codeReplace.ltStrGeoCycle.IndexOf(sRetCycle);
             }
         }
 

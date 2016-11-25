@@ -447,7 +447,7 @@ namespace DOGPlatform
            
         }
 
-        string dirAtuoSelect = "c:\\";
+        string dirAtuoSelect = Path.GetTempPath();
         private void tsmiReSelectDir_Click(object sender, EventArgs e)
         { //打开搜索路径
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -464,33 +464,21 @@ namespace DOGPlatform
         {
             if (sJHCurrent != "" && subDir != "")
             {
-                DirectoryInfo TheFolder = new DirectoryInfo(dirAtuoSelect);
-                this.tssInfor.Text ="智能搜索路径："+ dirAtuoSelect;
+                this.tssInfor.Text = "智能搜索路径：" + dirAtuoSelect;
                 //遍历文件
-                foreach (FileInfo NextFile in TheFolder.GetFiles())
-                    if (NextFile.Name.IndexOf(sJHCurrent) >= 0)
+                string[] files = Directory.GetFiles(dirAtuoSelect, "*.*", System.IO.SearchOption.AllDirectories);
+                foreach (string NextFile in files)
+                    if (NextFile.IndexOf(sJHCurrent) >= 0)
                     {
-                        string filepathSelected = Path.Combine(dirAtuoSelect, NextFile.Name);
                         //查找文件，添加到文件
-                        if (NextFile.Name.ToLower().IndexOf(sJHCurrent.ToLower()) >= 0)
+                        if (NextFile.ToLower().IndexOf(sJHCurrent.ToLower()) >= 0)
                         {
-                            DialogResult dialogResult = MessageBox.Show("目录下搜索到 " + NextFile.Name+" ,是否添加到资料库？", sJHCurrent + " 智能查找", MessageBoxButtons.YesNo);
-                            if (dialogResult == DialogResult.Yes) addFile(filepathSelected);
+                            DialogResult dialogResult = MessageBox.Show("目录下搜索到:  " + Path.GetFileName(NextFile) +Environment.NewLine+"路径: "+ Path.GetFullPath(NextFile)+  Environment.NewLine+"是否添加到资料库？", sJHCurrent + " 智能查找", MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.Yes) addFile(NextFile);
                         }
-                    }
+                    } 
                 
-                ////遍历文件夹
-                //foreach (DirectoryInfo NextFolder in TheFolder.GetDirectories())
-                //    foreach (FileInfo NextFile in NextFolder.GetFiles())
-                //    {
-                //        string filepathSelected = Path.Combine(dirAtuoSelect, NextFile.Name);
-                //        //查找文件，添加到文件
-                //        if (NextFile.Name.IndexOf(sJHCurrent) >= 0)
-                //        {
-                //                DialogResult dialogResult = MessageBox.Show("目录下搜索到" + NextFile.Name, "智能查找", MessageBoxButtons.YesNo);
-                //                if (dialogResult == DialogResult.Yes) addFile(filepathSelected);
-                //        }
-                //    }
+         
 
             }
             else

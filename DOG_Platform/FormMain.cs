@@ -165,7 +165,6 @@ namespace DOGPlatform
             //只展开第一层井菜单
             foreach (TreeNode tn in tvProjectData.Nodes) if (tn.Level == 0 && tn.Index==0) tn.Expand();
 
-            //读取配置文件，获取check的节点
         }
 
       
@@ -756,7 +755,11 @@ namespace DOGPlatform
             if (selectNode.Tag.ToString() == TypeProjectNode.globalLogDir.ToString())
                 cmsTNglobalLog.Items[0].Visible = true;
             if (selectNode.Tag.ToString() == TypeProjectNode.globalLog.ToString())
+            {
                 cmsTNglobalLog.Items[1].Visible = true;
+                cmsTNglobalLog.Items[2].Visible = true;
+                cmsTNglobalLog.Items[3].Visible = true;
+            }
             this.tvProjectData.ContextMenuStrip = this.cmsTNglobalLog;
         }
         
@@ -1942,7 +1945,7 @@ namespace DOGPlatform
             TreeNode tnSelected = tvProjectData.SelectedNode;
             string sJH = tnSelected.Parent.Parent.Text;
             string filePath = Path.Combine(cProjectManager.dirPathWellDir, sJH, tnSelected.Text + cProjectManager.fileExtensionWellLog);
-            FormInputBox inputBox = new FormInputBox("新文件名：", "请输入：", tnSelected.Text);
+            FormInputBox inputBox = new FormInputBox("新名称：", "请输入：", tnSelected.Text);
             var result = inputBox.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -2190,6 +2193,78 @@ namespace DOGPlatform
         {
 
         }
+
+        private void tsmiGlobeRenameLogName_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            FormInputBox inputBox = new FormInputBox("注意：本操作不可逆！", "新名称请输入：", tnSelected.Text);
+            string strLogItem = tnSelected.Text;
+
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                cProjectData.ltStrProjectGlobeLog.Remove(strLogItem);
+                Cursor.Current = Cursors.WaitCursor;
+                foreach (string sCurrentJH in cProjectData.ltStrProjectJH)
+                {
+                    string filePath = Path.Combine(cProjectManager.dirPathWellDir, sCurrentJH, strLogItem + cProjectManager.fileExtensionWellLog);
+                    string newInputStrLogItem = inputBox.ReturnValueStr;
+                    string newfilepath = Path.Combine(cProjectManager.dirPathWellDir, sCurrentJH, newInputStrLogItem + cProjectManager.fileExtensionWellLog);
+                    bool bDelete = true;
+                    if (File.Exists(filePath))
+                    {
+                        if (File.Exists(newfilepath)) //需要判断新文件是否存在
+                        {
+                            DialogResult dialogResult = MessageBox.Show(" 是否覆盖？", sCurrentJH + " 同名曲线 " + newInputStrLogItem + " 已存在", MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.No) bDelete = false;
+                        }
+                        if (bDelete == true)
+                        {
+                            File.Copy(filePath, newfilepath, bDelete); //用新文件名保存，
+                            File.Delete(filePath);  //删除原文件
+                        }
+                    } 
+                } 
+  
+                updateTreeViewProject();
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void tsmiGlobeDeleteLogFile_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            DialogResult dialogResult = MessageBox.Show("当前操作确认将删除所有井的同名曲线，且不可恢复？", "删除曲线 " + tnSelected, MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                foreach (string sJH in cProjectData.ltStrProjectJH)
+                {
+                    string filePath = Path.Combine(cProjectManager.dirPathWellDir, sJH, tnSelected.Text + cProjectManager.fileExtensionWellLog);
+                    if (File.Exists(filePath)) File.Delete(filePath);  //删除原文件
+                }
+                //从字典中删除
+                List<ItemDicLogGlobe> logHeadRet = cIODicLogHeadProject.readDicGlobeLog();
+                ItemDicLogGlobe item = logHeadRet.FirstOrDefault(p => p.sLogID == tnSelected.Text);
+                if (item != null)
+                {
+                    logHeadRet.Remove(item);
+                    cIODicLogHeadProject.writeDicGlobe(logHeadRet);
+                }
+                tnSelected.Remove();
+            }
+        }
+
+        private void cmsTNglobalLog_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tsmiWellSectionMake_Click(object sender, EventArgs e)
+        {
+            FormSectionWell formSingleWell = new FormSectionWell();
+            formSingleWell.Show();
+        } 
      
     }
 }

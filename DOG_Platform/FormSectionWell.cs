@@ -1115,6 +1115,11 @@ namespace DOGPlatform
          {
              bRefreshNow = false ;
          }
+
+         private void tsmiInsertOilGrade_Click(object sender, EventArgs e)
+         {
+             addTrackCss(TypeTrack.含油级别);
+         }
      
     }
 }

@@ -50,7 +50,6 @@
             this.statusStripTV = new System.Windows.Forms.StatusStrip();
             this.tssTVSelectItem = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslTVlbl = new System.Windows.Forms.ToolStripStatusLabel();
-            this.wellPanelMain = new DOGPlatform.wellPanel();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,20 +62,6 @@
             this.tsmiDel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiUndo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRedo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTrackInsert = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertDepthRuler = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertLayer = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertTrackLog = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertCJJS = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertCycle = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertLitho = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertText = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertPattern = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertimage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertCompositon = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertWellBone = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertDescription = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertRatioRect = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOperation = new System.Windows.Forms.ToolStripMenuItem();
             this.图道ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTrackSet = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,6 +123,22 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiCloseRefresh = new System.Windows.Forms.ToolStripButton();
             this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
+            this.wellPanelMain = new DOGPlatform.wellPanel();
+            this.tsmiInsertDepthRuler = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertLayer = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertTrackLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertCJJS = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertCycle = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertLitho = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertText = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertPattern = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertimage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertCompositon = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertWellBone = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertDescription = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertRatioRect = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTrackInsert = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertOilGrade = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcSection.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
@@ -327,14 +328,6 @@
             this.tsslTVlbl.Size = new System.Drawing.Size(32, 17);
             this.tsslTVlbl.Text = "提示";
             // 
-            // wellPanelMain
-            // 
-            this.wellPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wellPanelMain.Location = new System.Drawing.Point(0, 0);
-            this.wellPanelMain.Name = "wellPanelMain";
-            this.wellPanelMain.Size = new System.Drawing.Size(815, 517);
-            this.wellPanelMain.TabIndex = 4;
-            // 
             // menuStripMain
             // 
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -413,7 +406,7 @@
             // 
             this.tsmiSelect.Name = "tsmiSelect";
             this.tsmiSelect.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.tsmiSelect.Size = new System.Drawing.Size(145, 22);
+            this.tsmiSelect.Size = new System.Drawing.Size(152, 22);
             this.tsmiSelect.Text = "选择";
             this.tsmiSelect.Click += new System.EventHandler(this.tsmiSelect_Click);
             // 
@@ -421,7 +414,7 @@
             // 
             this.tsmiDel.Name = "tsmiDel";
             this.tsmiDel.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.tsmiDel.Size = new System.Drawing.Size(145, 22);
+            this.tsmiDel.Size = new System.Drawing.Size(152, 22);
             this.tsmiDel.Text = "删除";
             this.tsmiDel.Click += new System.EventHandler(this.tsmiDel_Click);
             // 
@@ -429,7 +422,7 @@
             // 
             this.tsmiUndo.Name = "tsmiUndo";
             this.tsmiUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.tsmiUndo.Size = new System.Drawing.Size(145, 22);
+            this.tsmiUndo.Size = new System.Drawing.Size(152, 22);
             this.tsmiUndo.Text = "撤销";
             this.tsmiUndo.Click += new System.EventHandler(this.tsmiUndo_Click);
             // 
@@ -437,121 +430,9 @@
             // 
             this.tsmiRedo.Name = "tsmiRedo";
             this.tsmiRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.tsmiRedo.Size = new System.Drawing.Size(145, 22);
+            this.tsmiRedo.Size = new System.Drawing.Size(152, 22);
             this.tsmiRedo.Text = "重做";
             this.tsmiRedo.Click += new System.EventHandler(this.tsmiRedo_Click);
-            // 
-            // tsmiTrackInsert
-            // 
-            this.tsmiTrackInsert.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiInsertDepthRuler,
-            this.tsmiInsertLayer,
-            this.tsmiInsertTrackLog,
-            this.tsmiInsertCJJS,
-            this.tsmiInsertCycle,
-            this.tsmiInsertLitho,
-            this.tsmiInsertText,
-            this.tsmiInsertPattern,
-            this.tsmiInsertimage,
-            this.tsmiInsertCompositon,
-            this.tsmiInsertWellBone,
-            this.tsmiInsertDescription,
-            this.tsmiInsertRatioRect});
-            this.tsmiTrackInsert.Name = "tsmiTrackInsert";
-            this.tsmiTrackInsert.Size = new System.Drawing.Size(44, 21);
-            this.tsmiTrackInsert.Text = "图道";
-            // 
-            // tsmiInsertDepthRuler
-            // 
-            this.tsmiInsertDepthRuler.Name = "tsmiInsertDepthRuler";
-            this.tsmiInsertDepthRuler.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertDepthRuler.Text = "深度尺";
-            this.tsmiInsertDepthRuler.Click += new System.EventHandler(this.tsmiInsertDepthRuler_Click);
-            // 
-            // tsmiInsertLayer
-            // 
-            this.tsmiInsertLayer.Name = "tsmiInsertLayer";
-            this.tsmiInsertLayer.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertLayer.Text = "地层";
-            this.tsmiInsertLayer.Click += new System.EventHandler(this.tsmiInsertLayer_Click);
-            // 
-            // tsmiInsertTrackLog
-            // 
-            this.tsmiInsertTrackLog.Name = "tsmiInsertTrackLog";
-            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertTrackLog.Text = "曲线";
-            this.tsmiInsertTrackLog.Click += new System.EventHandler(this.tsmiInsertTrackLog_Click);
-            // 
-            // tsmiInsertCJJS
-            // 
-            this.tsmiInsertCJJS.Name = "tsmiInsertCJJS";
-            this.tsmiInsertCJJS.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertCJJS.Text = "解释";
-            this.tsmiInsertCJJS.Click += new System.EventHandler(this.tsmiInsertJSJ_Click);
-            // 
-            // tsmiInsertCycle
-            // 
-            this.tsmiInsertCycle.Name = "tsmiInsertCycle";
-            this.tsmiInsertCycle.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertCycle.Text = "旋回";
-            this.tsmiInsertCycle.Click += new System.EventHandler(this.tsmiGeologicalCycle_Click);
-            // 
-            // tsmiInsertLitho
-            // 
-            this.tsmiInsertLitho.Name = "tsmiInsertLitho";
-            this.tsmiInsertLitho.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertLitho.Text = "岩性";
-            this.tsmiInsertLitho.Click += new System.EventHandler(this.tsmiInsertLitho_Click);
-            // 
-            // tsmiInsertText
-            // 
-            this.tsmiInsertText.Name = "tsmiInsertText";
-            this.tsmiInsertText.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertText.Text = "文本";
-            this.tsmiInsertText.Click += new System.EventHandler(this.tsmiInsertText_Click);
-            // 
-            // tsmiInsertPattern
-            // 
-            this.tsmiInsertPattern.Name = "tsmiInsertPattern";
-            this.tsmiInsertPattern.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertPattern.Text = "符号";
-            this.tsmiInsertPattern.Click += new System.EventHandler(this.tsmiInsert_I_Click);
-            // 
-            // tsmiInsertimage
-            // 
-            this.tsmiInsertimage.Name = "tsmiInsertimage";
-            this.tsmiInsertimage.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertimage.Text = "图片";
-            this.tsmiInsertimage.Click += new System.EventHandler(this.tsmiInsertimage_Click);
-            // 
-            // tsmiInsertCompositon
-            // 
-            this.tsmiInsertCompositon.Name = "tsmiInsertCompositon";
-            this.tsmiInsertCompositon.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertCompositon.Text = "组分";
-            this.tsmiInsertCompositon.Click += new System.EventHandler(this.tsmiInsertCompositon_Click);
-            // 
-            // tsmiInsertWellBone
-            // 
-            this.tsmiInsertWellBone.Name = "tsmiInsertWellBone";
-            this.tsmiInsertWellBone.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertWellBone.Text = "管柱";
-            this.tsmiInsertWellBone.Visible = false;
-            this.tsmiInsertWellBone.Click += new System.EventHandler(this.tsmiInsertWellBone_Click);
-            // 
-            // tsmiInsertDescription
-            // 
-            this.tsmiInsertDescription.Name = "tsmiInsertDescription";
-            this.tsmiInsertDescription.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertDescription.Text = "描述";
-            this.tsmiInsertDescription.Click += new System.EventHandler(this.tsmiFossil_Click);
-            // 
-            // tsmiInsertRatioRect
-            // 
-            this.tsmiInsertRatioRect.Name = "tsmiInsertRatioRect";
-            this.tsmiInsertRatioRect.Size = new System.Drawing.Size(112, 22);
-            this.tsmiInsertRatioRect.Text = "比例条";
-            this.tsmiInsertRatioRect.Click += new System.EventHandler(this.tsmiInsertRatioRect_Click);
             // 
             // tsmiOperation
             // 
@@ -574,55 +455,55 @@
             this.tsmiTrackMoveLeft,
             this.tsmiTrackMoveRight});
             this.图道ToolStripMenuItem.Name = "图道ToolStripMenuItem";
-            this.图道ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.图道ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.图道ToolStripMenuItem.Text = "图道";
             // 
             // tsmiTrackSet
             // 
             this.tsmiTrackSet.Name = "tsmiTrackSet";
-            this.tsmiTrackSet.Size = new System.Drawing.Size(100, 22);
+            this.tsmiTrackSet.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackSet.Text = "设置";
             this.tsmiTrackSet.Click += new System.EventHandler(this.tsmiTrackSet_Click);
             // 
             // tsmiTrackWidthAdd
             // 
             this.tsmiTrackWidthAdd.Name = "tsmiTrackWidthAdd";
-            this.tsmiTrackWidthAdd.Size = new System.Drawing.Size(100, 22);
+            this.tsmiTrackWidthAdd.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackWidthAdd.Text = "加宽";
             this.tsmiTrackWidthAdd.Click += new System.EventHandler(this.tsmiTrackWidthAdd_Click);
             // 
             // tsmiTrackWidthMinus
             // 
             this.tsmiTrackWidthMinus.Name = "tsmiTrackWidthMinus";
-            this.tsmiTrackWidthMinus.Size = new System.Drawing.Size(100, 22);
+            this.tsmiTrackWidthMinus.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackWidthMinus.Text = "收窄";
             this.tsmiTrackWidthMinus.Click += new System.EventHandler(this.tsmiTrackWidthMinus_Click);
             // 
             // 移除ToolStripMenuItem
             // 
             this.移除ToolStripMenuItem.Name = "移除ToolStripMenuItem";
-            this.移除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.移除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.移除ToolStripMenuItem.Text = "移除";
             this.移除ToolStripMenuItem.Click += new System.EventHandler(this.移除ToolStripMenuItem_Click);
             // 
             // 隐藏ToolStripMenuItem
             // 
             this.隐藏ToolStripMenuItem.Name = "隐藏ToolStripMenuItem";
-            this.隐藏ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.隐藏ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.隐藏ToolStripMenuItem.Text = "隐藏";
             this.隐藏ToolStripMenuItem.Click += new System.EventHandler(this.隐藏ToolStripMenuItem_Click);
             // 
             // tsmiTrackMoveLeft
             // 
             this.tsmiTrackMoveLeft.Name = "tsmiTrackMoveLeft";
-            this.tsmiTrackMoveLeft.Size = new System.Drawing.Size(100, 22);
+            this.tsmiTrackMoveLeft.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackMoveLeft.Text = "左移";
             this.tsmiTrackMoveLeft.Click += new System.EventHandler(this.tsbTrackMoveLeft_Click);
             // 
             // tsmiTrackMoveRight
             // 
             this.tsmiTrackMoveRight.Name = "tsmiTrackMoveRight";
-            this.tsmiTrackMoveRight.Size = new System.Drawing.Size(100, 22);
+            this.tsmiTrackMoveRight.Size = new System.Drawing.Size(152, 22);
             this.tsmiTrackMoveRight.Text = "右移";
             this.tsmiTrackMoveRight.Click += new System.EventHandler(this.tsbTrackMoveRight_Click);
             // 
@@ -633,27 +514,27 @@
             this.tsmiLogCurveCopy,
             this.tsmiLogCurvePaste});
             this.曲线ToolStripMenuItem.Name = "曲线ToolStripMenuItem";
-            this.曲线ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.曲线ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.曲线ToolStripMenuItem.Text = "曲线";
             // 
             // tsmiLogEdit
             // 
             this.tsmiLogEdit.Name = "tsmiLogEdit";
-            this.tsmiLogEdit.Size = new System.Drawing.Size(100, 22);
+            this.tsmiLogEdit.Size = new System.Drawing.Size(152, 22);
             this.tsmiLogEdit.Text = "设置";
             this.tsmiLogEdit.Click += new System.EventHandler(this.tsmiLogEdit_Click);
             // 
             // tsmiLogCurveCopy
             // 
             this.tsmiLogCurveCopy.Name = "tsmiLogCurveCopy";
-            this.tsmiLogCurveCopy.Size = new System.Drawing.Size(100, 22);
+            this.tsmiLogCurveCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiLogCurveCopy.Text = "复制";
             this.tsmiLogCurveCopy.Click += new System.EventHandler(this.tsbLogCopy_Click);
             // 
             // tsmiLogCurvePaste
             // 
             this.tsmiLogCurvePaste.Name = "tsmiLogCurvePaste";
-            this.tsmiLogCurvePaste.Size = new System.Drawing.Size(100, 22);
+            this.tsmiLogCurvePaste.Size = new System.Drawing.Size(152, 22);
             this.tsmiLogCurvePaste.Text = "粘贴";
             this.tsmiLogCurvePaste.Click += new System.EventHandler(this.tsmiPasteLog_Click);
             // 
@@ -663,7 +544,7 @@
             this.tsmiDataItemSet,
             this.tsmiDataItemInsert});
             this.层段ToolStripMenuItem1.Name = "层段ToolStripMenuItem1";
-            this.层段ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.层段ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.层段ToolStripMenuItem1.Text = "层段";
             // 
             // tsmiDataItemSet
@@ -719,7 +600,7 @@
             this.tsmiTreeviewShow,
             this.tsmiTreeviewHide});
             this.tsmiControlTree.Name = "tsmiControlTree";
-            this.tsmiControlTree.Size = new System.Drawing.Size(152, 22);
+            this.tsmiControlTree.Size = new System.Drawing.Size(124, 22);
             this.tsmiControlTree.Text = "控制树";
             // 
             // tsmiTreeviewShow
@@ -739,14 +620,14 @@
             // 普通ToolStripMenuItem
             // 
             this.普通ToolStripMenuItem.Name = "普通ToolStripMenuItem";
-            this.普通ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.普通ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.普通ToolStripMenuItem.Text = "分析模式";
             this.普通ToolStripMenuItem.Click += new System.EventHandler(this.普通ToolStripMenuItem_Click);
             // 
             // tsmiModelResult
             // 
             this.tsmiModelResult.Name = "tsmiModelResult";
-            this.tsmiModelResult.Size = new System.Drawing.Size(152, 22);
+            this.tsmiModelResult.Size = new System.Drawing.Size(124, 22);
             this.tsmiModelResult.Text = "出图模式";
             this.tsmiModelResult.Click += new System.EventHandler(this.tsmiModelResult_Click);
             // 
@@ -1110,6 +991,134 @@
             this.tsBtnReflush.Text = "刷新";
             this.tsBtnReflush.Click += new System.EventHandler(this.tsBtnReflush_Click);
             // 
+            // wellPanelMain
+            // 
+            this.wellPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wellPanelMain.Location = new System.Drawing.Point(0, 0);
+            this.wellPanelMain.Name = "wellPanelMain";
+            this.wellPanelMain.Size = new System.Drawing.Size(815, 517);
+            this.wellPanelMain.TabIndex = 4;
+            // 
+            // tsmiInsertDepthRuler
+            // 
+            this.tsmiInsertDepthRuler.Name = "tsmiInsertDepthRuler";
+            this.tsmiInsertDepthRuler.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertDepthRuler.Text = "深度尺";
+            this.tsmiInsertDepthRuler.Click += new System.EventHandler(this.tsmiInsertDepthRuler_Click);
+            // 
+            // tsmiInsertLayer
+            // 
+            this.tsmiInsertLayer.Name = "tsmiInsertLayer";
+            this.tsmiInsertLayer.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayer.Text = "地层";
+            this.tsmiInsertLayer.Click += new System.EventHandler(this.tsmiInsertLayer_Click);
+            // 
+            // tsmiInsertTrackLog
+            // 
+            this.tsmiInsertTrackLog.Name = "tsmiInsertTrackLog";
+            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackLog.Text = "曲线";
+            this.tsmiInsertTrackLog.Click += new System.EventHandler(this.tsmiInsertTrackLog_Click);
+            // 
+            // tsmiInsertCJJS
+            // 
+            this.tsmiInsertCJJS.Name = "tsmiInsertCJJS";
+            this.tsmiInsertCJJS.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertCJJS.Text = "测井解释";
+            this.tsmiInsertCJJS.Click += new System.EventHandler(this.tsmiInsertJSJ_Click);
+            // 
+            // tsmiInsertCycle
+            // 
+            this.tsmiInsertCycle.Name = "tsmiInsertCycle";
+            this.tsmiInsertCycle.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertCycle.Text = "旋回";
+            this.tsmiInsertCycle.Click += new System.EventHandler(this.tsmiGeologicalCycle_Click);
+            // 
+            // tsmiInsertLitho
+            // 
+            this.tsmiInsertLitho.Name = "tsmiInsertLitho";
+            this.tsmiInsertLitho.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLitho.Text = "岩性";
+            this.tsmiInsertLitho.Click += new System.EventHandler(this.tsmiInsertLitho_Click);
+            // 
+            // tsmiInsertText
+            // 
+            this.tsmiInsertText.Name = "tsmiInsertText";
+            this.tsmiInsertText.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertText.Text = "文本";
+            this.tsmiInsertText.Click += new System.EventHandler(this.tsmiInsertText_Click);
+            // 
+            // tsmiInsertPattern
+            // 
+            this.tsmiInsertPattern.Name = "tsmiInsertPattern";
+            this.tsmiInsertPattern.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertPattern.Text = "符号";
+            this.tsmiInsertPattern.Click += new System.EventHandler(this.tsmiInsert_I_Click);
+            // 
+            // tsmiInsertimage
+            // 
+            this.tsmiInsertimage.Name = "tsmiInsertimage";
+            this.tsmiInsertimage.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertimage.Text = "图片";
+            this.tsmiInsertimage.Click += new System.EventHandler(this.tsmiInsertimage_Click);
+            // 
+            // tsmiInsertCompositon
+            // 
+            this.tsmiInsertCompositon.Name = "tsmiInsertCompositon";
+            this.tsmiInsertCompositon.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertCompositon.Text = "组分";
+            this.tsmiInsertCompositon.Click += new System.EventHandler(this.tsmiInsertCompositon_Click);
+            // 
+            // tsmiInsertWellBone
+            // 
+            this.tsmiInsertWellBone.Name = "tsmiInsertWellBone";
+            this.tsmiInsertWellBone.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertWellBone.Text = "管柱";
+            this.tsmiInsertWellBone.Visible = false;
+            this.tsmiInsertWellBone.Click += new System.EventHandler(this.tsmiInsertWellBone_Click);
+            // 
+            // tsmiInsertDescription
+            // 
+            this.tsmiInsertDescription.Name = "tsmiInsertDescription";
+            this.tsmiInsertDescription.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertDescription.Text = "描述";
+            this.tsmiInsertDescription.Click += new System.EventHandler(this.tsmiFossil_Click);
+            // 
+            // tsmiInsertRatioRect
+            // 
+            this.tsmiInsertRatioRect.Name = "tsmiInsertRatioRect";
+            this.tsmiInsertRatioRect.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertRatioRect.Text = "比例条";
+            this.tsmiInsertRatioRect.Click += new System.EventHandler(this.tsmiInsertRatioRect_Click);
+            // 
+            // tsmiTrackInsert
+            // 
+            this.tsmiTrackInsert.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiInsertDepthRuler,
+            this.tsmiInsertLayer,
+            this.tsmiInsertTrackLog,
+            this.tsmiInsertCJJS,
+            this.tsmiInsertOilGrade,
+            this.tsmiInsertCycle,
+            this.tsmiInsertLitho,
+            this.tsmiInsertText,
+            this.tsmiInsertPattern,
+            this.tsmiInsertimage,
+            this.tsmiInsertCompositon,
+            this.tsmiInsertWellBone,
+            this.tsmiInsertDescription,
+            this.tsmiInsertRatioRect});
+            this.tsmiTrackInsert.Name = "tsmiTrackInsert";
+            this.tsmiTrackInsert.Size = new System.Drawing.Size(44, 21);
+            this.tsmiTrackInsert.Text = "图道";
+            // 
+            // tsmiInsertOilGrade
+            // 
+            this.tsmiInsertOilGrade.Name = "tsmiInsertOilGrade";
+            this.tsmiInsertOilGrade.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertOilGrade.Text = "含油级别";
+            this.tsmiInsertOilGrade.Click += new System.EventHandler(this.tsmiInsertOilGrade_Click);
+            // 
             // FormSectionWell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1154,16 +1163,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpen;
         private System.Windows.Forms.ToolStripMenuItem tsmiSave;
-        private System.Windows.Forms.ToolStripMenuItem tsmiTrackInsert;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertTrackLog;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLayer;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertText;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLitho;
         private System.Windows.Forms.ToolStripMenuItem tsmiNew;
         private System.Windows.Forms.TreeView tvSectionEdit;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertDepthRuler;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCJJS;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertPattern;
         private System.Windows.Forms.ToolStripMenuItem tsmiShowMode;
         private System.Windows.Forms.ToolStripMenuItem 普通ToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip cmsTVedit;
@@ -1179,7 +1180,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton tsBtnReflush;
         private System.Windows.Forms.ToolStripSeparator ToolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertRatioRect;
         private System.Windows.Forms.ToolStripMenuItem tsmiSaveAsTemplate;
         private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiTest;
@@ -1216,7 +1216,6 @@
         private System.Windows.Forms.ToolStripMenuItem 移除ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiDataItemInsert;
         private System.Windows.Forms.ToolStripMenuItem 隐藏ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCycle;
         private System.Windows.Forms.ToolStripLabel tsbLabelScale;
         private System.Windows.Forms.ToolStripComboBox tsbcbbVScale;
         private System.Windows.Forms.ToolStripMenuItem tsmiCopyLog;
@@ -1238,11 +1237,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiTrackMoveRight;
         private System.Windows.Forms.ToolStripMenuItem tsmiDel;
         private System.Windows.Forms.ToolStripMenuItem tsmiSelect;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertimage;
         private System.Windows.Forms.ToolStripMenuItem tsmiSave2Project;
         private System.Windows.Forms.ToolStripButton tsbTreeView;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertDescription;
         private System.Windows.Forms.StatusStrip statusStripTV;
         private System.Windows.Forms.ToolStripStatusLabel tssTVSelectItem;
         private System.Windows.Forms.ToolStripStatusLabel tsslTVlbl;
@@ -1251,9 +1248,22 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiModelResult;
         private System.Windows.Forms.ToolStripButton tsmiAdjustHead;
         public wellPanel wellPanelMain;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertWellBone;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCompositon;
         private System.Windows.Forms.ToolStripButton tsmiCloseRefresh;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTrackInsert;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertDepthRuler;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLayer;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertTrackLog;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCJJS;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertOilGrade;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCycle;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLitho;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertText;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertPattern;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertimage;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertCompositon;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertWellBone;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertDescription;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertRatioRect;
     }
 }

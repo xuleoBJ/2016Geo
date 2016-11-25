@@ -162,7 +162,7 @@ namespace DOGPlatform
             }
           
             //完善 小层 孔渗为无效值的情况
-            for (int i = 0; i < listLayerDataDic.Count ; i++)
+            for (int i = 0; i < listLayerDataDic.Count -1; i++)
             {
                 ItemDicLayerDataStatic currentItem = listLayerDataDic[i];
                 if (currentItem.fDCHD < 0 && currentItem.sJH == listLayerDataDic[i + 1].sJH)

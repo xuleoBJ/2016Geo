@@ -35,13 +35,15 @@ namespace DOGPlatform
         public static List<string> ltStrMapMetricScale=new List<string>{"100","200","500","1000","2000","5000","10000","20000","50000","100000"};
         public static List<string> ltStrMapFieldScale = new List<string> { "250", "500", "1000", "2000", "5000", "10000", "20000", "50000", "100000"};
 
-        public static List<string> ltStrTrackTypeIntervalProperty = new List<string> { TypeTrack.测井解释.ToString(), TypeTrack.沉积旋回.ToString(),TypeTrack.描述.ToString(),TypeTrack.管柱.ToString() };
+        public static List<string> ltStrTrackTypeIntervalProperty = new List<string> { TypeTrack.测井解释.ToString(), TypeTrack.含油级别.ToString(), TypeTrack.沉积旋回.ToString(), TypeTrack.描述.ToString(), TypeTrack.管柱.ToString() };
         
+        public static string dirTemplateSysName = "templateSys";
+
         public static string filePathInputWellhead = Path.Combine(dirPathUserData, "$wellHead#.txt");
 
         public static string filePathRunInfor = Path.Combine(dirPathUserData, "#Infor.txt");
         public static string filePathVoi = Path.Combine(dirPathUsedProjectData, "Voi");
-        
+
         public static string fileNameGE = "GE";
         public static string fileNameInputLayerDepth = "$inputLayerDepth#.txt";
         public static string fileNameInputJSJL = "$inputJSJL#.txt";
@@ -355,6 +357,17 @@ namespace DOGPlatform
 
         public static List<string> getTemplateFileNameList() 
         {
+            //如果没有模板文件，把系统模板的文件copy到这个目录下作为基本目标。
+            string templateSysDirPath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),cProjectManager.dirTemplateSysName);
+            if (Directory.GetFiles(dirPathTemplate, "*" + fileExtensionTemplate).Count() == 0 && Directory.Exists(templateSysDirPath))
+            {
+                string[] templateFiles = Directory.GetFiles(templateSysDirPath, "*" + fileExtensionTemplate);
+                foreach (string file in templateFiles)
+                {
+                    string templeFileName = Path.GetFileName(file);
+                    File.Copy(file, Path.Combine(dirPathTemplate, templeFileName));
+                }
+            }
             string[] files = Directory.GetFiles(dirPathTemplate, "*" + fileExtensionTemplate);
             List<string> ltFileNameXTM = new List<string>();
             foreach (string file in files)

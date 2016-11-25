@@ -187,7 +187,9 @@
             this.tsmiGraphDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNglobalLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExportAllLog = new System.Windows.Forms.ToolStripMenuItem();
-            this.全局设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGlobeLogSet = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGlobeLogRename = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGlobeDeleteLogFile = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNwellLogNode = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLogdataInput = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemCal = new System.Windows.Forms.ToolStripMenuItem();
@@ -217,6 +219,7 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiWellSectionMake = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1447,55 +1450,55 @@
             this.tsmiOpenAppSectionGeo,
             this.tsmiOpenAppSectionFence});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(161, 158);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(185, 158);
             // 
             // tsmiExpandAll
             // 
             this.tsmiExpandAll.Name = "tsmiExpandAll";
-            this.tsmiExpandAll.Size = new System.Drawing.Size(160, 22);
+            this.tsmiExpandAll.Size = new System.Drawing.Size(184, 22);
             this.tsmiExpandAll.Text = "展开";
             this.tsmiExpandAll.Click += new System.EventHandler(this.tsmiExpandAll_Click);
             // 
             // tsmiSelectAllWells
             // 
             this.tsmiSelectAllWells.Name = "tsmiSelectAllWells";
-            this.tsmiSelectAllWells.Size = new System.Drawing.Size(160, 22);
+            this.tsmiSelectAllWells.Size = new System.Drawing.Size(184, 22);
             this.tsmiSelectAllWells.Text = "全选";
             this.tsmiSelectAllWells.Click += new System.EventHandler(this.tsmiSelectAllWells_Click);
             // 
             // tsmiUnSelectAllWells
             // 
             this.tsmiUnSelectAllWells.Name = "tsmiUnSelectAllWells";
-            this.tsmiUnSelectAllWells.Size = new System.Drawing.Size(160, 22);
+            this.tsmiUnSelectAllWells.Size = new System.Drawing.Size(184, 22);
             this.tsmiUnSelectAllWells.Text = "全不选";
             this.tsmiUnSelectAllWells.Click += new System.EventHandler(this.tsmiUnSelectAllWells_Click);
             // 
             // tsmiColapseAll
             // 
             this.tsmiColapseAll.Name = "tsmiColapseAll";
-            this.tsmiColapseAll.Size = new System.Drawing.Size(160, 22);
+            this.tsmiColapseAll.Size = new System.Drawing.Size(184, 22);
             this.tsmiColapseAll.Text = "折叠";
             this.tsmiColapseAll.Click += new System.EventHandler(this.tsmiColapseAll_Click);
             // 
             // tsmiMakeWellSection
             // 
             this.tsmiMakeWellSection.Name = "tsmiMakeWellSection";
-            this.tsmiMakeWellSection.Size = new System.Drawing.Size(160, 22);
-            this.tsmiMakeWellSection.Text = "制作单井剖面";
+            this.tsmiMakeWellSection.Size = new System.Drawing.Size(184, 22);
+            this.tsmiMakeWellSection.Text = "批量制作单井综合图";
             this.tsmiMakeWellSection.Visible = false;
             this.tsmiMakeWellSection.Click += new System.EventHandler(this.tsmiMakeWellSection_Click);
             // 
             // tsmiOpenAppSectionGeo
             // 
             this.tsmiOpenAppSectionGeo.Name = "tsmiOpenAppSectionGeo";
-            this.tsmiOpenAppSectionGeo.Size = new System.Drawing.Size(160, 22);
+            this.tsmiOpenAppSectionGeo.Size = new System.Drawing.Size(184, 22);
             this.tsmiOpenAppSectionGeo.Text = "新建联井剖面";
             this.tsmiOpenAppSectionGeo.Click += new System.EventHandler(this.tsmiOpenAppSectionGeo_Click);
             // 
             // tsmiOpenAppSectionFence
             // 
             this.tsmiOpenAppSectionFence.Name = "tsmiOpenAppSectionFence";
-            this.tsmiOpenAppSectionFence.Size = new System.Drawing.Size(160, 22);
+            this.tsmiOpenAppSectionFence.Size = new System.Drawing.Size(184, 22);
             this.tsmiOpenAppSectionFence.Text = "新建井组栅状图";
             this.tsmiOpenAppSectionFence.Click += new System.EventHandler(this.tsmiOpenAppSectionFence_Click);
             // 
@@ -1566,28 +1569,29 @@
             this.cmsTNinputWell.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiWellInfor,
             this.tsmiWellData,
+            this.tsmiWellSectionMake,
             this.tsmiDeleteWell});
             this.cmsTNinputWell.Name = "cmsInputWell";
-            this.cmsTNinputWell.Size = new System.Drawing.Size(113, 70);
+            this.cmsTNinputWell.Size = new System.Drawing.Size(153, 114);
             // 
             // tsmiWellInfor
             // 
             this.tsmiWellInfor.Name = "tsmiWellInfor";
-            this.tsmiWellInfor.Size = new System.Drawing.Size(112, 22);
+            this.tsmiWellInfor.Size = new System.Drawing.Size(152, 22);
             this.tsmiWellInfor.Text = "井信息";
             this.tsmiWellInfor.Click += new System.EventHandler(this.tsmiWellInfor_Click);
             // 
             // tsmiWellData
             // 
             this.tsmiWellData.Name = "tsmiWellData";
-            this.tsmiWellData.Size = new System.Drawing.Size(112, 22);
+            this.tsmiWellData.Size = new System.Drawing.Size(152, 22);
             this.tsmiWellData.Text = "井数据";
             this.tsmiWellData.Click += new System.EventHandler(this.tsmiWellData_Click);
             // 
             // tsmiDeleteWell
             // 
             this.tsmiDeleteWell.Name = "tsmiDeleteWell";
-            this.tsmiDeleteWell.Size = new System.Drawing.Size(112, 22);
+            this.tsmiDeleteWell.Size = new System.Drawing.Size(152, 22);
             this.tsmiDeleteWell.Text = "删除井";
             this.tsmiDeleteWell.Click += new System.EventHandler(this.tsmiDeleteWell_Click);
             // 
@@ -1633,23 +1637,40 @@
             // 
             this.cmsTNglobalLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiExportAllLog,
-            this.全局设置ToolStripMenuItem});
+            this.tsmiGlobeLogSet,
+            this.tsmiGlobeLogRename,
+            this.tsmiGlobeDeleteLogFile});
             this.cmsTNglobalLog.Name = "cmsGlobalLog";
-            this.cmsTNglobalLog.Size = new System.Drawing.Size(149, 48);
+            this.cmsTNglobalLog.Size = new System.Drawing.Size(161, 92);
+            this.cmsTNglobalLog.Opening += new System.ComponentModel.CancelEventHandler(this.cmsTNglobalLog_Opening);
             // 
             // tsmiExportAllLog
             // 
             this.tsmiExportAllLog.Name = "tsmiExportAllLog";
-            this.tsmiExportAllLog.Size = new System.Drawing.Size(148, 22);
+            this.tsmiExportAllLog.Size = new System.Drawing.Size(160, 22);
             this.tsmiExportAllLog.Text = "导出多井曲线";
             this.tsmiExportAllLog.Click += new System.EventHandler(this.tsmiExportAllLog_Click);
             // 
-            // 全局设置ToolStripMenuItem
+            // tsmiGlobeLogSet
             // 
-            this.全局设置ToolStripMenuItem.Name = "全局设置ToolStripMenuItem";
-            this.全局设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.全局设置ToolStripMenuItem.Text = "全局设置";
-            this.全局设置ToolStripMenuItem.Click += new System.EventHandler(this.全局设置ToolStripMenuItem_Click);
+            this.tsmiGlobeLogSet.Name = "tsmiGlobeLogSet";
+            this.tsmiGlobeLogSet.Size = new System.Drawing.Size(160, 22);
+            this.tsmiGlobeLogSet.Text = "全局曲线设置";
+            this.tsmiGlobeLogSet.Click += new System.EventHandler(this.全局设置ToolStripMenuItem_Click);
+            // 
+            // tsmiGlobeLogRename
+            // 
+            this.tsmiGlobeLogRename.Name = "tsmiGlobeLogRename";
+            this.tsmiGlobeLogRename.Size = new System.Drawing.Size(160, 22);
+            this.tsmiGlobeLogRename.Text = "全局曲线重命名";
+            this.tsmiGlobeLogRename.Click += new System.EventHandler(this.tsmiGlobeRenameLogName_Click);
+            // 
+            // tsmiGlobeDeleteLogFile
+            // 
+            this.tsmiGlobeDeleteLogFile.Name = "tsmiGlobeDeleteLogFile";
+            this.tsmiGlobeDeleteLogFile.Size = new System.Drawing.Size(160, 22);
+            this.tsmiGlobeDeleteLogFile.Text = "全局删除曲线";
+            this.tsmiGlobeDeleteLogFile.Click += new System.EventHandler(this.tsmiGlobeDeleteLogFile_Click);
             // 
             // cmsTNwellLogNode
             // 
@@ -1868,6 +1889,13 @@
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
             // 
+            // tsmiWellSectionMake
+            // 
+            this.tsmiWellSectionMake.Name = "tsmiWellSectionMake";
+            this.tsmiWellSectionMake.Size = new System.Drawing.Size(152, 22);
+            this.tsmiWellSectionMake.Text = "单井组合图";
+            this.tsmiWellSectionMake.Click += new System.EventHandler(this.tsmiWellSectionMake_Click);
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
@@ -2082,7 +2110,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphDelete;
         private System.Windows.Forms.ContextMenuStrip cmsTNglobalLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportAllLog;
-        private System.Windows.Forms.ToolStripMenuItem 全局设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGlobeLogSet;
         private System.Windows.Forms.ContextMenuStrip cmsTNwellLogNode;
         private System.Windows.Forms.ToolStripMenuItem tsmiDeleAllLog;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportWellLog;
@@ -2130,6 +2158,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenAppSectionGeo;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenAppSectionFence;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionFenceOpen;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGlobeLogRename;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGlobeDeleteLogFile;
+        private System.Windows.Forms.ToolStripMenuItem tsmiWellSectionMake;
     }
 }
 

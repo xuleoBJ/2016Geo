@@ -43,17 +43,27 @@ namespace DOGPlatform
             trackDataListLog dlTrackDataListLog = cSVGSectionTrackLog.getLogSeriersFromLogFile(sJH, sLogName);
             if (trackTypeStr == TypeTrack.曲线道.ToString())
             {
-                dgvDataTable.Columns.Clear();
-                dgvDataTable.Columns.Add("topDepth", "深度");
-                dgvDataTable.Columns.Add("value", "数值");
-                dgvDataTable.Rows.Add(dlTrackDataListLog.fListMD.Count);
+             
+                    dgvDataTable.Columns.Clear();
+                    dgvDataTable.Columns.Add("topDepth", "深度");
+                    dgvDataTable.Columns.Add("value", "数值");
+                    if (dlTrackDataListLog.fListMD.Count > 1)
+                    {
+                        dgvDataTable.Rows.Add(dlTrackDataListLog.fListMD.Count);
+                    }
+                    else 
+                    {
+                        dgvDataTable.Rows.Add();
+                    }
             }
             int iCount = dgvDataTable.ColumnCount;
-            for (int i = 0; i < dlTrackDataListLog.fListMD.Count;i++ )
+
+            for (int i = 0; i < dlTrackDataListLog.fListMD.Count; i++)
             {
                 dgvDataTable.Rows[i].Cells[0].Value = dlTrackDataListLog.fListMD[i].ToString("0.00");
                 dgvDataTable.Rows[i].Cells[1].Value = dlTrackDataListLog.fListValue[i].ToString("0.00");
-            }
+            } 
+          
         } 
         private void tsmiCilpCopy_Click(object sender, EventArgs e)
         {
@@ -120,10 +130,12 @@ namespace DOGPlatform
                     this.ctlStatisticInfor1.initialForm(ltValue);
                     List<double> ltDepth = getListDataFromDgvByColomnIndex(this.dgvDataTable, 0);
                     this.ctlLogInforStatistic1.initialForm(ltDepth);
-
-                    nTBXleftValue.Text = ltValue.Min().ToString();
-                    nTBXrightValue.Text = ltValue.Max().ToString();
-                    updateFrequencyHistogram(ltValue);
+                    if (ltValue.Count > 1)
+                    {
+                        nTBXleftValue.Text = ltValue.Min().ToString();
+                        nTBXrightValue.Text = ltValue.Max().ToString();
+                        updateFrequencyHistogram(ltValue);
+                    }
                 }
             }
         }

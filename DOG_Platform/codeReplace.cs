@@ -8,7 +8,8 @@ namespace DOGPlatform
     class codeReplace
     {
         public static List<string> ltStrJSJL = new List<string> { "未解释", "油层", "差油层", "含水油层", "油水同层", "含油水层", "可疑层", "油气同层", "气层", "气水同层", "含气水层", "水层", "致密层", "干层", "煤层" };
-        public static List<string> ltStrLJJL = new List<string> { "饱含油", "富含油", "油侵", "油斑", "油迹", "荧光", "气砂", "含气", "水砂" };
+        public static List<string> ltStrHYJB = new List<string> { "饱含油", "富含油", "油侵", "油斑", "油迹", "荧光", "气砂", "含气", "水砂" };
+       
         public static List<string> ltStrGeoCycle = new List<string> { "正旋回", "反旋回"};
 
         public static string codeReplaceJSJL2FillUrl(string _sInputCode)

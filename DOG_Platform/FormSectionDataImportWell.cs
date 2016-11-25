@@ -51,12 +51,12 @@ namespace DOGPlatform
                         dgvDataTable.Rows[i].Cells[2].Value = item.sProperty.ToString();
                     }
                 }
-                if (trackTypeStr == TypeTrack.测井解释.ToString() || trackTypeStr == TypeTrack.沉积旋回.ToString() )
+                if (trackTypeStr == TypeTrack.测井解释.ToString() || trackTypeStr == TypeTrack.沉积旋回.ToString() ||trackTypeStr == TypeTrack.含油级别.ToString())
                 {
                     dgvDataTable.Columns.Clear();
                     dgvDataTable.Columns.Add("topDepth", "顶深");
                     dgvDataTable.Columns.Add("baseDepth", "底深");
-                    dgvDataTable.Columns.Add("property", "结果");
+                    dgvDataTable.Columns.Add("property", trackTypeStr);
                     for (int i = 0; i < listDataItem.Count; i++)
                     {
                         itemDrawDataIntervalValue item = listDataItem[i];
@@ -72,7 +72,7 @@ namespace DOGPlatform
                     dgvDataTable.Columns.Add("topDepth", "顶深");
                     dgvDataTable.Columns.Add("baseDepth", "底深");
                     dgvDataTable.Columns.Add("property", "类别");
-                    dgvDataTable.Columns.Add("text", "名称");
+                    dgvDataTable.Columns.Add("text", trackTypeStr);
                     for (int i = 0; i < listDataItem.Count; i++)
                     {
                         itemDrawDataIntervalValue item = listDataItem[i];
@@ -200,6 +200,7 @@ namespace DOGPlatform
                 }
                 else if (trackTypeStr == TypeTrack.分层.ToString()
                   || trackTypeStr == TypeTrack.测井解释.ToString()
+                  || trackTypeStr == TypeTrack.含油级别.ToString()
                    || trackTypeStr == TypeTrack.沉积旋回.ToString()
                   || trackTypeStr == TypeTrack.比例条.ToString()
                   )
