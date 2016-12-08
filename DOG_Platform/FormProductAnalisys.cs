@@ -294,11 +294,7 @@ namespace DOGPlatform
  
             }
 
-            if (this.checkBoxMapFrame.Checked == true)
-            {
-                returnElemment = cLayerProductionMap.gMapFrame(this.checkBoxGird.Checked);
-                cLayerProductionMap.addgElement2BaseLayer(returnElemment, 0, 0);
-            }
+        
             if (this.checkCompassShowed.Checked == true)
             {
                 cLayerProductionMap.svgRoot.AppendChild(cLayerProductionMap.gCompass(100, 400));

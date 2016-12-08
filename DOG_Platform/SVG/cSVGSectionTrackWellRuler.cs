@@ -42,11 +42,11 @@ namespace DOGPlatform.SVG
             while (iCurrentDepth <= ElevationDepthTop)
             {
                 XmlElement gDepthTick = svgDoc.CreateElement("path");
-                gDepthTick.SetAttribute("stroke-width", "1");
-                string d = "M " + iWidth.ToString() + " " + (-iCurrentDepth * fVsacle).ToString() + " h -8 ";
+                gDepthTick.SetAttribute("stroke-width", "2");
+                string d = "M " + iWidth.ToString() + " " + (-iCurrentDepth * fVsacle).ToString() + " h -20 ";
                 if (iCurrentDepth % m_tickInveral_main != 0)
                 {
-                    d = "M" + iWidth.ToString() + " " + (-iCurrentDepth * fVsacle).ToString() + " h -4 ";
+                    d = "M" + iWidth.ToString() + " " + (-iCurrentDepth * fVsacle).ToString() + " h -10 ";
                 }
                 gDepthTick.SetAttribute("stroke", "black");
                 gDepthTick.SetAttribute("d", d);
@@ -61,7 +61,7 @@ namespace DOGPlatform.SVG
                     gTickText.SetAttribute("font-size",iFontSize.ToString());
                     gTickText.SetAttribute("text-anchor", "end");
                     gTickText.SetAttribute("alignment-baseline", "central");
-                    gTickText.SetAttribute("strole-width", "0.5");
+                    gTickText.SetAttribute("strole-width", "1");
                     gTickText.InnerText = iCurrentDepth.ToString();
                     gElevationRuler.AppendChild(gTickText);
                 }

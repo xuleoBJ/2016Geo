@@ -48,7 +48,7 @@ namespace DOGPlatform
                 returnElemment = cSVGSectionTrackWellRuler.gElevationRulerSimple(svgSection.svgDoc, ElevationRulerTop, ElevationRulerBase, iScaleElevationRuler, curPage.fVscale, iFontSize);
                 //iDX取了10
                 //因为有页面的top深对应刻度，所以要做纵向平移。
-                svgSection.addgElement2BaseLayer(returnElemment, 20, iPageTopYOff);
+                svgSection.addgElement2BaseLayer(returnElemment, 100, iPageTopYOff);
             }
             #endregion
             XmlDocument XDocSection = new XmlDocument();

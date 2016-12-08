@@ -12,6 +12,7 @@ namespace DOGPlatform.XML
         public double xRef = cProjectData.dfMapXrealRefer;
         public double yRef = cProjectData.dfMapYrealRefer;
         public double dfscale = cProjectData.dfMapScale;
+        public int iNumExtendGrid = 4;
         public int iShowCompass = 0;
         public int iShowScaleRuler = 1;
         public int iShowMapFrame = 1;
@@ -25,6 +26,7 @@ namespace DOGPlatform.XML
             xRef = double.Parse(pageInor["xRef"].InnerText);
             yRef = double.Parse(pageInor["YRef"].InnerText);
             dfscale = double.Parse(pageInor["dfMapScale"].InnerText);
+            iNumExtendGrid = int.Parse(pageInor["iNumExtendGrid"].InnerText);
         }
         public static XElement PageInfor()
         {
@@ -37,6 +39,7 @@ namespace DOGPlatform.XML
                                    new XElement("xRef", cProjectData.dfMapXrealRefer.ToString()),
                                   new XElement("YRef", cProjectData.dfMapYrealRefer.ToString()),
                                  new XElement("dfMapScale", cProjectData.dfMapScale.ToString("0.00")),
+                                  new XElement("iNumExtendGrid", "4"),
                                  new XElement("mapTitle", ""),
                                   new XElement("fontSizeMapTitle", "20"),
                                   new XElement("mapTitleRectHeight", "40"),
@@ -49,6 +52,7 @@ namespace DOGPlatform.XML
         public static string fmpPageHeight = "/LayerMapConfig/PageInfor/pageHeight";
         public static string fmpPageUnit = "/LayerMapConfig/PageInfor/pageUnit";
         public static string fmpMapTitle = "/LayerMapConfig/PageInfor/mapTitle";
+        public static string fmpNumExtendGrid = "/LayerMapConfig/PageInfor/iNumExtendGrid";
         public static XElement ComPass() 
         {
             return new XElement("Compass",

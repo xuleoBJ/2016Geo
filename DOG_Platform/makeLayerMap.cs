@@ -17,7 +17,7 @@ namespace DOGPlatform
             //注意偏移量,偏移主要是为了好看 如果不偏移的话 就会绘到角落上,这时的偏移是整个偏移 后面的不用偏移了，相对偏移0，0
         
             //svg文件和XML对应的问题还要思考一下
-            string filePathSVGLayerMap = Path.Combine(cProjectManager.dirPathMap, Path.GetFileNameWithoutExtension(filePathOperate) + ".svg");
+            string filePathSVGLayerMap = Path.Combine(cProjectManager.dirPathTemp, Path.GetFileNameWithoutExtension(filePathOperate) + ".svg");
 
             //这块需要处理覆盖问题。
             if (File.Exists(filePathSVGLayerMap)) File.Delete(filePathSVGLayerMap);
@@ -50,10 +50,11 @@ namespace DOGPlatform
             //画井位
 
             cXEWellCss wellCss = new cXEWellCss(xmlLayerMap);
+            
+            //根据配置文件，读取页面基本配置信息
             cXELayerPage curPage = new cXELayerPage(xmlLayerMap);
            
-
-            //画每个图层
+            //从配置文件中 读取图层列表，根据配置绘制图层
             XmlNode xnLayerList = xmlLayerMap.SelectSingleNode("/LayerMapConfig/LayerList");
             //或许Layer标签的节点
             foreach (XmlNode xn in xnLayerList.ChildNodes)
@@ -70,7 +71,7 @@ namespace DOGPlatform
                     foreach (ItemWellMapPosition itemWell in listWellLayerMap)
                     {
                         Point PViewWell = cCordinationTransform.transRealPointF2ViewPoint(itemWell.dbX, itemWell.dbY, curPage.xRef, curPage.yRef, curPage.dfscale);
-                        returnElemment = cXMLLayerMapWellLog.gLayerWellLog(svgLayerMap, itemWell, layDataLog); ;
+                        returnElemment = cXMLLayerMapWellLog.gLayerWellLog(svgLayerMap, itemWell, layDataLog); 
                         //新层加内容
                         svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, PViewWell.X, PViewWell.Y);
                     }
@@ -156,13 +157,13 @@ namespace DOGPlatform
             {
                 XmlElement gLayerScaleRuler = svgLayerMap.gLayerElement("比例尺");
                 svgLayerMap.addgLayer(gLayerScaleRuler, svgLayerMap.offsetX_gSVG, svgLayerMap.offsetY_gSVG);
-                returnElemment = svgLayerMap.gScaleRuler(0, 0, (float)curPage.dfscale);
+                returnElemment = svgLayerMap.gScaleRuler(0, 0, curPage.dfscale);
                 svgLayerMap.addgElement2Layer(gLayerScaleRuler, returnElemment, 100, 100);
             }
 
             if (curPage.iShowMapFrame == 1)
             {
-                returnElemment = svgLayerMap.gMapFrame(true);
+                returnElemment = svgLayerMap.gMapFrame(true,curPage.iNumExtendGrid);
                 svgLayerMap.addgElement2BaseLayer(returnElemment);
             }
 

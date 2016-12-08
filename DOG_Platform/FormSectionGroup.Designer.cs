@@ -227,7 +227,7 @@
             this.tsmiWellPositionAdjust,
             this.tsmiShowState});
             this.cmsTVedit.Name = "treeviewContextMenuStrip";
-            this.cmsTVedit.Size = new System.Drawing.Size(173, 356);
+            this.cmsTVedit.Size = new System.Drawing.Size(173, 378);
             // 
             // tsmiInsertTrack
             // 
@@ -379,7 +379,7 @@
             // 
             this.tsmiViewWell.Name = "tsmiViewWell";
             this.tsmiViewWell.Size = new System.Drawing.Size(172, 22);
-            this.tsmiViewWell.Text = "定位井";
+            this.tsmiViewWell.Text = "定位显示选中井";
             this.tsmiViewWell.Click += new System.EventHandler(this.tsmiViewWell_Click);
             // 
             // tsmiWellPositionAdjust

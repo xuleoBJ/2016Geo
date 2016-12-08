@@ -31,8 +31,7 @@
             this.tbxTitle = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.nUDrefY = new System.Windows.Forms.NumericUpDown();
-            this.nUDrefX = new System.Windows.Forms.NumericUpDown();
+            this.nUDiNumExtendGrid = new System.Windows.Forms.NumericUpDown();
             this.cbbUnit = new System.Windows.Forms.ComboBox();
             this.cbbScale = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.nUDPageWidth = new System.Windows.Forms.NumericUpDown();
             this.label35 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -53,8 +51,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDrefY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDrefX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDiNumExtendGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -78,8 +75,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.nUDrefY);
-            this.groupBox3.Controls.Add(this.nUDrefX);
+            this.groupBox3.Controls.Add(this.nUDiNumExtendGrid);
             this.groupBox3.Controls.Add(this.cbbUnit);
             this.groupBox3.Controls.Add(this.cbbScale);
             this.groupBox3.Controls.Add(this.label3);
@@ -89,7 +85,6 @@
             this.groupBox3.Controls.Add(this.nUDPageWidth);
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.label67);
-            this.groupBox3.Controls.Add(this.label36);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(14, 74);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -100,51 +95,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "页面大小设置";
             // 
-            // nUDrefY
+            // nUDiNumExtendGrid
             // 
-            this.nUDrefY.AllowDrop = true;
-            this.nUDrefY.Increment = new decimal(new int[] {
-            500,
+            this.nUDiNumExtendGrid.AllowDrop = true;
+            this.nUDiNumExtendGrid.Location = new System.Drawing.Point(106, 59);
+            this.nUDiNumExtendGrid.Maximum = new decimal(new int[] {
+            50,
             0,
             0,
             0});
-            this.nUDrefY.Location = new System.Drawing.Point(292, 54);
-            this.nUDrefY.Maximum = new decimal(new int[] {
-            9000000,
+            this.nUDiNumExtendGrid.Name = "nUDiNumExtendGrid";
+            this.nUDiNumExtendGrid.Size = new System.Drawing.Size(66, 21);
+            this.nUDiNumExtendGrid.TabIndex = 42;
+            this.nUDiNumExtendGrid.Value = new decimal(new int[] {
+            4,
             0,
             0,
             0});
-            this.nUDrefY.Name = "nUDrefY";
-            this.nUDrefY.Size = new System.Drawing.Size(102, 21);
-            this.nUDrefY.TabIndex = 43;
-            this.nUDrefY.Value = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            // 
-            // nUDrefX
-            // 
-            this.nUDrefX.AllowDrop = true;
-            this.nUDrefX.Increment = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.nUDrefX.Location = new System.Drawing.Point(92, 54);
-            this.nUDrefX.Maximum = new decimal(new int[] {
-            90000000,
-            0,
-            0,
-            0});
-            this.nUDrefX.Name = "nUDrefX";
-            this.nUDrefX.Size = new System.Drawing.Size(102, 21);
-            this.nUDrefX.TabIndex = 42;
-            this.nUDrefX.Value = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
+            this.nUDiNumExtendGrid.ValueChanged += new System.EventHandler(this.nUDiNumExtendGrid_ValueChanged);
             // 
             // cbbUnit
             // 
@@ -158,7 +126,7 @@
             // 
             this.cbbScale.BackColor = System.Drawing.Color.White;
             this.cbbScale.FormattingEnabled = true;
-            this.cbbScale.Location = new System.Drawing.Point(92, 87);
+            this.cbbScale.Location = new System.Drawing.Point(91, 92);
             this.cbbScale.Name = "cbbScale";
             this.cbbScale.Size = new System.Drawing.Size(72, 20);
             this.cbbScale.TabIndex = 18;
@@ -212,7 +180,7 @@
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(199, 85);
+            this.button26.Location = new System.Drawing.Point(199, 89);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(75, 23);
             this.button26.TabIndex = 26;
@@ -250,11 +218,11 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(16, 56);
+            this.label35.Location = new System.Drawing.Point(19, 63);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(65, 12);
+            this.label35.Size = new System.Drawing.Size(83, 12);
             this.label35.TabIndex = 8;
-            this.label35.Text = "左侧基准点";
+            this.label35.Text = "区域扩编500 X";
             // 
             // label67
             // 
@@ -264,15 +232,6 @@
             this.label67.Size = new System.Drawing.Size(41, 12);
             this.label67.TabIndex = 37;
             this.label67.Text = "页面宽";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(209, 56);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(65, 12);
-            this.label36.TabIndex = 8;
-            this.label36.Text = "上方基准点";
             // 
             // label4
             // 
@@ -386,8 +345,7 @@
             this.Text = "页面设置";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDrefY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDrefX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDiNumExtendGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -402,8 +360,7 @@
         private System.Windows.Forms.TextBox tbxTitle;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown nUDrefY;
-        private System.Windows.Forms.NumericUpDown nUDrefX;
+        private System.Windows.Forms.NumericUpDown nUDiNumExtendGrid;
         private System.Windows.Forms.ComboBox cbbUnit;
         private System.Windows.Forms.ComboBox cbbScale;
         private System.Windows.Forms.Label label3;
@@ -413,7 +370,6 @@
         private System.Windows.Forms.NumericUpDown nUDPageWidth;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox checkBox1;

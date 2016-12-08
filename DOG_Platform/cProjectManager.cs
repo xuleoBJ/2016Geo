@@ -375,17 +375,17 @@ namespace DOGPlatform
             return ltFileNameXTM; 
         }
 
-        public static void save2ProjectDelEnvent(string inputFilePathSVG)
+        public static void save2ProjectResultMap(string inputFilePathSVG)
         {
             FormInputBox inputBox = new FormInputBox("请输入图名", "图名:");
             if (inputBox.ShowDialog() == DialogResult.OK)
             {
-                string sMapName = inputBox.ReturnValueStr;            //分层方案名 作为id 存values preserved after close
-               save2ProjectDelEnvent( inputFilePathSVG,sMapName);
+                string sMapName = inputBox.ReturnValueStr;      
+               save2ProjectResultMap( inputFilePathSVG,sMapName);
             }
         }
 
-        public static void save2ProjectDelEnvent(string inputFilePathSVG,string fileNameMap)
+        public static void save2ProjectResultMap(string inputFilePathSVG,string fileNameMap)
         {
             if (fileNameMap != "")
                 {

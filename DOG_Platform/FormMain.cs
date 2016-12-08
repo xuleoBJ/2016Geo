@@ -759,6 +759,7 @@ namespace DOGPlatform
                 cmsTNglobalLog.Items[1].Visible = true;
                 cmsTNglobalLog.Items[2].Visible = true;
                 cmsTNglobalLog.Items[3].Visible = true;
+                cmsTNglobalLog.Items[4].Visible = true;
             }
             this.tvProjectData.ContextMenuStrip = this.cmsTNglobalLog;
         }
@@ -2253,6 +2254,7 @@ namespace DOGPlatform
                 }
                 tnSelected.Remove();
             }
+            MessageBox.Show("删除完成");
         }
 
         private void cmsTNglobalLog_Opening(object sender, CancelEventArgs e)
@@ -2264,7 +2266,29 @@ namespace DOGPlatform
         {
             FormSectionWell formSingleWell = new FormSectionWell();
             formSingleWell.Show();
+        }
+
+        private void tsmiGlobeLogExport_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string sLogName = tnSelected.Text;
+            FolderBrowserDialog brwsr = new FolderBrowserDialog();
+
+            //Check to see if the user clicked the cancel button
+            if (brwsr.ShowDialog() == DialogResult.Cancel)
+                return;
+            else
+            {
+                string dirSelect = brwsr.SelectedPath;
+                //Do whatever with the new path
+                foreach (string sJH in cProjectData.ltStrProjectJH)
+                {
+                    string filePath = Path.Combine(cProjectManager.dirPathWellDir, sJH, sLogName + cProjectManager.fileExtensionWellLog);
+                    string newFilePath = Path.Combine(dirSelect, sJH + "_" + sLogName + ".txt");
+                    if (File.Exists(filePath)) File.Copy(filePath,newFilePath,true);  
+                }
+            }//end else
+            MessageBox.Show("导出完成");
         } 
-     
     }
 }

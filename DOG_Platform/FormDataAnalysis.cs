@@ -80,11 +80,7 @@ namespace DOGPlatform
             
             }
 
-            if (this.cbxMapFrame.Checked == true)
-            {
-                returnElemment = cPieMap.gMapFrame(this.cbxGrid.Checked);
-                cPieMap.addgElement2BaseLayer(returnElemment, 0, 0);
-            }
+          
 
             if (this.cbxCompassShowed.Checked == true)
             {

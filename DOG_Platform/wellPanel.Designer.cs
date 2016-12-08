@@ -35,6 +35,7 @@
             this.tsmiDataItemAdjustBot = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBodyLogSet = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDataItemInsert = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDataFromWellNeighbor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDataItemSet = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBodyLogValue = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSelectDel = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,6 @@
             this.lblCrossV = new System.Windows.Forms.Label();
             this.lblDrawMove = new System.Windows.Forms.Label();
             this.lblmarker = new System.Windows.Forms.Label();
-            this.tsmiDataFromWellNeighbor = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsWBBody.SuspendLayout();
             this.cmsWBHead.SuspendLayout();
             this.statusStripWellPanel.SuspendLayout();
@@ -130,6 +130,12 @@
             this.tsmiDataItemInsert.Size = new System.Drawing.Size(124, 22);
             this.tsmiDataItemInsert.Text = "插入新段";
             this.tsmiDataItemInsert.Click += new System.EventHandler(this.tsmiDataItemInsert_Click);
+            // 
+            // tsmiDataFromWellNeighbor
+            // 
+            this.tsmiDataFromWellNeighbor.Name = "tsmiDataFromWellNeighbor";
+            this.tsmiDataFromWellNeighbor.Size = new System.Drawing.Size(124, 22);
+            this.tsmiDataFromWellNeighbor.Text = "邻井采样";
             // 
             // tsmiDataItemSet
             // 
@@ -388,12 +394,6 @@
             this.lblmarker.Size = new System.Drawing.Size(0, 12);
             this.lblmarker.TabIndex = 9;
             // 
-            // tsmiDataFromWellNeighbor
-            // 
-            this.tsmiDataFromWellNeighbor.Name = "tsmiDataFromWellNeighbor";
-            this.tsmiDataFromWellNeighbor.Size = new System.Drawing.Size(124, 22);
-            this.tsmiDataFromWellNeighbor.Text = "邻井采样";
-            // 
             // wellPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -455,8 +455,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiHeadLogRemove;
         private System.Windows.Forms.ToolStripMenuItem tsmiHeadRefresh;
         private System.Windows.Forms.ToolStripMenuItem tsmiHeadLayerStastics;
-        private System.Windows.Forms.Label lblmarker;
         private System.Windows.Forms.ToolStripMenuItem tsmiDataFromWellNeighbor;
+        public System.Windows.Forms.Label lblmarker;
 
     }
 }

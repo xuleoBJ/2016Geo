@@ -852,7 +852,7 @@ namespace DOGPlatform
 
         private void tsmiSave2Project_Click(object sender, EventArgs e)
         {
-            cProjectManager.save2ProjectDelEnvent(filePathSVG);
+            cProjectManager.save2ProjectResultMap(filePathSVG);
         }
 
         private void tsmiAddLog_Click(object sender, EventArgs e)
@@ -939,6 +939,7 @@ namespace DOGPlatform
                 tsmiAdjustShowDepth.Visible = true;
                 tsmiTemplateSaveAs.Visible = true;
                 tsmiTemplateUse.Visible = true;
+                tsmiGetShowCurWell.Visible = true;
             }
             if (selectedNode.Level == 1)
             {
@@ -1413,6 +1414,24 @@ namespace DOGPlatform
                 dirSectionData = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName);
                 filePathSectionGeoCss = Path.Combine(cProjectManager.dirPathUsedProjectData, newInputFileName + cProjectManager.fileExtensionSectionGeo);
                 this.tbgViewEdit.Text = newInputFileName;
+            }
+        }
+
+        private void tsmiGetShowCurWell_Click(object sender, EventArgs e)
+        {
+             TreeNode currentNode = tvSectionEdit.SelectedNode;
+            if (currentNode != null)
+            {
+                setUpIDByTN(currentNode);
+                //获取井的位置
+                XmlNode selectWell = cXmlDocSectionGeo.selectNodeByID(this.filePathSectionGeoCss, this.sJH);
+                if (selectWell != null)
+                {
+                    float fMapScale = float.Parse(cXmlBase.getNodeInnerText(filePathSectionGeoCss, cXEGeopage.fullPathSacleMap));
+                    int xView = (int)(fMapScale * float.Parse(selectWell["Xview"].InnerText));
+                    int yView = (int)(fMapScale * float.Parse(selectWell["Yview"].InnerText));
+                    cSectionUIoperate.setOffSet(this.webBrowserSVG, new Point(xView, yView));
+                }
             }
         }
 

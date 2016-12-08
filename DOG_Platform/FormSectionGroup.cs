@@ -436,7 +436,7 @@ namespace DOGPlatform
 
         private void tsmiSave_Click(object sender, EventArgs e)
         {
-            cProjectManager.save2ProjectDelEnvent(filePathSVG);
+            cProjectManager.save2ProjectResultMap(filePathSVG);
         }
 
         private void tsmiAddLog_Click(object sender, EventArgs e)

@@ -37,11 +37,14 @@ namespace DOGPlatform
             listScale.Add("100000");
             cbbScale.Items.Clear();
             foreach (string sItem in listScale) cbbScale.Items.Add(sItem);
-            this.nUDrefX.Value = decimal.Parse(cProjectData.dfMapXrealRefer.ToString());
-            this.nUDrefY.Value = decimal.Parse(cProjectData.dfMapYrealRefer.ToString());
             initialCbbScale();
             this.cbbScale.Text = (1000.0 / cProjectData.dfMapScale).ToString("0");
             cPublicMethodForm.inialComboBox(cbbUnit, new List<string>(new string[] { "px", "pt", "mm", "pc", "cm", "in" }));
+        }
+
+        private void nUDiNumExtendGrid_ValueChanged(object sender, EventArgs e)
+        {
+            cXmlBase.setNodeInnerText(filePathOperate, cXELayerPage.fmpNumExtendGrid, nUDiNumExtendGrid.Value.ToString("0"));
         }
     }
 }

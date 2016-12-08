@@ -998,7 +998,7 @@ namespace DOGPlatform
              if (newEx.ShowDialog() == DialogResult.OK)
              {
                  string sMapName = newEx.ReturnValueStr; 
-                 cProjectManager.save2ProjectDelEnvent(filePathSVG,sMapName);
+                 cProjectManager.save2ProjectResultMap(filePathSVG,sMapName);
              }
          }
 

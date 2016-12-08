@@ -1218,6 +1218,7 @@
             this.tsbPageSet.Name = "tsbPageSet";
             this.tsbPageSet.Size = new System.Drawing.Size(23, 22);
             this.tsbPageSet.Text = "页面设置";
+            this.tsbPageSet.Click += new System.EventHandler(this.tsbPageSet_Click);
             // 
             // tsbTreeView
             // 
@@ -1350,25 +1351,25 @@
             // tsmiNew
             // 
             this.tsmiNew.Name = "tsmiNew";
-            this.tsmiNew.Size = new System.Drawing.Size(124, 22);
+            this.tsmiNew.Size = new System.Drawing.Size(152, 22);
             this.tsmiNew.Text = "新建";
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(152, 22);
             this.tsmiOpen.Text = "打开";
             // 
             // tsmiSave
             // 
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSave.Size = new System.Drawing.Size(152, 22);
             this.tsmiSave.Text = "保存";
             // 
             // tsmiSave2Project
             // 
             this.tsmiSave2Project.Name = "tsmiSave2Project";
-            this.tsmiSave2Project.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSave2Project.Size = new System.Drawing.Size(152, 22);
             this.tsmiSave2Project.Text = "入成果库";
             this.tsmiSave2Project.Click += new System.EventHandler(this.tsmiSave2Project_Click);
             // 
@@ -1387,14 +1388,14 @@
             // 
             this.temiReselect.Name = "temiReselect";
             this.temiReselect.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.temiReselect.Size = new System.Drawing.Size(145, 22);
+            this.temiReselect.Size = new System.Drawing.Size(152, 22);
             this.temiReselect.Text = "选择";
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
             this.tsmiDelete.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.tsmiDelete.Size = new System.Drawing.Size(145, 22);
+            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
             this.tsmiDelete.Text = "删除";
             // 
             // tsmiUndo
@@ -1402,7 +1403,7 @@
             this.tsmiUndo.Enabled = false;
             this.tsmiUndo.Name = "tsmiUndo";
             this.tsmiUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.tsmiUndo.Size = new System.Drawing.Size(145, 22);
+            this.tsmiUndo.Size = new System.Drawing.Size(152, 22);
             this.tsmiUndo.Text = "撤销";
             // 
             // tsmiRedo
@@ -1410,7 +1411,7 @@
             this.tsmiRedo.Enabled = false;
             this.tsmiRedo.Name = "tsmiRedo";
             this.tsmiRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.tsmiRedo.Size = new System.Drawing.Size(145, 22);
+            this.tsmiRedo.Size = new System.Drawing.Size(152, 22);
             this.tsmiRedo.Text = "重做";
             // 
             // tsmiInsertLayer

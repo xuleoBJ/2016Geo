@@ -191,14 +191,15 @@ namespace DOGPlatform.SVG
 
             svgDefs.AppendChild(drillingSymble);
         }
-        public XmlElement gScaleRuler(int iDx, int iDY, float m_scale)
+        public XmlElement gScaleRuler(int iDx, int iDY, double m_scale)
         {
             XmlElement gScaleRuler = svgDoc.CreateElement("g");
             string sTranslate = "translate(" + iDx.ToString() + "," + iDY.ToString() + ")";
             gScaleRuler.SetAttribute("transform", sTranslate);
             gScaleRuler.SetAttribute("id", "比例尺");
-            float _sacleUnit = Convert.ToSingle(1000.0 * m_scale);
-
+            double _sacleUnit = 1000.0 * m_scale;
+       
+            //黑白比例尺
             for (int i = 0; i < 4; i++)
             {
                 XmlElement gRect = svgDoc.CreateElement("rect");
@@ -212,6 +213,8 @@ namespace DOGPlatform.SVG
                 gRect.SetAttribute("stroke", "black");
                 gScaleRuler.AppendChild(gRect);
             }
+
+            //比例尺tick
             for (int i = 0; i < 5; i++)
             {
                 XmlElement gLine = svgDoc.CreateElement("line");
@@ -224,21 +227,23 @@ namespace DOGPlatform.SVG
                 gScaleRuler.AppendChild(gLine);
             }
 
-            for (int i = 0; i < 5; i++)
+            //比例尺文字
+            for (int i = 0; i < 2; i++)
             {
                 XmlElement gText = svgDoc.CreateElement("text");
-                gText.SetAttribute("x", (_sacleUnit * 0.25 * i - 5).ToString());
+                gText.SetAttribute("x", (_sacleUnit * i - 5).ToString());
                 gText.SetAttribute("y", "-4");
                 gText.SetAttribute("font-size", "8");
-                gText.InnerText = (250 * i).ToString() + "m";
+                gText.InnerText = (1000 * i).ToString() + "m";
                 gText.SetAttribute("fill", "black");
                 gScaleRuler.AppendChild(gText);
             }
 
             return gScaleRuler;
         }
-       
-        public XmlElement gMapFrame(bool bShowGrid)
+
+        // iNumExpandGrid是扩编的网格，网格算法取井位置最大和最小值作为区域，为了显示美股， 
+        public XmlElement gMapFrame(bool bShowGrid,int iNumExpandGrid)
         {
             XmlElement gMapFrame = svgDoc.CreateElement("g");
             gMapFrame.SetAttribute("id", "图框");
@@ -273,8 +278,8 @@ namespace DOGPlatform.SVG
             double xMax = dfListX.Max() - dfListX.Min();
             double yMax = dfListY.Max() - dfListY.Min();
             int iSacleUnit = 500; //定义网格单位
-            int iPanelWidth = Convert.ToInt32((int)(xMax / iSacleUnit + 3) * iSacleUnit * cProjectData.dfMapScale);//显示好看pannel比最大大3个网格
-            int iPanelHeight = Convert.ToInt32((int)(yMax / iSacleUnit + 3) * iSacleUnit * cProjectData.dfMapScale);
+            int iPanelWidth = Convert.ToInt32((int)(xMax / iSacleUnit + iNumExpandGrid) * iSacleUnit * cProjectData.dfMapScale);
+            int iPanelHeight = Convert.ToInt32((int)(yMax / iSacleUnit + iNumExpandGrid) * iSacleUnit * cProjectData.dfMapScale);
             XmlElement gRectInner = svgDoc.CreateElement("rect");
             gRectInner.SetAttribute("x", "0");
             gRectInner.SetAttribute("y", "0");

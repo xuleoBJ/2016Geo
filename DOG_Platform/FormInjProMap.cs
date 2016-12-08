@@ -540,11 +540,7 @@ namespace DOGPlatform
 ;
             }
 
-            if (this.cbxMapFrame.Checked == true)
-            {
-                returnElemment = cLayerProductionMap.gMapFrame(this.cbxGird.Checked);
-                cLayerProductionMap.addgElement2BaseLayer(returnElemment, 0, 0);
-            }
+        
             if (this.cbxCompassShowed.Checked == true)
             {
                 cLayerProductionMap.svgRoot.AppendChild(cLayerProductionMap.gCompass(300, 100));

@@ -97,7 +97,7 @@ namespace DOGPlatform
             svgLayerMap.addMapTitle(sTitle, 50, 20);
             XmlElement returnElemment;
             //svg文件和XML对应的问题还要思考一下
-            string filePathSVGLayerMap = Path.Combine(cProjectManager.dirPathMap, Path.GetFileNameWithoutExtension(filePathLayerCss)+ ".svg");
+            string filePathSVGLayerMap = Path.Combine(cProjectManager.dirPathTemp, Path.GetFileNameWithoutExtension(filePathLayerCss)+ ".svg");
 
             //这块需要处理覆盖问题。
             if (File.Exists(filePathSVGLayerMap)) File.Delete(filePathSVGLayerMap);
@@ -186,7 +186,7 @@ namespace DOGPlatform
             //}
 
         
-            returnElemment = svgLayerMap.gMapFrame(true);
+            returnElemment = svgLayerMap.gMapFrame(true,4);
             svgLayerMap.addgElement2BaseLayer(returnElemment);
 
             XmlElement gLayerCompass = svgLayerMap.gLayerElement("指南针");
@@ -304,7 +304,6 @@ namespace DOGPlatform
                 this.sSelectLayer = formNew.ReturnLayer;
                 filePathLayerCss = Path.Combine(cProjectManager.dirPathLayerDir, sSelectLayer, sSelectLayer+".xml");
                 cXmlDocLayer.generateXML(filePathLayerCss, sSelectLayer);
-           //     cXmlDocLayer.creatLayerMapConfigXML(filePathLayerCss, sSelectLayer,this.PageWidth, this.PageHeight);
                 if (File.Exists(filePathLayerCss))
                 {
                     listLayersDataCurrentLayerStatic = cIODicLayerDataStatic.readDicLayerData2struct().FindAll(p => p.sXCM == sSelectLayer);
@@ -430,7 +429,7 @@ namespace DOGPlatform
 
         private void tsmiSave2Project_Click(object sender, EventArgs e)
         {
-            cProjectManager.save2ProjectDelEnvent(this.filePathSVGLayerMap);
+            cProjectManager.save2ProjectResultMap(this.filePathSVGLayerMap);
         }
 
         private void 井点属性ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -473,13 +472,16 @@ namespace DOGPlatform
                 FormSectionWell newSectionWeb = new FormSectionWell(filePathOper, fTop, fBot);
                 newSectionWeb.WindowState = FormWindowState.Normal;
                 newSectionWeb.Size = new Size(300, 300);
-                newSectionWeb.StartPosition = FormStartPosition.Manual;
+                //newSectionWeb.StartPosition = FormStartPosition.Manual;
                 newSectionWeb.Location = pXY.ToPoint();
                 newSectionWeb.setViewMode();
                 newSectionWeb.FormBorderStyle = FormBorderStyle.SizableToolWindow;
                 newSectionWeb.TopLevel = true;
                 newSectionWeb.wellPanelMain.webBrowserHead.Visible = false;
                 newSectionWeb.wellPanelMain.lblCrossV.Visible = false;
+                newSectionWeb.wellPanelMain.lblCrossH.Visible = false;
+                newSectionWeb.wellPanelMain.lblmarker.Visible = false;
+                newSectionWeb.wellPanelMain.statusStripWellPanel.Visible = false;
                 newSectionWeb.Show();
             }
             else 
@@ -614,6 +616,12 @@ namespace DOGPlatform
         private void tsmiInsertWellPoint_Click(object sender, EventArgs e)
         {
             cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerWellPosition);
+        }
+
+        private void tsbPageSet_Click(object sender, EventArgs e)
+        {
+            FormLayerSettingPage newPage = new FormLayerSettingPage(this.filePathLayerCss);
+            newPage.ShowDialog();
         }
     }
 }
