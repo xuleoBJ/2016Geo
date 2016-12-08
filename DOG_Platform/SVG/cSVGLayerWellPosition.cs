@@ -17,9 +17,14 @@ namespace DOGPlatform.SVG
 
             XmlElement gWellPositon = svgDoc.CreateElement("g");
             gWellPositon.SetAttribute("id", sID);
-
             foreach (ItemWellMapPosition item in listMapLayerWell)
             {
+                //如果缺失本层的分层数据, 采用井头的数据作为井位，此处可以选用上一层的数据，这块可以在初始化绘图List数据时采用
+                if (item.dbX == 0) 
+                {
+                    item.dbX = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbX;
+                    item.dbY = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbY;
+                }
                 Point pointConvert2View = cCordinationTransform.transRealPointF2ViewPoint(item.dbX, item.dbY, curPage.xRef, curPage.yRef, curPage.dfscale);
                 gWellPositon.AppendChild(gWell(svgDoc, item.sJH, pointConvert2View.X, pointConvert2View.Y, item.iWellType, 
                     wellCss.iFontSizeJH, wellCss.iRadis, wellCss.iCirlceWidth, wellCss.DX_JHText, wellCss.DY_JHText));

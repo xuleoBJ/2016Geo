@@ -186,8 +186,6 @@ namespace DOGPlatform
             //}
 
         
-            returnElemment = svgLayerMap.gMapFrame(true,4);
-            svgLayerMap.addgElement2BaseLayer(returnElemment);
 
             XmlElement gLayerCompass = svgLayerMap.gLayerElement("指南针");
             svgLayerMap.addgLayer(gLayerCompass, svgLayerMap.offsetX_gSVG, svgLayerMap.offsetY_gSVG);

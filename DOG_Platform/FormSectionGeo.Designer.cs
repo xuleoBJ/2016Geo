@@ -58,6 +58,7 @@
             this.tsmiInsertWellAfter = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRemoveWell = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAdjustShowDepth = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGetShowCurWell = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTemplateSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTemplateUse = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripTV = new System.Windows.Forms.StatusStrip();
@@ -158,7 +159,6 @@
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGetShowCurWell = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcSectionGeo.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
@@ -275,42 +275,42 @@
             // tsmiInsertTrackDepthRuler
             // 
             this.tsmiInsertTrackDepthRuler.Name = "tsmiInsertTrackDepthRuler";
-            this.tsmiInsertTrackDepthRuler.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackDepthRuler.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackDepthRuler.Text = "深度尺";
             this.tsmiInsertTrackDepthRuler.Click += new System.EventHandler(this.tsmiInsertTrackDepthRuler_Click);
             // 
             // tsmiInsertTrackLog
             // 
             this.tsmiInsertTrackLog.Name = "tsmiInsertTrackLog";
-            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackLog.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackLog.Text = "曲线道";
             this.tsmiInsertTrackLog.Click += new System.EventHandler(this.tsmiInsertTrackLog_Click);
             // 
             // tsmiInsertTrackLayer
             // 
             this.tsmiInsertTrackLayer.Name = "tsmiInsertTrackLayer";
-            this.tsmiInsertTrackLayer.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackLayer.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackLayer.Text = "地层道";
             this.tsmiInsertTrackLayer.Click += new System.EventHandler(this.地层道ToolStripMenuItem_Click);
             // 
             // tsmiInsertTrackText
             // 
             this.tsmiInsertTrackText.Name = "tsmiInsertTrackText";
-            this.tsmiInsertTrackText.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackText.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackText.Text = "文本道";
             this.tsmiInsertTrackText.Click += new System.EventHandler(this.tsmiInsertTrackText_Click);
             // 
             // tsmiInsertTrackCJSJ
             // 
             this.tsmiInsertTrackCJSJ.Name = "tsmiInsertTrackCJSJ";
-            this.tsmiInsertTrackCJSJ.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackCJSJ.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackCJSJ.Text = "测井解释";
             this.tsmiInsertTrackCJSJ.Click += new System.EventHandler(this.tsmiInsertTrackCJSJ_Click);
             // 
             // tsmiInsertTrackLitho
             // 
             this.tsmiInsertTrackLitho.Name = "tsmiInsertTrackLitho";
-            this.tsmiInsertTrackLitho.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertTrackLitho.Size = new System.Drawing.Size(124, 22);
             this.tsmiInsertTrackLitho.Text = "岩性道";
             this.tsmiInsertTrackLitho.Click += new System.EventHandler(this.tsmiInsertTrackLitho_Click);
             // 
@@ -420,6 +420,13 @@
             this.tsmiAdjustShowDepth.Size = new System.Drawing.Size(160, 22);
             this.tsmiAdjustShowDepth.Text = "显示深度";
             this.tsmiAdjustShowDepth.Click += new System.EventHandler(this.tsmiShowState_Click);
+            // 
+            // tsmiGetShowCurWell
+            // 
+            this.tsmiGetShowCurWell.Name = "tsmiGetShowCurWell";
+            this.tsmiGetShowCurWell.Size = new System.Drawing.Size(160, 22);
+            this.tsmiGetShowCurWell.Text = "定位显示选中井";
+            this.tsmiGetShowCurWell.Click += new System.EventHandler(this.tsmiGetShowCurWell_Click);
             // 
             // tsmiTemplateSaveAs
             // 
@@ -1286,13 +1293,6 @@
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
-            // 
-            // tsmiGetShowCurWell
-            // 
-            this.tsmiGetShowCurWell.Name = "tsmiGetShowCurWell";
-            this.tsmiGetShowCurWell.Size = new System.Drawing.Size(160, 22);
-            this.tsmiGetShowCurWell.Text = "定位显示选中井";
-            this.tsmiGetShowCurWell.Click += new System.EventHandler(this.tsmiGetShowCurWell_Click);
             // 
             // FormSectionGeo
             // 

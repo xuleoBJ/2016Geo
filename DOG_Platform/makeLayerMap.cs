@@ -79,6 +79,7 @@ namespace DOGPlatform
                 if (sLayerType == TypeLayer.LayerWellPosition.ToString())
                 {
                     XmlNode dataList = xn.SelectSingleNode("dataList");
+                   
                     if (dataList != null)
                     {
                         XmlNodeList dataItem = dataList.SelectNodes("dataItem");
@@ -87,11 +88,14 @@ namespace DOGPlatform
                             ItemLayerWellPattern itemWell = new ItemLayerWellPattern(xnWell);
                             Point PViewWell = cCordinationTransform.transRealPointF2ViewPoint(itemWell.X, itemWell.Y, curPage.xRef, curPage.yRef, curPage.dfscale);
                             returnElemment = cXMLLayerMapStatic.gWellPattern(svgLayerMap, itemWell, 10, 5, 5, 5, 5);
+                      
                             //新层加内容
                             svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, PViewWell.X, PViewWell.Y);
                         }
                     }
+                  
                    
+
                 }
                 //地质属性数据图层
                 //if (sLayerType == TypeLayer.LayerGeoProperty.ToString())
@@ -163,7 +167,7 @@ namespace DOGPlatform
 
             if (curPage.iShowMapFrame == 1)
             {
-                returnElemment = svgLayerMap.gMapFrame(true,curPage.iNumExtendGrid);
+                returnElemment = svgLayerMap.gMapFrame(true,curPage);
                 svgLayerMap.addgElement2BaseLayer(returnElemment);
             }
 

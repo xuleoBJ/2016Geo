@@ -179,6 +179,7 @@
             this.tsslblIDinfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblWb = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbcLayerMap = new System.Windows.Forms.TabControl();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1111,7 +1112,6 @@
             this.tsbPageSet,
             this.tsbTreeView,
             this.toolStripSeparator7,
-            this.tsBtnReflush,
             this.tsbUndo,
             this.tsbRedo,
             this.toolStripSeparator1,
@@ -1120,7 +1120,9 @@
             this.toolStripSeparator5,
             this.tsbConnectLayer,
             this.tsbFault,
-            this.tsbWellGeo});
+            this.tsbWellGeo,
+            this.toolStripSeparator4,
+            this.tsBtnReflush});
             this.ToolStripMain.Location = new System.Drawing.Point(0, 25);
             this.ToolStripMain.Name = "ToolStripMain";
             this.ToolStripMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -1351,25 +1353,25 @@
             // tsmiNew
             // 
             this.tsmiNew.Name = "tsmiNew";
-            this.tsmiNew.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNew.Size = new System.Drawing.Size(124, 22);
             this.tsmiNew.Text = "新建";
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
             this.tsmiOpen.Text = "打开";
             // 
             // tsmiSave
             // 
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave.Size = new System.Drawing.Size(124, 22);
             this.tsmiSave.Text = "保存";
             // 
             // tsmiSave2Project
             // 
             this.tsmiSave2Project.Name = "tsmiSave2Project";
-            this.tsmiSave2Project.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave2Project.Size = new System.Drawing.Size(124, 22);
             this.tsmiSave2Project.Text = "入成果库";
             this.tsmiSave2Project.Click += new System.EventHandler(this.tsmiSave2Project_Click);
             // 
@@ -1388,14 +1390,14 @@
             // 
             this.temiReselect.Name = "temiReselect";
             this.temiReselect.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.temiReselect.Size = new System.Drawing.Size(152, 22);
+            this.temiReselect.Size = new System.Drawing.Size(145, 22);
             this.temiReselect.Text = "选择";
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
             this.tsmiDelete.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Size = new System.Drawing.Size(145, 22);
             this.tsmiDelete.Text = "删除";
             // 
             // tsmiUndo
@@ -1403,7 +1405,7 @@
             this.tsmiUndo.Enabled = false;
             this.tsmiUndo.Name = "tsmiUndo";
             this.tsmiUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.tsmiUndo.Size = new System.Drawing.Size(152, 22);
+            this.tsmiUndo.Size = new System.Drawing.Size(145, 22);
             this.tsmiUndo.Text = "撤销";
             // 
             // tsmiRedo
@@ -1411,7 +1413,7 @@
             this.tsmiRedo.Enabled = false;
             this.tsmiRedo.Name = "tsmiRedo";
             this.tsmiRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.tsmiRedo.Size = new System.Drawing.Size(152, 22);
+            this.tsmiRedo.Size = new System.Drawing.Size(145, 22);
             this.tsmiRedo.Text = "重做";
             // 
             // tsmiInsertLayer
@@ -1432,52 +1434,52 @@
             // tsmiInsertLayerGeoValue
             // 
             this.tsmiInsertLayerGeoValue.Name = "tsmiInsertLayerGeoValue";
-            this.tsmiInsertLayerGeoValue.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerGeoValue.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerGeoValue.Text = "地质数据";
             this.tsmiInsertLayerGeoValue.Click += new System.EventHandler(this.井点属性ToolStripMenuItem_Click);
             // 
             // tsmiInsertLayerPie
             // 
             this.tsmiInsertLayerPie.Name = "tsmiInsertLayerPie";
-            this.tsmiInsertLayerPie.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerPie.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerPie.Text = "井点饼图";
             this.tsmiInsertLayerPie.Click += new System.EventHandler(this.井点值ToolStripMenuItem_Click);
             // 
             // tsmiInsertLayerLog
             // 
             this.tsmiInsertLayerLog.Name = "tsmiInsertLayerLog";
-            this.tsmiInsertLayerLog.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerLog.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerLog.Text = "测井曲线";
             this.tsmiInsertLayerLog.Click += new System.EventHandler(this.测井曲线ToolStripMenuItem_Click);
             // 
             // tsmiInsertLayerWellArea
             // 
             this.tsmiInsertLayerWellArea.Name = "tsmiInsertLayerWellArea";
-            this.tsmiInsertLayerWellArea.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerWellArea.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerWellArea.Text = "井控面积";
             // 
             // tsmiInsertLayerInjPro
             // 
             this.tsmiInsertLayerInjPro.Name = "tsmiInsertLayerInjPro";
-            this.tsmiInsertLayerInjPro.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerInjPro.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerInjPro.Text = "注采关系";
             // 
             // tsmiInsertLayerBar
             // 
             this.tsmiInsertLayerBar.Name = "tsmiInsertLayerBar";
-            this.tsmiInsertLayerBar.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerBar.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertLayerBar.Text = "井点柱状图";
             // 
             // tsmiInsertFaultLine
             // 
             this.tsmiInsertFaultLine.Name = "tsmiInsertFaultLine";
-            this.tsmiInsertFaultLine.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertFaultLine.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertFaultLine.Text = "断层线";
             // 
             // tsmiInsertWellPoint
             // 
             this.tsmiInsertWellPoint.Name = "tsmiInsertWellPoint";
-            this.tsmiInsertWellPoint.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertWellPoint.Size = new System.Drawing.Size(136, 22);
             this.tsmiInsertWellPoint.Text = "井位";
             this.tsmiInsertWellPoint.Click += new System.EventHandler(this.tsmiInsertWellPoint_Click);
             // 
@@ -1689,6 +1691,11 @@
             this.tbcLayerMap.SelectedIndex = 0;
             this.tbcLayerMap.Size = new System.Drawing.Size(933, 489);
             this.tbcLayerMap.TabIndex = 0;
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // FormMapLayer
             // 
@@ -1904,6 +1911,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiInsertLayerBar;
         private System.Windows.Forms.ToolStripMenuItem tsmiInsertFaultLine;
         private System.Windows.Forms.ToolStripMenuItem tsmiInsertWellPoint;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 
     }
 }

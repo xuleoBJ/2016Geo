@@ -17,6 +17,8 @@ using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using DOGPlatform.XML;
+using DOGPlatform.SVG;
 
 namespace DOGPlatform.SVG
 {
@@ -242,8 +244,8 @@ namespace DOGPlatform.SVG
             return gScaleRuler;
         }
 
-        // iNumExpandGrid是扩编的网格，网格算法取井位置最大和最小值作为区域，为了显示美股， 
-        public XmlElement gMapFrame(bool bShowGrid,int iNumExpandGrid)
+        // iNumExpandGrid是扩编的网格，网格算法取井位置最大和最小值作为区域，为了显示美观， 
+        public XmlElement gMapFrame(bool bShowGrid,cXELayerPage curPage)
         {
             XmlElement gMapFrame = svgDoc.CreateElement("g");
             gMapFrame.SetAttribute("id", "图框");
@@ -278,8 +280,8 @@ namespace DOGPlatform.SVG
             double xMax = dfListX.Max() - dfListX.Min();
             double yMax = dfListY.Max() - dfListY.Min();
             int iSacleUnit = 500; //定义网格单位
-            int iPanelWidth = Convert.ToInt32((int)(xMax / iSacleUnit + iNumExpandGrid) * iSacleUnit * cProjectData.dfMapScale);
-            int iPanelHeight = Convert.ToInt32((int)(yMax / iSacleUnit + iNumExpandGrid) * iSacleUnit * cProjectData.dfMapScale);
+            int iPanelWidth = Convert.ToInt32((int)(xMax / iSacleUnit + curPage.iNumExtendGrid) * iSacleUnit * curPage.dfscale);
+            int iPanelHeight = Convert.ToInt32((int)(yMax / iSacleUnit + curPage.iNumExtendGrid) * iSacleUnit * curPage.dfscale);
             XmlElement gRectInner = svgDoc.CreateElement("rect");
             gRectInner.SetAttribute("x", "0");
             gRectInner.SetAttribute("y", "0");
@@ -320,9 +322,9 @@ namespace DOGPlatform.SVG
             gGridText2.SetAttribute("font-style", "normal");
             gGridText2.SetAttribute("fill", "black");
 
-            for (int i = 1; i * iSacleUnit * cProjectData.dfMapScale <= iPanelWidth; i++)
+            for (int i = 1; i * iSacleUnit * curPage.dfscale<= iPanelWidth; i++)
             {
-                int iXCurrentView = Convert.ToInt32(i * 500 * cProjectData.dfMapScale);
+                int iXCurrentView = Convert.ToInt32(i * 500 * curPage.dfscale);
                 Point point1 = new Point(iXCurrentView, 0);
                 Point point2;
                 if (bShowGrid == true) point2 = new Point(iXCurrentView, iPanelHeight);
@@ -363,9 +365,9 @@ namespace DOGPlatform.SVG
             }
 
             //应该写的数值是 cProject.dfMapXrealRefer + i * 500
-            for (int i = 1; i * iSacleUnit * cProjectData.dfMapScale <= iPanelHeight; i++)
+            for (int i = 1; i * iSacleUnit * curPage.dfscale<= iPanelHeight; i++)
             {
-                int iYCurrentView = Convert.ToInt32(i * 500 * cProjectData.dfMapScale);
+                int iYCurrentView = Convert.ToInt32(i * 500 * curPage.dfscale);
                 Point point3 = new Point(0, iYCurrentView);
                 Point point4;
                 if (bShowGrid == true) point4 = new Point(iPanelWidth, iYCurrentView);
