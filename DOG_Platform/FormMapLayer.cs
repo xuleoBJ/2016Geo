@@ -308,9 +308,8 @@ namespace DOGPlatform
                     cXMLLayerMapStatic.addWellStaticDataDic2XML(filePathLayerCss, sSelectLayer, listLayersDataCurrentLayerStatic);
                     //DialogResult dialogResult = MessageBox.Show("是否新建并覆盖？", "文件已存在", MessageBoxButtons.YesNo);
                     //if (dialogResult == DialogResult.No) bNew = false;
-             //       updateSVG();
                 }
-                
+               updateSVG();
             }
         }
 
@@ -620,6 +619,18 @@ namespace DOGPlatform
         {
             FormLayerSettingPage newPage = new FormLayerSettingPage(this.filePathLayerCss);
             newPage.ShowDialog();
+        }
+
+        private void tsmiAllProjectJH_Click(object sender, EventArgs e)
+        {
+            cXmlBase.setNodeInnerText(this.filePathLayerCss, cXELayerPage.fmpShowJHgroup, "1");
+            updateSVG();
+        }
+
+        private void tsmiCurrentLayerJH_Click(object sender, EventArgs e)
+        {
+            cXmlBase.setNodeInnerText(this.filePathLayerCss, cXELayerPage.fmpShowJHgroup, "0");
+            updateSVG();
         }
     }
 }

@@ -20,7 +20,8 @@ namespace DOGPlatform.SVG
             foreach (ItemWellMapPosition item in listMapLayerWell)
             {
                 //如果缺失本层的分层数据, 采用井头的数据作为井位，此处可以选用上一层的数据，这块可以在初始化绘图List数据时采用
-                if (item.dbX == 0) 
+                //配置文件内 显示所有井位1 显示当然层井 iShowAll = 0;
+                if (curPage.iShowAllJH==1 && item.dbX == 0) 
                 {
                     item.dbX = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbX;
                     item.dbY = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbY;

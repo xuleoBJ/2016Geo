@@ -124,7 +124,6 @@
             this.tsbPageSet = new System.Windows.Forms.ToolStripButton();
             this.tsbTreeView = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
             this.tsbUndo = new System.Windows.Forms.ToolStripButton();
             this.tsbRedo = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -134,6 +133,8 @@
             this.tsbConnectLayer = new System.Windows.Forms.ToolStripButton();
             this.tsbFault = new System.Windows.Forms.ToolStripButton();
             this.tsbWellGeo = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
             this.menuStripMapLayer = new System.Windows.Forms.MenuStrip();
             this.tsmiFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,7 +180,9 @@
             this.tsslblIDinfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblWb = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbcLayerMap = new System.Windows.Forms.TabControl();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiShowWell = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAllProjectJH = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCurrentLayerJH = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1237,16 +1240,6 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // tsBtnReflush
-            // 
-            this.tsBtnReflush.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBtnReflush.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnReflush.Image")));
-            this.tsBtnReflush.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtnReflush.Name = "tsBtnReflush";
-            this.tsBtnReflush.Size = new System.Drawing.Size(23, 22);
-            this.tsBtnReflush.Text = "刷新";
-            this.tsBtnReflush.Click += new System.EventHandler(this.tsBtnReflush_Click);
-            // 
             // tsbUndo
             // 
             this.tsbUndo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1324,6 +1317,21 @@
             this.tsbWellGeo.Name = "tsbWellGeo";
             this.tsbWellGeo.Size = new System.Drawing.Size(23, 22);
             this.tsbWellGeo.Text = "联井剖面";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsBtnReflush
+            // 
+            this.tsBtnReflush.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBtnReflush.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnReflush.Image")));
+            this.tsBtnReflush.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnReflush.Name = "tsBtnReflush";
+            this.tsBtnReflush.Size = new System.Drawing.Size(23, 22);
+            this.tsBtnReflush.Text = "刷新";
+            this.tsBtnReflush.Click += new System.EventHandler(this.tsBtnReflush_Click);
             // 
             // menuStripMapLayer
             // 
@@ -1627,28 +1635,29 @@
             this.cmsWebSVG.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiSetPage,
             this.tsmiSetWellPattern,
-            this.tsmiViewWellSection});
+            this.tsmiViewWellSection,
+            this.tsmiShowWell});
             this.cmsWebSVG.Name = "cmsWebSVG";
-            this.cmsWebSVG.Size = new System.Drawing.Size(125, 70);
+            this.cmsWebSVG.Size = new System.Drawing.Size(153, 114);
             // 
             // tsmiSetPage
             // 
             this.tsmiSetPage.Name = "tsmiSetPage";
-            this.tsmiSetPage.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSetPage.Size = new System.Drawing.Size(152, 22);
             this.tsmiSetPage.Text = "页面设置";
             this.tsmiSetPage.Click += new System.EventHandler(this.页面设置ToolStripMenuItem_Click);
             // 
             // tsmiSetWellPattern
             // 
             this.tsmiSetWellPattern.Name = "tsmiSetWellPattern";
-            this.tsmiSetWellPattern.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSetWellPattern.Size = new System.Drawing.Size(152, 22);
             this.tsmiSetWellPattern.Text = "井点设置";
             this.tsmiSetWellPattern.Click += new System.EventHandler(this.井点设置ToolStripMenuItem_Click);
             // 
             // tsmiViewWellSection
             // 
             this.tsmiViewWellSection.Name = "tsmiViewWellSection";
-            this.tsmiViewWellSection.Size = new System.Drawing.Size(124, 22);
+            this.tsmiViewWellSection.Size = new System.Drawing.Size(152, 22);
             this.tsmiViewWellSection.Text = "查看剖面";
             this.tsmiViewWellSection.Click += new System.EventHandler(this.查看剖面ToolStripMenuItem_Click);
             // 
@@ -1692,10 +1701,28 @@
             this.tbcLayerMap.Size = new System.Drawing.Size(933, 489);
             this.tbcLayerMap.TabIndex = 0;
             // 
-            // toolStripSeparator4
+            // tsmiShowWell
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.tsmiShowWell.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAllProjectJH,
+            this.tsmiCurrentLayerJH});
+            this.tsmiShowWell.Name = "tsmiShowWell";
+            this.tsmiShowWell.Size = new System.Drawing.Size(152, 22);
+            this.tsmiShowWell.Text = "显示井";
+            // 
+            // tsmiAllProjectJH
+            // 
+            this.tsmiAllProjectJH.Name = "tsmiAllProjectJH";
+            this.tsmiAllProjectJH.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAllProjectJH.Text = "所有井";
+            this.tsmiAllProjectJH.Click += new System.EventHandler(this.tsmiAllProjectJH_Click);
+            // 
+            // tsmiCurrentLayerJH
+            // 
+            this.tsmiCurrentLayerJH.Name = "tsmiCurrentLayerJH";
+            this.tsmiCurrentLayerJH.Size = new System.Drawing.Size(152, 22);
+            this.tsmiCurrentLayerJH.Text = "钻遇井";
+            this.tsmiCurrentLayerJH.Click += new System.EventHandler(this.tsmiCurrentLayerJH_Click);
             // 
             // FormMapLayer
             // 
@@ -1912,6 +1939,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiInsertFaultLine;
         private System.Windows.Forms.ToolStripMenuItem tsmiInsertWellPoint;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem tsmiShowWell;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAllProjectJH;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCurrentLayerJH;
 
     }
 }
