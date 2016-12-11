@@ -45,7 +45,6 @@ namespace DOGPlatform
         private void nUDiNumExtendGrid_ValueChanged(object sender, EventArgs e)
         {
             cXmlBase.setNodeInnerText(filePathOperate, cXELayerPage.fmpNumExtendGrid, nUDiNumExtendGrid.Value.ToString("0"));
-           
         }
     }
 }

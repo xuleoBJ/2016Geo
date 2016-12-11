@@ -46,13 +46,16 @@ namespace DOGPlatform
             string sLog = cbbLog.SelectedItem.ToString();
             //设置测井名
             cXmlDocLayer.setSelectedNodeChildNodeValue(this.filePathLayerCss, sLayerID, "logName", sLog);
+            cXmlDocLayer.setSelectedNodeChildNodeValue(this.filePathLayerCss, sLayerID, "title", sLog);
             cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "leftValue", nTBXleftValue.Text);
             cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "rightValue", nTBXrightValue.Text);
             cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "trackWidth", nUDTrackWidth.Value.ToString("0"));
-            //cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "sparsePoint", nUDDrawInterval.Value.ToString("0"));
+            string sDrawLeftChecked = cbxDrawLeft.Checked == true ? "1" : "0";
+            cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "iLeftDraw", sDrawLeftChecked);
+            string sPloygonChecked = this.cbxPolygon.Checked == true ? "1" : "0";
+            cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "isPloygon", sPloygonChecked);
             cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "fVScale", nUDfVScale.Value.ToString("0.0"));
             if (tbxFillColor.Text == "") cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "fill", "none");
-            //根据井号、层位段，深度段写入 这样 数据量小。
         }
 
         private void btnSeleclFillColor_Click(object sender, EventArgs e)
@@ -81,6 +84,20 @@ namespace DOGPlatform
                 this.tbxLogColor.Text = sHexColor;
                 cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "curveColor", sHexColor);
             }
+        }
+
+        private void btnLeftRightCov_Click(object sender, EventArgs e)
+        {
+            string sLeftValue = nTBXleftValue.Text;
+            cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "leftValue", nTBXrightValue.Text);
+            nTBXleftValue.Text = nTBXrightValue.Text; 
+            cXmlBase.setSelectedNodeChildNodeValue(filePathLayerCss, sLayerID, "rightValue", sLeftValue);
+            nTBXrightValue.Text = sLeftValue; 
+        }
+
+        private void cbxPolygon_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
      
 

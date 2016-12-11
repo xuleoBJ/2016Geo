@@ -719,11 +719,13 @@ namespace DOGPlatform
                         this.tvProjectData.ContextMenuStrip = this.cmsTNinputWell;
                     if (selectNode.Tag.ToString()  == TypeProjectNode.globalLogDir.ToString())  //当前 全局测井曲线
                         makeCMSGlobleLog(selectNode);
+                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.wellTopDir.ToString())  //
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNlayerItem;
                     if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionWellDir.ToString() )  //柱状剖面菜单
                         this.tvProjectData.ContextMenuStrip = this.cmsSectionWell;
-                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionGeoDir.ToString())  //sectionGeo
+                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionGeoDir.ToString())  //联井剖面菜单
                         this.tvProjectData.ContextMenuStrip = this.cmsTNsectionGeo;
-                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionFenceDir.ToString())  //sectionGeo
+                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.sectionFenceDir.ToString())  //栅状图菜单
                         this.tvProjectData.ContextMenuStrip = this.cmsTNSectionFence;
                     if (selectNode.Tag.ToString() == TypeProjectNode.svgMap.ToString())  //成果图
                         this.tvProjectData.ContextMenuStrip = this.cmsTNprojectGrapthSVG;
@@ -735,7 +737,9 @@ namespace DOGPlatform
                         makeCMSGlobleLog(selectNode);
                     if ( selectNode.Tag.ToString() == TypeProjectNode.sectionWell.ToString()) //当前选中井，index=0 是全局测井曲线
                         this.tvProjectData.ContextMenuStrip = this.cmsTNdataSectionWell;
-                    break;
+                    if (selectNode.Parent.Tag.ToString() == TypeProjectNode.wellTop.ToString())  //
+                        this.tvProjectData.ContextMenuStrip = this.cmsTNlayerItem;
+                        break;
                 case 3://第4级菜单，右键快捷菜单配置
                     if (selectNode.Parent.Text == "well logs")
                         this.tvProjectData.ContextMenuStrip = this.cmsTNwellLogItem;

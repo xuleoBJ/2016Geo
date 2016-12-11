@@ -22,6 +22,9 @@ using System.IO;
 using DOGPlatform.XML;
 using DOGPlatform.SVG;
 
+using System.Configuration;
+using System.Diagnostics;
+
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
@@ -66,7 +69,7 @@ namespace DOGPlatform
         string filePathLayerCss;
         string filePathSVGLayerMap;
 
-        string sLayerID;
+        string sSelectLayerID;
         string sCurrentID;
         public FormMapLayer()
         {
@@ -81,7 +84,7 @@ namespace DOGPlatform
         private void InitFormLayerMap()
         {
             webBrowserSVG.ObjectForScripting = this;
-            this.splitContainerLayer.Panel1Collapsed = true ;
+            this.splitContainerLayer.Panel1Collapsed = false ;
             if (cProjectData.ltStrProjectXCM.Count > 0) sSelectLayer = cProjectData.ltStrProjectXCM[0];
         }
         //初始化控件当新建工程或者打开工程时
@@ -432,12 +435,13 @@ namespace DOGPlatform
         private void 井点属性ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerGeoProperty);
-            
+            updateTV();
         }
 
         private void 井点值ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerPieGraph);
+            updateTV();
         }
 
         private void 页面设置ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -492,10 +496,10 @@ namespace DOGPlatform
             TreeNode selectNode = this.tvEdit.SelectedNode;
             if (selectNode != null && selectNode.Level == 1)
             {
-                sLayerID = selectNode.Name;
+                sSelectLayerID = selectNode.Name;
                 if (selectNode.Tag.ToString() == TypeLayer.LayerPieGraph.ToString())
                 {
-                    FormLayerSetPie newForm = new FormLayerSetPie(this.filePathLayerCss, sLayerID);
+                    FormLayerSetPie newForm = new FormLayerSetPie(this.filePathLayerCss, sSelectLayerID);
                     newForm.ShowDialog();
                 }
             }
@@ -504,18 +508,27 @@ namespace DOGPlatform
         private void 测井曲线ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerLog);
+            updateTV();
         }
 
+        void getLayerInforBySelectTNnode(TreeNode currentNode)
+        {
+            if (currentNode != null)
+            {
+                string strLayerType = currentNode.Tag.ToString();
+                this.sSelectLayerID = currentNode.Name;
+            }
+        }
         private void tsmiLayerData_Click(object sender, EventArgs e)
         {
              TreeNode currentNode = this.tvEdit.SelectedNode;
              if (currentNode != null)
              {
                  string strLayerType = currentNode.Tag.ToString();
-                 this.sLayerID = currentNode.Name;
+                 this.sSelectLayerID = currentNode.Name;
                  if (strLayerType == TypeLayer.LayerLog.ToString())
                  {
-                     FormLayerLog newLogLayer = new FormLayerLog(this.filePathLayerCss, sLayerID);
+                     FormLayerLog newLogLayer = new FormLayerLog(this.filePathLayerCss, sSelectLayerID);
                      newLogLayer.ShowDialog();
                  }
                  if (strLayerType == TypeLayer.LayerGeoProperty.ToString())
@@ -530,7 +543,7 @@ namespace DOGPlatform
                  }
                   if (strLayerType == TypeLayer.LayerWellPosition.ToString())
                   {
-                      cXMLLayerMapStatic.addWellPosition2Layer(filePathLayerCss,sLayerID, listLayersDataCurrentLayerStatic);
+                      cXMLLayerMapStatic.addWellPosition2Layer(filePathLayerCss,sSelectLayerID, listLayersDataCurrentLayerStatic);
                   }
 
              }
@@ -631,6 +644,52 @@ namespace DOGPlatform
         {
             cXmlBase.setNodeInnerText(this.filePathLayerCss, cXELayerPage.fmpShowJHgroup, "0");
             updateSVG();
+        }
+
+        private void tsmiLayerUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiLayerRename_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = this.tvEdit.SelectedNode;
+            getLayerInforBySelectTNnode(tnSelected);
+            string originalTitle = tnSelected.Text;
+            FormInputBox inputBox = new FormInputBox("新层名：", "请输入：", originalTitle);
+            var result = inputBox.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string newTitle = inputBox.ReturnValueStr;
+                cXmlDocLayer.reNameLayer(this.filePathLayerCss, this.sSelectLayerID, newTitle);
+            } 
+        }
+
+        private void tvEdit_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            
+        }
+
+        private void tvEdit_MouseUp(object sender, MouseEventArgs e)
+        {
+            TreeNode selectedNode = tvEdit.GetNodeAt(e.X, e.Y);
+            if (selectedNode != null)
+            {
+                //处理是否隐藏
+                if (selectedNode.Level == 1) // level 0 是页面 level 1 是layer
+                {
+                    int iCheck = selectedNode.Checked == true ? 1 : 0;
+                    this.sSelectLayerID = selectedNode.Name;
+                    //为了阻止不改变状态就刷新，必须记录原状态
+                    cXmlDocLayer.setLayerVisible(this.filePathLayerCss, sSelectLayerID, iCheck);
+                }
+            }
+        }
+
+        private void tsmiInsertLayerJSJL_Click(object sender, EventArgs e)
+        {
+            cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerJSJL);
+            updateTV();
         }
     }
 }

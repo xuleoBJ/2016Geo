@@ -24,12 +24,21 @@ namespace DOGPlatform
             setupTNGlobeWellLog(_tv,tnWells);
             foreach (string sJH in cProjectData.ltStrProjectJH)
             {
-                TreeNode tnJH = new TreeNode(sJH,3,3);
-                tnJH.Name = sJH;
-                tnJH.Tag = TypeProjectNode.well;
-                //加载单井结点
-                setupTNwellChild(tnJH); 
-                tnWells.Nodes.Add(tnJH);
+                //判断井文件夹是否存在
+                 string dirJH = Path.Combine(cProjectManager.dirPathWellDir, sJH);
+                 if (!Directory.Exists(dirJH))
+                 {
+                     cProjectData.ltStrProjectJH.Remove(sJH);
+                 }
+                 else
+                 {
+                     TreeNode tnJH = new TreeNode(sJH, 3, 3);
+                     tnJH.Name = sJH;
+                     tnJH.Tag = TypeProjectNode.well;
+                     //加载单井结点
+                     setupTNwellChild(tnJH);
+                     tnWells.Nodes.Add(tnJH);
+                 }
             }
             _tv.Nodes.Add(tnWells);
         }
@@ -217,14 +226,17 @@ namespace DOGPlatform
                 tnLogDir.Nodes.Clear();
                 string sJH = tnLogDir.Parent.Text;
                 string _wellDir = Path.Combine(cProjectManager.dirPathWellDir, sJH);
-                string[] wellLogItems = Directory.GetFiles(_wellDir, "*" + cProjectManager.fileExtensionWellLog);
-                if (wellLogItems.Count() > 0)
+                if(Directory.Exists(_wellDir))
                 {
-                    foreach (string _item in wellLogItems)
+                    string[] wellLogItems = Directory.GetFiles(_wellDir, "*" + cProjectManager.fileExtensionWellLog);
+                    if (wellLogItems.Count() > 0)
                     {
-                        string _log = Path.GetFileNameWithoutExtension(_item);
-                        setupTNLogItem(tnLogDir, _log);
-                    }
+                        foreach (string _item in wellLogItems)
+                        {
+                            string _log = Path.GetFileNameWithoutExtension(_item);
+                            setupTNLogItem(tnLogDir, _log);
+                        }
+                    } 
                 }
             }
         }

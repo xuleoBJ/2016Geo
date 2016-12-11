@@ -160,7 +160,7 @@ namespace DOGPlatform.SVG
 
         public static XmlElement addTrackItemLogHeadInfor(XmlDocument svgDoc, itemLogHeadInforDraw item, double iYPotionBot,int iLogNum, int width, int iFontSize)
         {
-            int iUpLine = 20; //不同测井曲线间隔距离
+            int iUpLine = iFontSize+10; //不同测井曲线间隔距离
             int iFirstLogheadLinePosition = 3;  //首条logheadLine线距离下边框的距离
             double iYPotion = iYPotionBot - iUpLine * (iLogNum - 1) - iFirstLogheadLinePosition;
             return addTrackItemLogHeadInfor(svgDoc, item.sIDLog, item.sLogName, item.sUnit,

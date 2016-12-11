@@ -30,6 +30,7 @@ namespace DOGPlatform
         void initializeForm() 
         {     
             //暂时移出平面的数据输入部分
+            dgvCurrent = this.dgvWellDev;
             this.tbcProjectDataInput.TabPages.Remove(tbgProductWellData);
             this.tbcProjectDataInput.TabPages.Remove(tbgInjectWellData);
             if(this.iCase==1)
@@ -42,8 +43,8 @@ namespace DOGPlatform
                 {
                     if (tbg.Text != tbgLayerDepth.Text) this.tbcProjectDataInput.TabPages.Remove(tbg);
                 } 
+                dgvCurrent = this.dgvLayerDepth;
             }
-            dgvCurrent = this.dgvWellDev;
             if (cProjectData.ltStrProjectJH.Count  > 0)
             {
                 foreach (string item in cProjectData.ltStrProjectJH) cbbJH.Items.Add(item);

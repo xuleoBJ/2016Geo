@@ -47,6 +47,8 @@
             this.nUDTrackWidth = new System.Windows.Forms.NumericUpDown();
             this.nTBXleftValue = new DOGPlatform.controls.NumericTextBox();
             this.nTBXrightValue = new DOGPlatform.controls.NumericTextBox();
+            this.cbxDrawLeft = new System.Windows.Forms.CheckBox();
+            this.cbxPolygon = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nUDLineWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDfVScale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTrackWidth)).BeginInit();
@@ -54,7 +56,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(248, 226);
+            this.btnCancel.Location = new System.Drawing.Point(248, 244);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 70;
@@ -63,7 +65,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(122, 226);
+            this.btnOK.Location = new System.Drawing.Point(122, 244);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 69;
@@ -125,6 +127,7 @@
             this.btnLeftRightCov.TabIndex = 118;
             this.btnLeftRightCov.Text = "左<->右";
             this.btnLeftRightCov.UseVisualStyleBackColor = true;
+            this.btnLeftRightCov.Click += new System.EventHandler(this.btnLeftRightCov_Click);
             // 
             // label34
             // 
@@ -280,11 +283,34 @@
             this.nTBXrightValue.Size = new System.Drawing.Size(91, 21);
             this.nTBXrightValue.TabIndex = 113;
             // 
+            // cbxDrawLeft
+            // 
+            this.cbxDrawLeft.AutoSize = true;
+            this.cbxDrawLeft.Location = new System.Drawing.Point(122, 204);
+            this.cbxDrawLeft.Name = "cbxDrawLeft";
+            this.cbxDrawLeft.Size = new System.Drawing.Size(72, 16);
+            this.cbxDrawLeft.TabIndex = 127;
+            this.cbxDrawLeft.Text = "左边绘制";
+            this.cbxDrawLeft.UseVisualStyleBackColor = true;
+            // 
+            // cbxPolygon
+            // 
+            this.cbxPolygon.AutoSize = true;
+            this.cbxPolygon.Location = new System.Drawing.Point(220, 204);
+            this.cbxPolygon.Name = "cbxPolygon";
+            this.cbxPolygon.Size = new System.Drawing.Size(72, 16);
+            this.cbxPolygon.TabIndex = 128;
+            this.cbxPolygon.Text = "曲线封闭";
+            this.cbxPolygon.UseVisualStyleBackColor = true;
+            this.cbxPolygon.CheckedChanged += new System.EventHandler(this.cbxPolygon_CheckedChanged);
+            // 
             // FormLayerLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 279);
+            this.Controls.Add(this.cbxPolygon);
+            this.Controls.Add(this.cbxDrawLeft);
             this.Controls.Add(this.nUDTrackWidth);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -307,7 +333,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormLayerLog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "测井曲线";
+            this.Text = "曲线图层测井选择";
             ((System.ComponentModel.ISupportInitialize)(this.nUDLineWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDfVScale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTrackWidth)).EndInit();
@@ -337,5 +363,7 @@
         private System.Windows.Forms.NumericUpDown nUDfVScale;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nUDTrackWidth;
+        private System.Windows.Forms.CheckBox cbxDrawLeft;
+        private System.Windows.Forms.CheckBox cbxPolygon;
     }
 }

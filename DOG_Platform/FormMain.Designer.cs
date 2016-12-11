@@ -191,6 +191,7 @@
             this.tsmiGlobeLogSet = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGlobeLogRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGlobeDeleteLogFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGlobeLogExport = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNwellLogNode = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLogdataInput = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogItemCal = new System.Windows.Forms.ToolStripMenuItem();
@@ -220,7 +221,9 @@
             this.tsmiSectionWellSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGlobeLogExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTNlayerItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.层信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -264,6 +267,7 @@
             this.cmsTNSectionFence.SuspendLayout();
             this.cmsTNdataSectionWell.SuspendLayout();
             this.cmsTNdataSectionWellChildItem.SuspendLayout();
+            this.cmsTNlayerItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmsNavigationPanel
@@ -1300,7 +1304,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1681,6 +1685,13 @@
             this.tsmiGlobeDeleteLogFile.Text = "全局删除曲线";
             this.tsmiGlobeDeleteLogFile.Click += new System.EventHandler(this.tsmiGlobeDeleteLogFile_Click);
             // 
+            // tsmiGlobeLogExport
+            // 
+            this.tsmiGlobeLogExport.Name = "tsmiGlobeLogExport";
+            this.tsmiGlobeLogExport.Size = new System.Drawing.Size(184, 22);
+            this.tsmiGlobeLogExport.Text = "导出单条曲线到目录";
+            this.tsmiGlobeLogExport.Click += new System.EventHandler(this.tsmiGlobeLogExport_Click);
+            // 
             // cmsTNwellLogNode
             // 
             this.cmsTNwellLogNode.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1795,33 +1806,33 @@
             this.tsmiSectionGeoCopy,
             this.tsmiSectionGeoDel});
             this.cmsTNsectionGeo.Name = "cmsProjectGrapth";
-            this.cmsTNsectionGeo.Size = new System.Drawing.Size(113, 92);
+            this.cmsTNsectionGeo.Size = new System.Drawing.Size(153, 114);
             // 
             // tsmiSectionGeoOpen
             // 
             this.tsmiSectionGeoOpen.Name = "tsmiSectionGeoOpen";
-            this.tsmiSectionGeoOpen.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoOpen.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoOpen.Text = "打开";
             this.tsmiSectionGeoOpen.Click += new System.EventHandler(this.tsmiSectionGeoOpen_Click);
             // 
             // tsmiSectionGeoRename
             // 
             this.tsmiSectionGeoRename.Name = "tsmiSectionGeoRename";
-            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoRename.Text = "重命名";
             this.tsmiSectionGeoRename.Click += new System.EventHandler(this.tsmiSectionGeoRename_Click);
             // 
             // tsmiSectionGeoCopy
             // 
             this.tsmiSectionGeoCopy.Name = "tsmiSectionGeoCopy";
-            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoCopy.Text = "复制";
             this.tsmiSectionGeoCopy.Click += new System.EventHandler(this.tsmiSectionGeoCopy_Click);
             // 
             // tsmiSectionGeoDel
             // 
             this.tsmiSectionGeoDel.Name = "tsmiSectionGeoDel";
-            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(112, 22);
+            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeoDel.Text = "删除";
             this.tsmiSectionGeoDel.Click += new System.EventHandler(this.tsmiSectionGeoDel_Click);
             // 
@@ -1898,12 +1909,25 @@
             this.tsmiDataSectionWellChildItemImport.Text = "导入数据";
             this.tsmiDataSectionWellChildItemImport.Click += new System.EventHandler(this.tsmiDataSectionWellChildItemImport_Click);
             // 
-            // tsmiGlobeLogExport
+            // cmsTNlayerItem
             // 
-            this.tsmiGlobeLogExport.Name = "tsmiGlobeLogExport";
-            this.tsmiGlobeLogExport.Size = new System.Drawing.Size(184, 22);
-            this.tsmiGlobeLogExport.Text = "导出单条曲线到目录";
-            this.tsmiGlobeLogExport.Click += new System.EventHandler(this.tsmiGlobeLogExport_Click);
+            this.cmsTNlayerItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.层信息ToolStripMenuItem,
+            this.删除ToolStripMenuItem});
+            this.cmsTNlayerItem.Name = "cmsTNlayerItem";
+            this.cmsTNlayerItem.Size = new System.Drawing.Size(113, 48);
+            // 
+            // 层信息ToolStripMenuItem
+            // 
+            this.层信息ToolStripMenuItem.Name = "层信息ToolStripMenuItem";
+            this.层信息ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.层信息ToolStripMenuItem.Text = "层信息";
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.删除ToolStripMenuItem.Text = "删除";
             // 
             // FormMain
             // 
@@ -1974,6 +1998,7 @@
             this.cmsTNSectionFence.ResumeLayout(false);
             this.cmsTNdataSectionWell.ResumeLayout(false);
             this.cmsTNdataSectionWellChildItem.ResumeLayout(false);
+            this.cmsTNlayerItem.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2171,6 +2196,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiGlobeDeleteLogFile;
         private System.Windows.Forms.ToolStripMenuItem tsmiWellSectionMake;
         private System.Windows.Forms.ToolStripMenuItem tsmiGlobeLogExport;
+        private System.Windows.Forms.ContextMenuStrip cmsTNlayerItem;
+        private System.Windows.Forms.ToolStripMenuItem 层信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
     }
 }
 

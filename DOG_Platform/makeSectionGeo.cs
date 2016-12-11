@@ -540,7 +540,7 @@ namespace DOGPlatform
                             if (curLogHead.iLogCurveVisible > 0)
                             {
                                 //增加测井头
-                                int iHeadLogSize = 14;
+                                int iHeadLogSize = 20;
                                 returnElemment = cSVGSectionTrack.addTrackItemLogHeadInfor(svgSection.svgDoc, curLogHead, iYpositionTrackHead + iHeightTrackHead, iLogNum, curTrackDraw.iTrackWidth, iHeadLogSize);
                                 wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
                             }

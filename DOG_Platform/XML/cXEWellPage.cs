@@ -16,6 +16,7 @@ namespace DOGPlatform.XML
        public double fVScale = 1;
        public int iHeightMapTitle = 40;
        public int iHeightTrackHead = 100;
+       public int iLogHeadFontSize = 20 ;
        public int iShowMode = 1;
        public double PageWidth = 1000;
        public double PageHeight = 10000;
@@ -53,10 +54,14 @@ namespace DOGPlatform.XML
             iShowMode = int.Parse(cXmlBase.getNodeInnerText(curDoc, cXEWellPage.fullPathShowMode));
             PageWidth = double.Parse(cXmlBase.getNodeInnerText(curDoc, cXEWellPage.fullPathPageWidth));
             PageHeight = double.Parse(cXmlBase.getNodeInnerText(curDoc, cXEWellPage.fullPathPageHeight));
+            
+            string sGetNodeText = cXmlBase.getNodeInnerText(curDoc, cXEWellPage.fullPathLogHeadFontSize);
+            if(sGetNodeText!="") iLogHeadFontSize = int.Parse(sGetNodeText);
         }
  
         public static string fullPathMapTitleRectHeight = "WellTemplate/Page/mapTitleRectHeight";
         public static string fullPathTrackRectHeight = "WellTemplate/Page/trackRectHeight";
+        public static string fullPathLogHeadFontSize = "WellTemplate/Page/iLogHeadFontSize";
         public static string fullPathPageWidth = "WellTemplate/Page/pageWidth";
         public static string fullPathPageHeight = "WellTemplate/Page/pageHeight";
         public static string fullPathPageUnit = "WellTemplate/Page/pageUnit";
@@ -80,6 +85,7 @@ namespace DOGPlatform.XML
                                                 new XElement("fontSizeMapTitle", "20"),
                                               new XElement("mapTitleRectHeight", "40"),
                                              new XElement("trackRectHeight", "100"),
+                                               new XElement("iLogHeadFontSize", "20"),
                                             new XElement("sBack1", "none"),
                                             new XElement("sBack2", "none") 
                                         ); 

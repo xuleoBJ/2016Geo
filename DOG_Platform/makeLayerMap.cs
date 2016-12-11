@@ -47,7 +47,6 @@ namespace DOGPlatform
             string sTitle = Path.GetFileNameWithoutExtension(filePathOperate);
             svgLayerMap.addMapTitle(sTitle, PageWidth/2, 20);
             XmlElement returnElemment;
-            //画井位
 
             cXEWellCss wellCss = new cXEWellCss(xmlLayerMap);
             
@@ -61,22 +60,32 @@ namespace DOGPlatform
             {
                 string sIDLayer = xn.Attributes["id"].Value;
                 string sLayerType = xn.Attributes["layerType"].Value;
+                string sLayerVisible = xn["visible"].InnerText; 
                 //建立新层
                 XmlElement gNewLayer = svgLayerMap.gLayerElement(sIDLayer);
                 svgLayerMap.addgLayer(gNewLayer, idx, idy);
                 //测井曲线图层
-                if (sLayerType == TypeLayer.LayerLog.ToString())
+                if (sLayerVisible =="1" && sLayerType == TypeLayer.LayerLog.ToString())
                 {
-                    LayerDataLog layDataLog = new LayerDataLog(xn);
+                    LayerDataLog layerDataLog = new LayerDataLog(xn);
                     foreach (ItemWellMapPosition itemWell in listWellLayerMap)
                     {
                         Point PViewWell = cCordinationTransform.transRealPointF2ViewPoint(itemWell.dbX, itemWell.dbY, curPage.xRef, curPage.yRef, curPage.dfscale);
-                        returnElemment = cXMLLayerMapWellLog.gLayerWellLog(svgLayerMap, itemWell, layDataLog); 
+                        returnElemment = cXMLLayerMapWellLog.gLayerWellLog(svgLayerMap, itemWell, layerDataLog); 
                         //新层加内容
-                        svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, PViewWell.X, PViewWell.Y);
+                        int xViewStart = PViewWell.X;
+                        int yViewStart = PViewWell.Y;
+                        //如果左值小于右值，就把曲线坐班绘制
+                        if (layerDataLog.iLeftDraw==1) xViewStart = xViewStart - layerDataLog.iTrackWidth;
+                        svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, xViewStart, yViewStart);
                     }
                 }
-                if (sLayerType == TypeLayer.LayerWellPosition.ToString())
+                if (sLayerVisible == "1" && sLayerType == TypeLayer.LayerJSJL.ToString())
+                { 
+                
+                
+                }
+                if (sLayerVisible =="1" && sLayerType == TypeLayer.LayerWellPosition.ToString())
                 {
                     XmlNode dataList = xn.SelectSingleNode("dataList");
                    

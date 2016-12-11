@@ -23,8 +23,12 @@ namespace DOGPlatform.SVG
                 //配置文件内 显示所有井位1 显示当然层井 iShowAll = 0;
                 if (curPage.iShowAllJH==1 && item.dbX == 0) 
                 {
-                    item.dbX = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbX;
-                    item.dbY = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH).dbY;
+                    ItemWell curWell = cProjectData.ltProjectWell.SingleOrDefault(p => p.sJH == item.sJH);
+                    if(curWell!=null)
+                    {
+                    item.dbX =curWell .dbX;
+                    item.dbY = curWell.dbY;
+                    }
                 }
                 Point pointConvert2View = cCordinationTransform.transRealPointF2ViewPoint(item.dbX, item.dbY, curPage.xRef, curPage.yRef, curPage.dfscale);
                 gWellPositon.AppendChild(gWell(svgDoc, item.sJH, pointConvert2View.X, pointConvert2View.Y, item.iWellType, 

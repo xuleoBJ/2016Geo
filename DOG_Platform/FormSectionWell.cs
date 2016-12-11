@@ -394,9 +394,7 @@ namespace DOGPlatform
                 //处理是否隐藏
                 if (selectedNode.Level > 0) // level 0 是页面
                 {
-                    int iCheck = 1;
-                    if (selectedNode.Checked == false) iCheck = 0;
-                    if (selectedNode.Checked == true) iCheck = 1;
+                    int iCheck = selectedNode.Checked == true ? 1 : 0;
                     string sIDtrack = selectedNode.Name;
                     //为了阻止不改变状态就刷新，必须记录原状态
                     int iCurrentVisible = cXmlDocSectionWell.getTrackVisible(this.filePathOper, sIDtrack);

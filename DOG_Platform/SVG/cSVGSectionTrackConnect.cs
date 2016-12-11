@@ -155,10 +155,10 @@ namespace DOGPlatform.SVG
         public static XmlElement gLineWellDistance(XmlDocument svgDoc,  double iXstart, double iYPotion, double length,double distance)
         {
             XmlElement gItemLogHeadInfor = svgDoc.CreateElement("g");
-            int iFontSize = 20;
+            int iFontSize = 64;
             XmlElement textValue = svgDoc.CreateElement("text");
             textValue.SetAttribute("x", (iXstart + length/2).ToString());
-            textValue.SetAttribute("y", (iYPotion+20).ToString());
+            textValue.SetAttribute("y", (iYPotion+60).ToString());
             textValue.SetAttribute("font-size", iFontSize.ToString());
             textValue.SetAttribute("text-anchor", "middle");
             textValue.SetAttribute("tdominant-baseline", "ideographic");
@@ -166,9 +166,9 @@ namespace DOGPlatform.SVG
             textValue.InnerText = distance.ToString("0.00");
             gItemLogHeadInfor.AppendChild(textValue);
             XmlElement distanceLine = svgDoc.CreateElement("path");
-            string sPath = "m " + iXstart .ToString()+" "+ (iYPotion +6).ToString() +"v-6"+ " h " + length.ToString()+"v6";
+            string sPath = "m " + iXstart .ToString()+" "+ (iYPotion +30).ToString() +"v-20"+ " h " + length.ToString()+"v20";
             distanceLine.SetAttribute("d", sPath);
-            distanceLine.SetAttribute("style", "stroke-width:2");
+            distanceLine.SetAttribute("style", "stroke-width:5");
             distanceLine.SetAttribute("stroke", "red");
             distanceLine.SetAttribute("fill", "none");
             gItemLogHeadInfor.AppendChild(distanceLine);

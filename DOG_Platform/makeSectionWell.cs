@@ -1201,15 +1201,34 @@ namespace DOGPlatform
         }
         public static List<string> intervalStastics(string filePathTemplatOper, ItemTrackDataIntervalProperty itemDataItem)
         {
+            string sCurJH = cXmlDocSectionWell.getJH(filePathTemplatOper);
+         
             float fTopInfor = itemDataItem.top;
             float fBotInfor = itemDataItem.bot;
             //在所有道循环，截取深度段信息组合成表
             List<string> ltHeadLine = new List<string>();
             List<string> ltStasticsValueStr = new List<string>();
+
+            ltHeadLine.Add("井号");
+            ltStasticsValueStr.Add(sCurJH);
+
             ltHeadLine.Add("顶深md");
             ltStasticsValueStr.Add(itemDataItem.top.ToString("0.0"));
             ltHeadLine.Add("底深md");
             ltStasticsValueStr.Add(itemDataItem.bot.ToString("0.0"));
+
+            //加入分层统计
+            List<ItemDicLayerDepth> returnItem = cIOinputLayerDepth.readLayerDepth2Struct(sCurJH);
+            string xcm = "-999";
+            foreach (ItemDicLayerDepth itemDepth in returnItem) 
+            {
+                if (itemDataItem.top >= itemDepth.fDS1 && itemDataItem.bot <= itemDepth.fDS2)
+                { xcm = itemDepth.sXCM; break; }
+            }
+            ltHeadLine.Add("小层");
+            ltStasticsValueStr.Add(xcm);
+
+            
             if (itemDataItem.sText != "")
             {
                 ltHeadLine.Add("文本");

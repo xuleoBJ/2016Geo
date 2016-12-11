@@ -6,6 +6,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using System.Drawing;
+using System.IO;
 
 namespace DOGPlatform.XML
 {
@@ -102,7 +103,7 @@ namespace DOGPlatform.XML
             layerList.Add(layerNode);
             XsingleWellStyleRoot.Save(filePathLayerCss);
         }
-
+    
         public static XElement setLayerNode(string filePathLayerCss, TypeLayer eTypeLayer)
         {
             string sLayerID =  cIDmake.idLayer();  //自动分配一个id,时间是唯一
@@ -113,15 +114,19 @@ namespace DOGPlatform.XML
             layerNode.Add(new XElement("title", sTitle));
             layerNode.Add(new XElement("fill-opacity", "0.8"));
             layerNode.Add(new XElement("fontColor", "black"));
-            layerNode.Add(new XElement("fontSize", "16")); 
+            layerNode.Add(new XElement("fontSize", "16"));
+            layerNode.Add(new XElement("fVScale", "1"));
             if (eTypeLayer == TypeLayer.LayerGeoProperty)
             {
 
             }
+            if (eTypeLayer == TypeLayer.LayerJSJL)
+            {
+                layerNode.Add(new XElement("trackWidth", "50"));
+            }
             else if (eTypeLayer == TypeLayer.LayerLog)
             {
                 layerNode.Add(new XElement("logName", ""));
-                layerNode.Add(new XElement("fVScale", "1"));
                 layerNode.Add(new XElement("trackWidth", "100"));
                 layerNode.Add(new XElement("showValue", "1"));
                 layerNode.Add(new XElement("is2Log10", "1"));
@@ -129,12 +134,14 @@ namespace DOGPlatform.XML
                 layerNode.Add(new XElement("sparsePoint", "1"));
                 layerNode.Add(new XElement("curveColor", "black"));
                 layerNode.Add(new XElement("lineWidth", "1"));
-                layerNode.Add(new XElement("lineType", "1"));
+                layerNode.Add(new XElement("lineType", "0"));
                 layerNode.Add(new XElement("leftValue", "0"));
                 layerNode.Add(new XElement("rightValue", "100"));
                 layerNode.Add(new XElement("sFill", "red"));
                 layerNode.Add(new XElement("DX_Text", "5"));
                 layerNode.Add(new XElement("DY_Text", "5")); 
+                layerNode.Add(new XElement("iLeftDraw","0"));
+                layerNode.Add(new XElement("isPloygon","0"));
             }
             else if (eTypeLayer == TypeLayer.LayerPieGraph)
             {
@@ -249,6 +256,34 @@ namespace DOGPlatform.XML
             xmlLayerMap.Save(filePathLayerCss);
         }
 
+        public static void  setLayerVisible(string filePathLayerCss, string sLayerID,int iVisible)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(filePathLayerCss);
+            string sPath = string.Format("//*[@id='{0}']", sLayerID);
+            XmlNode selectedNode = xmlDoc.SelectSingleNode(sPath);
+            if (selectedNode != null)
+            {
+                selectedNode["visible"].InnerText = iVisible.ToString();
+            }
+            xmlDoc.Save(filePathLayerCss);
+        }
+        public static void reNameLayer(string filePathLayerCss, string sLayerID,string strNewTitle) 
+        {
+            if (File.Exists(filePathLayerCss))
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(filePathLayerCss);
+                string sPath = string.Format("//*[@id='{0}']", sLayerID);
+                XmlNode selectedNode = xmlDoc.SelectSingleNode(sPath);
+                if (selectedNode != null)
+                {
+                    selectedNode["title"].InnerText = strNewTitle;
+                }
+                xmlDoc.Save(filePathLayerCss);
+            }
+        }
+
         public static void addHorizonal(string filePathLayerCss)
         {
             XmlDocument xmlLayerMap = new XmlDocument();
@@ -287,7 +322,7 @@ namespace DOGPlatform.XML
             sLayerID = el_Layer.Attributes["id"].Value;
             sLayerType = el_Layer.Attributes["layerType"].Value;
             sLayerTitle = el_Layer["title"].InnerText;
- //           iVisible = int.Parse(el_Layer["visible"].InnerText);
+            iVisible = int.Parse(el_Layer["visible"].InnerText);
         }
 
         public layerDataDraw(XmlElement el_Layer)

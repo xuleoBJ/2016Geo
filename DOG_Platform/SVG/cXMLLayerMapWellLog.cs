@@ -20,6 +20,8 @@ namespace DOGPlatform.SVG
         public int iHasGrid = 1;
         public int iDx = 5;
         public int iDy = 5;
+        public int iLeftDraw = 0;
+        public int isPloygon = 0;
 
         public LayerDataLog(XmlNode el_Layer)
         {
@@ -52,6 +54,8 @@ namespace DOGPlatform.SVG
             int.TryParse(el_Layer["sparsePoint"].InnerText, out this.iSparceNum);
             int.TryParse(el_Layer["DX_Text"].InnerText, out this.iDx);
             int.TryParse(el_Layer["DY_Text"].InnerText, out this.iDy);
+            int.TryParse(el_Layer["iLeftDraw"].InnerText, out this.iLeftDraw);
+            int.TryParse(el_Layer["isPloygon"].InnerText, out this.isPloygon);
         }
     }
     class cXMLLayerMapWellLog
@@ -87,7 +91,10 @@ namespace DOGPlatform.SVG
 
             xViewTrack = cSVGSectionTrackLog.getXview(qcMinValue, fLeftValue, fRightValue, iTrackwidth);
             _points += (xViewTrack).ToString("0.0") + ',' + (fListValue.Count * fVScale).ToString("0.0") + " ";
-            XmlElement gLogPolygon = svgDoc.CreateElement("polygon");
+            //平面图用ployLine好看一些
+            string sLogDrawPattern = "polyline";
+            if (logHeadInfor.isPloygon == 1) sLogDrawPattern = "polygon";
+            XmlElement gLogPolygon = svgDoc.CreateElement(sLogDrawPattern);
             //gLogPolygon.SetAttribute("id", logHeadInfor.sIDLog);
             gLogPolygon.SetAttribute("onclick", "getID(evt)");
             gLogPolygon.SetAttribute("stroke-width", iLinewidth.ToString());

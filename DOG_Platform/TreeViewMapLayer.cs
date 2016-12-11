@@ -27,8 +27,6 @@ namespace DOGPlatform
                 tn.Nodes.Add(tnode);
                 if (curLayerDraw.iVisible > 0) tnode.Checked = true;
                 else tnode.Checked = false;
-
-               
             }
         }
     }
