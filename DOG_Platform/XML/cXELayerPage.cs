@@ -17,6 +17,8 @@ namespace DOGPlatform.XML
         public int iShowScaleRuler = 1;
         public int iShowMapFrame = 1;
         public int iShowAllJH = 0;  //1,所有井号，0 钻遇井号 2 射孔井号
+        public int iPageWidth = 3000;
+        public int iPageHeight = 3000;
         public cXELayerPage(XmlDocument xmlDoc)
         {
             initial(xmlDoc);
@@ -28,14 +30,16 @@ namespace DOGPlatform.XML
             yRef = double.Parse(pageInor["YRef"].InnerText);
             dfscale = double.Parse(pageInor["dfMapScale"].InnerText);
             iNumExtendGrid = int.Parse(pageInor["iNumExtendGrid"].InnerText);
-            iShowAllJH = int.Parse(pageInor["iShowJHGroup"].InnerText); 
+            iShowAllJH = int.Parse(pageInor["iShowJHGroup"].InnerText);
+            iPageWidth = int.Parse(pageInor["pageWidth"].InnerText);
+            iPageHeight = int.Parse(pageInor["pageHeight"].InnerText);
         }
         public static XElement PageInfor()
         {
             //通过井底深度计算缺省页面高度
             return new XElement("PageInfor",
                                    new XElement("pageWidth", "3000"),
-                                  new XElement("pageHeight", "10000"),
+                                  new XElement("pageHeight", "3000"),
                                   new XElement("pageUnit", "mm"),
                                    new XElement("iShowMode", "1"),
                                    new XElement("xRef", cProjectData.dfMapXrealRefer.ToString()),
@@ -57,6 +61,9 @@ namespace DOGPlatform.XML
         public static string fmpMapTitle = "/LayerMapConfig/PageInfor/mapTitle";
         public static string fmpNumExtendGrid = "/LayerMapConfig/PageInfor/iNumExtendGrid";
         public static string fmpShowJHgroup = "/LayerMapConfig/PageInfor/iShowJHGroup";
+        public static string fmpMapScale = "/LayerMapConfig/PageInfor/dfMapScale";
+
+
         public static XElement ComPass() 
         {
             return new XElement("Compass",

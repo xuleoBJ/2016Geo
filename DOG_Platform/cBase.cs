@@ -65,7 +65,8 @@ namespace DOGPlatform
         LayerSumProduct,  //累产注
         LayerBarGraph,
         LayerPieGraph,
-        LayerJSJL,
+        LayerSection,
+        LayerWellDir,
         LayerLog
     }
 

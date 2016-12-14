@@ -106,9 +106,63 @@ namespace DOGPlatform.XML
             eleMent = xmlLayerMap.CreateElement("data");
             foreach (ItemDicLayerDataStatic item in listItemWell)
             {
-                XmlElement itemdata = xmlLayerMap.CreateElement("item");
-                itemdata.InnerText = ItemDicLayerDataStatic.item2string(item);
-                eleMent.AppendChild(itemdata);
+                XmlElement itemWell = xmlLayerMap.CreateElement("item");
+
+                XmlAttribute content = xmlLayerMap.CreateAttribute("LayerDataDicText");
+                content.Value = ItemDicLayerDataStatic.item2string(item);
+                itemWell.Attributes.Append(content);
+               //  itemWell.InnerText = ItemDicLayerDataStatic.item2string(item);
+
+                 XmlElement JH = xmlLayerMap.CreateElement("JH");
+                 JH.InnerText = item.sJH;
+                 itemWell.AppendChild(JH);
+                
+                 XmlElement ds1 = xmlLayerMap.CreateElement("ds1");
+                 ds1.InnerText = item.fDS1_md.ToString();
+                 itemWell.AppendChild(ds1);
+
+                 XmlElement ds2 = xmlLayerMap.CreateElement("ds2");
+                 ds2.InnerText = item.fDS2_md.ToString();
+                 itemWell.AppendChild(ds2);
+
+
+                 XmlElement dX = xmlLayerMap.CreateElement("X");
+                 dX.InnerText = item.dbX.ToString();
+                 itemWell.AppendChild(dX);
+
+                 XmlElement dY = xmlLayerMap.CreateElement("Y");
+                 dY.InnerText = item.dbY.ToString();
+                 itemWell.AppendChild(dY);
+
+                 XmlElement dZ = xmlLayerMap.CreateElement("X");
+                 dZ.InnerText = item.dbZ.ToString();
+                 itemWell.AppendChild(dZ);
+
+                 XmlElement dchd = xmlLayerMap.CreateElement("dchd");
+                 dchd.InnerText = item.fDCHD.ToString();
+                 itemWell.AppendChild(dchd);
+
+                 XmlElement sh = xmlLayerMap.CreateElement("sh");
+                 sh.InnerText = item.fYXHD.ToString();
+                 itemWell.AppendChild(sh);
+
+                 XmlElement yxhd = xmlLayerMap.CreateElement("yxhd");
+                 yxhd.InnerText = item.fYXHD.ToString();
+                 itemWell.AppendChild(yxhd);
+
+                 XmlElement kxd = xmlLayerMap.CreateElement("kxd");
+                 kxd.InnerText = item.fKXD.ToString();
+                 itemWell.AppendChild(kxd);
+
+                 XmlElement stl = xmlLayerMap.CreateElement("stl");
+                 stl.InnerText = item.fSTL.ToString();
+                 itemWell.AppendChild(stl);
+
+                 XmlElement bhd = xmlLayerMap.CreateElement("bhd");
+                 bhd.InnerText = item.fBHD.ToString();
+                 itemWell.AppendChild(bhd);
+
+                 eleMent.AppendChild(itemWell);
             }
             nodeLayer.AppendChild(eleMent);
 

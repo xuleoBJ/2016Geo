@@ -38,8 +38,4 @@ GR.API	GR.API	Gamma	black	0	100	0	1	0
 CALI.IN	CALI.IN	Caliper	black	0	100	0	1	0
 SP.MV	SP.MV	Spontaneous	black	0	100	0	1	0
 DT.US/FT	DT.US/FT	Sonic	black	0	100	0	1	0
-DEVI	DEVI		black	0	100	0	1	0
-AZIM	AZIM		black	0	100	0	1	0
 RI	RI		black	0	100	0	1	0
-C1	C1		black	0	100	0	1	0
-C2	C2		black	0	100	0	1	0

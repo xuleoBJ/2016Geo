@@ -796,6 +796,7 @@
     <Compile Include="SVG\cSVGBaseMap.cs" />
     <Compile Include="cExcel.cs" />
     <Compile Include="cDirDataSourceSingleWell.cs" />
+    <Compile Include="XML\cXMLLayerMapJSJL.cs" />
     <Compile Include="XML\cXMLLayerMapLog.cs" />
     <Compile Include="XML\cXMLLayerMapDynamic.cs" />
     <Compile Include="XML\cXMLLayerMapStatic.cs" />

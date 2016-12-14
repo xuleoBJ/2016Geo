@@ -77,6 +77,7 @@ namespace DOGPlatform
             MessageBox.Show("导出完成。");
         
         }
+
         public static void exportDGV2Excel(DataGridView dgvDataTable) 
         {
             #region
@@ -152,6 +153,7 @@ namespace DOGPlatform
             if (cProjectData.projectUnit == typeUnit.Field.ToString())
                 foreach (string sItem in cProjectManager.ltStrMapFieldScale) cbbMap.Items.Add(sItem); 
         }
+
         public static List<string> readDataGridView2ListWord(DataGridView dgv)
         {
             List<string> ltStrReturn = new List<string>();
@@ -203,6 +205,7 @@ namespace DOGPlatform
                 dgvDataTable.Rows.RemoveAt(0);
             }
         }
+
         public static void ListDirectory(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
@@ -266,6 +269,7 @@ namespace DOGPlatform
                 dgv.Rows.Add(_splitData);
             }
         }
+
         public static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
             var directoryNode = new TreeNode(directoryInfo.Name,0,1);
@@ -417,7 +421,6 @@ namespace DOGPlatform
             
         }
 
-
         public static void read2DataGridViewByListStrLine(List<string>ltStrLine, DataGridView dgv4txt)
         {
             if (dgv4txt.Rows.Count > 0) dgv4txt.Rows.Clear(); //清空井头信息表格全部内容，以便重新加载
@@ -434,6 +437,7 @@ namespace DOGPlatform
             AutoNumberRowsForGridView(dgv4txt);
 
         }
+
         public static void read2DataGridViewByTextFile(string filePath,DataGridView dgv4txt)
         {
             if (filePath != ""&&dgv4txt!=null)

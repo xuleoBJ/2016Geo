@@ -222,8 +222,9 @@
             this.cmsTNdataSectionWellChildItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiDataSectionWellChildItemImport = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNlayerItem = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.层信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLayerItemInfor = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiItemLayerDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGraphOpenDir = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1427,6 +1428,7 @@
             this.tscbbScale.Name = "tscbbScale";
             this.tscbbScale.Size = new System.Drawing.Size(80, 25);
             this.tscbbScale.SelectedIndexChanged += new System.EventHandler(this.tsCbbScale_SelectedIndexChanged);
+            this.tscbbScale.Click += new System.EventHandler(this.tscbbScale_Click);
             // 
             // ToolStripSeparator2
             // 
@@ -1613,35 +1615,36 @@
             this.tsmiGraphEdit,
             this.tsmiGraphRename,
             this.tsmiGraphCopy,
-            this.tsmiGraphDelete});
+            this.tsmiGraphDelete,
+            this.tsmiGraphOpenDir});
             this.cmsTNprojectGrapthSVG.Name = "cmsProjectGrapth";
-            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(113, 92);
+            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(153, 136);
             // 
             // tsmiGraphEdit
             // 
             this.tsmiGraphEdit.Name = "tsmiGraphEdit";
-            this.tsmiGraphEdit.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphEdit.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphEdit.Text = "编辑";
             this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
             // 
             // tsmiGraphRename
             // 
             this.tsmiGraphRename.Name = "tsmiGraphRename";
-            this.tsmiGraphRename.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphRename.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphRename.Text = "重命名";
             this.tsmiGraphRename.Click += new System.EventHandler(this.tsmiGraphRename_Click);
             // 
             // tsmiGraphCopy
             // 
             this.tsmiGraphCopy.Name = "tsmiGraphCopy";
-            this.tsmiGraphCopy.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphCopy.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphCopy.Text = "复制";
             this.tsmiGraphCopy.Click += new System.EventHandler(this.tsmiGraphCopy_Click);
             // 
             // tsmiGraphDelete
             // 
             this.tsmiGraphDelete.Name = "tsmiGraphDelete";
-            this.tsmiGraphDelete.Size = new System.Drawing.Size(112, 22);
+            this.tsmiGraphDelete.Size = new System.Drawing.Size(152, 22);
             this.tsmiGraphDelete.Text = "删除";
             this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
@@ -1806,33 +1809,33 @@
             this.tsmiSectionGeoCopy,
             this.tsmiSectionGeoDel});
             this.cmsTNsectionGeo.Name = "cmsProjectGrapth";
-            this.cmsTNsectionGeo.Size = new System.Drawing.Size(153, 114);
+            this.cmsTNsectionGeo.Size = new System.Drawing.Size(113, 92);
             // 
             // tsmiSectionGeoOpen
             // 
             this.tsmiSectionGeoOpen.Name = "tsmiSectionGeoOpen";
-            this.tsmiSectionGeoOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoOpen.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionGeoOpen.Text = "打开";
             this.tsmiSectionGeoOpen.Click += new System.EventHandler(this.tsmiSectionGeoOpen_Click);
             // 
             // tsmiSectionGeoRename
             // 
             this.tsmiSectionGeoRename.Name = "tsmiSectionGeoRename";
-            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoRename.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionGeoRename.Text = "重命名";
             this.tsmiSectionGeoRename.Click += new System.EventHandler(this.tsmiSectionGeoRename_Click);
             // 
             // tsmiSectionGeoCopy
             // 
             this.tsmiSectionGeoCopy.Name = "tsmiSectionGeoCopy";
-            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoCopy.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionGeoCopy.Text = "复制";
             this.tsmiSectionGeoCopy.Click += new System.EventHandler(this.tsmiSectionGeoCopy_Click);
             // 
             // tsmiSectionGeoDel
             // 
             this.tsmiSectionGeoDel.Name = "tsmiSectionGeoDel";
-            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSectionGeoDel.Size = new System.Drawing.Size(112, 22);
             this.tsmiSectionGeoDel.Text = "删除";
             this.tsmiSectionGeoDel.Click += new System.EventHandler(this.tsmiSectionGeoDel_Click);
             // 
@@ -1912,22 +1915,30 @@
             // cmsTNlayerItem
             // 
             this.cmsTNlayerItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.层信息ToolStripMenuItem,
-            this.删除ToolStripMenuItem});
+            this.tsmiLayerItemInfor,
+            this.tsmiItemLayerDelete});
             this.cmsTNlayerItem.Name = "cmsTNlayerItem";
             this.cmsTNlayerItem.Size = new System.Drawing.Size(113, 48);
             // 
-            // 层信息ToolStripMenuItem
+            // tsmiLayerItemInfor
             // 
-            this.层信息ToolStripMenuItem.Name = "层信息ToolStripMenuItem";
-            this.层信息ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.层信息ToolStripMenuItem.Text = "层信息";
+            this.tsmiLayerItemInfor.Name = "tsmiLayerItemInfor";
+            this.tsmiLayerItemInfor.Size = new System.Drawing.Size(112, 22);
+            this.tsmiLayerItemInfor.Text = "层信息";
             // 
-            // 删除ToolStripMenuItem
+            // tsmiItemLayerDelete
             // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
+            this.tsmiItemLayerDelete.Name = "tsmiItemLayerDelete";
+            this.tsmiItemLayerDelete.Size = new System.Drawing.Size(112, 22);
+            this.tsmiItemLayerDelete.Text = "删除";
+            this.tsmiItemLayerDelete.Click += new System.EventHandler(this.tsmiItemLayerDelete_Click);
+            // 
+            // tsmiGraphOpenDir
+            // 
+            this.tsmiGraphOpenDir.Name = "tsmiGraphOpenDir";
+            this.tsmiGraphOpenDir.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphOpenDir.Text = "打开目录";
+            this.tsmiGraphOpenDir.Click += new System.EventHandler(this.tsmiGraphOpenDir_Click);
             // 
             // FormMain
             // 
@@ -2197,8 +2208,9 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiWellSectionMake;
         private System.Windows.Forms.ToolStripMenuItem tsmiGlobeLogExport;
         private System.Windows.Forms.ContextMenuStrip cmsTNlayerItem;
-        private System.Windows.Forms.ToolStripMenuItem 层信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLayerItemInfor;
+        private System.Windows.Forms.ToolStripMenuItem tsmiItemLayerDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGraphOpenDir;
     }
 }
 

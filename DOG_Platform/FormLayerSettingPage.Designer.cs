@@ -33,9 +33,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.nUDiNumExtendGrid = new System.Windows.Forms.NumericUpDown();
             this.cbbUnit = new System.Windows.Forms.ComboBox();
-            this.cbbScale = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
             this.nUDPageHeight = new System.Windows.Forms.NumericUpDown();
             this.button26 = new System.Windows.Forms.Button();
             this.nUDPageWidth = new System.Windows.Forms.NumericUpDown();
@@ -77,9 +75,7 @@
             // 
             this.groupBox3.Controls.Add(this.nUDiNumExtendGrid);
             this.groupBox3.Controls.Add(this.cbbUnit);
-            this.groupBox3.Controls.Add(this.cbbScale);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.nUDPageHeight);
             this.groupBox3.Controls.Add(this.button26);
             this.groupBox3.Controls.Add(this.nUDPageWidth);
@@ -90,7 +86,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(485, 135);
+            this.groupBox3.Size = new System.Drawing.Size(449, 110);
             this.groupBox3.TabIndex = 63;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "页面大小设置";
@@ -122,16 +118,6 @@
             this.cbbUnit.Size = new System.Drawing.Size(75, 20);
             this.cbbUnit.TabIndex = 40;
             // 
-            // cbbScale
-            // 
-            this.cbbScale.BackColor = System.Drawing.Color.White;
-            this.cbbScale.FormattingEnabled = true;
-            this.cbbScale.Location = new System.Drawing.Point(91, 92);
-            this.cbbScale.Name = "cbbScale";
-            this.cbbScale.Size = new System.Drawing.Size(72, 20);
-            this.cbbScale.TabIndex = 18;
-            this.cbbScale.Text = "1:10";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -140,15 +126,6 @@
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 41;
             this.label3.Text = "图幅单位";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(32, 95);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 12);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "比例尺1:";
             // 
             // nUDPageHeight
             // 
@@ -177,10 +154,11 @@
             0,
             0,
             0});
+            this.nUDPageHeight.ValueChanged += new System.EventHandler(this.nUDPageHeight_ValueChanged);
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(199, 89);
+            this.button26.Location = new System.Drawing.Point(265, 56);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(75, 23);
             this.button26.TabIndex = 26;
@@ -214,6 +192,7 @@
             0,
             0,
             0});
+            this.nUDPageWidth.ValueChanged += new System.EventHandler(this.nUDPageWidth_ValueChanged);
             // 
             // label35
             // 
@@ -362,9 +341,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.NumericUpDown nUDiNumExtendGrid;
         private System.Windows.Forms.ComboBox cbbUnit;
-        private System.Windows.Forms.ComboBox cbbScale;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.NumericUpDown nUDPageHeight;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.NumericUpDown nUDPageWidth;

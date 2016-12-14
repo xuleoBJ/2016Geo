@@ -114,10 +114,8 @@ namespace DOGPlatform.SVG
             string sLogName = layerDataLog.sLogName;
             int iTrackwidth = layerDataLog.iTrackWidth;
             float fVScale = layerDataLog.fVScale;
-            //double fTop = itemStaticWellPosi.dbTop;
-            //double fBot = itemStaticWellPosi.dbBot;
-            double fTop = 1100;
-            double fBot = 1110;
+            double fTop = ltWellPos.dbTop;
+            double fBot = ltWellPos.dbBot;
             //获得测井数据
             trackDataListLog dlTrackDataListLog = cSVGSectionTrackLog.getLogSeriersFromLogFile(sJH, sLogName, fTop, fBot);
             XmlElement gEleWellLogPattern = gWellLogPattern(svgLayer.svgDoc, layerDataLog, iTrackwidth, dlTrackDataListLog.fListValue, fVScale);

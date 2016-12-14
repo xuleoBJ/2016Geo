@@ -309,8 +309,6 @@ namespace DOGPlatform
                 {
                     listLayersDataCurrentLayerStatic = cIODicLayerDataStatic.readDicLayerData2struct().FindAll(p => p.sXCM == sSelectLayer);
                     cXMLLayerMapStatic.addWellStaticDataDic2XML(filePathLayerCss, sSelectLayer, listLayersDataCurrentLayerStatic);
-                    //DialogResult dialogResult = MessageBox.Show("是否新建并覆盖？", "文件已存在", MessageBoxButtons.YesNo);
-                    //if (dialogResult == DialogResult.No) bNew = false;
                 }
                updateSVG();
             }
@@ -359,6 +357,20 @@ namespace DOGPlatform
                 TreeViewMapLayer.setupLayerNode(tnPage, this.filePathLayerCss);
                 tvEdit.Nodes.Add(tnPage);
                 tnPage.Expand();
+                
+                TreeNode tnWellDir = new TreeNode();
+                tnWellDir.Text = "井";
+                tnWellDir.Name = "wellDir";  //结点name
+                tnWellDir.Tag = "wellDir";
+                foreach (string sJH in cProjectData.ltStrProjectJH) 
+                {
+                    TreeNode tnWell = new TreeNode();
+                    tnWell.Text = sJH;
+                    tnWell.Name = "well";  //结点name
+                    tnWell.Tag = "well";
+                    tnWellDir.Nodes.Add(tnWell);
+                }
+                tvEdit.Nodes.Add(tnWellDir);
             }
         }
 
@@ -536,15 +548,28 @@ namespace DOGPlatform
                      FormLayerGeologicalValue newGeoLayer = new FormLayerGeologicalValue(this.filePathLayerCss);
                      newGeoLayer.ShowDialog();
                  }
-                  if (strLayerType == TypeLayer.LayerPieGraph.ToString())
+                 if (strLayerType == TypeLayer.LayerPieGraph.ToString())
                  {
                      FormLayerWellValue newLayer = new FormLayerWellValue(this.filePathLayerCss);
                      newLayer.ShowDialog();
                  }
-                  if (strLayerType == TypeLayer.LayerWellPosition.ToString())
-                  {
-                      cXMLLayerMapStatic.addWellPosition2Layer(filePathLayerCss,sSelectLayerID, listLayersDataCurrentLayerStatic);
-                  }
+                 if (strLayerType == TypeLayer.LayerWellPosition.ToString())
+                 {
+                     cXMLLayerMapStatic.addWellPosition2Layer(filePathLayerCss, sSelectLayerID, listLayersDataCurrentLayerStatic);
+                 }
+
+                 if (strLayerType == TypeLayer.LayerSection.ToString()) 
+                 {
+                     foreach (ItemDicLayerDataStatic item in listLayersDataCurrentLayerStatic)
+                     {
+                         string dirLayerJH = Path.Combine(cProjectManager.dirPathLayerDir, this.sSelectLayer, item.sJH);
+                         string filePathGoal = Path.Combine(dirLayerJH, item.sJH + "_" + this.sSelectLayer +".xml");
+                         if (!Directory.Exists(dirLayerJH)) Directory.CreateDirectory(dirLayerJH);
+                         string fileNameSelectTemplate = Path.Combine(cProjectManager.dirPathTemplate, "fn4简单剖面模板.xtl");
+                         cIOtemplate.copyTemplate(fileNameSelectTemplate, filePathGoal, item.sJH, item.fDS1_md, item.fDS2_md );
+                     }
+                     MessageBox.Show("模板导入完成");
+                 }
 
              }
         }
@@ -552,6 +577,7 @@ namespace DOGPlatform
         private void tsmiSelectDel_Click(object sender, EventArgs e)
         {
             TreeNode currentNode = this.tvEdit.SelectedNode;
+
             if (currentNode != null)
                 {
                     DialogResult dialogResult = MessageBox.Show("将删除选中:" + currentNode.Text + "，确认删除？", "删除选中", MessageBoxButtons.YesNo);
@@ -561,6 +587,7 @@ namespace DOGPlatform
                         currentNode.Remove();
                     }
                 }
+
             if (currentNode.Parent != null) currentNode.Parent.Expand();
         }
 
@@ -688,8 +715,61 @@ namespace DOGPlatform
 
         private void tsmiInsertLayerJSJL_Click(object sender, EventArgs e)
         {
-            cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerJSJL);
+            cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerSection);
             updateTV();
+        }
+
+        private void tsmiViewCurrentLayerData_Click(object sender, EventArgs e)
+        {
+
+            StreamWriter swNew = new StreamWriter(cProjectManager.filePathRunInfor, false, Encoding.UTF8);
+            List<string> ltWordHead = new List<string>();
+            ltWordHead.Add("井号");
+            ltWordHead.Add("小层名");
+            ltWordHead.Add("顶深md");
+            ltWordHead.Add("底深md");
+            ltWordHead.Add("X");
+            ltWordHead.Add("Y");
+            ltWordHead.Add("Z");
+            ltWordHead.Add("有效厚度");
+            ltWordHead.Add("孔隙度");
+            ltWordHead.Add("渗透率");
+            ltWordHead.Add("饱和度");
+            ltWordHead.Add("顶深TVD");
+            swNew.WriteLine(string.Join("\t", ltWordHead));
+
+            foreach (ItemDicLayerDataStatic item in listLayersDataCurrentLayerStatic) 
+            {
+                List<string> ltWord = new List<string>();
+                ltWord.Add(item.sJH);
+                ltWord.Add(item.sXCM);
+                ltWord.Add(item.fDS1_md.ToString());
+                ltWord.Add(item.fDS2_md.ToString());
+                ltWord.Add(item.dbX.ToString());
+                ltWord.Add(item.dbY.ToString());
+                ltWord.Add(item.dbZ.ToString());
+                ltWord.Add(item.fYXHD.ToString());
+                ltWord.Add(item.fKXD.ToString());
+                ltWord.Add(item.fSTL.ToString());
+                ltWord.Add(item.fBHD.ToString());
+                ltWord.Add(item.fDS1_TVD.ToString());
+                
+                swNew.WriteLine(string.Join("\t",ltWord));
+            }
+            swNew.Close();
+            System.Diagnostics.Process.Start("notepad.exe", cProjectManager.filePathRunInfor);
+        }
+
+        private void tsbcbbVScale_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tsbcbbVScale_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            float dfscale = float.Parse(tsbcbbVScale.SelectedItem.ToString());
+            double dfScale= 1000 / dfscale;
+            cXmlBase.setNodeInnerText(this.filePathLayerCss, cXELayerPage.fmpMapScale, dfScale.ToString());
+            updateSVG();
         }
     }
 }

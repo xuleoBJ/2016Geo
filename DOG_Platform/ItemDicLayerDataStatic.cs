@@ -11,7 +11,7 @@ namespace DOGPlatform
         public string sXCM;
         public double dbX;
         public double dbY;
-        public double dfZ;
+        public double dbZ;
         public float fDCHD;
         public float fSH;
         public float fYXHD;
@@ -29,7 +29,7 @@ namespace DOGPlatform
             ltStrWrited.Add(item.sXCM);
             ltStrWrited.Add(item.dbX.ToString());
             ltStrWrited.Add(item.dbY.ToString());
-            ltStrWrited.Add(item.dfZ.ToString());
+            ltStrWrited.Add(item.dbZ.ToString());
             ltStrWrited.Add(item.fDCHD.ToString());
             ltStrWrited.Add(item.fSH.ToString());
             ltStrWrited.Add(item.fYXHD.ToString());
@@ -54,8 +54,8 @@ namespace DOGPlatform
               double.TryParse(split[2], out item.dbX);
               item.dbY = 0;
               double.TryParse(split[3], out item.dbY);
-              item.dfZ = 0;
-              double.TryParse(split[4], out item.dfZ);
+              item.dbZ = 0;
+              double.TryParse(split[4], out item.dbZ);
               item.fDCHD = 0.0f;
               float.TryParse(split[5], out item.fDCHD);
               item.fSH = 0.0f;

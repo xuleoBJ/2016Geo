@@ -109,7 +109,7 @@ namespace DOGPlatform
                         {
                             itemLayerData.dbX = dfCurrentLayerX;
                             itemLayerData.dbY = dfCurrentLayerY;
-                            itemLayerData.dfZ = dfCurrentLayerZ;
+                            itemLayerData.dbZ = dfCurrentLayerZ;
                             itemLayerData.fDCHD = fCurrentLayerDCHD;
                             itemLayerData.fSH = fCurrentLayerSandThickness;
                             itemLayerData.fYXHD = fCurrentLayerYXHD;
@@ -125,7 +125,7 @@ namespace DOGPlatform
                         {
                             itemLayerData.dbX = 0.0;
                             itemLayerData.dbY = 0.0;
-                            itemLayerData.dfZ = 0.0;
+                            itemLayerData.dbZ = 0.0;
                             itemLayerData.fDCHD = -999;
                             itemLayerData.fSH =-999;
                             itemLayerData.fYXHD = 0;
@@ -151,7 +151,7 @@ namespace DOGPlatform
                     ItemDicLayerDataStatic nextItem=listLayerDataDic[i+1];
                     currentItem.dbX = nextItem.dbX;
                     currentItem.dbY = nextItem.dbY;
-                    currentItem.dfZ = nextItem.dfZ+nextItem.fDCHD;
+                    currentItem.dbZ = nextItem.dbZ + nextItem.fDCHD;
                     currentItem.fDS1_md = nextItem.fDS1_md;
                     currentItem.fDS2_md = nextItem.fDS2_md;
                     currentItem.fDS1_TVD = nextItem.fDS1_TVD;
@@ -170,7 +170,7 @@ namespace DOGPlatform
                     ItemDicLayerDataStatic nextItem = listLayerDataDic[i + 1];
                     currentItem.dbX = nextItem.dbX;
                     currentItem.dbY = nextItem.dbY;
-                    currentItem.dfZ = nextItem.dfZ + nextItem.fDCHD;
+                    currentItem.dbZ = nextItem.dbZ + nextItem.fDCHD;
                     currentItem.fDS1_md = nextItem.fDS1_md;
                     currentItem.fDS2_md = nextItem.fDS2_md;
                     currentItem.fDS1_TVD = nextItem.fDS1_TVD;
@@ -245,7 +245,7 @@ namespace DOGPlatform
 
                         sttLayerDataDicItem.dbX = double.Parse(split[2]);
                         sttLayerDataDicItem.dbY = double.Parse(split[3]);
-                        sttLayerDataDicItem.dfZ = double.Parse(split[4]);
+                        sttLayerDataDicItem.dbZ = double.Parse(split[4]);
 
                         sttLayerDataDicItem.fSH = float.Parse(split[5]);
                         sttLayerDataDicItem.fYXHD = float.Parse(split[6]);
@@ -290,7 +290,7 @@ namespace DOGPlatform
 
                         sttLayerDataDicItem.dbX = double.Parse(split[2]);
                         sttLayerDataDicItem.dbY = double.Parse(split[3]);
-                        sttLayerDataDicItem.dfZ = double.Parse(split[4]);
+                        sttLayerDataDicItem.dbZ = double.Parse(split[4]);
 
                         sttLayerDataDicItem.fSH = float.Parse(split[5]);
                         sttLayerDataDicItem.fYXHD = float.Parse(split[6]);
@@ -366,7 +366,7 @@ namespace DOGPlatform
                 ltStrWrited.Add(item.sXCM);
                 ltStrWrited.Add(item.dbX.ToString("0.0"));
                 ltStrWrited.Add(item.dbY.ToString("0.0"));
-                ltStrWrited.Add(item.dfZ.ToString("0.0")); //顶深海拔
+                ltStrWrited.Add(item.dbZ.ToString("0.0")); //顶深海拔
                 ltStrWrited.Add(item.fDCHD.ToString("0.0"));
                 ltStrWrited.Add(item.fSH.ToString("0.0"));
                 ltStrWrited.Add(item.fYXHD.ToString());

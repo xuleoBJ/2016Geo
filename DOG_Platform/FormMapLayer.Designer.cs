@@ -150,6 +150,7 @@
             this.tsmiInsertLayerGeoValue = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertLayerPie = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertLayerLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertLayerSection = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertLayerWellArea = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertLayerInjPro = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiInsertLayerBar = new System.Windows.Forms.ToolStripMenuItem();
@@ -180,12 +181,12 @@
             this.tsmiShowWell = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAllProjectJH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCurrentLayerJH = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiViewCurrentLayerData = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripWeb = new System.Windows.Forms.StatusStrip();
             this.tsslblDataItem = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblIDinfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslblWb = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbcLayerMap = new System.Windows.Forms.TabControl();
-            this.tsmiInsertLayerJSJL = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1212,6 +1213,8 @@
             "100000"});
             this.tsbcbbVScale.Name = "tsbcbbVScale";
             this.tsbcbbVScale.Size = new System.Drawing.Size(80, 25);
+            this.tsbcbbVScale.SelectedIndexChanged += new System.EventHandler(this.tsbcbbVScale_SelectedIndexChanged);
+            this.tsbcbbVScale.Click += new System.EventHandler(this.tsbcbbVScale_Click);
             // 
             // ToolStripSeparator2
             // 
@@ -1433,7 +1436,7 @@
             this.tsmiInsertLayerGeoValue,
             this.tsmiInsertLayerPie,
             this.tsmiInsertLayerLog,
-            this.tsmiInsertLayerJSJL,
+            this.tsmiInsertLayerSection,
             this.tsmiInsertLayerWellArea,
             this.tsmiInsertLayerInjPro,
             this.tsmiInsertLayerBar,
@@ -1463,6 +1466,13 @@
             this.tsmiInsertLayerLog.Size = new System.Drawing.Size(152, 22);
             this.tsmiInsertLayerLog.Text = "测井曲线";
             this.tsmiInsertLayerLog.Click += new System.EventHandler(this.测井曲线ToolStripMenuItem_Click);
+            // 
+            // tsmiInsertLayerSection
+            // 
+            this.tsmiInsertLayerSection.Name = "tsmiInsertLayerSection";
+            this.tsmiInsertLayerSection.Size = new System.Drawing.Size(152, 22);
+            this.tsmiInsertLayerSection.Text = "层段剖面";
+            this.tsmiInsertLayerSection.Click += new System.EventHandler(this.tsmiInsertLayerJSJL_Click);
             // 
             // tsmiInsertLayerWellArea
             // 
@@ -1658,28 +1668,29 @@
             this.tsmiSetPage,
             this.tsmiSetWellPattern,
             this.tsmiViewWellSection,
-            this.tsmiShowWell});
+            this.tsmiShowWell,
+            this.tsmiViewCurrentLayerData});
             this.cmsWebSVG.Name = "cmsWebSVG";
-            this.cmsWebSVG.Size = new System.Drawing.Size(125, 92);
+            this.cmsWebSVG.Size = new System.Drawing.Size(149, 114);
             // 
             // tsmiSetPage
             // 
             this.tsmiSetPage.Name = "tsmiSetPage";
-            this.tsmiSetPage.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSetPage.Size = new System.Drawing.Size(148, 22);
             this.tsmiSetPage.Text = "页面设置";
             this.tsmiSetPage.Click += new System.EventHandler(this.页面设置ToolStripMenuItem_Click);
             // 
             // tsmiSetWellPattern
             // 
             this.tsmiSetWellPattern.Name = "tsmiSetWellPattern";
-            this.tsmiSetWellPattern.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSetWellPattern.Size = new System.Drawing.Size(148, 22);
             this.tsmiSetWellPattern.Text = "井点设置";
             this.tsmiSetWellPattern.Click += new System.EventHandler(this.井点设置ToolStripMenuItem_Click);
             // 
             // tsmiViewWellSection
             // 
             this.tsmiViewWellSection.Name = "tsmiViewWellSection";
-            this.tsmiViewWellSection.Size = new System.Drawing.Size(124, 22);
+            this.tsmiViewWellSection.Size = new System.Drawing.Size(148, 22);
             this.tsmiViewWellSection.Text = "查看剖面";
             this.tsmiViewWellSection.Click += new System.EventHandler(this.查看剖面ToolStripMenuItem_Click);
             // 
@@ -1689,22 +1700,29 @@
             this.tsmiAllProjectJH,
             this.tsmiCurrentLayerJH});
             this.tsmiShowWell.Name = "tsmiShowWell";
-            this.tsmiShowWell.Size = new System.Drawing.Size(124, 22);
+            this.tsmiShowWell.Size = new System.Drawing.Size(148, 22);
             this.tsmiShowWell.Text = "显示井";
             // 
             // tsmiAllProjectJH
             // 
             this.tsmiAllProjectJH.Name = "tsmiAllProjectJH";
-            this.tsmiAllProjectJH.Size = new System.Drawing.Size(112, 22);
+            this.tsmiAllProjectJH.Size = new System.Drawing.Size(152, 22);
             this.tsmiAllProjectJH.Text = "所有井";
             this.tsmiAllProjectJH.Click += new System.EventHandler(this.tsmiAllProjectJH_Click);
             // 
             // tsmiCurrentLayerJH
             // 
             this.tsmiCurrentLayerJH.Name = "tsmiCurrentLayerJH";
-            this.tsmiCurrentLayerJH.Size = new System.Drawing.Size(112, 22);
+            this.tsmiCurrentLayerJH.Size = new System.Drawing.Size(152, 22);
             this.tsmiCurrentLayerJH.Text = "钻遇井";
             this.tsmiCurrentLayerJH.Click += new System.EventHandler(this.tsmiCurrentLayerJH_Click);
+            // 
+            // tsmiViewCurrentLayerData
+            // 
+            this.tsmiViewCurrentLayerData.Name = "tsmiViewCurrentLayerData";
+            this.tsmiViewCurrentLayerData.Size = new System.Drawing.Size(148, 22);
+            this.tsmiViewCurrentLayerData.Text = "当前小层数据";
+            this.tsmiViewCurrentLayerData.Click += new System.EventHandler(this.tsmiViewCurrentLayerData_Click);
             // 
             // statusStripWeb
             // 
@@ -1745,13 +1763,6 @@
             this.tbcLayerMap.SelectedIndex = 0;
             this.tbcLayerMap.Size = new System.Drawing.Size(933, 489);
             this.tbcLayerMap.TabIndex = 0;
-            // 
-            // tsmiInsertLayerJSJL
-            // 
-            this.tsmiInsertLayerJSJL.Name = "tsmiInsertLayerJSJL";
-            this.tsmiInsertLayerJSJL.Size = new System.Drawing.Size(152, 22);
-            this.tsmiInsertLayerJSJL.Text = "解释结论";
-            this.tsmiInsertLayerJSJL.Click += new System.EventHandler(this.tsmiInsertLayerJSJL_Click);
             // 
             // FormMapLayer
             // 
@@ -1973,7 +1984,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiCurrentLayerJH;
         private System.Windows.Forms.ToolStripMenuItem tsmiLayerCopy;
         private System.Windows.Forms.ToolStripMenuItem tsmiLayerRename;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLayerJSJL;
+        private System.Windows.Forms.ToolStripMenuItem tsmiInsertLayerSection;
+        private System.Windows.Forms.ToolStripMenuItem tsmiViewCurrentLayerData;
 
     }
 }

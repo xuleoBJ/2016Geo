@@ -171,6 +171,14 @@ namespace DOGPlatform.SVG
             XmlNode importNewsItem =gLayer.OwnerDocument.ImportNode(gElement, true);
             gLayer.AppendChild(importNewsItem);
         }
+
+        public void addgSVG2Layer(XmlElement gLayer, XmlElement gSVG, double ix, double iy)
+        {
+            string sTranslate = "translate(" + ix.ToString() + "," + iy.ToString() + ")";
+            gSVG.SetAttribute("transform", sTranslate);
+            XmlNode importNewsItem = gLayer.OwnerDocument.ImportNode(gSVG, true);
+            gLayer.AppendChild(importNewsItem);
+        }
         public void addgElement2Layer(XmlElement gLayer, XmlElement gElement, double ix)
         {
            addgElement2Layer(gLayer,gElement, ix, 0);

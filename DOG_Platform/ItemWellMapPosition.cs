@@ -11,6 +11,7 @@ namespace DOGPlatform
         public string sXCM;
         public double dbX;
         public double dbY;
+        public double dbZ;
         public double dbTop;
         public double dbBot;
         public double dbTopTVD;
@@ -66,8 +67,12 @@ namespace DOGPlatform
                 double.TryParse(split[2], out item.dbX);
                 item.dbY = 0.0;
                 double.TryParse(split[3], out item.dbY);
-                item.iWellType= 0;
-                int.TryParse(split[4], out item.iWellType);
+                item.dbZ = 0.0;
+                double.TryParse(split[4], out item.dbZ);
+                item.dbTop = 0.0;
+                double.TryParse(split[11], out item.dbTop);
+                item.dbBot = 0.0;
+                double.TryParse(split[12], out item.dbBot);
             }
             return item;
         } 

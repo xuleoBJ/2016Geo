@@ -439,7 +439,8 @@ namespace DOGPlatform
                             XmlNodeList dataItem = dataList.SelectNodes("dataItem");
                             foreach (XmlNode xn in dataItem)
                             {
-                                ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn); if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
+                                ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn); 
+                                if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
                                 {
                                     returnElemment = cSVGSectionTrackJSJL.gTrackItemTVDJSJL( svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);
                                     if (curTrackDraw.sTrackType == TypeTrack.沉积旋回.ToString()) returnElemment = cSVGSectionTrackCycle.gTrackItemTVDGeoCycle(svgSection.svgDoc, svgSection.svgDefs, item, fVScale, curTrackDraw.iTrackWidth);

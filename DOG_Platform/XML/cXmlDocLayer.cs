@@ -120,7 +120,7 @@ namespace DOGPlatform.XML
             {
 
             }
-            if (eTypeLayer == TypeLayer.LayerJSJL)
+            if (eTypeLayer == TypeLayer.LayerSection)
             {
                 layerNode.Add(new XElement("trackWidth", "50"));
             }

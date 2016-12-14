@@ -171,14 +171,14 @@ namespace DOGPlatform
                     iLineIndex++;
                     if (!line.StartsWith("#")) // //非注释行
                     {
-                        split = line.Trim().Split(new char[] { ' ','\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                        split = line.Trim().Split(new char[] { ' ','\t', ','}, StringSplitOptions.RemoveEmptyEntries);
                         if(split.Length>0)
                         {
                             if (split[0].ToUpper().StartsWith("~C")) start = true;
                             if (start == true && (split[0].ToUpper().StartsWith("~A")
                                 || split[0].ToUpper().StartsWith("~P")
                                 || split[0].ToUpper().StartsWith("~O"))) break;//start==true and 重新遇到~跳出循环
-                            if (start) ltLineRet.Add(line); //非注释行 
+                            if (start) ltLineRet.Add(line.Trim().Split(new char[] { '.', ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries)[0]); //加入系列，las去掉小数点后面的单位
                         }
                     }
                 }
