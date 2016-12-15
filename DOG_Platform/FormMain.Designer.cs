@@ -186,6 +186,7 @@
             this.tsmiGraphRename = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGraphDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGraphOpenDir = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTNglobalLog = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiExportAllLog = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGlobeLogSet = new System.Windows.Forms.ToolStripMenuItem();
@@ -224,7 +225,8 @@
             this.cmsTNlayerItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLayerItemInfor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiItemLayerDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiGraphOpenDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExportLayerDepth = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -1305,7 +1307,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1455,9 +1457,10 @@
             this.tsmiColapseAll,
             this.tsmiMakeWellSection,
             this.tsmiOpenAppSectionGeo,
-            this.tsmiOpenAppSectionFence});
+            this.tsmiOpenAppSectionFence,
+            this.数据导出ToolStripMenuItem});
             this.cmsDefaultProjectTV.Name = "cmsProjectWells";
-            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(185, 158);
+            this.cmsDefaultProjectTV.Size = new System.Drawing.Size(185, 180);
             // 
             // tsmiExpandAll
             // 
@@ -1599,7 +1602,7 @@
             // 
             this.tsmiWellSectionMake.Name = "tsmiWellSectionMake";
             this.tsmiWellSectionMake.Size = new System.Drawing.Size(136, 22);
-            this.tsmiWellSectionMake.Text = "单井组合图";
+            this.tsmiWellSectionMake.Text = "单井综合图";
             this.tsmiWellSectionMake.Click += new System.EventHandler(this.tsmiWellSectionMake_Click);
             // 
             // tsmiDeleteWell
@@ -1618,35 +1621,42 @@
             this.tsmiGraphDelete,
             this.tsmiGraphOpenDir});
             this.cmsTNprojectGrapthSVG.Name = "cmsProjectGrapth";
-            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(153, 136);
+            this.cmsTNprojectGrapthSVG.Size = new System.Drawing.Size(125, 114);
             // 
             // tsmiGraphEdit
             // 
             this.tsmiGraphEdit.Name = "tsmiGraphEdit";
-            this.tsmiGraphEdit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphEdit.Size = new System.Drawing.Size(124, 22);
             this.tsmiGraphEdit.Text = "编辑";
             this.tsmiGraphEdit.Click += new System.EventHandler(this.tsmiGraphEdit_Click);
             // 
             // tsmiGraphRename
             // 
             this.tsmiGraphRename.Name = "tsmiGraphRename";
-            this.tsmiGraphRename.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphRename.Size = new System.Drawing.Size(124, 22);
             this.tsmiGraphRename.Text = "重命名";
             this.tsmiGraphRename.Click += new System.EventHandler(this.tsmiGraphRename_Click);
             // 
             // tsmiGraphCopy
             // 
             this.tsmiGraphCopy.Name = "tsmiGraphCopy";
-            this.tsmiGraphCopy.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphCopy.Size = new System.Drawing.Size(124, 22);
             this.tsmiGraphCopy.Text = "复制";
             this.tsmiGraphCopy.Click += new System.EventHandler(this.tsmiGraphCopy_Click);
             // 
             // tsmiGraphDelete
             // 
             this.tsmiGraphDelete.Name = "tsmiGraphDelete";
-            this.tsmiGraphDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiGraphDelete.Size = new System.Drawing.Size(124, 22);
             this.tsmiGraphDelete.Text = "删除";
             this.tsmiGraphDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            // 
+            // tsmiGraphOpenDir
+            // 
+            this.tsmiGraphOpenDir.Name = "tsmiGraphOpenDir";
+            this.tsmiGraphOpenDir.Size = new System.Drawing.Size(124, 22);
+            this.tsmiGraphOpenDir.Text = "打开目录";
+            this.tsmiGraphOpenDir.Click += new System.EventHandler(this.tsmiGraphOpenDir_Click);
             // 
             // cmsTNglobalLog
             // 
@@ -1933,12 +1943,20 @@
             this.tsmiItemLayerDelete.Text = "删除";
             this.tsmiItemLayerDelete.Click += new System.EventHandler(this.tsmiItemLayerDelete_Click);
             // 
-            // tsmiGraphOpenDir
+            // 数据导出ToolStripMenuItem
             // 
-            this.tsmiGraphOpenDir.Name = "tsmiGraphOpenDir";
-            this.tsmiGraphOpenDir.Size = new System.Drawing.Size(152, 22);
-            this.tsmiGraphOpenDir.Text = "打开目录";
-            this.tsmiGraphOpenDir.Click += new System.EventHandler(this.tsmiGraphOpenDir_Click);
+            this.数据导出ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiExportLayerDepth});
+            this.数据导出ToolStripMenuItem.Name = "数据导出ToolStripMenuItem";
+            this.数据导出ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.数据导出ToolStripMenuItem.Text = "数据导出";
+            // 
+            // tsmiExportLayerDepth
+            // 
+            this.tsmiExportLayerDepth.Name = "tsmiExportLayerDepth";
+            this.tsmiExportLayerDepth.Size = new System.Drawing.Size(184, 22);
+            this.tsmiExportLayerDepth.Text = "导出分层顶底深数据";
+            this.tsmiExportLayerDepth.Click += new System.EventHandler(this.tsmiExportLayerDepth_Click);
             // 
             // FormMain
             // 
@@ -2211,6 +2229,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiLayerItemInfor;
         private System.Windows.Forms.ToolStripMenuItem tsmiItemLayerDelete;
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphOpenDir;
+        private System.Windows.Forms.ToolStripMenuItem 数据导出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExportLayerDepth;
     }
 }
 

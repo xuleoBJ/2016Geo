@@ -63,7 +63,7 @@ namespace DOGPlatform
         {
             if (cSoftwareLimited.limitedDay() == false)
             {
-                MessageBox.Show("软件已经过期，请联系软件作者QQ：38643987.", "提示");
+                MessageBox.Show("软件已经过期，请联系软件作者: 13581625021.", "提示");
                 System.Environment.Exit(0);
             }
             // iCase=0 debug,iCase=1 release
@@ -166,7 +166,6 @@ namespace DOGPlatform
             foreach (TreeNode tn in tvProjectData.Nodes) if (tn.Level == 0 && tn.Index==0) tn.Expand();
 
         }
-
       
         #region 工程管理
         bool createNewProject()
@@ -936,8 +935,8 @@ namespace DOGPlatform
                 double xMaxDistance = cProjectData.ltProjectWell.Max(p => p.dbX) - cProjectData.ltProjectWell.Min(p => p.dbX);
                 double yMaxDistance = cProjectData.ltProjectWell.Max(p => p.dbY) - cProjectData.ltProjectWell.Min(p => p.dbY);
 
-                int iPanelWidth = Convert.ToInt32((int)(xMaxDistance / iSacleUnit + 4) * iSacleUnit * cProjectData.dfMapScale);//显示好看pannel比最大大4个网格
-                int iPanelHeight = Convert.ToInt32((int)(yMaxDistance / iSacleUnit + 4) * iSacleUnit*cProjectData.dfMapScale);//显示好看pannel比最大大4个网格
+                int iPanelWidth = Convert.ToInt32((int)(xMaxDistance / iSacleUnit + 6) * iSacleUnit * cProjectData.dfMapScale);//显示好看pannel比最大大4个网格
+                int iPanelHeight = Convert.ToInt32((int)(yMaxDistance / iSacleUnit + 6) * iSacleUnit*cProjectData.dfMapScale);//显示好看pannel比最大大4个网格
                 panelWellNavigation.Dock = System.Windows.Forms.DockStyle.None;
 
                 panelWellNavigation.Width = iPanelWidth;
@@ -1469,6 +1468,7 @@ namespace DOGPlatform
         private void tsmiLayerColorSetting_Click(object sender, EventArgs e)
         {
             FormSettingLayerColor newSetting = new FormSettingLayerColor();
+            System.Diagnostics.Process.Start("explorer.exe", cProjectManager.dirProject);
             newSetting.ShowDialog();
         }
 
@@ -2293,6 +2293,68 @@ namespace DOGPlatform
                 }
             }//end else
             MessageBox.Show("导出完成");
+        }
+
+        private void tsmiItemLayerDelete_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelected = tvProjectData.SelectedNode;
+            string sXCM = tnSelected.Parent.Text;
+            DialogResult dialogResult = MessageBox.Show("当前操作确认将不可恢复？", "删除小层平面图: " + sXCM, MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string filePath = Path.Combine(cProjectManager.dirPathLayerDir, sXCM, sXCM + ".xml");
+                if (File.Exists(filePath)) File.Delete(filePath);
+                tnSelected.Remove();
+            }
+            MessageBox.Show("删除完成");
+        }
+
+        private void tscbbScale_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiGraphOpenDir_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", cProjectManager.dirPathMap);
+        }
+
+        private void tsmiExportLayerDepth_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "文本|*.txt|其它|*.*";
+            saveFileDialog1.Title = "保存分层顶底深数据";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+
+                foreach (string sJH in cProjectData.ltStrProjectJH)
+                {
+                    string filePath = Path.Combine(cProjectManager.dirPathWellDir, sJH, "#layerDepth#");
+                    if (File.Exists(filePath)) 
+                    {
+                        StreamReader sr = File.OpenText(filePath);
+                        string nextLine;
+                        int lineIndex = 0;
+                        int startLine = 6;
+                        while ((nextLine = sr.ReadLine()) != null)
+                        {
+                            lineIndex++;
+                            if (lineIndex == 2) startLine =2+ int.Parse( nextLine.Trim());
+                            else if (lineIndex > startLine)
+                            {
+                                sw.WriteLine(nextLine);
+                            }
+                        }
+                        sr.Close();
+                    }
+                } //end foreach
+                sw.Close();
+            MessageBox.Show("导出完成");
+            }
         } 
+     
     }
 }

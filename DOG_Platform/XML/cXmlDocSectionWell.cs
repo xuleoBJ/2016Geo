@@ -100,6 +100,7 @@ namespace DOGPlatform.XML
             trackNode.Add(new XElement("trackHeadFontSize", "18"));
             trackNode.Add(new XElement("fontSize", "16")); //道内字体
             trackNode.Add(new XElement("writingMode", "lr"));
+            trackNode.Add(new XElement("dataSource", "0"));  //记录数量从哪里来的 如果是1 表示从数据库来，如果是0 表示单独加载
             if (eTypeTrack == TypeTrack.深度尺)
             {
                 trackNode.Add(new XElement("mainScale", "50"));

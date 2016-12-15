@@ -72,7 +72,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(113, 87);
+            this.btnCancel.Location = new System.Drawing.Point(114, 98);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 66;
@@ -81,7 +81,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(16, 87);
+            this.btnOK.Location = new System.Drawing.Point(12, 98);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 65;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(226, 138);
+            this.ClientSize = new System.Drawing.Size(216, 140);
             this.Controls.Add(this.cbbSelectWellTemplate);
             this.Controls.Add(this.lblTemplate);
             this.Controls.Add(this.btnCancel);
