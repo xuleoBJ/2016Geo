@@ -13,7 +13,7 @@ namespace DOGPlatform
 {
     class makeSectionGeo
     {
-        public static int  iPositionXFirstWell=200;
+        public static int  iPositionXFirstWell=400;
         public static string generateSectionGraph( string dirSectionData, string pathSectionCss, string filenameSVGMap)
         {
             //定义页面大小 及 纵向平移
@@ -48,7 +48,7 @@ namespace DOGPlatform
                 returnElemment = cSVGSectionTrackWellRuler.gElevationRulerSimple(svgSection.svgDoc, ElevationRulerTop, ElevationRulerBase, iScaleElevationRuler, curPage.fVscale, iFontSize);
                 //iDX取了10
                 //因为有页面的top深对应刻度，所以要做纵向平移。
-                svgSection.addgElement2BaseLayer(returnElemment, 100, iPageTopYOff);
+                svgSection.addgElement2BaseLayer(returnElemment, 200, iPageTopYOff);
             }
             #endregion
             XmlDocument XDocSection = new XmlDocument();
@@ -386,15 +386,13 @@ namespace DOGPlatform
 
             float dfDS1ShowTVD = cIOinputWellPath.getTVDByJHAndMD(wellItem, (float)dfDS1Show);
 
-            int iYpositionTrackHead = Convert.ToInt16(dfDS1ShowTVD * fVScale) - iHeightTrackHead;
+            int iYpositionTrackHead = Convert.ToInt32(dfDS1ShowTVD * fVScale) - iHeightTrackHead;
 
             foreach (XmlElement el_Track in cXmlDocSectionWell.getTrackNodes(filePathTemplatOper))
             {
                 //初始化绘制道的基本信息
                 trackDataDraw curTrackDraw = new trackDataDraw(el_Track);
-                //增加道头
-                returnElemment = cSVGSectionTrack.trackHead(svgSection.svgDoc, curTrackDraw.sTrackID, curTrackDraw.sTrackTitle, iYpositionTrackHead, iHeightTrackHead, curTrackDraw.iTrackWidth, curTrackDraw.iTrackHeadFontSize, curTrackDraw.sWriteMode);
-                wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+            
           
                //增加距离位置节点
                 cXmlDocSectionGeo.addWellTrackXviewNode(pathSectionCss, sJH, curTrackDraw.sTrackID, iListTrackWidth.Sum());
@@ -402,6 +400,9 @@ namespace DOGPlatform
                 #region  判断是否可见，可见才绘制
                 if (curTrackDraw.iVisible > 0)
                 {
+                    //增加道头
+                    returnElemment = cSVGSectionTrack.trackHead(svgSection.svgDoc, curTrackDraw.sTrackID, curTrackDraw.sTrackTitle, iYpositionTrackHead, iHeightTrackHead, curTrackDraw.iTrackWidth, curTrackDraw.iTrackHeadFontSize, curTrackDraw.sWriteMode);
+                    wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
                     #region 井深结构尺
                     if (el_Track["trackType"].InnerText == TypeTrack.深度尺.ToString())
                     {

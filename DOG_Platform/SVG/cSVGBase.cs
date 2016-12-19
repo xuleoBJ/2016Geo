@@ -172,12 +172,16 @@ namespace DOGPlatform.SVG
             gLayer.AppendChild(importNewsItem);
         }
 
-        public void addgSVG2Layer(XmlElement gLayer, XmlElement gSVG, double ix, double iy)
+        public void addgSVG2Layer(XmlElement gLayer, string sPathSVG, double ix, double iy)
         {
-            string sTranslate = "translate(" + ix.ToString() + "," + iy.ToString() + ")";
-            gSVG.SetAttribute("transform", sTranslate);
-            XmlNode importNewsItem = gLayer.OwnerDocument.ImportNode(gSVG, true);
-            gLayer.AppendChild(importNewsItem);
+            XmlElement svgEle = svgDoc.CreateElement("image");
+            svgEle.SetAttribute("id", "id"+cIDmake.generateRandID());
+            svgEle.SetAttribute("x", ix.ToString());
+            svgEle.SetAttribute("y", iy.ToString());
+             svgEle.SetAttribute("width", "100");
+            svgEle.SetAttribute("height", "100");
+            svgEle.SetAttribute("href", cSVGBase.svgNS, sPathSVG);
+            gLayer.AppendChild(svgEle);
         }
         public void addgElement2Layer(XmlElement gLayer, XmlElement gElement, double ix)
         {

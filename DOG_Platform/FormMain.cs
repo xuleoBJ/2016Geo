@@ -576,9 +576,6 @@ namespace DOGPlatform
             }
         }
 
-
-    
-
         void addTreeViewSVGNode(XmlNode xn, TreeNode tn,int iLever) 
         {
             iLever--;
@@ -783,7 +780,6 @@ namespace DOGPlatform
         {
             cExportData4Petrel.exportWellHead();
         }
-
 
         int iNumClickLineDraw = 0;
         Point pLinePoint1 = new Point(-1, -1);
@@ -1468,7 +1464,6 @@ namespace DOGPlatform
         private void tsmiLayerColorSetting_Click(object sender, EventArgs e)
         {
             FormSettingLayerColor newSetting = new FormSettingLayerColor();
-            System.Diagnostics.Process.Start("explorer.exe", cProjectManager.dirProject);
             newSetting.ShowDialog();
         }
 

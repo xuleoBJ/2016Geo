@@ -33,6 +33,7 @@
             this.tsmiData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenFile = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDeleteCurrentLine = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAllLineCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuSave = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,7 +115,6 @@
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbbJH = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tsmiAllLineCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tbcProjectDataInput.SuspendLayout();
             this.tbgWellPath.SuspendLayout();
@@ -146,7 +146,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1120, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1020, 25);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -166,21 +166,28 @@
             // tsmiOpenFile
             // 
             this.tsmiOpenFile.Name = "tsmiOpenFile";
-            this.tsmiOpenFile.Size = new System.Drawing.Size(152, 22);
+            this.tsmiOpenFile.Size = new System.Drawing.Size(124, 22);
             this.tsmiOpenFile.Text = "打开文件";
             this.tsmiOpenFile.Click += new System.EventHandler(this.tsmiOpenFile_Click);
             // 
             // tsmiDeleteCurrentLine
             // 
             this.tsmiDeleteCurrentLine.Name = "tsmiDeleteCurrentLine";
-            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDeleteCurrentLine.Size = new System.Drawing.Size(124, 22);
             this.tsmiDeleteCurrentLine.Text = "删选中行";
             this.tsmiDeleteCurrentLine.Click += new System.EventHandler(this.tsmiDeleteCurrentLine_Click);
+            // 
+            // tsmiAllLineCopy
+            // 
+            this.tsmiAllLineCopy.Name = "tsmiAllLineCopy";
+            this.tsmiAllLineCopy.Size = new System.Drawing.Size(124, 22);
+            this.tsmiAllLineCopy.Text = "全选复制";
+            this.tsmiAllLineCopy.Click += new System.EventHandler(this.tsmiAllLineCopy_Click);
             // 
             // ToolStripMenuSave
             // 
             this.ToolStripMenuSave.Name = "ToolStripMenuSave";
-            this.ToolStripMenuSave.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuSave.Size = new System.Drawing.Size(124, 22);
             this.ToolStripMenuSave.Text = "保存修改";
             // 
             // ToolStripMenuItem3
@@ -189,7 +196,7 @@
             this.ToolStripMenuItem4,
             this.ToolStripMenuItem5});
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(124, 22);
             this.ToolStripMenuItem3.Text = "数据导出";
             // 
             // ToolStripMenuItem4
@@ -207,7 +214,7 @@
             // ToolStripMenuItem6
             // 
             this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
-            this.ToolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem6.Size = new System.Drawing.Size(124, 22);
             this.ToolStripMenuItem6.Text = "退出";
             // 
             // tsmiCopyFromExcel
@@ -237,7 +244,7 @@
             this.tbcProjectDataInput.Location = new System.Drawing.Point(0, 25);
             this.tbcProjectDataInput.Name = "tbcProjectDataInput";
             this.tbcProjectDataInput.SelectedIndex = 0;
-            this.tbcProjectDataInput.Size = new System.Drawing.Size(1120, 572);
+            this.tbcProjectDataInput.Size = new System.Drawing.Size(1020, 572);
             this.tbcProjectDataInput.TabIndex = 14;
             this.tbcProjectDataInput.SelectedIndexChanged += new System.EventHandler(this.tbcProjectDataInput_SelectedIndexChanged);
             // 
@@ -247,7 +254,7 @@
             this.tbgWellPath.Location = new System.Drawing.Point(4, 22);
             this.tbgWellPath.Name = "tbgWellPath";
             this.tbgWellPath.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgWellPath.Size = new System.Drawing.Size(1112, 546);
+            this.tbgWellPath.Size = new System.Drawing.Size(1012, 546);
             this.tbgWellPath.TabIndex = 9;
             this.tbgWellPath.Text = "井斜数据";
             this.tbgWellPath.UseVisualStyleBackColor = true;
@@ -264,7 +271,7 @@
             this.dgvWellDev.Location = new System.Drawing.Point(3, 3);
             this.dgvWellDev.Name = "dgvWellDev";
             this.dgvWellDev.RowTemplate.Height = 23;
-            this.dgvWellDev.Size = new System.Drawing.Size(1106, 540);
+            this.dgvWellDev.Size = new System.Drawing.Size(1006, 540);
             this.dgvWellDev.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -293,7 +300,7 @@
             this.tbgLayerDepth.Controls.Add(this.dgvLayerDepth);
             this.tbgLayerDepth.Location = new System.Drawing.Point(4, 22);
             this.tbgLayerDepth.Name = "tbgLayerDepth";
-            this.tbgLayerDepth.Size = new System.Drawing.Size(1112, 546);
+            this.tbgLayerDepth.Size = new System.Drawing.Size(1020, 546);
             this.tbgLayerDepth.TabIndex = 3;
             this.tbgLayerDepth.Text = "分层数据";
             this.tbgLayerDepth.UseVisualStyleBackColor = true;
@@ -309,7 +316,7 @@
             this.dgvLayerDepth.Location = new System.Drawing.Point(0, 0);
             this.dgvLayerDepth.Name = "dgvLayerDepth";
             this.dgvLayerDepth.RowTemplate.Height = 23;
-            this.dgvLayerDepth.Size = new System.Drawing.Size(1112, 546);
+            this.dgvLayerDepth.Size = new System.Drawing.Size(1020, 546);
             this.dgvLayerDepth.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn8
@@ -333,7 +340,7 @@
             this.tbgJSJL.Controls.Add(this.dgvIntepretation);
             this.tbgJSJL.Location = new System.Drawing.Point(4, 22);
             this.tbgJSJL.Name = "tbgJSJL";
-            this.tbgJSJL.Size = new System.Drawing.Size(1112, 546);
+            this.tbgJSJL.Size = new System.Drawing.Size(1020, 546);
             this.tbgJSJL.TabIndex = 2;
             this.tbgJSJL.Text = "解释成果表";
             this.tbgJSJL.UseVisualStyleBackColor = true;
@@ -354,7 +361,7 @@
             this.dgvIntepretation.Location = new System.Drawing.Point(0, 0);
             this.dgvIntepretation.Name = "dgvIntepretation";
             this.dgvIntepretation.RowTemplate.Height = 23;
-            this.dgvIntepretation.Size = new System.Drawing.Size(1112, 546);
+            this.dgvIntepretation.Size = new System.Drawing.Size(1020, 546);
             this.dgvIntepretation.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn4
@@ -409,7 +416,7 @@
             this.tbgPerforation.Location = new System.Drawing.Point(4, 22);
             this.tbgPerforation.Name = "tbgPerforation";
             this.tbgPerforation.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgPerforation.Size = new System.Drawing.Size(1112, 546);
+            this.tbgPerforation.Size = new System.Drawing.Size(1020, 546);
             this.tbgPerforation.TabIndex = 6;
             this.tbgPerforation.Text = "射孔数据";
             this.tbgPerforation.UseVisualStyleBackColor = true;
@@ -422,7 +429,7 @@
             this.perforationTabControl.Location = new System.Drawing.Point(3, 3);
             this.perforationTabControl.Name = "perforationTabControl";
             this.perforationTabControl.SelectedIndex = 0;
-            this.perforationTabControl.Size = new System.Drawing.Size(1106, 540);
+            this.perforationTabControl.Size = new System.Drawing.Size(1014, 540);
             this.perforationTabControl.TabIndex = 24;
             // 
             // tbgSheKong
@@ -431,7 +438,7 @@
             this.tbgSheKong.Location = new System.Drawing.Point(4, 22);
             this.tbgSheKong.Name = "tbgSheKong";
             this.tbgSheKong.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgSheKong.Size = new System.Drawing.Size(1098, 514);
+            this.tbgSheKong.Size = new System.Drawing.Size(1006, 514);
             this.tbgSheKong.TabIndex = 0;
             this.tbgSheKong.Text = "射孔数据";
             this.tbgSheKong.UseVisualStyleBackColor = true;
@@ -448,7 +455,7 @@
             this.dgvPerforation.Location = new System.Drawing.Point(3, 3);
             this.dgvPerforation.Name = "dgvPerforation";
             this.dgvPerforation.RowTemplate.Height = 23;
-            this.dgvPerforation.Size = new System.Drawing.Size(1092, 508);
+            this.dgvPerforation.Size = new System.Drawing.Size(1000, 508);
             this.dgvPerforation.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn15
@@ -531,7 +538,7 @@
             this.tbgProductWellData.Controls.Add(this.dgvOilProductionData);
             this.tbgProductWellData.Location = new System.Drawing.Point(4, 22);
             this.tbgProductWellData.Name = "tbgProductWellData";
-            this.tbgProductWellData.Size = new System.Drawing.Size(1112, 546);
+            this.tbgProductWellData.Size = new System.Drawing.Size(1020, 546);
             this.tbgProductWellData.TabIndex = 7;
             this.tbgProductWellData.Text = "油井生产数据";
             this.tbgProductWellData.UseVisualStyleBackColor = true;
@@ -556,7 +563,7 @@
             this.dgvOilProductionData.Location = new System.Drawing.Point(0, 0);
             this.dgvOilProductionData.Name = "dgvOilProductionData";
             this.dgvOilProductionData.RowTemplate.Height = 23;
-            this.dgvOilProductionData.Size = new System.Drawing.Size(1112, 546);
+            this.dgvOilProductionData.Size = new System.Drawing.Size(1020, 546);
             this.dgvOilProductionData.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn22
@@ -629,7 +636,7 @@
             this.tbgInjectWellData.Controls.Add(this.dgvWaterInjectionData);
             this.tbgInjectWellData.Location = new System.Drawing.Point(4, 22);
             this.tbgInjectWellData.Name = "tbgInjectWellData";
-            this.tbgInjectWellData.Size = new System.Drawing.Size(1112, 546);
+            this.tbgInjectWellData.Size = new System.Drawing.Size(1020, 546);
             this.tbgInjectWellData.TabIndex = 8;
             this.tbgInjectWellData.Text = "水井生产数据";
             this.tbgInjectWellData.UseVisualStyleBackColor = true;
@@ -651,7 +658,7 @@
             this.dgvWaterInjectionData.Location = new System.Drawing.Point(0, 0);
             this.dgvWaterInjectionData.Name = "dgvWaterInjectionData";
             this.dgvWaterInjectionData.RowTemplate.Height = 23;
-            this.dgvWaterInjectionData.Size = new System.Drawing.Size(1112, 546);
+            this.dgvWaterInjectionData.Size = new System.Drawing.Size(1020, 546);
             this.dgvWaterInjectionData.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn31
@@ -710,7 +717,7 @@
             this.tbgProFile.Location = new System.Drawing.Point(4, 22);
             this.tbgProFile.Name = "tbgProFile";
             this.tbgProFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgProFile.Size = new System.Drawing.Size(1112, 546);
+            this.tbgProFile.Size = new System.Drawing.Size(1020, 546);
             this.tbgProFile.TabIndex = 10;
             this.tbgProFile.Text = "吸水剖面";
             this.tbgProFile.UseVisualStyleBackColor = true;
@@ -728,7 +735,7 @@
             this.dgvProfile.Location = new System.Drawing.Point(3, 3);
             this.dgvProfile.Name = "dgvProfile";
             this.dgvProfile.RowTemplate.Height = 23;
-            this.dgvProfile.Size = new System.Drawing.Size(1106, 540);
+            this.dgvProfile.Size = new System.Drawing.Size(1014, 540);
             this.dgvProfile.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn10
@@ -772,18 +779,11 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 200;
             // 
-            // tsmiAllLineCopy
-            // 
-            this.tsmiAllLineCopy.Name = "tsmiAllLineCopy";
-            this.tsmiAllLineCopy.Size = new System.Drawing.Size(152, 22);
-            this.tsmiAllLineCopy.Text = "全选复制";
-            this.tsmiAllLineCopy.Click += new System.EventHandler(this.tsmiAllLineCopy_Click);
-            // 
             // FormDataImportWells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 597);
+            this.ClientSize = new System.Drawing.Size(1020, 597);
             this.Controls.Add(this.cbbJH);
             this.Controls.Add(this.tbcProjectDataInput);
             this.Controls.Add(this.menuStrip1);

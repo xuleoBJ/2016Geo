@@ -12,12 +12,13 @@ namespace DOGPlatform
 {
     class makeLayerMap
     {
-        public static  string  generateLayerMap(string filePathLayerOperate)
+        public static  string  generateLayerMap(string filePathLayerOperate,string sCurrentLayer)
         {
             //注意偏移量,偏移主要是为了好看 如果不偏移的话 就会绘到角落上,这时的偏移是整个偏移 后面的不用偏移了，相对偏移0，0
         
             //svg文件和XML对应的问题还要思考一下
-            string filePathSVGLayerMap = Path.Combine(cProjectManager.dirPathTemp, Path.GetFileNameWithoutExtension(filePathLayerOperate) + ".svg");
+            string dirPathLayer = Path.Combine(cProjectManager.dirPathLayerDir,sCurrentLayer);
+            string filePathSVGLayerMap = Path.Combine(dirPathLayer, Path.GetFileNameWithoutExtension(filePathLayerOperate) + ".svg");
 
             //这块需要处理覆盖问题。
             if (File.Exists(filePathSVGLayerMap)) File.Delete(filePathSVGLayerMap);
@@ -64,7 +65,8 @@ namespace DOGPlatform
                 //建立新层
                 XmlElement gNewLayer = svgLayerMap.gLayerElement(sIDLayer);
                 svgLayerMap.addgLayer(gNewLayer, idx, idy);
-                //测井曲线图层
+                
+                #region  测井曲线图层
                 if (sLayerVisible =="1" && sLayerType == TypeLayer.LayerLog.ToString())
                 {
                     LayerDataLog layerDataLog = new LayerDataLog(xn);
@@ -80,9 +82,11 @@ namespace DOGPlatform
                         svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, xViewStart, yViewStart);
                     }
                 }
+                #endregion 
+
+                #region 小层SectionLayer图层。
                 if (sLayerVisible == "1" && sLayerType == TypeLayer.LayerSection.ToString())
                 {
-                    #region 模板图道,利用模板,导入数据分析。
                     //建立新层
                     XmlElement gWellLayer = svgLayerMap.gLayerElement("LayerSection");
                     svgLayerMap.addgLayer(gWellLayer, 0, 0);
@@ -92,26 +96,25 @@ namespace DOGPlatform
                         string sCurXCM = listWellLayerMap[i].sXCM;
                         string dirLayerJH = Path.Combine(cProjectManager.dirPathLayerDir, sCurXCM,sCurJH);
                         string filePathSecitonTemplatOper = Path.Combine(dirLayerJH, sCurJH + "_" + sCurXCM + ".xml");
+                        string filePathSecitonLayerSectionSVG = Path.Combine(dirLayerJH, sCurJH + "_" + sCurXCM + ".svg");
 
                         //斜井模式
-
-                        double fVscaleLayerSection = 1;
+                        double fVscaleLayerSection = 50;
                         
-                        //cSVGSectionWell currentWell = makePathWell(svgLayerMap,sCurJH, filePathLayerOperate, filePathSecitonTemplatOper,
-                        //listWellLayerMap[i].dbTop, listWellLayerMap[i].dbBot, fVscaleLayerSection, curPage);
-
-                  //      makeWellLayerSectionGraph(filePathSecitonTemplatOper, listWellLayerMap[i].dbTop, listWellLayerMap[i].dbBot, fVscaleLayerSection);
+                        makeWellLayerSectionGraph(filePathSecitonTemplatOper, listWellLayerMap[i].dbTop, listWellLayerMap[i].dbBot, fVscaleLayerSection);
                         Point PViewWell = cCordinationTransform.transRealPointF2ViewPoint(listWellLayerMap[i].dbX, listWellLayerMap[i].dbY, curPage.xRef, curPage.yRef, curPage.dfscale);
                         //新层加内容
                         int xViewStart = PViewWell.X;
                         int yViewStart = PViewWell.Y;
-
-                      
+                        //这块应该改成相对路径
+                        string pathLayerSectionRelative = Path.Combine(sCurJH, sCurJH + "_" + sCurXCM + ".svg");
+                        if( File.Exists(filePathSecitonLayerSectionSVG))
+                            svgLayerMap.addgSVG2Layer(gNewLayer, filePathSecitonLayerSectionSVG, xViewStart, yViewStart);
                     }
-
-                    #endregion
-                
                 }
+                #endregion
+
+               #region 井位图层。
                 if (sLayerVisible =="1" && sLayerType == TypeLayer.LayerWellPosition.ToString())
                 {
                     XmlNode dataList = xn.SelectSingleNode("dataList");
@@ -129,8 +132,19 @@ namespace DOGPlatform
                             svgLayerMap.addgElement2Layer(gNewLayer, returnElemment, PViewWell.X, PViewWell.Y);
                         }
                     }
+                #endregion
                    
                 }
+
+                #region 井位饼图图层
+                if (sLayerType == TypeLayer.LayerPieGraph.ToString())
+                {
+                    returnElemment = cXMLLayerMapWellPieGraph.gWellPieGraphFromXML(svgLayerMap.svgDoc, xn, sIDLayer, listWellLayerMap, curPage);
+                    //新层加内容
+                    svgLayerMap.addgElement2Layer(gNewLayer, returnElemment);
+                }
+                #endregion
+
                 //地质属性数据图层
                 //if (sLayerType == TypeLayer.LayerGeoProperty.ToString())
                 //    returnElemment = svgLayerMap.gLayerWellsGeologyPropertyFromXML(xn, sIDLayer);
@@ -146,13 +160,7 @@ namespace DOGPlatform
                 //井位柱状图图层
                 //if (xn.Attributes["LayerType"].Value == TypeLayer.LayerBarGraph.ToString())
                 //    returnElemment = svgLayerMap.gWellBarGraphFromXML(xn, sID, listWellsStatic);
-                //井位饼图图层
-                if (sLayerType == TypeLayer.LayerPieGraph.ToString())
-                {
-                    returnElemment = cXMLLayerMapWellPieGraph.gWellPieGraphFromXML(svgLayerMap.svgDoc, xn, sIDLayer, listWellLayerMap, curPage);
-                    //新层加内容
-                    svgLayerMap.addgElement2Layer(gNewLayer, returnElemment);
-                }
+                
             }
 
             //add voi
@@ -190,7 +198,7 @@ namespace DOGPlatform
             //由于井位图是底图，造成被压在最下面一层。这个问题要解决一下。
             returnElemment = cSVGLayerWellPosition.gWellsPosition(xmlLayerMap, listWellLayerMap, "井位", wellCss, curPage);
             svgLayerMap.addgElement2BaseLayer(returnElemment);
-
+            #region 比例尺
             if (curPage.iShowScaleRuler == 1)
             {
                 XmlElement gLayerScaleRuler = svgLayerMap.gLayerElement("比例尺");
@@ -198,21 +206,25 @@ namespace DOGPlatform
                 returnElemment = svgLayerMap.gScaleRuler(0, 0, curPage.dfscale);
                 svgLayerMap.addgElement2Layer(gLayerScaleRuler, returnElemment, 100, 100);
             }
+            #endregion
 
+            #region 页面网格
             if (curPage.iShowMapFrame == 1)
             {
                 returnElemment = svgLayerMap.gMapFrame(true,curPage);
                 svgLayerMap.addgElement2BaseLayer(returnElemment);
             }
+            #endregion
 
+            #region 指男针
             if (curPage.iShowCompass == 1)
             {
                 XmlElement gLayerCompass = svgLayerMap.gLayerElement("指南针");
                 svgLayerMap.addgLayer(gLayerCompass, svgLayerMap.offsetX_gSVG, svgLayerMap.offsetY_gSVG);
                 svgLayerMap.addgElement2Layer(gLayerCompass, svgLayerMap.gCompass(300, 100));
             }
+            #endregion
 
-        
 
             svgLayerMap.makeSVGfile(filePathSVGLayerMap);
 
@@ -432,7 +444,6 @@ namespace DOGPlatform
                         }//结束曲线循环
                     } //结束曲线if
                     #endregion 结束曲线道
-
                   
                     #region 绘制测井图头,测井图信息很重要，图形加载数据要捕捉测井头的ID
                     if (curTrackDraw.sTrackType == TypeTrack.曲线道.ToString())
@@ -449,13 +460,11 @@ namespace DOGPlatform
                         }
                     }
                     #endregion
-                 
 
                     //道宽List
                     iListTrackWidth.Add(curTrackDraw.iTrackWidth);
                 } //if 是否可见
             }//结束Foreach图道循环绘制
-          
       
             cSingleWell.makeSVGfile(filePathWellsvg);
         }

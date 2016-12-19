@@ -381,7 +381,7 @@ namespace DOGPlatform
             File.Copy(filePathLayerCss, filePathHis, true);
             UndoList.Push(filePathHis);
             setUnDoRedoEnable();
-            filePathSVGLayerMap = makeLayerMap.generateLayerMap(this.filePathLayerCss);
+            filePathSVGLayerMap = makeLayerMap.generateLayerMap(this.filePathLayerCss,this.sSelectLayer);
             this.webBrowserSVG.Navigate(new Uri(filePathSVGLayerMap));
             this.tbcLayerMap.SelectedTab = this.tbgSVGLayer;
             this.tbgSVGLayer.Text = filePathLayerCss;

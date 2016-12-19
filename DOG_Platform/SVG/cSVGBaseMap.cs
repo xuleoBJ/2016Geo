@@ -410,6 +410,7 @@ namespace DOGPlatform.SVG
             gMapFrame.AppendChild(gGridText2);
             return gMapFrame;
         }
+
         public XmlElement gCompass(int iDx, int iDY)
         {
             XmlElement gCompass = svgDoc.CreateElement("g");
@@ -447,6 +448,7 @@ namespace DOGPlatform.SVG
             return gCompass;
 
         }
+
         public XmlElement addgRoseMap()
         {
             XmlElement gRoseMap = svgDoc.CreateElement("g");
@@ -528,7 +530,6 @@ namespace DOGPlatform.SVG
             return gPolyline;
         }
 
-      
         public void addBodysandBodyPatternDefs()
         {
 
@@ -551,7 +552,6 @@ namespace DOGPlatform.SVG
             svgDefs.AppendChild(sandBodyPattern);
         }
         
-
         public XmlElement MarkerArrow(float m_scale)
         {
             XmlElement markerArrow = svgDoc.CreateElement("marker");
