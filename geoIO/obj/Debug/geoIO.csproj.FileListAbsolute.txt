@@ -6,3 +6,8 @@ D:\2016Geo\geoIO\bin\Debug\geoIO.dll
 D:\2016Geo\geoIO\bin\Debug\geoIO.pdb
 D:\2016Geo\geoIO\obj\Debug\geoIO.dll
 D:\2016Geo\geoIO\obj\Debug\geoIO.pdb
+E:\2016geo\2016Geo\geoIO\bin\Debug\geoIO.dll
+E:\2016geo\2016Geo\geoIO\bin\Debug\geoIO.pdb
+E:\2016geo\2016Geo\geoIO\obj\Debug\geoIO.csprojResolveAssemblyReference.cache
+E:\2016geo\2016Geo\geoIO\obj\Debug\geoIO.dll
+E:\2016geo\2016Geo\geoIO\obj\Debug\geoIO.pdb

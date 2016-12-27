@@ -380,7 +380,7 @@ namespace DOGPlatform
             FormInputBox inputBox = new FormInputBox("请输入图名", "图名:");
             if (inputBox.ShowDialog() == DialogResult.OK)
             {
-                string sMapName = inputBox.ReturnValueStr;      
+               string sMapName = inputBox.ReturnValueStr.Trim();      
                save2ProjectResultMap( inputFilePathSVG,sMapName);
             }
         }
