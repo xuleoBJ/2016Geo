@@ -148,6 +148,11 @@ namespace DOGPlatform.XML
             }
         }
 
+        /// <summary>
+        /// _nodePath 如果是 path1/path2/path3 这种，需要解析增加
+        /// </summary>
+        /// <param name="_xmlFilePath"></param>
+        /// <param name="_nodePath"></param>
         public static void addNodeIfNull(string _xmlFilePath, string _nodePath)
         {
             XmlDocument xmlDoc = new XmlDocument();
@@ -155,8 +160,23 @@ namespace DOGPlatform.XML
             XmlNode currentNode = xmlDoc.SelectSingleNode(_nodePath);
             if (currentNode == null)
             {
-                XmlNode newNode = xmlDoc.CreateElement(_nodePath);
-                currentNode.AppendChild(newNode);
+                string[]  splitPath = _nodePath.Split('/');
+                for (int i = 0; i < splitPath.Length;i++ )
+                {
+                    currentNode = xmlDoc.SelectSingleNode(string.Join("/",splitPath.Take(i)));
+                    if (currentNode == null && i>0)
+                    {
+                        XmlNode currentNodeParent = xmlDoc.SelectSingleNode(string.Join("/", splitPath.Take(i-1)));
+                        XmlNode newNode = xmlDoc.CreateElement(splitPath[i]);
+                        currentNodeParent.AppendChild(newNode);
+                    }
+                    if (currentNode == null && i == 0)
+                    {
+                        XmlNode newNode = xmlDoc.CreateElement(splitPath[i]);
+                        xmlDoc.AppendChild(newNode);
+                    }
+                }
+             
                 xmlDoc.Save(_xmlFilePath);
             }
         }

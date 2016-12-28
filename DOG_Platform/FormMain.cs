@@ -1963,8 +1963,6 @@ namespace DOGPlatform
             }
         }
 
-     
-
         private void tsmiSetProject_Click(object sender, EventArgs e)
         {
             FormProjectInfor newProject = new FormProjectInfor();
@@ -2348,6 +2346,22 @@ namespace DOGPlatform
                 } //end foreach
                 sw.Close();
             MessageBox.Show("导出完成");
+            }
+        }
+
+        private void tsmiWellLogft2m_Click(object sender, EventArgs e)
+        {
+            TreeNode tnSelect = tvProjectData.SelectedNode;
+            string sJH = tnSelect.Parent.Text;
+            DialogResult dialogResult = MessageBox.Show("注意：此操作将把所有曲线由ft转换成m", "提示", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string _wellDir = Path.Combine(cProjectManager.dirPathWellDir, sJH);
+                foreach (string _item in Directory.GetFiles(_wellDir, "*" + cProjectManager.fileExtensionWellLog)) 
+                {
+                    cIOinputLog.textLogConvertFT2m(_item);
+                }
+                MessageBox.Show("ft->m转换完毕。");
             }
         } 
      

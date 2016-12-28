@@ -51,15 +51,10 @@
             0});
             this.nUDShowedBottom.Location = new System.Drawing.Point(70, 94);
             this.nUDShowedBottom.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
-            this.nUDShowedBottom.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
             this.nUDShowedBottom.Name = "nUDShowedBottom";
             this.nUDShowedBottom.Size = new System.Drawing.Size(110, 21);
             this.nUDShowedBottom.TabIndex = 36;
@@ -88,15 +83,10 @@
             0});
             this.nUDShowedTop.Location = new System.Drawing.Point(70, 58);
             this.nUDShowedTop.Maximum = new decimal(new int[] {
-            10000,
+            100000,
             0,
             0,
             0});
-            this.nUDShowedTop.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            -2147483648});
             this.nUDShowedTop.Name = "nUDShowedTop";
             this.nUDShowedTop.Size = new System.Drawing.Size(110, 21);
             this.nUDShowedTop.TabIndex = 38;

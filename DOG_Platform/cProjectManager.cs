@@ -24,11 +24,9 @@ namespace DOGPlatform
         public static string dirPathTemplate = dirProject;
         public static string dirPathHis = dirProject;
 
-       // public static string filePathInkscape = @"C:\Program Files\Inkscape\inkscape.exe";
         public static string filePathInkscape = @"C:\Program Files\Inkscape\inkscape.exe";                            
         public static string filePahtsvgPattern = @"C:\Program Files\\Inkscape\share\patterns\patterns.svg";
         public static string dirPahtInkExtension = @"C:\Program Files\Inkscape\share\extensions";
-
 
         public static List<string> ltStrMapSunit = new List<string> { typeUnit.Metric.ToString() , typeUnit.Field.ToString()};
         public static List<string> ltStrRulerType = new List<string> { "测深(md)", "垂深(TVD)" };

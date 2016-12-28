@@ -607,6 +607,38 @@ namespace DOGPlatform
             Cursor.Current = Cursors.Default;
         }
 
+        public static void textLogConvertFT2m(string filePath)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            string oldFileCopy = filePath + "_tmp";
+            File.Copy(filePath, oldFileCopy,true);
+            StreamWriter sw = new StreamWriter(filePath, false, Encoding.UTF8);
+            using (StreamReader sr = new StreamReader(oldFileCopy, Encoding.UTF8))
+            {
+                string line;
+                int lineIndex = 0;
+                int _iDataStartLine = 4; //
+                while ((line = sr.ReadLine()) != null) 
+                {
+                    lineIndex++;
+                    if (lineIndex <= 4) 
+                    {
+                        sw.WriteLine(line);
+                    }
+                    if ( lineIndex > _iDataStartLine) 
+                    {
+                        string[] split = line.Trim().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                        string depthMstr = (float.Parse(split[0]) / 3.2808).ToString("0.00");
+                        string newLine = depthMstr + "\t" + split[1] + "\t\n";
+                        sw.WriteLine(newLine);
+                    }
+                }
+            }  
+            sw.Close();
+            File.Delete(oldFileCopy);
+            Cursor.Current = Cursors.Default;
+        }
+
         public static void extractTextLog2File(string sJH, string sLogName, string filePath)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -631,12 +663,12 @@ namespace DOGPlatform
                 using (StreamReader sr = new StreamReader(_filepath, Encoding.UTF8))
                 {
                     string _line;
-                    int _iLine = 0;
+                    int lineIndex = 0;
                     int _iDataStartLine = 4 ; //
                     while ((_line = sr.ReadLine()) != null) //抽稀
                     {
-                        _iLine++;
-                        if (_iLine % 2 == 0 && _iLine > _iDataStartLine) //抽稀了一半数据
+                        lineIndex++;
+                        if (lineIndex % 2 == 0 && lineIndex > _iDataStartLine) //抽稀了一半数据
                         {
                             string[] split = _line.Trim().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                             sReturn += split[0] + "\t" + split[1] + "\t";
@@ -663,12 +695,12 @@ namespace DOGPlatform
                 using (StreamReader sr = new StreamReader(_filepath, Encoding.UTF8))
                 {
                     string _line;
-                    int _iLine = 0;
+                    int lineIndex = 0;
                     int _iDataStartLine = 4; //
                     while ((_line = sr.ReadLine()) != null) //抽稀
                     {
-                        _iLine++;
-                        if (_iLine % 2 == 0 && _iLine > _iDataStartLine) //抽稀了一半数据
+                        lineIndex++;
+                        if (lineIndex % 2 == 0 && lineIndex > _iDataStartLine) //抽稀了一半数据
                         {
                             string[] split = _line.Trim().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                             listStrRet.Add( split[0] + "\t" + split[1] + "\t");
@@ -695,12 +727,12 @@ namespace DOGPlatform
                 using (StreamReader sr = new StreamReader(_filepath, Encoding.UTF8))
                 {
                     string _line;
-                    int _iLine = 0;
+                    int lineIndex = 0;
                     int _iDataStartLine = 4; //
                     while ((_line = sr.ReadLine()) != null) //抽稀
                     {
-                        _iLine++;
-                        if ( _iLine > _iDataStartLine) //抽稀了一半数据
+                        lineIndex++;
+                        if ( lineIndex > _iDataStartLine) //抽稀了一半数据
                         {
                             string[] split = _line.Trim().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                             float top;

@@ -45,8 +45,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.nUDTrackHeadFontSize = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nUDShowedBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDPageWidth)).BeginInit();
@@ -72,11 +72,6 @@
             0,
             0,
             0});
-            this.nUDShowedBottom.Minimum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            -2147483648});
             this.nUDShowedBottom.Name = "nUDShowedBottom";
             this.nUDShowedBottom.Size = new System.Drawing.Size(57, 21);
             this.nUDShowedBottom.TabIndex = 34;
@@ -170,7 +165,7 @@
             0});
             this.nUDPageWidth.Location = new System.Drawing.Point(54, 30);
             this.nUDPageWidth.Maximum = new decimal(new int[] {
-            200000,
+            2000000,
             0,
             0,
             0});
@@ -320,15 +315,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "图头布局";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 12);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "统一设置道头字体大小";
-            // 
             // nUDTrackHeadFontSize
             // 
             this.nUDTrackHeadFontSize.AllowDrop = true;
@@ -357,6 +343,15 @@
             0,
             0});
             this.nUDTrackHeadFontSize.ValueChanged += new System.EventHandler(this.nUDTrackHeadFontSize_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 12);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "统一设置道头字体大小";
             // 
             // FormSettingShowState
             // 

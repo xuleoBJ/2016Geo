@@ -227,6 +227,7 @@
             this.cmsTNlayerItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiLayerItemInfor = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiItemLayerDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiWellLogft2m = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsNavigationPanel.SuspendLayout();
             this.ToolStripContainer1.ContentPanel.SuspendLayout();
             this.ToolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -509,7 +510,7 @@
             this.tbgMainIE.Location = new System.Drawing.Point(4, 22);
             this.tbgMainIE.Name = "tbgMainIE";
             this.tbgMainIE.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgMainIE.Size = new System.Drawing.Size(862, 606);
+            this.tbgMainIE.Size = new System.Drawing.Size(856, 606);
             this.tbgMainIE.TabIndex = 15;
             this.tbgMainIE.Text = "图形";
             this.tbgMainIE.UseVisualStyleBackColor = true;
@@ -522,7 +523,7 @@
             this.webBrowserIE.Location = new System.Drawing.Point(3, 3);
             this.webBrowserIE.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserIE.Name = "webBrowserIE";
-            this.webBrowserIE.Size = new System.Drawing.Size(856, 600);
+            this.webBrowserIE.Size = new System.Drawing.Size(850, 600);
             this.webBrowserIE.TabIndex = 1;
             // 
             // cmsWebSVG
@@ -561,7 +562,7 @@
             this.tbgMainTable.Location = new System.Drawing.Point(4, 22);
             this.tbgMainTable.Name = "tbgMainTable";
             this.tbgMainTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgMainTable.Size = new System.Drawing.Size(862, 606);
+            this.tbgMainTable.Size = new System.Drawing.Size(856, 606);
             this.tbgMainTable.TabIndex = 16;
             this.tbgMainTable.Text = "表格";
             this.tbgMainTable.UseVisualStyleBackColor = true;
@@ -574,7 +575,7 @@
             this.dgvDataTable.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDataTable.Name = "dgvDataTable";
             this.dgvDataTable.RowTemplate.Height = 27;
-            this.dgvDataTable.Size = new System.Drawing.Size(856, 600);
+            this.dgvDataTable.Size = new System.Drawing.Size(850, 600);
             this.dgvDataTable.TabIndex = 2;
             // 
             // tbgWellHead
@@ -588,7 +589,7 @@
             this.tbgWellHead.Location = new System.Drawing.Point(4, 22);
             this.tbgWellHead.Name = "tbgWellHead";
             this.tbgWellHead.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgWellHead.Size = new System.Drawing.Size(862, 606);
+            this.tbgWellHead.Size = new System.Drawing.Size(856, 606);
             this.tbgWellHead.TabIndex = 0;
             this.tbgWellHead.Text = "井位数据";
             this.tbgWellHead.UseVisualStyleBackColor = true;
@@ -698,7 +699,7 @@
             this.tbgLayerSeriers.Controls.Add(this.dgvLayerSeriers);
             this.tbgLayerSeriers.Location = new System.Drawing.Point(4, 22);
             this.tbgLayerSeriers.Name = "tbgLayerSeriers";
-            this.tbgLayerSeriers.Size = new System.Drawing.Size(862, 606);
+            this.tbgLayerSeriers.Size = new System.Drawing.Size(856, 606);
             this.tbgLayerSeriers.TabIndex = 5;
             this.tbgLayerSeriers.Text = "分层方案";
             this.tbgLayerSeriers.UseVisualStyleBackColor = true;
@@ -821,21 +822,21 @@
             // tsmiNewProject
             // 
             this.tsmiNewProject.Name = "tsmiNewProject";
-            this.tsmiNewProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiNewProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiNewProject.Text = "新建项目";
             this.tsmiNewProject.Click += new System.EventHandler(this.tsmiNewProject_Click);
             // 
             // tsmiOpenProject
             // 
             this.tsmiOpenProject.Name = "tsmiOpenProject";
-            this.tsmiOpenProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiOpenProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiOpenProject.Text = "打开项目";
             this.tsmiOpenProject.Click += new System.EventHandler(this.tsmiOpenProject_Click);
             // 
             // tsmiSetProject
             // 
             this.tsmiSetProject.Name = "tsmiSetProject";
-            this.tsmiSetProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiSetProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiSetProject.Text = "项目信息";
             this.tsmiSetProject.Click += new System.EventHandler(this.tsmiSetProject_Click);
             // 
@@ -843,32 +844,32 @@
             // 
             this.tsmiSaveProject.Enabled = false;
             this.tsmiSaveProject.Name = "tsmiSaveProject";
-            this.tsmiSaveProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiSaveProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiSaveProject.Text = "保存项目";
             this.tsmiSaveProject.Click += new System.EventHandler(this.tsmSaveProject_Click);
             // 
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(130, 6);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // tsmiSaveAnotherProject
             // 
             this.tsmiSaveAnotherProject.Enabled = false;
             this.tsmiSaveAnotherProject.Name = "tsmiSaveAnotherProject";
-            this.tsmiSaveAnotherProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiSaveAnotherProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiSaveAnotherProject.Text = "项目另存...";
             this.tsmiSaveAnotherProject.Click += new System.EventHandler(this.tsmiSaveAnotherProject_Click);
             // 
             // ToolStripMenuItem2
             // 
             this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(130, 6);
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // tsmiExitProject
             // 
             this.tsmiExitProject.Name = "tsmiExitProject";
-            this.tsmiExitProject.Size = new System.Drawing.Size(133, 22);
+            this.tsmiExitProject.Size = new System.Drawing.Size(152, 22);
             this.tsmiExitProject.Text = "退出";
             this.tsmiExitProject.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
@@ -1065,7 +1066,7 @@
             // tsmiCalWellDistance
             // 
             this.tsmiCalWellDistance.Name = "tsmiCalWellDistance";
-            this.tsmiCalWellDistance.Size = new System.Drawing.Size(136, 22);
+            this.tsmiCalWellDistance.Size = new System.Drawing.Size(152, 22);
             this.tsmiCalWellDistance.Text = "井距计算";
             this.tsmiCalWellDistance.Visible = false;
             this.tsmiCalWellDistance.Click += new System.EventHandler(this.tsmiCalWellDistance_Click);
@@ -1073,7 +1074,7 @@
             // tsmiLayerGeology
             // 
             this.tsmiLayerGeology.Name = "tsmiLayerGeology";
-            this.tsmiLayerGeology.Size = new System.Drawing.Size(136, 22);
+            this.tsmiLayerGeology.Size = new System.Drawing.Size(152, 22);
             this.tsmiLayerGeology.Text = "小层平面图";
             this.tsmiLayerGeology.Click += new System.EventHandler(this.tsmiLayerGeology_Click);
             // 
@@ -1084,7 +1085,7 @@
             this.tsmiVoiAna,
             this.tsmiVorReserver});
             this.voronoiToolStripMenuItem.Name = "voronoiToolStripMenuItem";
-            this.voronoiToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.voronoiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.voronoiToolStripMenuItem.Text = "voronoi";
             // 
             // tsmiCalVoro
@@ -1122,21 +1123,21 @@
             // tsmiSectionSingleWell
             // 
             this.tsmiSectionSingleWell.Name = "tsmiSectionSingleWell";
-            this.tsmiSectionSingleWell.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSectionSingleWell.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionSingleWell.Text = "单井综合";
             this.tsmiSectionSingleWell.Click += new System.EventHandler(this.tsmiSectionSingleWell_Click);
             // 
             // tsmiSectionGeology
             // 
             this.tsmiSectionGeology.Name = "tsmiSectionGeology";
-            this.tsmiSectionGeology.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSectionGeology.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionGeology.Text = "联井分析";
             this.tsmiSectionGeology.Click += new System.EventHandler(this.tsmiSectionGeology_Click);
             // 
             // tsmiSectionFence
             // 
             this.tsmiSectionFence.Name = "tsmiSectionFence";
-            this.tsmiSectionFence.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSectionFence.Size = new System.Drawing.Size(152, 22);
             this.tsmiSectionFence.Text = "井组分析";
             this.tsmiSectionFence.Click += new System.EventHandler(this.tsmiSectionFence_Click);
             // 
@@ -1307,7 +1308,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(612, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1726,35 +1727,36 @@
             this.tsmiLogdataInput,
             this.tsmiLogItemCal,
             this.tsmiDeleAllLog,
-            this.tsmiExportWellLog});
+            this.tsmiExportWellLog,
+            this.tsmiWellLogft2m});
             this.cmsTNwellLogNode.Name = "cmsGlobalLog";
-            this.cmsTNwellLogNode.Size = new System.Drawing.Size(125, 92);
+            this.cmsTNwellLogNode.Size = new System.Drawing.Size(125, 114);
             // 
             // tsmiLogdataInput
             // 
             this.tsmiLogdataInput.Name = "tsmiLogdataInput";
-            this.tsmiLogdataInput.Size = new System.Drawing.Size(124, 22);
+            this.tsmiLogdataInput.Size = new System.Drawing.Size(152, 22);
             this.tsmiLogdataInput.Text = "曲线导入";
             this.tsmiLogdataInput.Click += new System.EventHandler(this.tsmiLogdataInput_Click);
             // 
             // tsmiLogItemCal
             // 
             this.tsmiLogItemCal.Name = "tsmiLogItemCal";
-            this.tsmiLogItemCal.Size = new System.Drawing.Size(124, 22);
+            this.tsmiLogItemCal.Size = new System.Drawing.Size(152, 22);
             this.tsmiLogItemCal.Text = "曲线计算";
             this.tsmiLogItemCal.Click += new System.EventHandler(this.tsmiLogItemCal_Click);
             // 
             // tsmiDeleAllLog
             // 
             this.tsmiDeleAllLog.Name = "tsmiDeleAllLog";
-            this.tsmiDeleAllLog.Size = new System.Drawing.Size(124, 22);
+            this.tsmiDeleAllLog.Size = new System.Drawing.Size(152, 22);
             this.tsmiDeleAllLog.Text = "曲线删除";
             this.tsmiDeleAllLog.Click += new System.EventHandler(this.tsmiDeleAllLog_Click);
             // 
             // tsmiExportWellLog
             // 
             this.tsmiExportWellLog.Name = "tsmiExportWellLog";
-            this.tsmiExportWellLog.Size = new System.Drawing.Size(124, 22);
+            this.tsmiExportWellLog.Size = new System.Drawing.Size(152, 22);
             this.tsmiExportWellLog.Text = "曲线导出";
             this.tsmiExportWellLog.Click += new System.EventHandler(this.tsmiExportWellLog_Click);
             // 
@@ -1957,6 +1959,13 @@
             this.tsmiItemLayerDelete.Size = new System.Drawing.Size(112, 22);
             this.tsmiItemLayerDelete.Text = "删除";
             this.tsmiItemLayerDelete.Click += new System.EventHandler(this.tsmiItemLayerDelete_Click);
+            // 
+            // tsmiWellLogft2m
+            // 
+            this.tsmiWellLogft2m.Name = "tsmiWellLogft2m";
+            this.tsmiWellLogft2m.Size = new System.Drawing.Size(152, 22);
+            this.tsmiWellLogft2m.Text = "ft->m";
+            this.tsmiWellLogft2m.Click += new System.EventHandler(this.tsmiWellLogft2m_Click);
             // 
             // FormMain
             // 
@@ -2231,6 +2240,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiGraphOpenDir;
         private System.Windows.Forms.ToolStripMenuItem 数据导出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiExportLayerDepth;
+        private System.Windows.Forms.ToolStripMenuItem tsmiWellLogft2m;
     }
 }
 

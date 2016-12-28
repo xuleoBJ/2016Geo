@@ -210,5 +210,10 @@ namespace DOGPlatform
                     dgvCurrent.Rows[i].Cells[j].Selected = true;
             cPublicMethodForm.copyDGVselect2Clipboard(this.dgvCurrent);
         }
+
+        private void ftmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
