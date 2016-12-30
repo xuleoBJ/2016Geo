@@ -163,17 +163,27 @@ namespace DOGPlatform.XML
                 string[]  splitPath = _nodePath.Split('/');
                 for (int i = 0; i < splitPath.Length;i++ )
                 {
-                    currentNode = xmlDoc.SelectSingleNode(string.Join("/",splitPath.Take(i)));
-                    if (currentNode == null && i>0)
+                   
+                    if (i>0)
                     {
+                        string sPath = string.Join("/", splitPath.Take(i));
+                        currentNode = xmlDoc.SelectSingleNode(sPath);
+                        if(currentNode == null )
+                        {
                         XmlNode currentNodeParent = xmlDoc.SelectSingleNode(string.Join("/", splitPath.Take(i-1)));
                         XmlNode newNode = xmlDoc.CreateElement(splitPath[i]);
                         currentNodeParent.AppendChild(newNode);
+                        }
                     }
-                    if (currentNode == null && i == 0)
+                    if (i == 0)
                     {
-                        XmlNode newNode = xmlDoc.CreateElement(splitPath[i]);
-                        xmlDoc.AppendChild(newNode);
+                        string sPath = splitPath[0];
+                        currentNode = xmlDoc.SelectSingleNode(sPath);
+                        if (currentNode == null)
+                        {
+                            XmlNode newNode = xmlDoc.CreateElement(sPath);
+                            xmlDoc.DocumentElement.AppendChild(newNode);
+                        }
                     }
                 }
              

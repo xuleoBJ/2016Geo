@@ -36,6 +36,9 @@
             this.tvFileManage = new System.Windows.Forms.TreeView();
             this.cmsTV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiTVaddFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTVautoFind = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReSelectDir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSelectedDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTVopenDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTVcollapse2Well = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTVrefresh = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +52,7 @@
             this.richTBXview = new System.Windows.Forms.RichTextBox();
             this.webBrowserFile = new System.Windows.Forms.WebBrowser();
             this.statusStripLV = new System.Windows.Forms.StatusStrip();
+            this.tssInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.lvFileGeo = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,10 +63,6 @@
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRefreshDir = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenDir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiTVautoFind = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReSelectDir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSelectedDir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tssInfor = new System.Windows.Forms.ToolStripStatusLabel();
             this.tbcSection.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
@@ -154,6 +154,30 @@
             this.tsmiTVaddFile.Text = "添加文件";
             this.tsmiTVaddFile.Click += new System.EventHandler(this.tsmiTVaddFile_Click);
             // 
+            // tsmiTVautoFind
+            // 
+            this.tsmiTVautoFind.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiReSelectDir,
+            this.tsmiSelectedDir});
+            this.tsmiTVautoFind.Name = "tsmiTVautoFind";
+            this.tsmiTVautoFind.Size = new System.Drawing.Size(124, 22);
+            this.tsmiTVautoFind.Text = "智能查找";
+            this.tsmiTVautoFind.Click += new System.EventHandler(this.tsmiTVautoFind_Click);
+            // 
+            // tsmiReSelectDir
+            // 
+            this.tsmiReSelectDir.Name = "tsmiReSelectDir";
+            this.tsmiReSelectDir.Size = new System.Drawing.Size(124, 22);
+            this.tsmiReSelectDir.Text = "选择目录";
+            this.tsmiReSelectDir.Click += new System.EventHandler(this.tsmiReSelectDir_Click);
+            // 
+            // tsmiSelectedDir
+            // 
+            this.tsmiSelectedDir.Name = "tsmiSelectedDir";
+            this.tsmiSelectedDir.Size = new System.Drawing.Size(124, 22);
+            this.tsmiSelectedDir.Text = "已选目录";
+            this.tsmiSelectedDir.Click += new System.EventHandler(this.tsmiSelectedDir_Click);
+            // 
             // tsmiTVopenDir
             // 
             this.tsmiTVopenDir.Name = "tsmiTVopenDir";
@@ -234,8 +258,8 @@
             // tsslViewInfor
             // 
             this.tsslViewInfor.Name = "tsslViewInfor";
-            this.tsslViewInfor.Size = new System.Drawing.Size(35, 17);
-            this.tsslViewInfor.Text = "提示:";
+            this.tsslViewInfor.Size = new System.Drawing.Size(56, 17);
+            this.tsslViewInfor.Text = "预览窗口";
             // 
             // picBoxView
             // 
@@ -276,6 +300,12 @@
             this.statusStripLV.Size = new System.Drawing.Size(396, 22);
             this.statusStripLV.TabIndex = 52;
             this.statusStripLV.Text = "statusStrip1";
+            // 
+            // tssInfor
+            // 
+            this.tssInfor.Name = "tssInfor";
+            this.tssInfor.Size = new System.Drawing.Size(32, 17);
+            this.tssInfor.Text = "信息";
             // 
             // lvFileGeo
             // 
@@ -338,14 +368,14 @@
             // tsmiAdd
             // 
             this.tsmiAdd.Name = "tsmiAdd";
-            this.tsmiAdd.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAdd.Size = new System.Drawing.Size(148, 22);
             this.tsmiAdd.Text = "添加到目录";
             this.tsmiAdd.Click += new System.EventHandler(this.tsmiAdd_Click);
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Size = new System.Drawing.Size(148, 22);
             this.tsmiDelete.Text = "目录中移除";
             this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
@@ -362,36 +392,6 @@
             this.tsmiOpenDir.Size = new System.Drawing.Size(148, 22);
             this.tsmiOpenDir.Text = "打开所在目录";
             this.tsmiOpenDir.Click += new System.EventHandler(this.tsmiOpenDir_Click);
-            // 
-            // tsmiTVautoFind
-            // 
-            this.tsmiTVautoFind.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiReSelectDir,
-            this.tsmiSelectedDir});
-            this.tsmiTVautoFind.Name = "tsmiTVautoFind";
-            this.tsmiTVautoFind.Size = new System.Drawing.Size(124, 22);
-            this.tsmiTVautoFind.Text = "智能查找";
-            this.tsmiTVautoFind.Click += new System.EventHandler(this.tsmiTVautoFind_Click);
-            // 
-            // tsmiReSelectDir
-            // 
-            this.tsmiReSelectDir.Name = "tsmiReSelectDir";
-            this.tsmiReSelectDir.Size = new System.Drawing.Size(152, 22);
-            this.tsmiReSelectDir.Text = "选择目录";
-            this.tsmiReSelectDir.Click += new System.EventHandler(this.tsmiReSelectDir_Click);
-            // 
-            // tsmiSelectedDir
-            // 
-            this.tsmiSelectedDir.Name = "tsmiSelectedDir";
-            this.tsmiSelectedDir.Size = new System.Drawing.Size(152, 22);
-            this.tsmiSelectedDir.Text = "已选目录";
-            this.tsmiSelectedDir.Click += new System.EventHandler(this.tsmiSelectedDir_Click);
-            // 
-            // tssInfor
-            // 
-            this.tssInfor.Name = "tssInfor";
-            this.tssInfor.Size = new System.Drawing.Size(32, 17);
-            this.tssInfor.Text = "信息";
             // 
             // FormFileManagerGeo
             // 

@@ -30,6 +30,10 @@
         {
             this.tbcProjectInfor = new System.Windows.Forms.TabControl();
             this.tbgInfor = new System.Windows.Forms.TabPage();
+            this.tbxAuthor = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxProjectComment = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbbUnit = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxProjectBlock = new System.Windows.Forms.TextBox();
@@ -40,10 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.tbxProjectComment = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbxAuthor = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.tbcProjectInfor.SuspendLayout();
             this.tbgInfor.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.tbcProjectInfor.Location = new System.Drawing.Point(12, 12);
             this.tbcProjectInfor.Name = "tbcProjectInfor";
             this.tbcProjectInfor.SelectedIndex = 0;
-            this.tbcProjectInfor.Size = new System.Drawing.Size(534, 342);
+            this.tbcProjectInfor.Size = new System.Drawing.Size(534, 425);
             this.tbcProjectInfor.TabIndex = 0;
             // 
             // tbgInfor
@@ -74,15 +74,48 @@
             this.tbgInfor.Location = new System.Drawing.Point(4, 22);
             this.tbgInfor.Name = "tbgInfor";
             this.tbgInfor.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgInfor.Size = new System.Drawing.Size(526, 316);
+            this.tbgInfor.Size = new System.Drawing.Size(526, 399);
             this.tbgInfor.TabIndex = 0;
             this.tbgInfor.Text = "工程信息";
             this.tbgInfor.UseVisualStyleBackColor = true;
             // 
+            // tbxAuthor
+            // 
+            this.tbxAuthor.Location = new System.Drawing.Point(69, 64);
+            this.tbxAuthor.Name = "tbxAuthor";
+            this.tbxAuthor.Size = new System.Drawing.Size(136, 21);
+            this.tbxAuthor.TabIndex = 51;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "负责人";
+            // 
+            // tbxProjectComment
+            // 
+            this.tbxProjectComment.Location = new System.Drawing.Point(69, 206);
+            this.tbxProjectComment.Multiline = true;
+            this.tbxProjectComment.Name = "tbxProjectComment";
+            this.tbxProjectComment.Size = new System.Drawing.Size(400, 173);
+            this.tbxProjectComment.TabIndex = 49;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 206);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "备注";
+            // 
             // cbbUnit
             // 
             this.cbbUnit.FormattingEnabled = true;
-            this.cbbUnit.Location = new System.Drawing.Point(69, 63);
+            this.cbbUnit.Location = new System.Drawing.Point(69, 103);
             this.cbbUnit.Name = "cbbUnit";
             this.cbbUnit.Size = new System.Drawing.Size(113, 20);
             this.cbbUnit.TabIndex = 47;
@@ -90,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 63);
+            this.label4.Location = new System.Drawing.Point(34, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 12);
             this.label4.TabIndex = 6;
@@ -98,7 +131,7 @@
             // 
             // tbxProjectBlock
             // 
-            this.tbxProjectBlock.Location = new System.Drawing.Point(69, 130);
+            this.tbxProjectBlock.Location = new System.Drawing.Point(69, 170);
             this.tbxProjectBlock.Name = "tbxProjectBlock";
             this.tbxProjectBlock.Size = new System.Drawing.Size(400, 21);
             this.tbxProjectBlock.TabIndex = 5;
@@ -106,7 +139,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 133);
+            this.label3.Location = new System.Drawing.Point(34, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 4;
@@ -114,7 +147,7 @@
             // 
             // tbxProjectAera
             // 
-            this.tbxProjectAera.Location = new System.Drawing.Point(69, 97);
+            this.tbxProjectAera.Location = new System.Drawing.Point(69, 137);
             this.tbxProjectAera.Name = "tbxProjectAera";
             this.tbxProjectAera.Size = new System.Drawing.Size(400, 21);
             this.tbxProjectAera.TabIndex = 3;
@@ -122,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 100);
+            this.label2.Location = new System.Drawing.Point(34, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 2;
@@ -132,7 +165,7 @@
             // 
             this.tbxProjectPath.Location = new System.Drawing.Point(69, 26);
             this.tbxProjectPath.Name = "tbxProjectPath";
-            this.tbxProjectPath.Size = new System.Drawing.Size(209, 21);
+            this.tbxProjectPath.Size = new System.Drawing.Size(400, 21);
             this.tbxProjectPath.TabIndex = 1;
             // 
             // label1
@@ -146,7 +179,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(438, 368);
+            this.btnCancel.Location = new System.Drawing.Point(438, 443);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 90;
@@ -155,7 +188,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(327, 368);
+            this.btnOK.Location = new System.Drawing.Point(327, 443);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 89;
@@ -163,44 +196,11 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // tbxProjectComment
-            // 
-            this.tbxProjectComment.Location = new System.Drawing.Point(69, 163);
-            this.tbxProjectComment.Multiline = true;
-            this.tbxProjectComment.Name = "tbxProjectComment";
-            this.tbxProjectComment.Size = new System.Drawing.Size(400, 118);
-            this.tbxProjectComment.TabIndex = 49;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 166);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 12);
-            this.label5.TabIndex = 48;
-            this.label5.Text = "备注";
-            // 
-            // tbxAuthor
-            // 
-            this.tbxAuthor.Location = new System.Drawing.Point(333, 26);
-            this.tbxAuthor.Name = "tbxAuthor";
-            this.tbxAuthor.Size = new System.Drawing.Size(136, 21);
-            this.tbxAuthor.TabIndex = 51;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(286, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 50;
-            this.label6.Text = "负责人";
-            // 
             // FormProjectInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 403);
+            this.ClientSize = new System.Drawing.Size(551, 501);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tbcProjectInfor);
