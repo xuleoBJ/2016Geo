@@ -210,8 +210,11 @@ namespace DOGPlatform
                          _pf.X, _pf.Y, cProjectData.dfMapXrealRefer, cProjectData.dfMapYrealRefer, cProjectData.dfMapScale);
                         listViewVer.Add(_currentVer);
                     }
-                    dc.DrawPolygon(blackPen, listViewVer.ToArray());
-                    dc.FillPolygon(redBrush, listViewVer.ToArray());
+                    if (listViewVer.Count > 0)
+                    {
+                        dc.DrawPolygon(blackPen, listViewVer.ToArray());
+                        dc.FillPolygon(redBrush, listViewVer.ToArray());
+                    }
                 } //end foreach
             }//end if 
         }

@@ -1112,28 +1112,28 @@
             // tsmiNew
             // 
             this.tsmiNew.Name = "tsmiNew";
-            this.tsmiNew.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNew.Size = new System.Drawing.Size(124, 22);
             this.tsmiNew.Text = "新建";
             this.tsmiNew.Click += new System.EventHandler(this.tsmiNew_Click);
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(152, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(124, 22);
             this.tsmiOpen.Text = "打开";
             this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // tsmiSave
             // 
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave.Size = new System.Drawing.Size(124, 22);
             this.tsmiSave.Text = "保存";
             this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
             // tsmiSave2Project
             // 
             this.tsmiSave2Project.Name = "tsmiSave2Project";
-            this.tsmiSave2Project.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave2Project.Size = new System.Drawing.Size(124, 22);
             this.tsmiSave2Project.Text = "入成果库";
             this.tsmiSave2Project.Click += new System.EventHandler(this.tsmiSave2Project_Click);
             // 

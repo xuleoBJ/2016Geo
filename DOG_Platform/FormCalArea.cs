@@ -37,7 +37,7 @@ namespace DOGPlatform
                 _pf.Y = float.Parse(dgv.Rows[j].Cells[1].Value.ToString());
                 points.Add(_pf);
             }
-            MessageBox.Show("面积= " + cCalBase.calArea(points).ToString("0.000") + " 平方公里\r\n" + "长度= " + cCalBase.calLength(points).ToString("0.000") + " 公里","计算结果");
+            MessageBox.Show("面积= " + cCalBase.calArea(points).ToString("0.000") + " \r\n" + "长度= " + cCalBase.calLength(points).ToString("0.000"),"计算结果");
         }
     }
 }
