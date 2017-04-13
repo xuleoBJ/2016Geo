@@ -11,7 +11,9 @@ namespace DOGPlatform
     {
         public static List<ItemDicLogGlobe> readDicGlobeLog()
         {
-            string filePathDic = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemLogHead.txt");
+            string filePathDic = Path.Combine(cProjectManager.dirPathUserData, "ItemLogHead.txt");
+            if (!File.Exists(filePathDic))
+                File.Copy(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemLogHead.txt"), filePathDic);
             List<ItemDicLogGlobe> listItemLogHeadInfors = new List<ItemDicLogGlobe>();
             try
             {

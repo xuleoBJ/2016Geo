@@ -91,7 +91,9 @@ namespace DOGPlatform
         public static void initialCodeList()
         {
             dicColor.Clear();
-            string filePathColor = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "colorCode.txt");
+            string filePathColor = Path.Combine(cProjectManager.dirPathUserData, "colorCode.txt");
+            if (!File.Exists(filePathColor))
+                File.Copy(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "colorCode.txt"), filePathColor);
             if (File.Exists(filePathColor))
             {
                 using (StreamReader sr = new StreamReader(filePathColor, System.Text.Encoding.UTF8))
@@ -107,7 +109,9 @@ namespace DOGPlatform
                 }//end using 
             }//end if 
 
-                string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemCode.txt");
+            string filePath = Path.Combine(cProjectManager.dirPathUserData, "ItemCode.txt");
+            if (!File.Exists(filePath))
+                File.Copy(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemCode.txt"), filePath); 
                 if (File.Exists(filePath))
                 {
                     ltCodeItem.Clear();
