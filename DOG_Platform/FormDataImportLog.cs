@@ -28,7 +28,6 @@ namespace DOGPlatform
             ascii,
             list,
             las,
-            las2,
         }
 
         string sJH="";
@@ -44,7 +43,6 @@ namespace DOGPlatform
             logFormatText.Add(FormatLogFile.ascii.ToString());
             logFormatText.Add(FormatLogFile.list.ToString());
             logFormatText.Add(FormatLogFile.las.ToString());
-            logFormatText.Add(FormatLogFile.las2.ToString());
             cbbLogFormat.DataSource = logFormatText;
             this.cbbLogFormat.SelectedIndex = 0;
         }
@@ -83,7 +81,6 @@ namespace DOGPlatform
             if (currentFormat==FormatLogFile.ascii) listLogHeadColumn = cIOinputLog.getLogSerierNamesFromTXTLog(filepath);
             if (currentFormat == FormatLogFile.list) listLogHeadColumn = cIOinputLog.getLogSerierNamesFromListLog(filepath);
             if (currentFormat == FormatLogFile.las) listLogHeadColumn = cIOinputLog.getLogSerierNamesFromLasLog(filepath);
-            if (currentFormat == FormatLogFile.las2) listLogHeadColumn = cIOinputLog.getLogSerierNamesFromLasV2Log(filepath);
             return listLogHeadColumn; 
         }
 
@@ -135,7 +132,6 @@ namespace DOGPlatform
             if (currentFormat == FormatLogFile.ascii) importTextLogText(2);
             if (currentFormat == FormatLogFile.list) importTextLogText(4); 
             if (currentFormat == FormatLogFile.las) importTextLogText(cIOinputLog.getDataStartLineOfLasLog(filePathSourceLogFile));
-            if (currentFormat == FormatLogFile.las2) importTextLogText(cIOinputLog.getDataStartLineOfLasLog(filePathSourceLogFile)); 
         }
         public  void importTextLogText(int _iDataStartLine)
         {
@@ -193,7 +189,7 @@ namespace DOGPlatform
             {
                  string[] split = line.Trim().Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                  ltLogID.Add(split[0]);
-                 if (split.Length >= 2 && (currentFormat == FormatLogFile.las2 || currentFormat == FormatLogFile.las))
+                 if (split.Length >= 2 && currentFormat == FormatLogFile.las)
                      ltUnit.Add(split[1]);
                  else
                  {

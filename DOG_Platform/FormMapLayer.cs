@@ -310,6 +310,7 @@ namespace DOGPlatform
                     listLayersDataCurrentLayerStatic = cIODicLayerDataStatic.readDicLayerData2struct().FindAll(p => p.sXCM == sSelectLayer);
                     cXMLLayerMapStatic.addWellStaticDataDic2XML(filePathLayerCss, sSelectLayer, listLayersDataCurrentLayerStatic);
                 }
+               updateTV();
                updateSVG();
             }
         }

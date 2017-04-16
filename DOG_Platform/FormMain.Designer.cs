@@ -136,10 +136,10 @@
             this.tsmiLiotho = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDataPole = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCalAera = new System.Windows.Forms.ToolStripMenuItem();
-            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eclipseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiVersion = new System.Windows.Forms.ToolStripMenuItem();
@@ -1209,14 +1209,14 @@
             // tsmiPicTool
             // 
             this.tsmiPicTool.Name = "tsmiPicTool";
-            this.tsmiPicTool.Size = new System.Drawing.Size(152, 22);
+            this.tsmiPicTool.Size = new System.Drawing.Size(125, 22);
             this.tsmiPicTool.Text = "图形工具";
             this.tsmiPicTool.Click += new System.EventHandler(this.tsmiPicTool_Click);
             // 
             // 数据处理ToolStripMenuItem
             // 
             this.数据处理ToolStripMenuItem.Name = "数据处理ToolStripMenuItem";
-            this.数据处理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.数据处理ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.数据处理ToolStripMenuItem.Text = "数据处理";
             this.数据处理ToolStripMenuItem.Visible = false;
             this.数据处理ToolStripMenuItem.Click += new System.EventHandler(this.数据处理ToolStripMenuItem_Click);
@@ -1224,7 +1224,7 @@
             // tsmiLiotho
             // 
             this.tsmiLiotho.Name = "tsmiLiotho";
-            this.tsmiLiotho.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLiotho.Size = new System.Drawing.Size(125, 22);
             this.tsmiLiotho.Text = "岩相图元";
             this.tsmiLiotho.Visible = false;
             this.tsmiLiotho.Click += new System.EventHandler(this.tsmiLiotho_Click);
@@ -1232,7 +1232,7 @@
             // tsmiDataPole
             // 
             this.tsmiDataPole.Name = "tsmiDataPole";
-            this.tsmiDataPole.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDataPole.Size = new System.Drawing.Size(125, 22);
             this.tsmiDataPole.Text = "极点图";
             this.tsmiDataPole.Visible = false;
             this.tsmiDataPole.Click += new System.EventHandler(this.tsmiDataPole_Click);
@@ -1240,21 +1240,14 @@
             // tsmiCalAera
             // 
             this.tsmiCalAera.Name = "tsmiCalAera";
-            this.tsmiCalAera.Size = new System.Drawing.Size(152, 22);
+            this.tsmiCalAera.Size = new System.Drawing.Size(125, 22);
             this.tsmiCalAera.Text = "面积周长";
             this.tsmiCalAera.Click += new System.EventHandler(this.tsmiCalAera_Click);
-            // 
-            // configToolStripMenuItem
-            // 
-            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.configToolStripMenuItem.Text = "配置文件";
-            this.configToolStripMenuItem.Click += new System.EventHandler(this.configToolStripMenuItem_Click);
             // 
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.testToolStripMenuItem.Text = "做patten";
             this.testToolStripMenuItem.Visible = false;
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
@@ -1262,7 +1255,7 @@
             // calFormToolStripMenuItem
             // 
             this.calFormToolStripMenuItem.Name = "calFormToolStripMenuItem";
-            this.calFormToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calFormToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.calFormToolStripMenuItem.Text = "calForm";
             this.calFormToolStripMenuItem.Visible = false;
             this.calFormToolStripMenuItem.Click += new System.EventHandler(this.calFormToolStripMenuItem_Click);
@@ -1270,10 +1263,17 @@
             // eclipseToolStripMenuItem
             // 
             this.eclipseToolStripMenuItem.Name = "eclipseToolStripMenuItem";
-            this.eclipseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eclipseToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eclipseToolStripMenuItem.Text = "Eclipse";
             this.eclipseToolStripMenuItem.Visible = false;
             this.eclipseToolStripMenuItem.Click += new System.EventHandler(this.eclipseToolStripMenuItem_Click);
+            // 
+            // configToolStripMenuItem
+            // 
+            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
+            this.configToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.configToolStripMenuItem.Text = "配置文件";
+            this.configToolStripMenuItem.Click += new System.EventHandler(this.configToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -1305,9 +1305,9 @@
             this.tsBtnOpenProject,
             this.tsBtnSaveProject,
             this.toolStripSeparator3,
+            this.tsbtnFileDataManager,
             this.tsBtnDataManager,
             this.tsBtnDataView,
-            this.tsbtnFileDataManager,
             this.ToolStripSeparator1,
             this.tsBtnReflush,
             this.tsBtnZoonIn,
@@ -1320,7 +1320,7 @@
             this.tscbbLayer});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(610, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject

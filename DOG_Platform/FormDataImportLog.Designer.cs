@@ -153,7 +153,7 @@
             // 
             // btnShowLogHead
             // 
-            this.btnShowLogHead.Location = new System.Drawing.Point(843, 12);
+            this.btnShowLogHead.Location = new System.Drawing.Point(841, 14);
             this.btnShowLogHead.Name = "btnShowLogHead";
             this.btnShowLogHead.Size = new System.Drawing.Size(75, 23);
             this.btnShowLogHead.TabIndex = 9;

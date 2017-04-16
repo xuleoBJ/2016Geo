@@ -191,10 +191,7 @@ namespace DOGPlatform
             return ltLineRet;
         }
 
-        public static List<string> getLogSerierNamesFromLasV2Log(string filePathLog)
-        {
-           return getLogSerierNamesFromLasLog(filePathLog);
-        }
+    
 
         public static int getDataStartLineOfLasLog(string filePathLog) 
         {

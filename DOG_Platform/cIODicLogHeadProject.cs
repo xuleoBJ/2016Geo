@@ -47,7 +47,7 @@ namespace DOGPlatform
         }
         public static void writeDicGlobe(List<ItemDicLogGlobe> listDicLogGlobe) 
         {
-            string filePathDic = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemLogHead.txt");
+            string filePathDic = Path.Combine(cProjectManager.dirPathUserData, "colorCode.txt"); 
             List<string> listLine = new List<string>();
             foreach (ItemDicLogGlobe item in listDicLogGlobe) listLine.Add(ItemDicLogGlobe.item2Line(item));
             cIOBase.write2file(listLine, filePathDic);
