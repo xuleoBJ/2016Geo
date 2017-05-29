@@ -38,6 +38,7 @@
             this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ftmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCopyFromExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDataImport = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,7 +116,7 @@
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbbJH = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ftmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmFirstColAddJH = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tbcProjectDataInput.SuspendLayout();
             this.tbgWellPath.SuspendLayout();
@@ -156,6 +157,7 @@
             this.tsmiData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiOpenFile,
             this.tsmiDeleteCurrentLine,
+            this.tsmFirstColAddJH,
             this.tsmiAllLineCopy,
             this.ToolStripMenuSave,
             this.ToolStripMenuItem3,
@@ -212,6 +214,13 @@
             this.ToolStripMenuItem5.Name = "ToolStripMenuItem5";
             this.ToolStripMenuItem5.Size = new System.Drawing.Size(129, 22);
             this.ToolStripMenuItem5.Text = "导入excle";
+            // 
+            // ftmToolStripMenuItem
+            // 
+            this.ftmToolStripMenuItem.Name = "ftmToolStripMenuItem";
+            this.ftmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ftmToolStripMenuItem.Text = "ft->m";
+            this.ftmToolStripMenuItem.Click += new System.EventHandler(this.ftmToolStripMenuItem_Click);
             // 
             // ToolStripMenuItem6
             // 
@@ -486,7 +495,7 @@
             this.tbgBuKong.Location = new System.Drawing.Point(4, 22);
             this.tbgBuKong.Name = "tbgBuKong";
             this.tbgBuKong.Padding = new System.Windows.Forms.Padding(3);
-            this.tbgBuKong.Size = new System.Drawing.Size(1006, 514);
+            this.tbgBuKong.Size = new System.Drawing.Size(998, 514);
             this.tbgBuKong.TabIndex = 1;
             this.tbgBuKong.Text = "堵孔数据";
             this.tbgBuKong.UseVisualStyleBackColor = true;
@@ -503,7 +512,7 @@
             this.dataGridView4.Location = new System.Drawing.Point(3, 3);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowTemplate.Height = 23;
-            this.dataGridView4.Size = new System.Drawing.Size(1000, 508);
+            this.dataGridView4.Size = new System.Drawing.Size(992, 508);
             this.dataGridView4.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn18
@@ -781,12 +790,12 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 200;
             // 
-            // ftmToolStripMenuItem
+            // tsmFirstColAddJH
             // 
-            this.ftmToolStripMenuItem.Name = "ftmToolStripMenuItem";
-            this.ftmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ftmToolStripMenuItem.Text = "ft->m";
-            this.ftmToolStripMenuItem.Click += new System.EventHandler(this.ftmToolStripMenuItem_Click);
+            this.tsmFirstColAddJH.Name = "tsmFirstColAddJH";
+            this.tsmFirstColAddJH.Size = new System.Drawing.Size(152, 22);
+            this.tsmFirstColAddJH.Text = "首列加井号";
+            this.tsmFirstColAddJH.Visible = false;
             // 
             // FormDataImportWells
             // 
@@ -914,5 +923,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.ToolStripMenuItem tsmiAllLineCopy;
         private System.Windows.Forms.ToolStripMenuItem ftmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmFirstColAddJH;
     }
 }

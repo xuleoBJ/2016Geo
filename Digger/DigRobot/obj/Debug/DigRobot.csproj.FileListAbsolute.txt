@@ -61,4 +61,3 @@ D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.Properties.Resources.resources
 D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.csproj.GenerateResource.Cache
 D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.exe
 D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.pdb
-D:\2016Geo\Digger\DigRobot\obj\Debug\DigRobot.csprojResolveAssemblyReference.cache

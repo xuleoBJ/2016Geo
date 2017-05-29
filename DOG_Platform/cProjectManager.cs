@@ -112,7 +112,7 @@ namespace DOGPlatform
             string filePath = Path.Combine(cProjectManager.dirPathUserData, "ItemCode.txt");
             if (!File.Exists(filePath))
                 File.Copy(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code", "ItemCode.txt"), filePath); 
-                if (File.Exists(filePath))
+            else
                 {
                     ltCodeItem.Clear();
                     using (StreamReader sr = new StreamReader(filePath, System.Text.Encoding.UTF8))

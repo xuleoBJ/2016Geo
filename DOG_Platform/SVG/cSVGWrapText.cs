@@ -68,6 +68,8 @@ namespace DOGPlatform.SVG
             List<string> ltBreakText = cPublicMethodBase.splitText2LimitLineWithChangLine(sText, (int)fLimitwidth, SystemFonts.DefaultFont);
             double fStartTextY = y + height * 0.35;
             double fLineHeight = SystemFonts.DefaultFont.Height;
+            if (height < (fLineHeight+5)) fStartTextY = y + fLineHeight/2+2;
+
             int iLineNum= ltBreakText.Count;
             for (int k = 0; k < iLineNum; k++)
             {
@@ -126,10 +128,11 @@ namespace DOGPlatform.SVG
             gTextRect.SetAttribute("fill", sRectColor);
             gWrapTextWithRect.AppendChild(gTextRect);
 
+            double fLineHeight = SystemFonts.DefaultFont.Height;
             //分行处理
             XmlElement text = svgDoc.CreateElement("text");
             text.SetAttribute("x", (fLimitwidth * 0.5).ToString());
-            text.SetAttribute("y", (y + height * 0.5).ToString());
+            text.SetAttribute("y", (y + height * 0.5 + fontSize).ToString());
             text.SetAttribute("fill", sFontColor);
             text.SetAttribute("text-anchor", "start");
             text.SetAttribute("dominant-baseline", "text-after-edge");
@@ -137,8 +140,8 @@ namespace DOGPlatform.SVG
             text.SetAttribute("style", "strole-width:1");
 
             List<string> ltBreakText = cPublicMethodBase.splitText2LimitLineWithChangLine(sText, (int)fLimitwidth, SystemFonts.DefaultFont);
-            double fLineHeight = SystemFonts.DefaultFont.Height;
-            double fStartTextY = y + 2+fLineHeight;
+
+            double fStartTextY = y+ 2 + fLineHeight;
             int iLineNum = ltBreakText.Count;
             for (int k = 0; k < iLineNum; k++)
             {

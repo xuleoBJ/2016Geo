@@ -164,7 +164,6 @@ namespace DOGPlatform
             swNewFile.Close();
         }
 
-
         /// <summary>
         /// Geo文件合并
         /// </summary>
@@ -301,8 +300,10 @@ namespace DOGPlatform
                 return reader.ReadLine().Split().ToList();
             }
         }
+
         /// <summary>
         /// read text file 2 ListString firstlineIndex=1
+        /// 空行删除了
         /// </summary>
         /// <param name="filepath">text file path</param>
         /// <param name="iStartLine">startline</param>
@@ -310,9 +311,7 @@ namespace DOGPlatform
         public static List<string> readText2StringList(string filepath, int iStartLine)
         {
             List<string> ltStrReturn = new List<string>();
-
             int lineindex = 0;
-            string[] split;
             if (File.Exists(filepath))
             {
                 using (StreamReader sr = new StreamReader(filepath, Encoding.Default))
@@ -321,8 +320,7 @@ namespace DOGPlatform
                     while ((line = sr.ReadLine()) != null) //delete the line whose legth is 0
                     {
                         lineindex++;
-                        split = line.Trim().Split(new char[] { ' ', '\t', ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
-                        if (lineindex >= iStartLine)
+                        if (lineindex >= iStartLine && line!="")
                             ltStrReturn.Add(line);
                     }
                 }
@@ -474,7 +472,6 @@ namespace DOGPlatform
 
         }
 
-
         public static void replaceLineByFirstWord(string _filePath, string _sFirstWord, List<string> _ltStrLine)
         {
             replaceLineByFirstWord(_filePath, _sFirstWord, string.Join("\r\n", _ltStrLine));                     
@@ -504,7 +501,6 @@ namespace DOGPlatform
         }
 
      
-
         //按词列指数删除文件
         public static void deleteLinesByWordColumnIndexFromText(string filePathOriginal, string filePathGoal, int iDeleteColumnIndex,
             List<string> ltStr)

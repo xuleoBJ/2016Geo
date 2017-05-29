@@ -7,6 +7,7 @@ using System.Xml.Linq;
 using System.IO;
 using DOGPlatform.XML;
 using DOGPlatform.SVG;
+using System.Drawing;
 
 namespace DOGPlatform.XML
 {
@@ -41,7 +42,6 @@ namespace DOGPlatform.XML
 
     class cXMLLayerMapStatic : cXmlDocLayer
     {
-        
         public static void addWellPosition2Layer(string filePathLayerCss, string sLayerID,List<ItemDicLayerDataStatic> listItemWell)
         {
             XmlDocument wellTemplateXML = new XmlDocument();
@@ -206,8 +206,7 @@ namespace DOGPlatform.XML
             if (sProperty == "0") return "10基础井网采油井";
           return "0井";
         }
-        public static XmlElement gWellPattern
-     (cSVGDocLayerMap svgLayer,  ItemLayerWellPattern itemWell , int JHFontSize, int radis, int iCirlceWidth, int DX_JHText, int DY_JHText)
+        public static XmlElement gWellPattern(cSVGDocLayerMap svgLayer,  ItemLayerWellPattern itemWell , int JHFontSize, int radis, int iCirlceWidth, int DX_JHText, int DY_JHText)
         {
             XmlDocument svgDoc = svgLayer.svgDoc;
             XmlElement svgDefs = svgLayer.svgDefs;
@@ -250,6 +249,31 @@ namespace DOGPlatform.XML
             gWellItem.AppendChild(gJHText);
 
             return gWellItem;
+        }
+
+        public static XmlElement gFault(cSVGDocLayerMap svgLayer,  ItemFaultLine curItemdata,List<Point> listPointView )
+        {
+            XmlDocument svgDoc = svgLayer.svgDoc;
+            XmlElement svgDefs = svgLayer.svgDefs;
+            XmlElement gPloylineFault = svgDoc.CreateElement("g");
+             
+            XmlElement gPloylineFaultPolygon = svgDoc.CreateElement("polyline");
+      
+            gPloylineFaultPolygon.SetAttribute("onclick", "getID(evt)");
+            gPloylineFaultPolygon.SetAttribute("stroke-width", "5");
+            gPloylineFaultPolygon.SetAttribute("stroke", "red");
+            gPloylineFaultPolygon.SetAttribute("stroke-dasharray","0");
+            gPloylineFaultPolygon.SetAttribute("fill", "none");
+            gPloylineFaultPolygon.SetAttribute("ill-opacity", "1");
+            string _points = "";
+            foreach (Point pd in listPointView)
+            {
+                    _points += pd.X.ToString("0.0") + ',' + pd.Y.ToString("0.0") + " ";
+            }
+            gPloylineFaultPolygon.SetAttribute("points", _points);
+            gPloylineFault.AppendChild(gPloylineFaultPolygon); 
+ 
+            return gPloylineFault;
         }
     }
 }

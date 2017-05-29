@@ -5,7 +5,7 @@ import shutil
 
 if __name__=="__main__":
     
-    sourceDirPath="±‰÷ —“"
+    sourceDirPath="¿˘—“"
 
     fileWrited_txtLog=open("newItemCode.txt",'w')
     fileNames=os.listdir(sourceDirPath)

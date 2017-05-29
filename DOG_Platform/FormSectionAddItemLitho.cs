@@ -68,9 +68,13 @@ namespace DOGPlatform
             ItemCode inputCode = cProjectManager.ltCodeItem.FirstOrDefault(p => p.chineseName == sLithoName);
             List<string> ltStrRockType = cProjectManager.ltCodeItem.Select(p => p.codeType).Distinct().ToList();
             cPublicMethodForm.inialComboBox(this.cbbType, ltStrRockType);
-            cbbType.SelectedItem = inputCode.codeType;
-            initialCbbRock(inputCode.codeType);
-            cbbItemLitho.SelectedItem = inputCode.chineseName;
+            if (inputCode != null)
+            {
+                cbbType.SelectedItem = inputCode.codeType;
+                initialCbbRock(inputCode.codeType);
+                cbbItemLitho.SelectedItem = inputCode.chineseName;
+            }
+
             this.filePathTemple = _filePathTemple;
 
             nUDGrainSize.Value=(decimal)curItem.fValue;

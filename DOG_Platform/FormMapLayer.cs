@@ -554,6 +554,30 @@ namespace DOGPlatform
                      FormLayerWellValue newLayer = new FormLayerWellValue(this.filePathLayerCss);
                      newLayer.ShowDialog();
                  }
+
+                 if (strLayerType == TypeLayer.LayerFaultLine.ToString())
+                 {
+                     //读入断层线 
+                     //断层线文件路径 
+                     //断层文件格式 x y 断层编号
+                     OpenFileDialog ofdProjectPath = new OpenFileDialog();
+
+                     ofdProjectPath.Title = " 导入断层文件：";
+                     ofdProjectPath.Filter = "断层文件|*.txt";
+                     //设置默认文件类型显示顺序 
+                     ofdProjectPath.FilterIndex = 1;
+                     //保存对话框是否记忆上次打开的目录 
+                     ofdProjectPath.RestoreDirectory = true;
+
+                     if (ofdProjectPath.ShowDialog() == DialogResult.OK)
+                     {
+                         string filePathFault = ofdProjectPath.FileName;
+                         cXMLLayerMapFaultLine.addLayerFaults2XML(filePathLayerCss, sSelectLayerID, filePathFault);
+                
+                     }
+                    
+                 }
+
                  if (strLayerType == TypeLayer.LayerWellPosition.ToString())
                  {
                      cXMLLayerMapStatic.addWellPosition2Layer(filePathLayerCss, sSelectLayerID, listLayersDataCurrentLayerStatic);
@@ -771,6 +795,61 @@ namespace DOGPlatform
             double dfScale= 1000 / dfscale;
             cXmlBase.setNodeInnerText(this.filePathLayerCss, cXELayerPage.fmpMapScale, dfScale.ToString());
             updateSVG();
+        }
+
+        private void tsmiInsertFaultLine_Click(object sender, EventArgs e)
+        {
+            cXmlDocLayer.addLayerCss(this.filePathLayerCss, TypeLayer.LayerFaultLine);
+            updateTV();
+        }
+
+        private void tsmiInsertLayerInjPro_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void 读取ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdProjectPath = new OpenFileDialog();
+
+            ofdProjectPath.Title = " 打开项目：";
+            ofdProjectPath.Filter = "xl文件|*.xl";
+            //设置默认文件类型显示顺序 
+            ofdProjectPath.FilterIndex = 1;
+            //保存对话框是否记忆上次打开的目录 
+            ofdProjectPath.RestoreDirectory = true;
+
+            if (ofdProjectPath.ShowDialog() == DialogResult.OK)
+            {
+                string filePathInjConnect = ofdProjectPath.FileName;
+                int lineindex = 0;
+                StreamWriter sw = new StreamWriter(cProjectManager.dirPathUsedProjectData + "\\" + Path.GetFileName(filePathInjConnect), false, Encoding.UTF8);
+
+
+                using (StreamReader sr = new StreamReader(filePathInjConnect, Encoding.Default))
+                {
+                    String line;
+                    string healLine = "日期年月	注水井井号	小层名称	生产井井号	相对注水量	相对产油贡献	绝对注水量	绝对产油贡献	油井含水	注水强度	水井流压	有效厚度	油井流压	累注量（方）	砂岩厚度	注水倍数	波及系数	改前渗透率	渗透率修正系数	水井表皮系数	油井表皮系数	阶段天数	计算日注水	计算累产水	油井有效厚度	油水井距	孔隙体积	累产油（方）	累产水（方）	注采比	累注采比	平均So	剩余储量	可动储量	高水淹体积	水井附近静压	油井附近静压";
+                    string[] headWord = healLine.Split();
+
+                    while ((line = sr.ReadLine()) != null) //delete the line whose legth is 0
+                    {
+                        lineindex++;
+                        char[] delimiterChars = { ' ', ',', '\t' };
+                        string[] splitLine = line.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
+
+                        if (lineindex == 7) sw.WriteLine(string.Join("\t", headWord));
+
+                        if (lineindex >= 8)
+                        {
+                            sw.WriteLine(string.Join("\t", splitLine));
+                        }
+                    }
+                }
+                sw.Close();
+
+            }
+          
         }
     }
 }

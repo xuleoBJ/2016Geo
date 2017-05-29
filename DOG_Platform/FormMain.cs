@@ -336,6 +336,7 @@ namespace DOGPlatform
                     cProjectData.setProjectXCM2XML(strFCFA);
                     cProjectData.getProjectXCMFromXML();
                     cProjectManager.createLayerDir();
+                    tbcMain.TabPages.Remove(tbgLayerSeriers);
                     updateTreeViewProject();
                 }
                 else 

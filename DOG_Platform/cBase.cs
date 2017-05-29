@@ -61,6 +61,7 @@ namespace DOGPlatform
         LayerGeoProperty = 7,
         LayerCoutour = 8,
         LayerHorizonalInterval=9,
+        LayerFaultLine = 10,
         LayerDailyProduct, //日产注
         LayerSumProduct,  //累产注
         LayerBarGraph,

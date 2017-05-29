@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.cmsNavigationPanel = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiCloseInput = new System.Windows.Forms.ToolStripMenuItem();
@@ -148,9 +157,9 @@
             this.tsBtnOpenProject = new System.Windows.Forms.ToolStripButton();
             this.tsBtnSaveProject = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnFileDataManager = new System.Windows.Forms.ToolStripButton();
             this.tsBtnDataManager = new System.Windows.Forms.ToolStripButton();
             this.tsBtnDataView = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnFileDataManager = new System.Windows.Forms.ToolStripButton();
             this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsBtnReflush = new System.Windows.Forms.ToolStripButton();
             this.tsBtnZoonIn = new System.Windows.Forms.ToolStripButton();
@@ -570,11 +579,35 @@
             // 
             // dgvDataTable
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDataTable.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDataTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDataTable.Location = new System.Drawing.Point(3, 3);
             this.dgvDataTable.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDataTable.Name = "dgvDataTable";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDataTable.RowTemplate.Height = 27;
             this.dgvDataTable.Size = new System.Drawing.Size(850, 600);
             this.dgvDataTable.TabIndex = 2;
@@ -647,6 +680,14 @@
             // 
             // dgvWellHead
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWellHead.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvWellHead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWellHead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -655,8 +696,24 @@
             this.Column4,
             this.Column11,
             this.Column5});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvWellHead.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvWellHead.Location = new System.Drawing.Point(23, 39);
             this.dgvWellHead.Name = "dgvWellHead";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWellHead.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvWellHead.RowTemplate.Height = 23;
             this.dgvWellHead.Size = new System.Drawing.Size(861, 568);
             this.dgvWellHead.TabIndex = 0;
@@ -748,11 +805,35 @@
             // 
             // dgvLayerSeriers
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLayerSeriers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLayerSeriers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLayerSeriers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLayerSeriers.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvLayerSeriers.Location = new System.Drawing.Point(8, 40);
             this.dgvLayerSeriers.Name = "dgvLayerSeriers";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLayerSeriers.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvLayerSeriers.RowTemplate.Height = 23;
             this.dgvLayerSeriers.Size = new System.Drawing.Size(369, 550);
             this.dgvLayerSeriers.TabIndex = 1;
@@ -1309,7 +1390,6 @@
             this.tsBtnDataManager,
             this.tsBtnDataView,
             this.ToolStripSeparator1,
-            this.tsBtnReflush,
             this.tsBtnZoonIn,
             this.tsBtnZoomOut,
             this.tsmiMove,
@@ -1317,10 +1397,11 @@
             this.tscbbScale,
             this.ToolStripSeparator2,
             this.tslblLayer,
-            this.tscbbLayer});
+            this.tscbbLayer,
+            this.tsBtnReflush});
             this.ToolStripMain.Location = new System.Drawing.Point(3, 25);
             this.ToolStripMain.Name = "ToolStripMain";
-            this.ToolStripMain.Size = new System.Drawing.Size(610, 25);
+            this.ToolStripMain.Size = new System.Drawing.Size(579, 25);
             this.ToolStripMain.TabIndex = 3;
             // 
             // tsBtnNewProject
@@ -1358,6 +1439,16 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
+            // tsbtnFileDataManager
+            // 
+            this.tsbtnFileDataManager.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnFileDataManager.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFileDataManager.Image")));
+            this.tsbtnFileDataManager.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnFileDataManager.Name = "tsbtnFileDataManager";
+            this.tsbtnFileDataManager.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnFileDataManager.Text = "资料管理";
+            this.tsbtnFileDataManager.Click += new System.EventHandler(this.tsbtnFileDataManager_Click);
+            // 
             // tsBtnDataManager
             // 
             this.tsBtnDataManager.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1377,16 +1468,6 @@
             this.tsBtnDataView.Size = new System.Drawing.Size(23, 22);
             this.tsBtnDataView.Text = "井数据查看";
             this.tsBtnDataView.Click += new System.EventHandler(this.tsBtnDataView_Click);
-            // 
-            // tsbtnFileDataManager
-            // 
-            this.tsbtnFileDataManager.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnFileDataManager.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnFileDataManager.Image")));
-            this.tsbtnFileDataManager.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnFileDataManager.Name = "tsbtnFileDataManager";
-            this.tsbtnFileDataManager.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnFileDataManager.Text = "资料管理";
-            this.tsbtnFileDataManager.Click += new System.EventHandler(this.tsbtnFileDataManager_Click);
             // 
             // ToolStripSeparator1
             // 

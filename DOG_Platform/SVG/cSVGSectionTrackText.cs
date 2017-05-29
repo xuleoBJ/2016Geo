@@ -22,7 +22,10 @@ namespace DOGPlatform.SVG
             }
             return gRectText; 
         }
-
+        //public static XmlElement gTrackItemText(XmlDocument svgDoc, ItemTrackDrawDataIntervalProperty item, double fVScale, int iFontSize, double iTrackWidth)
+        //{
+        //    return gTrackItemText(svgDoc, string sID, double _top, double _bottom, fVScale, string sText, int fontSize,int iAlignMode, iTrackwidth, string sBackColor, string sWriteMode)
+        //}
       
     
     }

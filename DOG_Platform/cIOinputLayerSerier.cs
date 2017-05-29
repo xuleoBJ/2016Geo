@@ -47,18 +47,17 @@ namespace DOGPlatform
             }
 
             List<string> listFaultNames = listFaultPoints.Select(p => p.sFaultName).ToList();
-            foreach (string _faultName in listFaultNames)
-            {
-                ItemFaultLine currentLine = new ItemFaultLine();
-                currentLine.sXCM = _xcm;
-                currentLine.sFaultName = _faultName;
-                currentLine.ltPoints = new List<PointD>();
-                List<ItemFaultPoint> listPoints = listFaultPoints.FindAll(p => p.sFaultName == _faultName);
-                foreach (ItemFaultPoint item in listPoints) currentLine.ltPoints.Add(new PointD(item.dbx, item.dby));
-                listReturn.Add(currentLine);
-            }
+            //foreach (string _faultName in listFaultNames)
+            //{
+            //    ItemFaultLine currentLine = new ItemFaultLine();
+            //    currentLine.sXCM = _xcm;
+            //    currentLine.sFaultName = _faultName;
+            //    currentLine.ltPoints = new List<PointD>();
+            //    List<ItemFaultPoint> listPoints = listFaultPoints.FindAll(p => p.sFaultName == _faultName);
+            //    foreach (ItemFaultPoint item in listPoints) currentLine.ltPoints.Add(new PointD(item.dbx, item.dby));
+            //    listReturn.Add(currentLine);
+            //}
             
-
             return listReturn;
         }
 

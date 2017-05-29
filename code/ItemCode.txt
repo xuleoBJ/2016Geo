@@ -11,7 +11,7 @@
 常用	砾状砂岩	lizhuangshayan	砾状砂岩	83	砾状砂岩
 常用	粗砂岩	cushayan	粗砂岩	83	粗砂岩
 常用	细砂岩	xishayan	细砂岩	83	细砂岩
-常用	中砾岩	zhongshayan	中砾岩	100	中砾岩
+常用	中砾岩	zhongliyan	中砾岩	100	中砾岩
 常用	小砾岩	xiaoliyan	小砾岩	100	小砾岩
 常用	巨砾岩	juliyan	巨砾岩	100	巨砾岩
 常用	泥砾岩	niliyan	泥砾岩	100	泥砾岩

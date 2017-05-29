@@ -136,6 +136,7 @@ namespace DOGPlatform
 
         private void btnConnectLayerByTop_Click(object sender, EventArgs e)
         {
+            cXmlDocSectionGeo.clearAllConnectDataItem(this.filePathSectionGeoCss);
             List<string> ltStrSelectedXCM = getSelectListLayer();
             foreach (string sXCM in ltStrSelectedXCM)
             {

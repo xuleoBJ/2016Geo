@@ -235,7 +235,7 @@ namespace DOGPlatform.SVG
                 XmlElement gText = svgDoc.CreateElement("text");
                 gText.SetAttribute("x", (_sacleUnit * i - 5).ToString());
                 gText.SetAttribute("y", "-4");
-                gText.SetAttribute("font-size", "8");
+                gText.SetAttribute("font-size", "16");
                 gText.InnerText = (1000 * i).ToString() + "m";
                 gText.SetAttribute("fill", "black");
                 gScaleRuler.AppendChild(gText);
@@ -245,8 +245,10 @@ namespace DOGPlatform.SVG
         }
 
         // iNumExpandGrid是扩编的网格，网格算法取井位置最大和最小值作为区域，为了显示美观， 
-        public XmlElement gMapFrame(bool bShowGrid,cXELayerPage curPage)
+        public XmlElement gMapFrame(cXELayerPage curPage)
         {
+            bool bShowGrid = true;
+            if (curPage.iShowGrid != 1) bShowGrid = false ;
             XmlElement gMapFrame = svgDoc.CreateElement("g");
             gMapFrame.SetAttribute("id", "图框");
             List<string> ltStrWellName = new List<string>();
@@ -279,26 +281,30 @@ namespace DOGPlatform.SVG
             float dfscale = this.dfscale;
             double xMax = dfListX.Max() - dfListX.Min();
             double yMax = dfListY.Max() - dfListY.Min();
-            int iSacleUnit = 500; //定义网格单位
-            int iPanelWidth = Convert.ToInt32((int)(xMax / iSacleUnit + curPage.iNumExtendGrid) * iSacleUnit * curPage.dfscale);
-            int iPanelHeight = Convert.ToInt32((int)(yMax / iSacleUnit + curPage.iNumExtendGrid) * iSacleUnit * curPage.dfscale);
+            int iGridUnit = curPage.iGridSize; //定义网格单位
+            int iPanelWidth = Convert.ToInt32((int)(xMax / iGridUnit + curPage.iNumExtendGrid) * iGridUnit * curPage.dfscale);
+            int iPanelHeight = Convert.ToInt32((int)(yMax / iGridUnit + curPage.iNumExtendGrid) * iGridUnit * curPage.dfscale);
             XmlElement gRectInner = svgDoc.CreateElement("rect");
-            gRectInner.SetAttribute("x", "0");
-            gRectInner.SetAttribute("y", "0");
+            int iStartXviewRef = 0;
+            int iStartYviewRef = 0;
+
+            gRectInner.SetAttribute("x", iStartXviewRef.ToString());
+            gRectInner.SetAttribute("y", iStartYviewRef.ToString());
             gRectInner.SetAttribute("width", iPanelWidth.ToString());
             gRectInner.SetAttribute("height", iPanelHeight.ToString());
             gRectInner.SetAttribute("fill", "none");
-            gRectInner.SetAttribute("stroke-width", "1");
+            gRectInner.SetAttribute("stroke-width", "2");
             gRectInner.SetAttribute("stroke", "black");
             gMapFrame.AppendChild(gRectInner);
             XmlElement gRectOuter = svgDoc.CreateElement("rect");
-            int iDistance = 10;//定义内外框距离
-            gRectOuter.SetAttribute("x", (-iDistance).ToString());
-            gRectOuter.SetAttribute("y", (-iDistance).ToString());
+            int iDistance = iGridUnit/4>=50? 50:iGridUnit/4 ; //定义内外框距离
+            
+            gRectOuter.SetAttribute("x", (iStartXviewRef - iDistance).ToString());
+            gRectOuter.SetAttribute("y", (iStartYviewRef - iDistance).ToString());
             gRectOuter.SetAttribute("width", (iPanelWidth + iDistance*2).ToString());
             gRectOuter.SetAttribute("height", (iPanelHeight + iDistance * 2).ToString());
             gRectOuter.SetAttribute("fill", "none");
-            gRectOuter.SetAttribute("stroke-width", "2");
+            gRectOuter.SetAttribute("stroke-width", "3");
             gRectOuter.SetAttribute("stroke", "black");
             gMapFrame.AppendChild(gRectOuter);
 
@@ -312,95 +318,144 @@ namespace DOGPlatform.SVG
 
             XmlElement gGridText = svgDoc.CreateElement("g");
             gGridText.SetAttribute("id", "idRulerTextBig");
-            gGridText.SetAttribute("font-size", "8");
+            gGridText.SetAttribute("font-size", "30");
             gGridText.SetAttribute("font-style", "normal");
             gGridText.SetAttribute("fill", "black");
 
             XmlElement gGridText2 = svgDoc.CreateElement("g");
             gGridText2.SetAttribute("id", "idRulerTextSmall");
-            gGridText2.SetAttribute("font-size", "6");
+            gGridText2.SetAttribute("font-size", "20");
             gGridText2.SetAttribute("font-style", "normal");
             gGridText2.SetAttribute("fill", "black");
 
-            for (int i = 1; i * iSacleUnit * curPage.dfscale<= iPanelWidth; i++)
+            for (int i = 1; i * iGridUnit * curPage.dfscale<= iPanelWidth; i++)
             {
-                int iXCurrentView = Convert.ToInt32(i * 500 * curPage.dfscale);
+                int iXCurrentView = Convert.ToInt32(i * iGridUnit * curPage.dfscale);
                 Point point1 = new Point(iXCurrentView, 0);
                 Point point2;
-                if (bShowGrid == true) point2 = new Point(iXCurrentView, iPanelHeight);
-                else point2 = new Point(iXCurrentView, iDistance);
+                 point2 = new Point(iXCurrentView, iPanelHeight);
+                
+                if (bShowGrid == true)
+                {
 
-                XmlElement gLine = svgDoc.CreateElement("line");
-                gLine.SetAttribute("x1", point1.X.ToString());
-                gLine.SetAttribute("y1", (point1.Y - iDistance).ToString());
-                gLine.SetAttribute("x2", point2.X.ToString());
-                gLine.SetAttribute("y2", (point2.Y+iDistance).ToString());
-                gGridLine.AppendChild(gLine);
-
-                //应该写的数值是 cProject.dfMapXrealRefer + i * 500
+                    XmlElement gLine = svgDoc.CreateElement("line");
+                    gLine.SetAttribute("x1", point1.X.ToString());
+                    gLine.SetAttribute("y1", (point1.Y - iDistance).ToString());
+                    gLine.SetAttribute("x2", point2.X.ToString());
+                    gLine.SetAttribute("y2", (point2.Y + iDistance).ToString());
+                    gGridLine.AppendChild(gLine);
+                }
+                else
+                {
+                    XmlElement gLineUpMark = svgDoc.CreateElement("line");
+                    gLineUpMark.SetAttribute("x1", point1.X.ToString());
+                    gLineUpMark.SetAttribute("y1", (point1.Y - iDistance).ToString());
+                    gLineUpMark.SetAttribute("x2", point1.X.ToString());
+                    gLineUpMark.SetAttribute("y2", (point1.Y).ToString());
+                    gGridLine.AppendChild(gLineUpMark);
+                    XmlElement gLineDownMark = svgDoc.CreateElement("line");
+                    gLineDownMark.SetAttribute("x1", point2.X.ToString());
+                    gLineDownMark.SetAttribute("y1", (point2.Y).ToString());
+                    gLineDownMark.SetAttribute("x2", point2.X.ToString());
+                    gLineDownMark.SetAttribute("y2", (point2.Y + iDistance).ToString());
+                    gGridLine.AppendChild(gLineDownMark);
+                
+                }
+                //应该写的数值是 cProject.dfMapXrealRefer + i * iGridUnit
+                //标注Xview
+                string XaxisMarkBig = (iXCurrentView - 50).ToString();
+      
                 XmlElement gXText = svgDoc.CreateElement("text");
-                gXText.SetAttribute("x", (iXCurrentView - 13).ToString());
+
+                string strXtext = ((cProjectData.dfMapXrealRefer + i * iGridUnit) / 100000).ToString("0");
+                string strXtext2 = (((cProjectData.dfMapXrealRefer + i * iGridUnit) % 100000) / 100).ToString("0");
+
+                gXText.SetAttribute("x", XaxisMarkBig);
                 gXText.SetAttribute("y", "-1");
-                gXText.InnerText = ((cProjectData.dfMapXrealRefer + i * 500)/100000).ToString("0");
+                gXText.InnerText = strXtext;
                 gGridText.AppendChild(gXText);
 
                 XmlElement gXText2 = svgDoc.CreateElement("text");
                 gXText2.SetAttribute("x", (iXCurrentView+2).ToString());
                 gXText2.SetAttribute("y", "-1");
-                gXText2.InnerText = (((cProjectData.dfMapXrealRefer + i * 500)%100000)/100).ToString("0");
+                gXText2.InnerText = strXtext2;
                 gGridText2.AppendChild(gXText2);
 
                 XmlElement gXTextDown = svgDoc.CreateElement("text");
-                gXTextDown.SetAttribute("x", (iXCurrentView - 13).ToString());
-                gXTextDown.SetAttribute("y", (point2.Y + 7).ToString());
-                gXTextDown.InnerText = ((cProjectData.dfMapXrealRefer + i * 500) / 100000).ToString("0");
+                gXTextDown.SetAttribute("x", XaxisMarkBig);
+                gXTextDown.SetAttribute("y", (point2.Y + 25).ToString());
+                gXTextDown.InnerText = strXtext;
                 gGridText.AppendChild(gXTextDown);
 
                 XmlElement gXText2Down = svgDoc.CreateElement("text");
                 gXText2Down.SetAttribute("x", (iXCurrentView + 2).ToString());
-                gXText2Down.SetAttribute("y", (point2.Y + 7).ToString());
-                gXText2Down.InnerText = (((cProjectData.dfMapXrealRefer + i * 500) % 100000) / 100).ToString("0");
+                gXText2Down.SetAttribute("y", (point2.Y + 25).ToString());
+                gXText2Down.InnerText = strXtext2;
                 gGridText2.AppendChild(gXText2Down);
 
             }
 
-            //应该写的数值是 cProject.dfMapXrealRefer + i * 500
-            for (int i = 1; i * iSacleUnit * curPage.dfscale<= iPanelHeight; i++)
+            //应该写的数值是 cProject.dfMapXrealRefer + i * iGridUnit
+            //左右Y轴标注
+            for (int i = 1; i * iGridUnit * curPage.dfscale<= iPanelHeight; i++)
             {
-                int iYCurrentView = Convert.ToInt32(i * 500 * curPage.dfscale);
+                int iYCurrentView = Convert.ToInt32(i * iGridUnit * curPage.dfscale);
                 Point point3 = new Point(0, iYCurrentView);
                 Point point4;
-                if (bShowGrid == true) point4 = new Point(iPanelWidth, iYCurrentView);
-                else point4 = new Point(iDistance, iYCurrentView);
-                XmlElement gLine = svgDoc.CreateElement("line");
-                gLine.SetAttribute("x1", (point3.X - iDistance).ToString());
-                gLine.SetAttribute("y1", point3.Y.ToString());
-                gLine.SetAttribute("x2", (point4.X+ iDistance).ToString());
-                gLine.SetAttribute("y2", point4.Y.ToString());
-                gGridLine.AppendChild(gLine);
-
+                point4 = new Point(iPanelWidth, iYCurrentView);
+                //是否显示网格线
+                if (bShowGrid == true)
+                {
+                    //      else point4 = new Point(iDistance, iYCurrentView);
+                    XmlElement gLine = svgDoc.CreateElement("line");
+                    gLine.SetAttribute("x1", (point3.X - iDistance).ToString());
+                    gLine.SetAttribute("y1", iYCurrentView.ToString());
+                    gLine.SetAttribute("x2", (point4.X + iDistance).ToString());
+                    gLine.SetAttribute("y2", iYCurrentView.ToString());
+                    gGridLine.AppendChild(gLine);
+                }
+                else 
+                {
+                    XmlElement gLineLeftMarkLine = svgDoc.CreateElement("line");
+                    gLineLeftMarkLine.SetAttribute("x1", (point3.X - iDistance).ToString());
+                    gLineLeftMarkLine.SetAttribute("y1", iYCurrentView.ToString());
+                    gLineLeftMarkLine.SetAttribute("x2", (point3.X).ToString());
+                    gLineLeftMarkLine.SetAttribute("y2", iYCurrentView.ToString());
+                    gGridLine.AppendChild(gLineLeftMarkLine);
+                    XmlElement gLineRightMarkLine = svgDoc.CreateElement("line");
+                    gLineRightMarkLine.SetAttribute("x1", (point4.X).ToString());
+                    gLineRightMarkLine.SetAttribute("y1", iYCurrentView.ToString());
+                    gLineRightMarkLine.SetAttribute("x2", (point4.X + iDistance).ToString());
+                    gLineRightMarkLine.SetAttribute("y2", iYCurrentView.ToString());
+                    gGridLine.AppendChild(gLineRightMarkLine);
+                
+                }
                 XmlElement gYText = svgDoc.CreateElement("text");
+                string strYtext = ((cProjectData.dfMapYrealRefer - i * iGridUnit) / 100000).ToString("0");
+                string strYtext2 = (((cProjectData.dfMapYrealRefer + i * iGridUnit) % 100000) / 100).ToString("0");
                 gYText.SetAttribute("x", (-iDistance+1).ToString());
                 gYText.SetAttribute("y", (iYCurrentView-1).ToString());
-                gYText.InnerText = ((cProjectData.dfMapYrealRefer - i * 500)/100000).ToString("0");
+                gYText.InnerText = strYtext;
                 gGridText.AppendChild(gYText);
 
+                string iYaixMarkSmall = (iYCurrentView + 20).ToString();
                 XmlElement gYText2= svgDoc.CreateElement("text");
                 gYText2.SetAttribute("x", (-iDistance + 1).ToString());
-                gYText2.SetAttribute("y", (iYCurrentView+5).ToString());
-                gYText2.InnerText = (((cProjectData.dfMapYrealRefer - i * 500) %100000)/100).ToString("0");
+                gYText2.SetAttribute("y", iYaixMarkSmall);
+                gYText2.InnerText = strYtext2;
                 gGridText2.AppendChild(gYText2);
 
+                
                 XmlElement gXTextRight = svgDoc.CreateElement("text");
                 gXTextRight.SetAttribute("x", point4.X .ToString());
-                gXTextRight.SetAttribute("y", (iYCurrentView - 1).ToString());
-                gXTextRight.InnerText = ((cProjectData.dfMapYrealRefer - i * 500) / 100000).ToString("0");
+                gXTextRight.SetAttribute("y", (iYCurrentView-1).ToString());
+                gXTextRight.InnerText = strYtext;
                 gGridText.AppendChild(gXTextRight);
 
                 XmlElement gXText2Right = svgDoc.CreateElement("text");
                 gXText2Right.SetAttribute("x", point4.X .ToString());
-                gXText2Right.SetAttribute("y", (iYCurrentView + 5).ToString());
-                gXText2Right.InnerText = (((cProjectData.dfMapYrealRefer - i * 500) % 100000) / 100).ToString("0");
+                gXText2Right.SetAttribute("y", iYaixMarkSmall);
+                gXText2Right.InnerText = strYtext2;
                 gGridText2.AppendChild(gXText2Right);
 
             }

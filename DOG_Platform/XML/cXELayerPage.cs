@@ -13,9 +13,11 @@ namespace DOGPlatform.XML
         public double yRef = cProjectData.dfMapYrealRefer;
         public double dfscale = cProjectData.dfMapScale;
         public int iNumExtendGrid = 4;
+        public int iGridSize = 500;
         public int iShowCompass = 0;
         public int iShowScaleRuler = 1;
         public int iShowMapFrame = 1;
+        public int  iShowGrid = 1;
         public int iShowAllJH = 0;  //1,所有井号，0 钻遇井号 2 射孔井号
         public int iPageWidth = 3000;
         public int iPageHeight = 3000;
@@ -29,10 +31,13 @@ namespace DOGPlatform.XML
             xRef = double.Parse(pageInor["xRef"].InnerText);
             yRef = double.Parse(pageInor["YRef"].InnerText);
             dfscale = double.Parse(pageInor["dfMapScale"].InnerText);
+            
             iNumExtendGrid = int.Parse(pageInor["iNumExtendGrid"].InnerText);
             iShowAllJH = int.Parse(pageInor["iShowJHGroup"].InnerText);
             iPageWidth = int.Parse(pageInor["pageWidth"].InnerText);
             iPageHeight = int.Parse(pageInor["pageHeight"].InnerText);
+            if ( pageInor["iGridSize"] !=null ) iGridSize = int.Parse(pageInor["iGridSize"].InnerText);
+            if (pageInor["iShowGrid"] != null) iShowGrid = int.Parse(pageInor["iShowGrid"].InnerText);
         }
         public static XElement PageInfor()
         {
@@ -59,7 +64,9 @@ namespace DOGPlatform.XML
         public static string fmpPageHeight = "/LayerMapConfig/PageInfor/pageHeight";
         public static string fmpPageUnit = "/LayerMapConfig/PageInfor/pageUnit";
         public static string fmpMapTitle = "/LayerMapConfig/PageInfor/mapTitle";
-        public static string fmpNumExtendGrid = "/LayerMapConfig/PageInfor/iNumExtendGrid";
+        public static string fmpGridNumExtend= "/LayerMapConfig/PageInfor/iNumExtendGrid";
+        public static string fmpGridSize = "/LayerMapConfig/PageInfor/iGridSize";
+        public static string fmpShowGrid = "/LayerMapConfig/PageInfor/iShowGrid";
         public static string fmpShowJHgroup = "/LayerMapConfig/PageInfor/iShowJHGroup";
         public static string fmpMapScale = "/LayerMapConfig/PageInfor/dfMapScale";
 

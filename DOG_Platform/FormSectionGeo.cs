@@ -1156,6 +1156,8 @@ namespace DOGPlatform
                 DialogResult dialogResult = MessageBox.Show( "确认移除: "+this.sJH, "移除井", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    //首先要清除联井信息
+                    cXmlDocSectionGeo.clearAllConnectDataItem(this.filePathSectionGeoCss);
                     cXmlDocSectionGeo.deleteWellSelect(this.filePathSectionGeoCss, this.sJH);
                     File.Delete(this.filePathOper);
                     updateTVandList();

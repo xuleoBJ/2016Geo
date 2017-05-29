@@ -227,6 +227,7 @@ namespace DOGPlatform.XML
                 XmlNode _parentNode = xmlDoc.SelectSingleNode(_parent);
                 currentNode = xmlDoc.CreateNode(XmlNodeType.Element, _node, "");
                 _parentNode.AppendChild(currentNode);
+                currentNode.InnerText = sInnerText;
             }
         }
 

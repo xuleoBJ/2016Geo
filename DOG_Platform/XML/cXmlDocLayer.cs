@@ -163,7 +163,18 @@ namespace DOGPlatform.XML
                 layerNode.Add(new XElement("DX_Text", "5"));
                 layerNode.Add(new XElement("DY_Text", "5"));
             }
-           
+            else if (eTypeLayer == TypeLayer.LayerPolyline)
+            {
+                layerNode.Add(new XElement("fill-opacity", "0.8"));
+                layerNode.Add(new XElement("lineColor", "black"));
+                layerNode.Add(new XElement("lineWidth", "1"));
+                layerNode.Add(new XElement("lineType", "0"));
+            }
+            else if (eTypeLayer == TypeLayer.LayerFaultLine)
+            {
+                
+            }
+
             return layerNode;
         }
 

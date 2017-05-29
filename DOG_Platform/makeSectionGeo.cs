@@ -431,6 +431,28 @@ namespace DOGPlatform
                         }
                     }
                     #endregion
+
+                    #region 文本
+                    if (curTrackDraw.sTrackType == TypeTrack.文本道.ToString())
+                    {
+                        XmlNode dataList = el_Track.SelectSingleNode("dataList");
+                        int iAlignMode = 0;
+                        if (dataList != null)
+                        {
+                            XmlNodeList dataItem = dataList.SelectNodes("dataItem");
+                            foreach (XmlNode xn in dataItem)
+                            {
+                                ItemTrackDrawDataIntervalProperty item = new ItemTrackDrawDataIntervalProperty(xn);
+                                if (item.top >= dfDS1Show && item.bot <= dfDS2Show)
+                                {
+                                    returnElemment = cSVGSectionTrackText.gTrackItemText(svgSection.svgDoc,  item.sID, item.top, item.bot, fVScale,item.sText,  curTrackDraw.iTrackFontSize, iAlignMode, curTrackDraw.iTrackWidth, item.sProperty, curTrackDraw.sWriteMode);
+                                    wellGeoSingle.addTrack(returnElemment, iListTrackWidth.Sum());
+                                                                                                 
+                                }
+                            }
+                        }
+                    }
+                    #endregion
                     #region 测井解释，旋回,化石道
                     if (cProjectManager.ltStrTrackTypeIntervalProperty.IndexOf(curTrackDraw.sTrackType) >= 0)
                     {
