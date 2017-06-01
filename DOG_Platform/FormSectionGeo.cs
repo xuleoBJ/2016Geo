@@ -939,6 +939,7 @@ namespace DOGPlatform
                 tsmiAdjustShowDepth.Visible = true;
                 tsmiTemplateSaveAs.Visible = true;
                 tsmiTemplateUse.Visible = true;
+                tsmiTemplateUseAll.Visible = true;
                 tsmiGetShowCurWell.Visible = true;
             }
             if (selectedNode.Level == 1)
@@ -1433,6 +1434,34 @@ namespace DOGPlatform
                     int xView = (int)(fMapScale * float.Parse(selectWell["Xview"].InnerText));
                     int yView = (int)(fMapScale * float.Parse(selectWell["Yview"].InnerText));
                     cSectionUIoperate.setOffSet(this.webBrowserSVG, new Point(xView, yView));
+                }
+            }
+        }
+
+        private void tsmiTemplateUseAll_Click(object sender, EventArgs e)
+        {
+            FormSectAddNewWell formNew = new FormSectAddNewWell(2); //通过2 构造函数 通知模板选择 模板从剖面分析来，不要井号
+            var result = formNew.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string xtlFileName = formNew.ReturnFileNameXMT;
+                bool bNew = true;
+
+                DialogResult dialogResult = MessageBox.Show("确认应用新模板？", "请选择", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No) bNew = false;
+                
+                if (bNew == true)
+                {
+                    string xtmPath = Path.Combine(cProjectManager.dirPathTemplate, xtlFileName);
+                    //在所有的井目录下应用新模板，在所有井井节点循环
+                    foreach (TreeNode tnNodeCur in this.tvSectionEdit.Nodes)
+                    {
+                        if (tnNodeCur.Level == 0)
+                        {
+                            setUpIDByTN(tnNodeCur);
+                            cIOtemplate.copyTemplate(xtmPath, filePathOper, this.sJH);
+                        }
+                    }
                 }
             }
         }

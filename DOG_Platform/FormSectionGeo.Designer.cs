@@ -159,6 +159,7 @@
             this.普通ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.简化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTemplateUseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.tbcSectionGeo.SuspendLayout();
             this.tbgViewEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSection)).BeginInit();
@@ -247,9 +248,10 @@
             this.tsmiAdjustShowDepth,
             this.tsmiGetShowCurWell,
             this.tsmiTemplateSaveAs,
-            this.tsmiTemplateUse});
+            this.tsmiTemplateUse,
+            this.tsmiTemplateUseAll});
             this.cmsTVedit.Name = "treeviewContextMenuStrip";
-            this.cmsTVedit.Size = new System.Drawing.Size(161, 400);
+            this.cmsTVedit.Size = new System.Drawing.Size(161, 444);
             // 
             // tsmiWellHeadInfor
             // 
@@ -439,7 +441,7 @@
             // 
             this.tsmiTemplateUse.Name = "tsmiTemplateUse";
             this.tsmiTemplateUse.Size = new System.Drawing.Size(160, 22);
-            this.tsmiTemplateUse.Text = "应用模板";
+            this.tsmiTemplateUse.Text = "当前井应用模板";
             this.tsmiTemplateUse.Click += new System.EventHandler(this.tsmiTemplateUse_Click);
             // 
             // statusStripTV
@@ -1294,6 +1296,13 @@
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
+            // tsmiTemplateUseAll
+            // 
+            this.tsmiTemplateUseAll.Name = "tsmiTemplateUseAll";
+            this.tsmiTemplateUseAll.Size = new System.Drawing.Size(160, 22);
+            this.tsmiTemplateUseAll.Text = "全部井应用模板";
+            this.tsmiTemplateUseAll.Click += new System.EventHandler(this.tsmiTemplateUseAll_Click);
+            // 
             // FormSectionGeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1464,5 +1473,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiWellHeadInfor;
         private System.Windows.Forms.ToolStripMenuItem tsmiSectionGeoRename;
         private System.Windows.Forms.ToolStripMenuItem tsmiGetShowCurWell;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTemplateUseAll;
     }
 }
