@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:geoScape2016"
+"ProjectName" = "8:geoScape2020"
 "LanguageId" = "3:2052"
 "CodePage" = "3:936"
 "UILanguageId" = "3:2052"
@@ -15,44 +15,20 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_314F68B9A552BBA3B9A29996325C8178"
-        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_39997C2FECB8426398D58018DEA5D6CF"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_46AE8BAEA3DC13D58C2086DF30CDC843"
-        "OwnerKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_46AE8BAEA3DC13D58C2086DF30CDC843"
+        "MsmKey" = "8:_37D7945ACDCC982F5F5FFD21B18CCC90"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_46AE8BAEA3DC13D58C2086DF30CDC843"
-        "OwnerKey" = "8:_798543BC163A3B9FC7BB57D42361AA96"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_46AE8BAEA3DC13D58C2086DF30CDC843"
-        "OwnerKey" = "8:_314F68B9A552BBA3B9A29996325C8178"
+        "MsmKey" = "8:_39997C2FECB8426398D58018DEA5D6CF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -69,25 +45,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
-        "OwnerKey" = "8:_314F68B9A552BBA3B9A29996325C8178"
+        "MsmKey" = "8:_5863B1FA59899E794D594F9551A30029"
+        "OwnerKey" = "8:_E703BDEF7517FE2CFD0353F01E47BE3F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
-        "OwnerKey" = "8:_798543BC163A3B9FC7BB57D42361AA96"
+        "MsmKey" = "8:_5863B1FA59899E794D594F9551A30029"
+        "OwnerKey" = "8:_CA1F82AA268EAF06FCFB16D523BE0A71"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
+        "MsmKey" = "8:_5863B1FA59899E794D594F9551A30029"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_798543BC163A3B9FC7BB57D42361AA96"
+        "MsmKey" = "8:_5ABE672AB31C68D1E69CF883E94C2F70"
+        "OwnerKey" = "8:_5863B1FA59899E794D594F9551A30029"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5ABE672AB31C68D1E69CF883E94C2F70"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -95,12 +77,6 @@
         {
         "MsmKey" = "8:_7AFBE00418924511B6ABA7E659C607CE"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_89A6651E618FA038BFFDA24C09348924"
-        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,19 +99,43 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CA1F82AA268EAF06FCFB16D523BE0A71"
+        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDE34AA051A94D6271807BC383959565"
+        "OwnerKey" = "8:_5863B1FA59899E794D594F9551A30029"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDE34AA051A94D6271807BC383959565"
+        "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDE34AA051A94D6271807BC383959565"
+        "OwnerKey" = "8:_CA1F82AA268EAF06FCFB16D523BE0A71"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CDE34AA051A94D6271807BC383959565"
+        "OwnerKey" = "8:_E703BDEF7517FE2CFD0353F01E47BE3F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D32F7D16A8CF4992BBF9072A3936425B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F331B44E7BA0E6AFDE7968D5B5B2DEB7"
-        "OwnerKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F331B44E7BA0E6AFDE7968D5B5B2DEB7"
+        "MsmKey" = "8:_E703BDEF7517FE2CFD0353F01E47BE3F"
         "OwnerKey" = "8:_33B5BFEE429C4D39A87EA627F223BA2F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -148,37 +148,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_798543BC163A3B9FC7BB57D42361AA96"
+        "OwnerKey" = "8:_CA1F82AA268EAF06FCFB16D523BE0A71"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_314F68B9A552BBA3B9A29996325C8178"
+        "OwnerKey" = "8:_E703BDEF7517FE2CFD0353F01E47BE3F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5D731A09AFC257C6758B318C99DF75CC"
+        "OwnerKey" = "8:_5863B1FA59899E794D594F9551A30029"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F331B44E7BA0E6AFDE7968D5B5B2DEB7"
+        "OwnerKey" = "8:_5ABE672AB31C68D1E69CF883E94C2F70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_46AE8BAEA3DC13D58C2086DF30CDC843"
+        "OwnerKey" = "8:_CDE34AA051A94D6271807BC383959565"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_89A6651E618FA038BFFDA24C09348924"
+        "OwnerKey" = "8:_37D7945ACDCC982F5F5FFD21B18CCC90"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -189,7 +189,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\geoScape2016.msi"
+        "OutputFilename" = "8:Debug\\geoScape2020.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -286,20 +286,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_314F68B9A552BBA3B9A29996325C8178"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_37D7945ACDCC982F5F5FFD21B18CCC90"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DigRobot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_314F68B9A552BBA3B9A29996325C8178"
+                    "_37D7945ACDCC982F5F5FFD21B18CCC90"
                     {
-                    "Name" = "8:IronPython.dll"
+                    "Name" = "8:DigRobot.exe"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:IronPython.dll"
+            "SourcePath" = "8:DigRobot.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
@@ -335,37 +335,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_46AE8BAEA3DC13D58C2086DF30CDC843"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_46AE8BAEA3DC13D58C2086DF30CDC843"
-                    {
-                    "Name" = "8:Microsoft.Scripting.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.Scripting.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_54018BEB131046CBADB31EDCBF45CB14"
@@ -408,14 +377,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5D731A09AFC257C6758B318C99DF75CC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5863B1FA59899E794D594F9551A30029"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5D731A09AFC257C6758B318C99DF75CC"
+                    "_5863B1FA59899E794D594F9551A30029"
                     {
                     "Name" = "8:Microsoft.Dynamic.dll"
                     "Attributes" = "3:512"
@@ -439,20 +408,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_798543BC163A3B9FC7BB57D42361AA96"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5ABE672AB31C68D1E69CF883E94C2F70"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting.AspNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_798543BC163A3B9FC7BB57D42361AA96"
+                    "_5ABE672AB31C68D1E69CF883E94C2F70"
                     {
-                    "Name" = "8:Microsoft.Scripting.AspNet.dll"
+                    "Name" = "8:Microsoft.Scripting.Metadata.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Scripting.AspNet.dll"
+            "SourcePath" = "8:Microsoft.Scripting.Metadata.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
@@ -488,37 +457,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_89A6651E618FA038BFFDA24C09348924"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DigRobot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_89A6651E618FA038BFFDA24C09348924"
-                    {
-                    "Name" = "8:DigRobot.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:DigRobot.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8AE7AAA1C7474985B7B29DB6F354B2E5"
@@ -581,6 +519,68 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CA1F82AA268EAF06FCFB16D523BE0A71"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting.AspNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CA1F82AA268EAF06FCFB16D523BE0A71"
+                    {
+                    "Name" = "8:Microsoft.Scripting.AspNet.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Scripting.AspNet.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CDE34AA051A94D6271807BC383959565"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CDE34AA051A94D6271807BC383959565"
+                    {
+                    "Name" = "8:Microsoft.Scripting.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.Scripting.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D32F7D16A8CF4992BBF9072A3936425B"
             {
             "SourcePath" = "8:..\\DOG_Platform\\bin\\Debug\\Script\\drawPosition.js"
@@ -601,20 +601,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F331B44E7BA0E6AFDE7968D5B5B2DEB7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E703BDEF7517FE2CFD0353F01E47BE3F"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:IronPython, Version=2.7.5.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F331B44E7BA0E6AFDE7968D5B5B2DEB7"
+                    "_E703BDEF7517FE2CFD0353F01E47BE3F"
                     {
-                    "Name" = "8:Microsoft.Scripting.Metadata.dll"
+                    "Name" = "8:IronPython.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Scripting.Metadata.dll"
+            "SourcePath" = "8:IronPython.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B4E38478D5DC44D493413B0E98D8AB47"
@@ -651,7 +651,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_B4E38478D5DC44D493413B0E98D8AB47"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -720,9 +720,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:geoScape2016"
+        "ProductName" = "8:geoScape2020"
         "ProductCode" = "8:{14F56315-DCCB-4156-9CA1-2A3D83C3F1F7}"
-        "PackageCode" = "8:{261B2B68-30B7-4F07-BDB5-2496888B5FA3}"
+        "PackageCode" = "8:{D7649AB5-F213-4D2B-B3B0-F3245D7F9ACE}"
         "UpgradeCode" = "8:{AED19D8B-12FA-496E-8B91-0704E80D5D2F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -733,7 +733,7 @@
         "Manufacturer" = "8:oneWalkStdio"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:geoScape2016"
+        "Title" = "8:geoScape2020"
         "Subject" = "8:"
         "ARPCONTACT" = "8:oneWalkStdio"
         "Keywords" = "8:"
@@ -743,7 +743,7 @@
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"

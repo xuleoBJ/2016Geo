@@ -18,9 +18,9 @@
    sodipodi:docname="CSB0020104C.svg">
   <defs id="">
     <pattern patternUnits="userSpaceOnUse" width="20" height="20" inkscape:stockid="细砾岩" inkscape:collect="always" id="xiliyan">
-	  <circle cx="5" cy="5" r="1.5" stroke="black" stroke-width="0.5" fill="none" />
+	  <circle cx="5" cy="5" r="2.5" stroke="black" stroke-width="0.5" fill="none" />
 	   <svg:path d="M 0 9.5 h 20" style="stroke: black; fill: none" stroke-width="0.5" />
-       <circle cx="15" cy="15" r="1.5" stroke="black" stroke-width="0.5" fill="none" />
+       <circle cx="15" cy="15" r="2.5" stroke="black" stroke-width="0.5" fill="none" />
 	    <svg:path d="M 0 19.5 h 20" style="stroke: black; fill: none" stroke-width="0.5" />
     </pattern>
   </defs>
